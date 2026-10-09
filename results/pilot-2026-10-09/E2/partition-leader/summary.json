@@ -1,0 +1,53 @@
+{
+  "config": {
+    "DB": "etcd",
+    "Nodes": 5,
+    "Fault": "partition-leader",
+    "Duration": 20000000000,
+    "Recover": 5000000000,
+    "Schedule": {
+      "Fault": "",
+      "Warmup": 3000000000,
+      "Interval": 3000000000,
+      "Duration": 5000000000
+    },
+    "Workload": {
+      "Clients": 25,
+      "KeyRotate": 0,
+      "ActiveKeys": 0,
+      "OpTimeout": 1000000000,
+      "Stagger": 0,
+      "Values": 0
+    },
+    "CheckTimeout": 60000000000,
+    "RaftKV": {
+      "Bin": "/tmp/raftkv-bin/raftkv",
+      "ReadMode": "readindex",
+      "Bugs": null,
+      "LazyFS": false,
+      "ElectionTimeout": 1000000000,
+      "Heartbeat": 100000000,
+      "ExtraArgs": null
+    },
+    "Etcd": {
+      "Bin": "/tmp/raftkv-bin/etcd",
+      "Serializable": false,
+      "ElectionTimeout": 1000000000,
+      "Heartbeat": 100000000,
+      "NoFsync": false
+    },
+    "Out": "results/pilot-2026-10-09/E2/partition-leader"
+  },
+  "trials": 3,
+  "valid": 3,
+  "illegal": 0,
+  "unknown": 0,
+  "errors": 0,
+  "detection_rate": 0,
+  "detection_ci95_low": 0,
+  "detection_ci95_high": 0.5615060804490177,
+  "ops": 52664,
+  "ok_ops": 52185,
+  "info_ops": 355,
+  "fail_ops": 124
+}

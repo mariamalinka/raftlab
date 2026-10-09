@@ -1,0 +1,55 @@
+{
+  "trial": 2,
+  "check": {
+    "result": "Illegal",
+    "detected_at_s": 5.2,
+    "ops": 20664,
+    "ok": 20614,
+    "fail": 0,
+    "info": 50,
+    "bad_keys": [
+      2,
+      3
+    ]
+  },
+  "faults": 3,
+  "events": [
+    {
+      "time": 3073954295,
+      "kind": "start",
+      "fault": "clock-partition",
+      "desc": "clock x0.25 on n4 + [4] | [1 2 3 5]"
+    },
+    {
+      "time": 8192424251,
+      "kind": "heal",
+      "fault": "clock-partition",
+      "desc": "clock x0.25 on n4 + [4] | [1 2 3 5]"
+    },
+    {
+      "time": 11291306112,
+      "kind": "start",
+      "fault": "clock-partition",
+      "desc": "clock x0.25 on n5 + [5] | [1 2 3 4]"
+    },
+    {
+      "time": 16447944355,
+      "kind": "heal",
+      "fault": "clock-partition",
+      "desc": "clock x0.25 on n5 + [5] | [1 2 3 4]"
+    },
+    {
+      "time": 19556960521,
+      "kind": "start",
+      "fault": "clock-partition",
+      "desc": "clock x0.25 on n4 + [4] | [1 2 3 5]"
+    },
+    {
+      "time": 20086883906,
+      "kind": "heal",
+      "fault": "clock-partition",
+      "desc": "clock x0.25 on n4 + [4] | [1 2 3 5]"
+    }
+  ],
+  "wall_s": 149.549061932
+}

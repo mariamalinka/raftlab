@@ -1,0 +1,50 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 26092,
+    "ok": 26092,
+    "fail": 0,
+    "info": 0
+  },
+  "faults": 3,
+  "events": [
+    {
+      "time": 3003691444,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n5 656ms x2.00, n3 901ms x4.00, n1 -15ms x1.00, n4 -895ms x0.50"
+    },
+    {
+      "time": 8007937811,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n5 656ms x2.00, n3 901ms x4.00, n1 -15ms x1.00, n4 -895ms x0.50"
+    },
+    {
+      "time": 11014808641,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n1 657ms x1.00, n4 600ms x0.50, n2 -12ms x0.50, n5 -1.501s x2.00, n3 1.275s x2.00"
+    },
+    {
+      "time": 16018635680,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n1 657ms x1.00, n4 600ms x0.50, n2 -12ms x0.50, n5 -1.501s x2.00, n3 1.275s x2.00"
+    },
+    {
+      "time": 19020052041,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n2 1.574s x1.00, n1 342ms x2.00"
+    },
+    {
+      "time": 20002488823,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n2 1.574s x1.00, n1 342ms x2.00"
+    }
+  ],
+  "wall_s": 28.627642302
+}

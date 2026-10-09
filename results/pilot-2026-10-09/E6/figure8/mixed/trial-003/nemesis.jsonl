@@ -1,0 +1,6 @@
+{"time":3004933853,"kind":"start","fault":"kill-leader","desc":"kill leader [5]"}
+{"time":8007224770,"kind":"heal","fault":"kill-leader","desc":"kill leader [5]"}
+{"time":11010928380,"kind":"start","fault":"pause-leader","desc":"pause leader [4]"}
+{"time":16018809267,"kind":"heal","fault":"pause-leader","desc":"pause leader [4]"}
+{"time":19131479207,"kind":"start","fault":"clock-partition","desc":"clock x0.25 on n5 + [5] | [1 2 3 4]"}
+{"time":20108179092,"kind":"heal","fault":"clock-partition","desc":"clock x0.25 on n5 + [5] | [1 2 3 4]"}

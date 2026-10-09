@@ -1,0 +1,50 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 17459,
+    "ok": 17339,
+    "fail": 34,
+    "info": 86
+  },
+  "faults": 3,
+  "events": [
+    {
+      "time": 3111245324,
+      "kind": "start",
+      "fault": "partition-halves",
+      "desc": "halves [1 5] | [2 3 4]"
+    },
+    {
+      "time": 8212933424,
+      "kind": "heal",
+      "fault": "partition-halves",
+      "desc": "halves [1 5] | [2 3 4]"
+    },
+    {
+      "time": 11326175394,
+      "kind": "start",
+      "fault": "partition-halves",
+      "desc": "halves [3 4] | [1 2 5]"
+    },
+    {
+      "time": 16439748419,
+      "kind": "heal",
+      "fault": "partition-halves",
+      "desc": "halves [3 4] | [1 2 5]"
+    },
+    {
+      "time": 19552318323,
+      "kind": "start",
+      "fault": "partition-halves",
+      "desc": "halves [4 5] | [1 2 3]"
+    },
+    {
+      "time": 20088048005,
+      "kind": "heal",
+      "fault": "partition-halves",
+      "desc": "halves [4 5] | [1 2 3]"
+    }
+  ],
+  "wall_s": 28.32421792
+}

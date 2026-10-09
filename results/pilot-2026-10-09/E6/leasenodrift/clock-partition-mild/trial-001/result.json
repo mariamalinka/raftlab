@@ -1,0 +1,50 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 18749,
+    "ok": 18649,
+    "fail": 16,
+    "info": 84
+  },
+  "faults": 3,
+  "events": [
+    {
+      "time": 3105206675,
+      "kind": "start",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n2 + [2] | [1 3 4 5]"
+    },
+    {
+      "time": 8206336393,
+      "kind": "heal",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n2 + [2] | [1 3 4 5]"
+    },
+    {
+      "time": 11315623053,
+      "kind": "start",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n4 + [4] | [1 2 3 5]"
+    },
+    {
+      "time": 16433624975,
+      "kind": "heal",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n4 + [4] | [1 2 3 5]"
+    },
+    {
+      "time": 19537303900,
+      "kind": "start",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n5 + [5] | [1 2 3 4]"
+    },
+    {
+      "time": 20076996791,
+      "kind": "heal",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n5 + [5] | [1 2 3 4]"
+    }
+  ],
+  "wall_s": 28.888418254
+}

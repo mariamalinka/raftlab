@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Summarise a results tree into Markdown tables (stdlib only).
+
+    python3 analysis/report.py results > results/REPORT.md
+
+Correctness runs (rkharness) are found by summary.json, benchmark runs
+(loadgen) by points.jsonl, failover runs by failover.jsonl.
+"""
+import json
+import os
+import statistics
+import sys
+from collections import defaultdict
+
+
+def load_jsonl(path):
+    with open(path) as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
+def rel(root, path):
+    return os.path.relpath(path, root)
+
+
+def correctness(root):
+    rows = []
+    for dirpath, _, files in os.walk(root):
+        if "summary.json" in files:
+            with open(os.path.join(dirpath, "summary.json")) as f:
+                s = json.load(f)
+            rows.append((rel(root, dirpath), s))
+    rows.sort()
+    if not rows:
+        return
+    by_exp = defaultdict(list)
+    for name, s in rows:
+        by_exp[name.split(os.sep)[0]].append((name, s))
+    for exp, items in sorted(by_exp.items()):
+        print(f"\n### {exp}: linearizability\n")
+        print("| Run | DB | Fault | Bugs | Read path | Trials | Valid | Anomalies | Unknown | Errors | Detection [95% CI] | Median detect (s) | Ops ok / info / fail |")
+        print("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+        for name, s in items:
+            c = s["config"]
+            bugs = ",".join(c.get("RaftKV", {}).get("Bugs") or []) or "-"
+            rm = c.get("RaftKV", {}).get("ReadMode", "-") if c["DB"] == "raftkv" else ("serializable" if c.get("Etcd", {}).get("Serializable") else "linearizable")
+            det = f'{s["detection_rate"]:.2f} [{s["detection_ci95_low"]:.2f}, {s["detection_ci95_high"]:.2f}]'
+            md = f'{s["median_time_to_detection_s"]:.1f}' if s.get("median_time_to_detection_s") else "-"
+            print(f'| {name} | {c["DB"]} | {c["Fault"]} | {bugs} | {rm} | {s["trials"]} | {s["valid"]} | {s["illegal"]} | {s["unknown"]} | {s["errors"]} | {det} | {md} | {s["ok_ops"]} / {s["info_ops"]} / {s["fail_ops"]} |')
+
+
+def median_ci(xs):
+    """Median with a distribution-free ~95% CI from order statistics (n>=6),
+    else min-max."""
+    xs = sorted(xs)
+    n = len(xs)
+    med = statistics.median(xs)
+    if n >= 6:
+        import math
+        k = max(0, int(math.floor((n - 1.96 * math.sqrt(n)) / 2)))
+        return med, xs[k], xs[min(n - 1, n - 1 - k)]
+    return med, xs[0], xs[-1]
+
+
+def benchmarks(root):
+    runs = []
+    for dirpath, _, files in os.walk(root):
+        if "points.jsonl" in files:
+            runs.append(dirpath)
+    if not runs:
+        return
+    print("\n### Benchmarks: latency vs offered load\n")
+    print("Median over repetitions, with min–max (or 95% CI for 6+ reps) in brackets.\n")
+    for d in sorted(runs):
+        cfg = {}
+        if os.path.exists(os.path.join(d, "config.json")):
+            with open(os.path.join(d, "config.json")) as f:
+                cfg = json.load(f)
+        pts = defaultdict(list)
+        for row in load_jsonl(os.path.join(d, "points.jsonl")):
+            r = row["result"]
+            pts[r["offered_ops_s"]].append(r)
+        extra = " ".join(x for x in [cfg.get("raftkv_args", ""), "etcd-no-fsync" if cfg.get("etcd_no_fsync") else ""] if x)
+        print(f"\n**{rel(root, d)}** ({cfg.get('db', '?')}, reads {cfg.get('read_frac', '?')}, value {cfg.get('value_size', '?')} B, "
+              f"{'zipf' if cfg.get('zipf') else 'uniform'}, read path {cfg.get('read_mode', '-')}{', ' + extra if extra else ''})\n")
+        print("| Offered (ops/s) | Achieved | p50 ms | p99 ms | p99.9 ms | Errors+dropped |")
+        print("|---|---|---|---|---|---|")
+        for rate in sorted(pts):
+            rs = pts[rate]
+
+            def fmt(key):
+                m, lo, hi = median_ci([r[key] for r in rs])
+                return f"{m:.2f} [{lo:.2f}–{hi:.2f}]"
+            errs = sum(r["errors"] + r["dropped"] for r in rs)
+            print(f"| {rate:g} | {statistics.median([r['achieved_ops_s'] for r in rs]):.0f} | {fmt('p50_ms')} | {fmt('p99_ms')} | {fmt('p999_ms')} | {errs} |")
+
+
+def failover(root):
+    runs = []
+    for dirpath, _, files in os.walk(root):
+        if "failover.jsonl" in files:
+            runs.append(dirpath)
+    if not runs:
+        return
+    print("\n### Failover (E4)\n")
+    print("| Run | Kills | Unavailability median ms [range] | Catch-up median ms [range] |")
+    print("|---|---|---|---|")
+    for d in sorted(runs):
+        rows = load_jsonl(os.path.join(d, "failover.jsonl"))
+        gaps = [r["gap_ms"] for r in rows if r["gap_ms"] >= 0]
+        ups = [r["catch_up_ms"] for r in rows if r["catch_up_ms"] >= 0]
+
+        def f(xs):
+            if not xs:
+                return "-"
+            m, lo, hi = median_ci(xs)
+            return f"{m:.0f} [{lo:.0f}–{hi:.0f}]"
+        print(f"| {rel(root, d)} | {len(rows)} | {f(gaps)} | {f(ups)} |")
+
+
+def main():
+    root = sys.argv[1] if len(sys.argv) > 1 else "results"
+    print(f"# Results: {root}\n")
+    print("Generated by analysis/report.py from raw run folders.")
+    correctness(root)
+    benchmarks(root)
+    failover(root)
+
+
+if __name__ == "__main__":
+    main()

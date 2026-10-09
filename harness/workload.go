@@ -33,6 +33,10 @@ type WorkloadOptions struct {
 	// Stagger is the mean pause between one client's operations.
 	Stagger time.Duration
 	Values  int // writes pick values in [0, Values)
+	// UniqueValues gives every write a value no other write uses, so a stale
+	// read cannot be explained by an indeterminate write of the same value.
+	// CAS then expects the last value this client saw on the key.
+	UniqueValues bool
 }
 
 func (o *WorkloadOptions) defaults() {
@@ -78,6 +82,15 @@ func RunRegister(ctx context.Context, db DB, start time.Time, o WorkloadOptions)
 			defer cl.Close()
 			rng := rand.New(rand.NewSource(time.Now().UnixNano() + int64(p)))
 			process := p
+			next := 0
+			seen := map[int]int{} // key -> last value this client read or wrote
+			value := func() int {
+				if !o.UniqueValues {
+					return rng.Intn(o.Values)
+				}
+				next++
+				return next*o.Clients + p
+			}
 			for ctx.Err() == nil {
 				epoch := int(time.Since(start) / o.KeyRotate)
 				key := epoch*o.ActiveKeys + rng.Intn(o.ActiveKeys)
@@ -85,7 +98,13 @@ func RunRegister(ctx context.Context, db DB, start time.Time, o WorkloadOptions)
 				op := Op{Process: process, Key: key}
 				octx, cancel := context.WithTimeout(context.Background(), o.OpTimeout)
 				op.Call = since()
-				switch rng.Intn(3) {
+				f := rng.Intn(3)
+				if f == 2 && o.UniqueValues {
+					if _, ok := seen[key]; !ok {
+						f = 1 // nothing to compare against yet
+					}
+				}
+				switch f {
 				case 0:
 					op.F = "read"
 					v, found, err := cl.Get(octx, ks)
@@ -98,19 +117,31 @@ func RunRegister(ctx context.Context, db DB, start time.Time, o WorkloadOptions)
 							op.Value, err = strconv.Atoi(v)
 							if err != nil {
 								op.Type, op.Err = "fail", "bad value "+v
+							} else {
+								seen[key] = op.Value
 							}
 						}
 					}
 				case 1:
 					op.F = "write"
-					op.Value = rng.Intn(o.Values)
+					op.Value = value()
 					op.Type, op.Err = classify(cl.Put(octx, ks, strconv.Itoa(op.Value)))
+					if op.Type == "ok" {
+						seen[key] = op.Value
+					}
 				case 2:
 					op.F = "cas"
-					op.Expected, op.Value = rng.Intn(o.Values), rng.Intn(o.Values)
+					if o.UniqueValues {
+						op.Expected, op.Value = seen[key], value()
+					} else {
+						op.Expected, op.Value = rng.Intn(o.Values), rng.Intn(o.Values)
+					}
 					ok, err := cl.CAS(octx, ks, strconv.Itoa(op.Expected), strconv.Itoa(op.Value))
 					op.Type, op.Err = classify(err)
 					op.CASOK = ok
+					if op.Type == "ok" && ok {
+						seen[key] = op.Value
+					}
 				}
 				op.Return = since()
 				cancel()

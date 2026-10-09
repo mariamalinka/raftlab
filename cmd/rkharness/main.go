@@ -18,26 +18,30 @@ import (
 
 func main() {
 	var (
-		db        = flag.String("db", "raftkv", "raftkv or etcd")
-		nodes     = flag.Int("nodes", 5, "cluster size")
-		fault     = flag.String("fault", "partition-leader", "nemesis: "+strings.Join(harness.FaultNames(), ", "))
-		trials    = flag.Int("trials", 1, "independent trials (fresh cluster each)")
-		dur       = flag.Duration("time", 30*time.Second, "workload duration with faults")
-		recover   = flag.Duration("recover", 5*time.Second, "healthy tail after faults stop")
-		warmup    = flag.Duration("warmup", 3*time.Second, "healthy time before the first fault")
-		interval  = flag.Duration("interval", 3*time.Second, "healthy time between faults")
-		faultDur  = flag.Duration("fault-duration", 5*time.Second, "how long each fault lasts")
-		clients   = flag.Int("clients", 10, "concurrent client processes")
-		opTimeout = flag.Duration("op-timeout", time.Second, "client operation timeout")
-		checkTO   = flag.Duration("check-timeout", time.Minute, "linearizability checker timeout")
-		bin       = flag.String("bin", "/tmp/raftkv-bin", "directory with raftkv, raftkv-bugs and etcd binaries")
-		readMode  = flag.String("read-mode", "readindex", "raftkv read path: log, readindex, lease")
-		bugs      = flag.String("bugs", "", "comma-separated injected bugs (uses the raftkv-bugs binary)")
-		lazyfs    = flag.Bool("lazyfs", false, "raftkv loses unsynced writes on kill")
-		election  = flag.Duration("election-timeout", time.Second, "election timeout (both systems)")
-		heartbeat = flag.Duration("heartbeat", 100*time.Millisecond, "heartbeat interval (both systems)")
-		serial    = flag.Bool("etcd-serializable", false, "etcd: serializable (unsafe) reads, for E8")
-		out       = flag.String("out", "results/scratch", "output directory")
+		db         = flag.String("db", "raftkv", "raftkv or etcd")
+		nodes      = flag.Int("nodes", 5, "cluster size")
+		fault      = flag.String("fault", "partition-leader", "nemesis: "+strings.Join(harness.FaultNames(), ", "))
+		trials     = flag.Int("trials", 1, "independent trials (fresh cluster each)")
+		dur        = flag.Duration("time", 30*time.Second, "workload duration with faults")
+		recover    = flag.Duration("recover", 5*time.Second, "healthy tail after faults stop")
+		warmup     = flag.Duration("warmup", 3*time.Second, "healthy time before the first fault")
+		interval   = flag.Duration("interval", 3*time.Second, "healthy time between faults")
+		faultDur   = flag.Duration("fault-duration", 5*time.Second, "how long each fault lasts")
+		clients    = flag.Int("clients", 10, "concurrent client processes")
+		opTimeout  = flag.Duration("op-timeout", time.Second, "client operation timeout")
+		checkTO    = flag.Duration("check-timeout", time.Minute, "linearizability checker timeout")
+		keyRotate  = flag.Duration("key-rotate", 5*time.Second, "move the workload to fresh keys this often; make it longer than a fault plus recovery to read keys after a fault heals")
+		activeKeys = flag.Int("active-keys", 2, "keys in use at a time")
+		values     = flag.Int("values", 5, "writes pick values in [0, values)")
+		unique     = flag.Bool("unique-values", false, "give every write a distinct value (CAS expects the client's last seen value)")
+		bin        = flag.String("bin", "/tmp/raftkv-bin", "directory with raftkv, raftkv-bugs and etcd binaries")
+		readMode   = flag.String("read-mode", "readindex", "raftkv read path: log, readindex, lease")
+		bugs       = flag.String("bugs", "", "comma-separated injected bugs (uses the raftkv-bugs binary)")
+		lazyfs     = flag.Bool("lazyfs", false, "raftkv loses unsynced writes on kill")
+		election   = flag.Duration("election-timeout", time.Second, "election timeout (both systems)")
+		heartbeat  = flag.Duration("heartbeat", 100*time.Millisecond, "heartbeat interval (both systems)")
+		serial     = flag.Bool("etcd-serializable", false, "etcd: serializable (unsafe) reads, for E8")
+		out        = flag.String("out", "results/scratch", "output directory")
 	)
 	flag.Parse()
 	if os.Geteuid() != 0 {
@@ -47,7 +51,7 @@ func main() {
 	o := harness.TestOptions{
 		DB: *db, Nodes: *nodes, Fault: *fault, Duration: *dur, Recover: *recover,
 		Schedule:     harness.Schedule{Warmup: *warmup, Interval: *interval, Duration: *faultDur},
-		Workload:     harness.WorkloadOptions{Clients: *clients, OpTimeout: *opTimeout},
+		Workload:     harness.WorkloadOptions{Clients: *clients, OpTimeout: *opTimeout, KeyRotate: *keyRotate, ActiveKeys: *activeKeys, Values: *values, UniqueValues: *unique},
 		CheckTimeout: *checkTO,
 		RaftKV: harness.RaftKVOptions{
 			Bin: filepath.Join(*bin, "raftkv"), ReadMode: *readMode, LazyFS: *lazyfs,

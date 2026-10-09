@@ -53,9 +53,36 @@ Full table: results/pilot-2026-10-09/REPORT.md.
   partition-bridge trial was "unknown" (checker timeout).
 - E5: under clock-partition (leader clock at 0.25×, then isolated), lease
   reads were non-linearizable in 3/3 trials (median detection 5.2 s);
-  ReadIndex was linearizable in 3/3. First evidence for H1.
-- E6: only localread showed signs (2/3 "unknown", i.e. checker timeouts; an
-  earlier scratch run caught it in 2/3). The other six bugs went undetected
-  on their expected fault in 3/3 trials. Next: confirm each bug is
-  reachable with a targeted unit test, raise the checker timeout, and lengthen
-  or intensify the fault schedules.
+  ReadIndex was linearizable in 3/3. The 0.25x clock is far outside the 10%
+  drift bound the lease assumes, so this shows what happens when that
+  assumption breaks, not a lease defect: every provably stale read came from
+  clients pinned to the slowed leader, inside the predicted lease window.
+- E6: 0 of 7 bugs detected (0 anomalies in 21 trials). localread gave 2
+  "unknown" results, which are checker timeouts, not detections. An earlier
+  30 s run of localread (archived in results/scratch-2026-10-09) caught it in
+  2/3. An earlier version of this log said "6 of 7 missed"; that over-counted
+  the timeouts. Why each bug was missed, with evidence:
+  ../E5-E6-INVESTIGATION.md (in the research folder). Main causes: keys
+  rotate every 5 s, as long as each fault, so post-recovery damage is never
+  read; a 5-value domain lets indeterminate writes explain stale reads; the
+  third fault of a 20 s trial is cut below one election timeout.
+
+## Rerun after the E6 investigation, 2026-10-09 (3 trials × 20 s, 25 clients)
+
+Full table and stale-read scan: results/rerun-2026-10-09/REPORT.md. New
+harness options: `-key-rotate`, `-active-keys`, `-values`, `-unique-values`.
+
+| Run | Porcupine | Trials with provably stale reads |
+|---|---|---|
+| ackbeforefsync, kill-all, lazyfs, key-rotate 15 s | Ok 3/3 | 0/3 |
+| ackbeforefsync, same + unique values | Unknown 3/3 (timeout) | 3/3, all just after a restart |
+| correct build, same + unique values (control) | Ok 3/3 | 0/3 |
+| localread, partition-leader, unique values | Unknown 3/3 (timeout) | 2/3, all from clients of the isolated leader |
+| localread, clock-partition, unique values | Illegal 3/3 | 3/3 |
+
+- Longer key rotation alone did not expose ackbeforefsync: with 5 values,
+  writes left indeterminate by the kill explain the stale reads. Unique values
+  are what make the loss visible.
+- With unique values and long-lived keys, Porcupine times out. Until the
+  checker scales, report the stale-read scan next to its verdict
+  (`analysis/stale_reads.py`).

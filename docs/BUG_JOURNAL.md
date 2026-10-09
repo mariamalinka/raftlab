@@ -18,6 +18,23 @@ Lesson: what it says about the method
 
 ---
 
+## H-2: Lost writes never re-read, stale reads explained away (2026-10-09)
+
+Found by: E6 pilot investigation (../E5-E6-INVESTIGATION.md).
+Symptom: ackbeforefsync lost hundreds of acknowledged writes in 9/9 kill-all
+faults (surviving log shorter than the acknowledged writes), yet every trial
+was linearizable. localread trials came back Ok or Unknown.
+Cause: two harness blind spots. Keys rotated every 5 s, as long as each fault,
+so no client read a pre-fault key after recovery. And writes took one of 5
+values, so a stale read could always be explained by a same-valued write left
+indeterminate by the fault.
+Fix: `-key-rotate` and `-unique-values` in cmd/rkharness (harness/workload.go).
+With both, ackbeforefsync shows provably stale reads in 3/3 trials (0/3 for
+the correct build) and localread in 2/3 under partition-leader.
+Lesson: a "not detected" cell needs a reachability check: did the bug fire,
+and could any client have seen it? Porcupine now times out on these
+histories, so the checker is the next bottleneck.
+
 ## H-1: Leader-chasing clients hide stale reads (2026-10-09)
 
 Found by: pilot of E6, bug `localread` under `partition-leader`

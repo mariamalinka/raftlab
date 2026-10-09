@@ -1,0 +1,57 @@
+{
+  "config": {
+    "DB": "raftkv",
+    "Nodes": 5,
+    "Fault": "clock-partition",
+    "Duration": 20000000000,
+    "Recover": 5000000000,
+    "Schedule": {
+      "Fault": "",
+      "Warmup": 3000000000,
+      "Interval": 3000000000,
+      "Duration": 5000000000
+    },
+    "Workload": {
+      "Clients": 25,
+      "KeyRotate": 5000000000,
+      "ActiveKeys": 2,
+      "OpTimeout": 1000000000,
+      "Stagger": 0,
+      "Values": 5,
+      "UniqueValues": true
+    },
+    "CheckTimeout": 60000000000,
+    "RaftKV": {
+      "Bin": "/tmp/raftkv-bin/raftkv-bugs",
+      "ReadMode": "readindex",
+      "Bugs": [
+        "localread"
+      ],
+      "LazyFS": false,
+      "ElectionTimeout": 1000000000,
+      "Heartbeat": 100000000,
+      "ExtraArgs": null
+    },
+    "Etcd": {
+      "Bin": "/tmp/raftkv-bin/etcd",
+      "Serializable": false,
+      "ElectionTimeout": 1000000000,
+      "Heartbeat": 100000000,
+      "NoFsync": false
+    },
+    "Out": "results/rerun-2026-10-09/E6/localread/clock-partition-unique"
+  },
+  "trials": 3,
+  "valid": 0,
+  "illegal": 3,
+  "unknown": 0,
+  "errors": 0,
+  "detection_rate": 1,
+  "detection_ci95_low": 0.43849391955098227,
+  "detection_ci95_high": 1,
+  "median_time_to_detection_s": 6,
+  "ops": 50832,
+  "ok_ops": 50582,
+  "info_ops": 242,
+  "fail_ops": 8
+}

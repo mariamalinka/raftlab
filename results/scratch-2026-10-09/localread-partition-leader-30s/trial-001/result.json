@@ -1,0 +1,67 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Illegal",
+    "detected_at_s": 21.1,
+    "ops": 24040,
+    "ok": 23803,
+    "fail": 24,
+    "info": 213,
+    "bad_keys": [
+      8,
+      9
+    ]
+  },
+  "faults": 4,
+  "events": [
+    {
+      "time": 3082186626,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [1] | [2 3 4 5]"
+    },
+    {
+      "time": 8187294714,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [1] | [2 3 4 5]"
+    },
+    {
+      "time": 11275337252,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [4] | [1 2 3 5]"
+    },
+    {
+      "time": 16391692143,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [4] | [1 2 3 5]"
+    },
+    {
+      "time": 19482065403,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [3] | [1 2 4 5]"
+    },
+    {
+      "time": 24575095291,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [3] | [1 2 4 5]"
+    },
+    {
+      "time": 27645387816,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [4] | [1 2 3 5]"
+    },
+    {
+      "time": 30111234492,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [4] | [1 2 3 5]"
+    }
+  ],
+  "wall_s": 400.435441612
+}

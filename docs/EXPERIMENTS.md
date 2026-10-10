@@ -79,6 +79,7 @@ harness options: `-key-rotate`, `-active-keys`, `-values`, `-unique-values`.
 | correct build, same + unique values (control) | Ok 3/3 | 0/3 |
 | localread, partition-leader, unique values | Unknown 3/3 (timeout) | 2/3, all from clients of the isolated leader |
 | localread, clock-partition, unique values | Illegal 3/3 | 3/3 |
+| correct build, clock-partition, unique values (control) | Ok 3/3 | 0/3 |
 
 - Longer key rotation alone did not expose ackbeforefsync: with 5 values,
   writes left indeterminate by the kill explain the stale reads. Unique values

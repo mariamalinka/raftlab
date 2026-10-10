@@ -870,10 +870,16 @@ func (r *Raft) HandleAppendEntries(req *AppendEntriesRequest) *AppendEntriesResp
 		}
 	}
 	if len(changed) > 0 {
-		seq := r.enqueue(persistOp{ents: slices.Clone(changed)})
+		r.enqueue(persistOp{ents: slices.Clone(changed)})
+	}
+	// Figure 2: respond only after stable storage is updated. The entries
+	// up to newLast may still be queued by an earlier request (this one can
+	// be a retransmission, or a heartbeat pointing past them), so wait for
+	// every write queued so far, not just this request's own.
+	if seq := r.enqSeq; r.durableSeq < seq {
 		term := r.term
 		r.waitDurable(seq)
-		if r.term != term {
+		if r.term != term || r.durableSeq < seq {
 			return &AppendEntriesResponse{Term: r.term}
 		}
 	}

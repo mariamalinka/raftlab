@@ -4,7 +4,7 @@ BIN ?= /tmp/raftkv-bin
 OUT ?= results
 export BIN OUT
 
-.PHONY: build test g1 e1 e2 e3 e4 e5 e6 e7 e8 reproduce report clean
+.PHONY: bugtests build test g1 e1 e2 e3 e4 e5 e6 e7 e8 reproduce report clean
 
 build:
 	mkdir -p $(BIN)
@@ -17,6 +17,14 @@ build:
 test:
 	go vet ./...
 	go test -race ./...
+
+# Each injected bug must make its deterministic test fail (RQ3 reachability).
+bugtests:
+	@for b in votenopersist:raft:VoteNoPersist notruncate:raft:NoTruncate figure8:raft:Figure8 nodedup:kv:NoDedup; do \
+	  n=$${b%%:*}; r=$${b#*:}; p=$${r%%:*}; t=$${r#*:}; \
+	  if RAFTKV_BUGS=$$n go test -tags bugs -count=1 -run "^TestBug$$t$$" ./internal/$$p >/dev/null 2>&1; then \
+	    echo "$$n: NOT caught"; exit 1; else echo "$$n: caught"; fi; \
+	done
 
 g1:
 	bash scripts/g1.sh

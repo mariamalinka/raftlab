@@ -87,3 +87,12 @@ harness options: `-key-rotate`, `-active-keys`, `-values`, `-unique-values`.
 - With unique values and long-lived keys, Porcupine times out. Until the
   checker scales, report the stale-read scan next to its verdict
   (`analysis/stale_reads.py`).
+
+## Deterministic bug tests (RQ3 reachability)
+
+`make bugtests` runs one deterministic test per bug with that bug switched on
+and checks that it fails: `TestBugVoteNoPersist`, `TestBugNoTruncate`,
+`TestBugFigure8` (internal/raft/bugs_test.go) and `TestBugNoDedup`
+(internal/kv/bugs_test.go). All four pass in normal builds and fail 20/20
+with their bug on, under the race detector. ackbeforefsync, localread and
+leasenodrift are not covered yet.

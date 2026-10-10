@@ -28,6 +28,7 @@ Full runs use `make eN` (20 trials per cell, 30 s each, 25 clients; benchmarks
 | clock-skew | random nodes jump ±2 election timeouts and run 0.25×–4× (raftkv only) |
 | clock-partition | leader's clock at 0.25× speed, then isolated (beyond any drift bound) |
 | clock-partition-mild | same at 0.92× (inside the default 10% bound) |
+| bridge-churn | partition-bridge with the bridge node killed and restarted every 100-400 ms (targets votenopersist) |
 | mixed | each round picks one of the above process, network or clock faults (H2) |
 
 `-lazyfs` makes raftkv lose unsynced WAL writes on kill.
@@ -96,3 +97,16 @@ and checks that it fails: `TestBugVoteNoPersist`, `TestBugNoTruncate`,
 (internal/kv/bugs_test.go). All four pass in normal builds and fail 20/20
 with their bug on, under the race detector. ackbeforefsync, localread and
 leasenodrift are not covered yet.
+
+## Fault schedule changes, 2026-10-10
+
+- A fault that cannot run its full `-fault-duration` before the end of the
+  run is no longer started (it used to be cut to under a second).
+- New fault `bridge-churn` (see catalogue). New flag `-raftkv-args` passes node
+  flags such as `-batch=8` through to every raftkv node.
+- Validation (3 trials each, unique values, key-rotate 15 s; results/faults-2026-10-10):
+  votenopersist/bridge-churn, leasenodrift/clock-partition-mild at T = 3 s and
+  notruncate/partition-halves with -batch=8 found nothing (Ok or checker timeout,
+  no provably stale reads). **The bug-free build lost an acknowledged write
+  under bridge-churn in 1 of 3 trials**; see that REPORT.md. Likely cause:
+  deep-dive finding 16.1 (follower acks entries before they are persisted).

@@ -34,6 +34,7 @@ func main() {
 		activeKeys = flag.Int("active-keys", 2, "keys in use at a time")
 		values     = flag.Int("values", 5, "writes pick values in [0, values)")
 		unique     = flag.Bool("unique-values", false, "give every write a distinct value (CAS expects the client's last seen value)")
+		raftArgs   = flag.String("raftkv-args", "", "extra raftkv node flags, e.g. \"-batch=8\"")
 		bin        = flag.String("bin", "/tmp/raftkv-bin", "directory with raftkv, raftkv-bugs and etcd binaries")
 		readMode   = flag.String("read-mode", "readindex", "raftkv read path: log, readindex, lease")
 		bugs       = flag.String("bugs", "", "comma-separated injected bugs (uses the raftkv-bugs binary)")
@@ -55,7 +56,7 @@ func main() {
 		CheckTimeout: *checkTO,
 		RaftKV: harness.RaftKVOptions{
 			Bin: filepath.Join(*bin, "raftkv"), ReadMode: *readMode, LazyFS: *lazyfs,
-			ElectionTimeout: *election, Heartbeat: *heartbeat,
+			ElectionTimeout: *election, Heartbeat: *heartbeat, ExtraArgs: strings.Fields(*raftArgs),
 		},
 		Etcd: harness.EtcdOptions{Bin: filepath.Join(*bin, "etcd"), Serializable: *serial, ElectionTimeout: *election, Heartbeat: *heartbeat},
 		Out:  *out,

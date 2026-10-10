@@ -125,23 +125,37 @@ var faults = map[string]fault{
 		return partition(e, [][]int{p[:k], p[k:]}, "halves")
 	},
 	"partition-bridge": func(ctx context.Context, e *env) (func() error, string, error) {
-		// Two halves that can't see each other, plus one node that sees both.
-		p := e.shuffled()
-		k := (e.n - 1) / 2
-		a, b := p[:k], p[k+1:]
-		var pairs [][2]int
-		for _, x := range a {
-			for _, y := range b {
-				pairs = append(pairs, [2]int{x, y})
+		heal, desc, _, err := partitionBridge(e)
+		return heal, desc, err
+	},
+	// bridge-churn is partition-bridge with the bridge node crashed and
+	// restarted every 100-400 ms. Each half needs the bridge's vote to win,
+	// so both halves campaign through it; a bridge that forgets its vote on
+	// restart can elect two leaders in one term (votenopersist).
+	"bridge-churn": func(ctx context.Context, e *env) (func() error, string, error) {
+		heal, desc, bridge, err := partitionBridge(e)
+		if err != nil {
+			return nil, "", err
+		}
+		stop, done := make(chan struct{}), make(chan struct{})
+		rng := rand.New(rand.NewSource(e.rng.Int63()))
+		go func() {
+			defer close(done)
+			for {
+				select {
+				case <-stop:
+					return
+				case <-time.After(time.Duration(100+rng.Intn(300)) * time.Millisecond):
+				}
+				e.db.Kill(bridge)
+				e.db.Start(bridge)
 			}
-		}
-		if err := e.net.Heal(); err != nil {
-			return nil, "", err
-		}
-		if err := e.net.Cut(pairs); err != nil {
-			return nil, "", err
-		}
-		return e.net.Heal, fmt.Sprintf("bridge %v <-%d-> %v", human(a), p[k]+1, human(b)), nil
+		}()
+		return func() error {
+			close(stop)
+			<-done
+			return heal()
+		}, desc + " (bridge crash-restarting)", nil
 	},
 	"clock-skew": func(ctx context.Context, e *env) (func() error, string, error) {
 		// Random jumps of up to ±2 election timeouts and rates of 0.25x-4x on
@@ -164,6 +178,27 @@ var faults = map[string]fault{
 	// that ignore drift.
 	"clock-partition":      clockPartition(0.25),
 	"clock-partition-mild": clockPartition(0.92),
+}
+
+// partitionBridge splits the nodes into two halves that can't see each
+// other plus one node that sees both, and returns that bridge node.
+func partitionBridge(e *env) (func() error, string, int, error) {
+	p := e.shuffled()
+	k := (e.n - 1) / 2
+	a, b := p[:k], p[k+1:]
+	var pairs [][2]int
+	for _, x := range a {
+		for _, y := range b {
+			pairs = append(pairs, [2]int{x, y})
+		}
+	}
+	if err := e.net.Heal(); err != nil {
+		return nil, "", 0, err
+	}
+	if err := e.net.Cut(pairs); err != nil {
+		return nil, "", 0, err
+	}
+	return e.net.Heal, fmt.Sprintf("bridge %v <-%d-> %v", human(a), p[k]+1, human(b)), p[k], nil
 }
 
 func clockPartition(rate float64) fault {
@@ -243,6 +278,12 @@ func RunNemesis(ctx context.Context, e *env, s Schedule, start time.Time) []Neme
 		return events
 	}
 	for {
+		// A fault cut short by the end of the run is usually shorter than an
+		// election timeout and changes nothing, so don't start one.
+		if dl, ok := ctx.Deadline(); ok && time.Until(dl) < s.Duration {
+			<-ctx.Done()
+			return events
+		}
 		name := s.Fault
 		if name == "mixed" {
 			name = mixedPool[e.rng.Intn(len(mixedPool))]

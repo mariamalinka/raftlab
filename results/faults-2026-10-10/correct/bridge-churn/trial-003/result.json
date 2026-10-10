@@ -1,0 +1,50 @@
+{
+  "trial": 3,
+  "check": {
+    "result": "Ok",
+    "ops": 23139,
+    "ok": 22866,
+    "fail": 57,
+    "info": 216
+  },
+  "faults": 3,
+  "events": [
+    {
+      "time": 3099619774,
+      "kind": "start",
+      "fault": "bridge-churn",
+      "desc": "bridge [1 5] \u003c-3-\u003e [2 4] (bridge crash-restarting)"
+    },
+    {
+      "time": 8180355012,
+      "kind": "heal",
+      "fault": "bridge-churn",
+      "desc": "bridge [1 5] \u003c-3-\u003e [2 4] (bridge crash-restarting)"
+    },
+    {
+      "time": 11272294036,
+      "kind": "start",
+      "fault": "bridge-churn",
+      "desc": "bridge [3 5] \u003c-2-\u003e [1 4] (bridge crash-restarting)"
+    },
+    {
+      "time": 16344263363,
+      "kind": "heal",
+      "fault": "bridge-churn",
+      "desc": "bridge [3 5] \u003c-2-\u003e [1 4] (bridge crash-restarting)"
+    },
+    {
+      "time": 19428887099,
+      "kind": "start",
+      "fault": "bridge-churn",
+      "desc": "bridge [2 4] \u003c-5-\u003e [1 3] (bridge crash-restarting)"
+    },
+    {
+      "time": 24524756029,
+      "kind": "heal",
+      "fault": "bridge-churn",
+      "desc": "bridge [2 4] \u003c-5-\u003e [1 3] (bridge crash-restarting)"
+    }
+  ],
+  "wall_s": 38.65413614
+}

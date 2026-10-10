@@ -1,0 +1,15 @@
+{"time":"2026-10-10T00:37:32.138660112Z","level":"WARN","msg":"bug-injection build","bugs":["notruncate"]}
+{"time":"2026-10-10T00:37:32.138972418Z","level":"INFO","msg":"raft started","node":3,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["notruncate"]}
+{"time":"2026-10-10T00:37:32.139249683Z","level":"INFO","msg":"serving","node":3,"addr":"10.77.0.13:7000","read_mode":"readindex"}
+{"time":"2026-10-10T00:37:49.310019275Z","level":"INFO","msg":"starting election","node":3,"term":6,"last_index":6136,"last_term":3}
+{"time":"2026-10-10T00:37:50.44445129Z","level":"INFO","msg":"starting election","node":3,"term":7,"last_index":6136,"last_term":3}
+{"time":"2026-10-10T00:37:51.611137074Z","level":"INFO","msg":"became follower","node":3,"term":8,"leader":0}
+{"time":"2026-10-10T00:37:51.615323318Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6072}
+{"time":"2026-10-10T00:37:51.616766659Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6080}
+{"time":"2026-10-10T00:37:51.616833181Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6088}
+{"time":"2026-10-10T00:37:51.617366542Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6096}
+{"time":"2026-10-10T00:37:51.620421897Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6104}
+{"time":"2026-10-10T00:37:51.625218168Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6112}
+{"time":"2026-10-10T00:37:51.625466768Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6120}
+{"time":"2026-10-10T00:37:51.625487435Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6128}
+{"time":"2026-10-10T00:37:51.625985638Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":8,"index":6136}

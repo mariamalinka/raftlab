@@ -1,0 +1,38 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 19211,
+    "ok": 19115,
+    "fail": 34,
+    "info": 62
+  },
+  "faults": 2,
+  "events": [
+    {
+      "time": 3002884962,
+      "kind": "start",
+      "fault": "pause-leader",
+      "desc": "pause leader [3]"
+    },
+    {
+      "time": 8002979157,
+      "kind": "heal",
+      "fault": "pause-leader",
+      "desc": "pause leader [3]"
+    },
+    {
+      "time": 11006341359,
+      "kind": "start",
+      "fault": "pause-leader",
+      "desc": "pause leader [1]"
+    },
+    {
+      "time": 16007237644,
+      "kind": "heal",
+      "fault": "pause-leader",
+      "desc": "pause leader [1]"
+    }
+  ],
+  "wall_s": 28.227748012
+}

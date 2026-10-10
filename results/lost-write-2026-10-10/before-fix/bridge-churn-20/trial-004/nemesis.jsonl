@@ -1,0 +1,6 @@
+{"time":3084855476,"kind":"start","fault":"bridge-churn","desc":"bridge [1 2] \u003c-5-\u003e [3 4] (bridge crash-restarting)"}
+{"time":8168073043,"kind":"heal","fault":"bridge-churn","desc":"bridge [1 2] \u003c-5-\u003e [3 4] (bridge crash-restarting)"}
+{"time":11240206480,"kind":"start","fault":"bridge-churn","desc":"bridge [1 5] \u003c-2-\u003e [3 4] (bridge crash-restarting)"}
+{"time":16338375463,"kind":"heal","fault":"bridge-churn","desc":"bridge [1 5] \u003c-2-\u003e [3 4] (bridge crash-restarting)"}
+{"time":19399699173,"kind":"start","fault":"bridge-churn","desc":"bridge [3 4] \u003c-2-\u003e [1 5] (bridge crash-restarting)"}
+{"time":24474536478,"kind":"heal","fault":"bridge-churn","desc":"bridge [3 4] \u003c-2-\u003e [1 5] (bridge crash-restarting)"}

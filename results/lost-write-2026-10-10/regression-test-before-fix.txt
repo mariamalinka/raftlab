@@ -1,0 +1,11 @@
+=== RUN   TestFollowerAckRequiresStableStorage
+    durability_test.go:103: follower acknowledged match 2 (prev 0, 2 entries) but stable storage ends at 0
+--- FAIL: TestFollowerAckRequiresStableStorage (0.00s)
+=== RUN   TestCommittedEntrySurvivesFollowerCrash
+    durability_test.go:235: leader 1 committed X=4581 at index 3; stable storage: L=3 G=3 F=2
+    durability_test.go:260: acknowledged write X=4581 committed at index 3 was lost: new leader 4 (term 2) has [] there
+--- FAIL: TestCommittedEntrySurvivesFollowerCrash (0.30s)
+FAIL
+FAIL	raftkv/internal/raft	0.305s
+FAIL
+commit: 9667921 (unfixed), branch fix/follower-ack-durability, test file untracked at time of run

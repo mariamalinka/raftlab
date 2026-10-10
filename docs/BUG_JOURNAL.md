@@ -18,6 +18,22 @@ Lesson: what it says about the method
 
 ---
 
+## R-1: Follower acknowledged entries before storing them (2026-10-10)
+
+Found by: bridge-churn fault, bug-free build
+(results/faults-2026-10-10/correct/bridge-churn/trial-001).
+Symptom: an acknowledged write was lost; later reads returned an older value.
+Cause: HandleAppendEntries waited for durability only when the request
+changed the log. A retransmission or heartbeat covering entries still queued
+by an earlier request was acknowledged at once, so the leader could commit
+an entry that a follower crash then erased from the majority.
+Fix: wait for every queued write before replying Success (raft.go,
+branch fix/follower-ack-durability). Regression tests:
+internal/raft/durability_test.go. Full write-up (Polish):
+docs/INVESTIGATION-lost-write.md.
+Lesson: the 6.5840-style suite never crashes a node while its writes are
+pending; only a fault that kills a node in the middle of replication found it.
+
 ## H-2: Lost writes never re-read, stale reads explained away (2026-10-09)
 
 Found by: E6 pilot investigation (../E5-E6-INVESTIGATION.md).

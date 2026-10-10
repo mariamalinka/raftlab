@@ -1,0 +1,16 @@
+{"time":"2026-10-10T01:54:24.196599246Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-10T01:54:24.196932761Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-10T01:54:29.927719762Z","level":"INFO","msg":"starting election","node":5,"term":2,"last_index":2255,"last_term":1}
+{"time":"2026-10-10T01:54:31.017362129Z","level":"INFO","msg":"starting election","node":5,"term":3,"last_index":2255,"last_term":1}
+{"time":"2026-10-10T01:54:32.032515364Z","level":"INFO","msg":"became follower","node":5,"term":4,"leader":0}
+{"time":"2026-10-10T01:54:32.973090341Z","level":"INFO","msg":"starting election","node":5,"term":5,"last_index":2255,"last_term":1}
+{"time":"2026-10-10T01:54:34.952336929Z","level":"INFO","msg":"starting election","node":5,"term":6,"last_index":2255,"last_term":1}
+{"time":"2026-10-10T01:54:35.172666767Z","level":"INFO","msg":"became follower","node":5,"term":7,"leader":0}
+{"time":"2026-10-10T01:54:35.174991409Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":7,"index":5391}
+{"time":"2026-10-10T01:54:37.662724084Z","level":"INFO","msg":"starting election","node":5,"term":8,"last_index":6658,"last_term":7}
+{"time":"2026-10-10T01:54:39.278112079Z","level":"INFO","msg":"became follower","node":5,"term":9,"leader":0}
+{"time":"2026-10-10T01:54:39.343302404Z","level":"INFO","msg":"starting election","node":5,"term":10,"last_index":6658,"last_term":7}
+{"time":"2026-10-10T01:54:40.734871111Z","level":"INFO","msg":"became follower","node":5,"term":11,"leader":0}
+{"time":"2026-10-10T01:54:41.013190719Z","level":"INFO","msg":"starting election","node":5,"term":12,"last_index":6658,"last_term":7}
+{"time":"2026-10-10T01:54:42.272559903Z","level":"INFO","msg":"starting election","node":5,"term":13,"last_index":6658,"last_term":7}
+{"time":"2026-10-10T01:54:43.258088017Z","level":"INFO","msg":"became follower","node":5,"term":14,"leader":0}

@@ -1,0 +1,26 @@
+== go vet ./...
+== raft suite default (-race)
+ok  	raftkv/internal/raft	156.406s
+== raft suite -pipeline (-race)
+ok  	raftkv/internal/raft	152.924s
+== raft suite -batch=1 (-race)
+ok  	raftkv/internal/raft	175.175s
+== all packages (-race)
+?   	raftkv/bench	[no test files]
+?   	raftkv/client	[no test files]
+?   	raftkv/cmd/loadgen	[no test files]
+?   	raftkv/cmd/raftkv	[no test files]
+?   	raftkv/cmd/rkharness	[no test files]
+?   	raftkv/harness	[no test files]
+?   	raftkv/internal/bugs	[no test files]
+?   	raftkv/internal/clock	[no test files]
+ok  	raftkv/internal/kv	1.103s
+ok  	raftkv/internal/raft	156.291s
+?   	raftkv/internal/rpc	[no test files]
+?   	raftkv/internal/server	[no test files]
+?   	raftkv/internal/wal	[no test files]
+== make bugtests
+votenopersist: caught
+notruncate: caught
+figure8: caught
+nodedup: caught

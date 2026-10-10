@@ -1,0 +1,4 @@
+{"time":3095101443,"kind":"start","fault":"partition-halves","desc":"halves [1 4] | [2 3 5]"}
+{"time":8203379294,"kind":"heal","fault":"partition-halves","desc":"halves [1 4] | [2 3 5]"}
+{"time":11302711199,"kind":"start","fault":"partition-halves","desc":"halves [3 5] | [1 2 4]"}
+{"time":16397372800,"kind":"heal","fault":"partition-halves","desc":"halves [3 5] | [1 2 4]"}

@@ -1,0 +1,38 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 22356,
+    "ok": 22306,
+    "fail": 13,
+    "info": 37
+  },
+  "faults": 2,
+  "events": [
+    {
+      "time": 3006371629,
+      "kind": "start",
+      "fault": "kill-leader",
+      "desc": "kill leader [2]"
+    },
+    {
+      "time": 8007258469,
+      "kind": "heal",
+      "fault": "kill-leader",
+      "desc": "kill leader [2]"
+    },
+    {
+      "time": 11012153675,
+      "kind": "start",
+      "fault": "kill-leader",
+      "desc": "kill leader [5]"
+    },
+    {
+      "time": 16013411416,
+      "kind": "heal",
+      "fault": "kill-leader",
+      "desc": "kill leader [5]"
+    }
+  ],
+  "wall_s": 28.353462983
+}

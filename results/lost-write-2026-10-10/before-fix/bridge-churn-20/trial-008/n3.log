@@ -1,0 +1,17 @@
+{"time":"2026-10-10T02:10:36.959058229Z","level":"INFO","msg":"raft started","node":3,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-10T02:10:36.959266716Z","level":"INFO","msg":"serving","node":3,"addr":"10.77.0.13:7000","read_mode":"readindex"}
+{"time":"2026-10-10T02:10:42.970184621Z","level":"INFO","msg":"starting election","node":3,"term":2,"last_index":2186,"last_term":1}
+{"time":"2026-10-10T02:10:43.323758756Z","level":"INFO","msg":"became follower","node":3,"term":3,"leader":0}
+{"time":"2026-10-10T02:10:44.685654635Z","level":"INFO","msg":"starting election","node":3,"term":4,"last_index":2186,"last_term":1}
+{"time":"2026-10-10T02:10:45.315313492Z","level":"INFO","msg":"became follower","node":3,"term":5,"leader":0}
+{"time":"2026-10-10T02:10:50.864807617Z","level":"INFO","msg":"starting election","node":3,"term":8,"last_index":6605,"last_term":7}
+{"time":"2026-10-10T02:10:52.42132973Z","level":"INFO","msg":"became follower","node":3,"term":9,"leader":0}
+{"time":"2026-10-10T02:10:59.199616823Z","level":"INFO","msg":"starting election","node":3,"term":13,"last_index":7999,"last_term":12}
+{"time":"2026-10-10T02:10:59.661299511Z","level":"INFO","msg":"became follower","node":3,"term":14,"leader":0}
+{"time":"2026-10-10T02:11:00.980384027Z","level":"INFO","msg":"starting election","node":3,"term":15,"last_index":7999,"last_term":12}
+{"time":"2026-10-10T02:11:01.542228713Z","level":"INFO","msg":"became follower","node":3,"term":16,"leader":0}
+{"time":"2026-10-10T02:11:03.2002881Z","level":"INFO","msg":"starting election","node":3,"term":17,"last_index":7999,"last_term":12}
+{"time":"2026-10-10T02:11:03.445172575Z","level":"INFO","msg":"became follower","node":3,"term":18,"leader":0}
+{"time":"2026-10-10T02:11:05.079828335Z","level":"INFO","msg":"starting election","node":3,"term":20,"last_index":7999,"last_term":12}
+{"time":"2026-10-10T02:11:05.205029161Z","level":"INFO","msg":"became follower","node":3,"term":21,"leader":0}
+{"time":"2026-10-10T02:11:05.207557742Z","level":"INFO","msg":"installing snapshot from leader","node":3,"term":21,"index":10638}

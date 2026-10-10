@@ -1,0 +1,8 @@
+=== RUN   TestFollowerAckRequiresStableStorage
+--- PASS: TestFollowerAckRequiresStableStorage (0.40s)
+=== RUN   TestCommittedEntrySurvivesFollowerCrash
+    durability_test.go:232: leader did not commit index 3 while node 1 could not store it (correct)
+--- PASS: TestCommittedEntrySurvivesFollowerCrash (1.13s)
+PASS
+ok  	raftkv/internal/raft	1.539s
+commit: 9667921 + fix in working tree (branch fix/follower-ack-durability)

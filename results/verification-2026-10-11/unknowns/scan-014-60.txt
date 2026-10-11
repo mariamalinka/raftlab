@@ -1,0 +1,6 @@
+trial 014 key 0: Ok (4377 ops, 6.9s)  peakRSS=497MB
+trial 014 key 1: Ok (4405 ops, 1.3s)  peakRSS=112MB
+trial 014 key 2: Unknown (5379 ops, 60.0s)  peakRSS=1837MB
+trial 014 key 3: Ok (5280 ops, 0.1s)  peakRSS=4MB
+trial 014 key 4: Ok (2718 ops, 0.0s)  peakRSS=4MB
+trial 014 key 5: Ok (2637 ops, 0.0s)  peakRSS=4MB

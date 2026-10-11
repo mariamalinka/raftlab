@@ -1,0 +1,128 @@
+package harness
+
+import (
+	"bufio"
+	"encoding/json"
+	"fmt"
+	"math"
+	"os"
+	"strings"
+	"testing"
+	"time"
+
+	"github.com/anishathalye/porcupine"
+)
+
+func loadHist(t *testing.T, p string) []Op {
+	f, err := os.Open(p)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer f.Close()
+	var h []Op
+	sc := bufio.NewScanner(f)
+	sc.Buffer(make([]byte, 1<<20), 1<<20)
+	for sc.Scan() {
+		var o Op
+		if err := json.Unmarshal(sc.Bytes(), &o); err != nil {
+			t.Fatal(err)
+		}
+		h = append(h, o)
+	}
+	return h
+}
+
+// Per-key check of each history named in HISTS (comma separated).
+func TestScratchPerKey(t *testing.T) {
+	to := 120 * time.Second
+	if v := os.Getenv("KEYTIMEOUT"); v != "" {
+		to, _ = time.ParseDuration(v)
+	}
+	for _, p := range strings.Split(os.Getenv("HISTS"), ",") {
+		if p == "" {
+			continue
+		}
+		h := loadHist(t, p)
+		ops := toOperations(h, math.MaxInt64)
+		var summary []string
+		for _, part := range RegisterModel.Partition(ops) {
+			k := part[0].Input.(regInput).Key
+			t0 := time.Now()
+			res := porcupine.CheckOperationsTimeout(RegisterModel, part, to)
+			info := 0
+			for _, o := range part {
+				if o.Output.(regOutput).Unknown {
+					info++
+				}
+			}
+			fmt.Printf("  key %d: %s (%d ops, %d info, %.1fs)\n", k, res, len(part), info, time.Since(t0).Seconds())
+			if res != porcupine.Ok {
+				summary = append(summary, fmt.Sprintf("key %d: %s", k, res))
+			}
+		}
+		fmt.Printf("%s: %d keys checked; non-OK: %v\n", p, len(RegisterModel.Partition(ops)), summary)
+	}
+}
+
+// Prefix checks of one key: KEY, CUTS (seconds, comma separated).
+func TestScratchPrefix(t *testing.T) {
+	to, _ := time.ParseDuration(os.Getenv("KEYTIMEOUT"))
+	var key int
+	fmt.Sscan(os.Getenv("KEY"), &key)
+	for _, p := range strings.Split(os.Getenv("HISTS"), ",") {
+		var h []Op
+		for _, o := range loadHist(t, p) {
+			if o.Key == key {
+				h = append(h, o)
+			}
+		}
+		for _, c := range strings.Split(os.Getenv("CUTS"), ",") {
+			var s float64
+			fmt.Sscan(c, &s)
+			t0 := time.Now()
+			ops := toOperations(h, int64(s*1e9))
+			res := porcupine.CheckOperationsTimeout(RegisterModel, ops, to)
+			fmt.Printf("%s key %d cut %.1fs: %s (%d ops, %.1fs)\n", p[len(p)-30:], key, s, res, len(ops), time.Since(t0).Seconds())
+		}
+	}
+}
+
+// Reduced check of one key: drop indeterminate writes/CASes whose value is
+// never read and never expected by a CAS. Sound for Ok: under the
+// nondeterministic model an indeterminate op may always be linearized with
+// no effect, so if the reduced history linearizes, so does the original.
+func TestScratchReduced(t *testing.T) {
+	to, _ := time.ParseDuration(os.Getenv("KEYTIMEOUT"))
+	var key int
+	fmt.Sscan(os.Getenv("KEY"), &key)
+	for _, p := range strings.Split(os.Getenv("HISTS"), ",") {
+		var h []Op
+		for _, o := range loadHist(t, p) {
+			if o.Key == key {
+				h = append(h, o)
+			}
+		}
+		seen := map[int]bool{}
+		for _, o := range h {
+			if o.Type == "ok" && o.F == "read" {
+				seen[o.Value] = true
+			}
+			if o.Type == "ok" && o.F == "cas" {
+				seen[o.Expected] = true
+			}
+		}
+		var red []Op
+		dropped := 0
+		for _, o := range h {
+			if o.Type == "info" && o.F != "read" && !seen[o.Value] {
+				dropped++
+				continue
+			}
+			red = append(red, o)
+		}
+		t0 := time.Now()
+		ops := toOperations(red, math.MaxInt64)
+		res := porcupine.CheckOperationsTimeout(RegisterModel, ops, to)
+		fmt.Printf("%s key %d reduced (dropped %d unobserved info ops): %s (%d ops, %.1fs)\n", p[len(p)-30:], key, dropped, res, len(ops), time.Since(t0).Seconds())
+	}
+}

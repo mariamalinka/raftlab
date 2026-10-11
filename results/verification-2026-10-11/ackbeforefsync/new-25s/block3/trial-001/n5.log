@@ -1,0 +1,16 @@
+{"time":"2026-10-11T02:49:03.298720974Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:49:03.298953707Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:49:03.299266506Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:49:04.459751026Z","level":"INFO","msg":"starting election","node":5,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-11T02:49:04.463878047Z","level":"INFO","msg":"became leader","node":5,"term":1,"last_index":1}
+{"time":"2026-10-11T02:49:12.500897533Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:49:12.501768136Z","level":"INFO","msg":"raft started","node":5,"term":1,"vote":5,"snapshot":0,"last_index":2244,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:49:12.50240403Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:49:13.682506924Z","level":"INFO","msg":"starting election","node":5,"term":2,"last_index":2244,"last_term":1}
+{"time":"2026-10-11T02:49:13.684579023Z","level":"INFO","msg":"became leader","node":5,"term":2,"last_index":2245}
+{"time":"2026-10-11T02:49:20.52585699Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:49:20.527009668Z","level":"INFO","msg":"raft started","node":5,"term":2,"vote":5,"snapshot":0,"last_index":3356,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:49:20.527188994Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:49:28.54310301Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:49:28.544527419Z","level":"INFO","msg":"raft started","node":5,"term":3,"vote":3,"snapshot":0,"last_index":4469,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:49:28.544786971Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}

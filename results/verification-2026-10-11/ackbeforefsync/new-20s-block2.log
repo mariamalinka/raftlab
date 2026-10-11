@@ -1,0 +1,7 @@
+trial 1/5: Unknown ops=14919 ok=14667 info=174 fail=78 faults=2 (88s)
+trial 2/5: Unknown ops=14326 ok=14026 info=196 fail=104 faults=2 (88s)
+trial 3/5: Ok ops=14586 ok=14288 info=192 fail=106 faults=2 (28s)
+trial 4/5: Ok ops=14722 ok=14445 info=178 fail=99 faults=2 (29s)
+trial 5/5: Unknown ops=14252 ok=13967 info=183 fail=102 faults=2 (88s)
+
+raftkv / kill-all: 2 valid, 0 illegal, 3 unknown, 0 errors; detection 0.00 [0.00, 0.66]

@@ -1,0 +1,4 @@
+{"time":3011249086,"kind":"start","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}
+{"time":8017049813,"kind":"heal","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}
+{"time":11031195575,"kind":"start","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}
+{"time":16035125443,"kind":"heal","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}

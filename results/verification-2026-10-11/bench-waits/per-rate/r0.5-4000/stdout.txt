@@ -1,0 +1,1 @@
+raftkv rate=4000 rep=1 tput=4000 p50=6.35ms p99=46.53ms p99.9=59.71ms errors=0 dropped=0

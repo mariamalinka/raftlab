@@ -1,0 +1,1 @@
+{"rep":1,"result":{"backend":"raftkv","offered_ops_s":8000,"achieved_ops_s":8000,"read_frac":0.5,"value_size":128,"zipf":false,"ops":160000,"errors":0,"dropped":0,"p50_ms":15.575,"p99_ms":88.447,"p999_ms":131.839,"max_ms":157.695,"mean_ms":21.493795356250015}}

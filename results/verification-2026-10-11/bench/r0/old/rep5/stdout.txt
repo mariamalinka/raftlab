@@ -1,0 +1,6 @@
+raftkv rate=500 rep=1 tput=500 p50=2.19ms p99=6.74ms p99.9=23.93ms errors=0 dropped=0
+raftkv rate=1000 rep=1 tput=1000 p50=2.99ms p99=23.55ms p99.9=39.07ms errors=0 dropped=0
+raftkv rate=2000 rep=1 tput=2000 p50=4.46ms p99=39.90ms p99.9=54.59ms errors=0 dropped=0
+raftkv rate=4000 rep=1 tput=4000 p50=7.17ms p99=59.01ms p99.9=86.78ms errors=0 dropped=0
+raftkv rate=8000 rep=1 tput=8000 p50=33.05ms p99=117.69ms p99.9=144.90ms errors=0 dropped=0
+raftkv rate=12000 rep=1 tput=212 p50=2621.44ms p99=5357.57ms p99.9=5992.45ms errors=79016 dropped=156743

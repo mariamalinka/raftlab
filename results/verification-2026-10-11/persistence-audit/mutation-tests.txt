@@ -1,0 +1,23 @@
+# Mutation 1: HandleRequestVote grants without waitDurable (r.waitDurable(r.persistHardState()) -> r.persistHardState())
+=== RUN   TestPromisesWaitForDurableTerm
+=== RUN   TestPromisesWaitForDurableTerm/vote
+    persist_audit_test.go:116: vote in term 6 granted while stable hard state is {Term:5 Vote:2}
+=== RUN   TestPromisesWaitForDurableTerm/append
+--- FAIL: TestPromisesWaitForDurableTerm (0.20s)
+    --- FAIL: TestPromisesWaitForDurableTerm/vote (0.00s)
+    --- PASS: TestPromisesWaitForDurableTerm/append (0.20s)
+FAIL
+FAIL	raftkv/internal/raft	0.204s
+FAIL
+
+# Mutation 2: HandleAppendEntries durability wait removed (the pre-fix behaviour for empty requests)
+=== RUN   TestPromisesWaitForDurableTerm
+=== RUN   TestPromisesWaitForDurableTerm/vote
+=== RUN   TestPromisesWaitForDurableTerm/append
+    persist_audit_test.go:129: append in term 7 acknowledged while stable hard state is {Term:5 Vote:2}
+--- FAIL: TestPromisesWaitForDurableTerm (0.20s)
+    --- PASS: TestPromisesWaitForDurableTerm/vote (0.20s)
+    --- FAIL: TestPromisesWaitForDurableTerm/append (0.00s)
+FAIL
+FAIL	raftkv/internal/raft	0.205s
+FAIL

@@ -1,0 +1,24 @@
+ackbeforefsync, kill-all, -lazyfs, unique values, key-rotate 15s, 25 clients, current rkharness
+columns per kill: proven loss (acked - max reloaded last_index > 0), trials with reads of pre-kill keys after heal, trials with provably stale reads after heal
+
+old-20s: 20 trials, 2 kills fit; detected (stale reads) 15/20; Porcupine [('Ok', 5), ('Unknown', 15), ('Illegal', 0)]
+  kill 1: proven loss 17/20, deficit median 14.0, reads after heal in 20/20, stale in 15/20
+  kill 2: proven loss 20/20, deficit median 264.5, reads after heal in 0/20, stale in 0/20
+
+new-20s: 20 trials, 2 kills fit; detected (stale reads) 11/20; Porcupine [('Ok', 6), ('Unknown', 14), ('Illegal', 0)]
+  kill 1: proven loss 17/20, deficit median 15.0, reads after heal in 20/20, stale in 11/20
+  kill 2: proven loss 20/20, deficit median 297.5, reads after heal in 0/20, stale in 0/20
+
+old-25s: 20 trials, 3 kills fit; detected (stale reads) 18/20; Porcupine [('Ok', 2), ('Unknown', 18), ('Illegal', 0)]
+  kill 1: proven loss 18/20, deficit median 27.0, reads after heal in 20/20, stale in 16/20
+  kill 2: proven loss 20/20, deficit median 317.0, reads after heal in 0/20, stale in 0/20
+  kill 3: proven loss 20/20, deficit median 536.5, reads after heal in 20/20, stale in 13/20
+
+new-25s: 20 trials, 3 kills fit; detected (stale reads) 18/20; Porcupine [('Ok', 2), ('Unknown', 18), ('Illegal', 0)]
+  kill 1: proven loss 19/20, deficit median 12.5, reads after heal in 20/20, stale in 15/20
+  kill 2: proven loss 20/20, deficit median 321.0, reads after heal in 0/20, stale in 0/20
+  kill 3: proven loss 20/20, deficit median 570.0, reads after heal in 20/20, stale in 12/20
+
+Fisher exact (two-sided), detection old vs new, 20s: p = 0.32
+Fisher exact (two-sided), detection old vs new, 25s: p = 1.00
+Fisher exact, kill-1 stale old vs new, 25s: p = 1.00

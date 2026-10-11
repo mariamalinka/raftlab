@@ -1,0 +1,4 @@
+=== RUN   TestScratchPerKey
+/mnt/project-files/research/raftkv/results/lost-write-2026-10-10/after-fix/bridge-churn-20/trial-005/history.jsonl: 6 keys checked; non-OK: []
+--- PASS: TestScratchPerKey (146.96s)
+PASS

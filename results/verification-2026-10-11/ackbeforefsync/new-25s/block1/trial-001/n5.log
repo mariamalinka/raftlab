@@ -1,0 +1,18 @@
+{"time":"2026-10-11T02:19:50.506293056Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:19:50.506522002Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:19:50.506976979Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:19:51.541401996Z","level":"INFO","msg":"starting election","node":5,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-11T02:19:51.543471586Z","level":"INFO","msg":"became follower","node":5,"term":1,"leader":4}
+{"time":"2026-10-11T02:19:59.612553187Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:19:59.613741001Z","level":"INFO","msg":"raft started","node":5,"term":1,"vote":5,"snapshot":0,"last_index":2225,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:19:59.614307392Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:20:00.834996812Z","level":"INFO","msg":"starting election","node":5,"term":2,"last_index":2225,"last_term":1}
+{"time":"2026-10-11T02:20:00.836758454Z","level":"INFO","msg":"became leader","node":5,"term":2,"last_index":2226}
+{"time":"2026-10-11T02:20:07.632743938Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:20:07.634587158Z","level":"INFO","msg":"raft started","node":5,"term":2,"vote":5,"snapshot":0,"last_index":3313,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:20:07.637634302Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:20:08.640437235Z","level":"INFO","msg":"starting election","node":5,"term":3,"last_index":3313,"last_term":2}
+{"time":"2026-10-11T02:20:08.642578065Z","level":"INFO","msg":"became leader","node":5,"term":3,"last_index":3314}
+{"time":"2026-10-11T02:20:15.655412222Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:20:15.656913173Z","level":"INFO","msg":"raft started","node":5,"term":3,"vote":5,"snapshot":0,"last_index":4438,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:20:15.657275236Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}

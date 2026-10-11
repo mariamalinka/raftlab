@@ -1,0 +1,6 @@
+trial 015 key 0: Unknown (5511 ops, 60.0s)  peakRSS=3418MB
+trial 015 key 1: Ok (5632 ops, 0.2s)  peakRSS=5MB
+trial 015 key 2: Ok (6609 ops, 0.3s)  peakRSS=4MB
+trial 015 key 3: Ok (6482 ops, 0.4s)  peakRSS=3MB
+trial 015 key 4: Ok (2736 ops, 0.0s)  peakRSS=4MB
+trial 015 key 5: Ok (2599 ops, 0.0s)  peakRSS=5MB

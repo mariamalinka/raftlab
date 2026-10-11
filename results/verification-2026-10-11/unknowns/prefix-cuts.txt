@@ -1,0 +1,18 @@
+trial 014 key 2 cut 17: Ok (20 ops, 0.0s)  peakRSS=3MB
+trial 014 key 2 cut 19: Ok (1003 ops, 0.0s)  peakRSS=4MB
+trial 014 key 2 cut 21: Ok (1963 ops, 0.1s)  peakRSS=4MB
+trial 014 key 2 cut 23: Ok (2657 ops, 0.1s)  peakRSS=4MB
+trial 014 key 2 cut 25: Ok (3329 ops, 0.2s)  peakRSS=0MB
+trial 014 key 2 cut 27: Unknown (3731 ops, 30.0s)  peakRSS=1015MB
+trial 014 key 2 cut 29: Unknown (4809 ops, 30.0s)  peakRSS=1111MB
+trial 014 key 2 cut 31: Unknown (5379 ops, 30.0s)  peakRSS=1222MB
+trial 015 key 0 cut 2: Ok (1067 ops, 0.0s)  peakRSS=13MB
+trial 015 key 0 cut 4: Ok (2074 ops, 0.1s)  peakRSS=4MB
+trial 015 key 0 cut 6: Ok (2842 ops, 1.4s)  peakRSS=164MB
+trial 015 key 0 cut 8: Ok (3462 ops, 1.7s)  peakRSS=137MB
+trial 015 key 0 cut 10: Ok (3717 ops, 1.6s)  peakRSS=194MB
+trial 015 key 0 cut 12: Unknown (4502 ops, 30.0s)  peakRSS=1964MB
+trial 015 key 0 cut 14: Unknown (5229 ops, 30.0s)  peakRSS=2123MB
+trial 015 key 0 cut 16: Unknown (5511 ops, 30.0s)  peakRSS=2230MB
+
+[exited with code 0]

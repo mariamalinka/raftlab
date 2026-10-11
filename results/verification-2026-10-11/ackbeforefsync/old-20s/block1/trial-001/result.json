@@ -1,0 +1,38 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Unknown",
+    "ops": 14525,
+    "ok": 14246,
+    "fail": 84,
+    "info": 195
+  },
+  "faults": 2,
+  "events": [
+    {
+      "time": 3016857939,
+      "kind": "start",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    },
+    {
+      "time": 8022229736,
+      "kind": "heal",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    },
+    {
+      "time": 11033183159,
+      "kind": "start",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    },
+    {
+      "time": 16042934307,
+      "kind": "heal",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    }
+  ],
+  "wall_s": 88.174789487
+}

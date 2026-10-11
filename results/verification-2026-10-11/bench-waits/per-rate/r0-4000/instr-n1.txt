@@ -1,0 +1,1 @@
+INSTRWAIT succ_new=14337 succ_empty=2813 waits_new=14337 waits_empty=2555 total_new_us=22721584 total_empty_us=4542087 hist_new=[0 0 11 866 4063 5187 3044 839 226 86 15 0 0 0 0 0] hist_empty=[23 23 60 255 595 756 561 202 46 33 1 0 0 0 0 0]

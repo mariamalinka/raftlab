@@ -1,0 +1,63 @@
+package raft
+
+// Measurement-only instrumentation (not for the repository): how often and how
+// long a follower's AppendEntries handler waits for stable storage, split by
+// requests that carried new entries (waited before the fix too) and requests
+// that did not (heartbeats, retransmissions: the waits the fix added).
+
+import (
+	"fmt"
+	"os"
+	"sync"
+	"time"
+)
+
+var instr struct {
+	sync.Mutex
+	succ  [2]int64
+	waits [2]int64
+	total [2]time.Duration
+	hist  [2][16]int64 // bucket i: < 2^i * 50us
+	once  sync.Once
+}
+
+func bucket(d time.Duration) int {
+	b := 0
+	for lim := 50 * time.Microsecond; d >= lim && b < 15; lim *= 2 {
+		b++
+	}
+	return b
+}
+
+func idx(empty bool) int {
+	if empty {
+		return 1
+	}
+	return 0
+}
+
+func instrCount(empty bool) {
+	instr.Lock()
+	instr.succ[idx(empty)]++
+	instr.Unlock()
+	instr.once.Do(func() { go instrDump() })
+}
+
+func instrRecord(empty bool, d time.Duration) {
+	i := idx(empty)
+	instr.Lock()
+	instr.waits[i]++
+	instr.total[i] += d
+	instr.hist[i][bucket(d)]++
+	instr.Unlock()
+}
+
+func instrDump() {
+	for range time.Tick(2 * time.Second) {
+		instr.Lock()
+		fmt.Fprintf(os.Stderr, "INSTRWAIT succ_new=%d succ_empty=%d waits_new=%d waits_empty=%d total_new_us=%d total_empty_us=%d hist_new=%v hist_empty=%v\n",
+			instr.succ[0], instr.succ[1], instr.waits[0], instr.waits[1],
+			instr.total[0].Microseconds(), instr.total[1].Microseconds(), instr.hist[0], instr.hist[1])
+		instr.Unlock()
+	}
+}

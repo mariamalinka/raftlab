@@ -1,0 +1,20 @@
+# go vet ./...
+# go test -race ./... (branch fix/follower-ack-durability + audit tests)
+?   	raftkv/bench	[no test files]
+?   	raftkv/client	[no test files]
+?   	raftkv/cmd/loadgen	[no test files]
+?   	raftkv/cmd/raftkv	[no test files]
+?   	raftkv/cmd/rkharness	[no test files]
+?   	raftkv/harness	[no test files]
+?   	raftkv/internal/bugs	[no test files]
+?   	raftkv/internal/clock	[no test files]
+ok  	raftkv/internal/kv	1.033s
+ok  	raftkv/internal/raft	158.308s
+?   	raftkv/internal/rpc	[no test files]
+?   	raftkv/internal/server	[no test files]
+?   	raftkv/internal/wal	[no test files]
+# make bugtests
+votenopersist: caught
+notruncate: caught
+figure8: caught
+nodedup: caught

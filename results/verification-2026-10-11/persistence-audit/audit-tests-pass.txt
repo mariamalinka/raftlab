@@ -1,0 +1,14 @@
+=== RUN   TestPromisesWaitForDurableTerm
+=== RUN   TestPromisesWaitForDurableTerm/vote
+=== RUN   TestPromisesWaitForDurableTerm/append
+--- PASS: TestPromisesWaitForDurableTerm (0.40s)
+    --- PASS: TestPromisesWaitForDurableTerm/vote (0.20s)
+    --- PASS: TestPromisesWaitForDurableTerm/append (0.20s)
+=== RUN   TestRefusalsMayCarryUnstoredTerm
+    persist_audit_test.go:160: refusals answered in terms 6 and 7 while the stable term was 5
+--- PASS: TestRefusalsMayCarryUnstoredTerm (0.00s)
+=== RUN   TestSnapshotCoveredAppendDoesNotWait
+    persist_audit_test.go:200: acknowledged match 3 (<= commit 3) in term 7 while the stable term is 5
+--- PASS: TestSnapshotCoveredAppendDoesNotWait (0.00s)
+PASS
+ok  	raftkv/internal/raft	0.407s

@@ -1,0 +1,19 @@
+--- wt-cfa86fa/internal/raft/raft.go	2026-10-11 01:20:49.207586572 +0000
++++ wt-waits/internal/raft/raft.go	2026-10-11 01:24:22.243053352 +0000
+@@ -878,13 +878,16 @@
+ 	// every write queued so far, not just this request's own.
+ 	if seq := r.enqSeq; r.durableSeq < seq {
+ 		term := r.term
++		instrStart := time.Now()
+ 		r.waitDurable(seq)
++		instrRecord(len(changed) == 0, time.Since(instrStart))
+ 		if r.term != term || r.durableSeq < seq {
+ 			return &AppendEntriesResponse{Term: r.term}
+ 		}
+ 	}
+ 	resp.Success = true
+ 	resp.MatchIndex = newLast
++	instrCount(len(changed) == 0)
+ 	return resp
+ }
+ 

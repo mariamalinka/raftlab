@@ -1,0 +1,6 @@
+etcd rate=500 rep=1 tput=500 p50=2.64ms p99=7.90ms p99.9=22.11ms errors=0 dropped=0
+etcd rate=1000 rep=1 tput=1000 p50=5.06ms p99=14.17ms p99.9=20.38ms errors=0 dropped=0
+etcd rate=2000 rep=1 tput=2000 p50=7.96ms p99=41.41ms p99.9=86.27ms errors=0 dropped=0
+etcd rate=4000 rep=1 tput=4000 p50=15.61ms p99=85.06ms p99.9=122.30ms errors=0 dropped=0
+etcd rate=8000 rep=1 tput=8000 p50=45.70ms p99=133.38ms p99.9=182.14ms errors=0 dropped=0
+etcd rate=12000 rep=1 tput=12000 p50=135.55ms p99=344.06ms p99.9=413.95ms errors=0 dropped=0

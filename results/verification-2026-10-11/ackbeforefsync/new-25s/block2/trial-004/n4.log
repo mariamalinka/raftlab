@@ -1,0 +1,16 @@
+{"time":"2026-10-11T02:40:07.395257796Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:40:07.395390499Z","level":"INFO","msg":"raft started","node":4,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:40:07.395577112Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:40:08.570798425Z","level":"INFO","msg":"starting election","node":4,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-11T02:40:08.573116081Z","level":"INFO","msg":"became leader","node":4,"term":1,"last_index":1}
+{"time":"2026-10-11T02:40:16.647691421Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:40:16.648700972Z","level":"INFO","msg":"raft started","node":4,"term":1,"vote":4,"snapshot":0,"last_index":2268,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:40:16.649091227Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:40:17.743634324Z","level":"INFO","msg":"truncated conflicting suffix","node":4,"term":2,"index":2268}
+{"time":"2026-10-11T02:40:24.670205011Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:40:24.67203124Z","level":"INFO","msg":"raft started","node":4,"term":2,"vote":0,"snapshot":0,"last_index":3352,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:40:24.673134851Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:40:32.684869093Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:40:32.691469133Z","level":"INFO","msg":"raft started","node":4,"term":3,"vote":2,"snapshot":0,"last_index":4441,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-11T02:40:32.692539125Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-11T02:40:33.818718643Z","level":"INFO","msg":"truncated conflicting suffix","node":4,"term":4,"index":4441}

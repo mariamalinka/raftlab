@@ -20,10 +20,11 @@ test:
 
 # Each injected bug must make its deterministic test fail (RQ3 reachability).
 bugtests:
-	@for b in votenopersist:raft:VoteNoPersist notruncate:raft:NoTruncate figure8:raft:Figure8 nodedup:kv:NoDedup; do \
+	@for b in votenopersist:raft:VoteNoPersist notruncate:raft:NoTruncate figure8:raft:Figure8 nodedup:kv:NoDedup \
+	         ackbeforefsync:raft:AckBeforeFsync leasenodrift:raft:LeaseNoDrift localread:kv:LocalRead; do \
 	  n=$${b%%:*}; r=$${b#*:}; p=$${r%%:*}; t=$${r#*:}; \
-	  if RAFTKV_BUGS=$$n go test -tags bugs -count=1 -run "^TestBug$$t$$" ./internal/$$p >/dev/null 2>&1; then \
-	    echo "$$n: NOT caught"; exit 1; else echo "$$n: caught"; fi; \
+	  if RAFTKV_BUGS=$$n go test -tags bugs -count=1 -run "^TestBug$$t$$" ./internal/$$p 2>&1 | grep -q -- "^--- FAIL: TestBug$$t "; then \
+	    echo "$$n: caught"; else echo "$$n: NOT caught"; exit 1; fi; \
 	done
 
 g1:

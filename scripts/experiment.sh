@@ -51,18 +51,34 @@ E5) # H1: read paths, speed and correctness, with and without clock faults
   done
   ;;
 E6) # RQ3 / H2: detection rate of each injected bug under each fault
+  # Unique write values let a stale read be told apart from an indeterminate
+  # write. Faults run at 3, 15 and 27 s; 12 s key epochs give each fault its
+  # own keys plus 4 s of healthy reads after the heal, and 34 s leaves 7 s
+  # for the last fault to start and finish.
+  E6H="$BIN/rkharness -trials $TRIALS -clients 25 -time ${E6_TIME:-34s} -warmup 3s -interval 7s -fault-duration 5s -recover 5s -key-rotate 12s -unique-values"
   FAULTS=${FAULTS:-"kill-leader kill-majority pause-leader partition-leader partition-halves partition-bridge clock-partition-mild mixed"}
-  for bug in figure8 localread leasenodrift votenopersist notruncate nodedup ackbeforefsync; do
+  BUGS=${BUGS:-"figure8 localread leasenodrift votenopersist notruncate nodedup ackbeforefsync"}
+  for bug in $BUGS; do
     extra=""
     case $bug in
       leasenodrift) extra="-read-mode lease" ;;
       ackbeforefsync) extra="-lazyfs" ;;
     esac
     for f in $FAULTS; do
-      $H -db raftkv -bugs $bug $extra -fault "$f" -out "$OUT/E6/$bug/$f"
+      $E6H -db raftkv -bugs $bug $extra -fault "$f" -out "$OUT/E6/$bug/$f"
     done
-    [ "$bug" = ackbeforefsync ] && $H -db raftkv -bugs $bug $extra -fault kill-all -out "$OUT/E6/$bug/kill-all"
+    [ "$bug" = ackbeforefsync ] && $E6H -db raftkv -bugs $bug $extra -fault kill-all -out "$OUT/E6/$bug/kill-all"
   done
+  # Controls: the correct build under the same settings (false-positive rate
+  # of the checker and the stale-read scan), on both read paths E6 uses.
+  if [ "${CONTROLS:-1}" = 1 ]; then
+    for f in $FAULTS; do
+      $E6H -db raftkv -fault "$f" -out "$OUT/E6/correct/$f"
+      $E6H -db raftkv -read-mode lease -fault "$f" -out "$OUT/E6/correct-lease/$f"
+    done
+    $E6H -db raftkv -lazyfs -fault kill-all -out "$OUT/E6/correct/kill-all-lazyfs"
+  fi
+  python3 analysis/e6_audit.py "$OUT/E6" > "$OUT/E6/AUDIT.md"
   ;;
 E7) # H3: ablation of batching, pipelining and fsync against etcd
   $L -db etcd -read-frac 0.5 -out "$OUT/E7/etcd"

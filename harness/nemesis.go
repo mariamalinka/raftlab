@@ -256,6 +256,21 @@ type Schedule struct {
 	Duration time.Duration // how long each fault lasts
 }
 
+// PlannedFaults is how many faults the schedule starts in a run of length d:
+// each fault starts after the warmup or the previous fault's duration plus
+// the interval, and RunNemesis only starts one that can finish before d.
+// The executed count can be lower when setting up faults takes time.
+func PlannedFaults(s Schedule, d time.Duration) int {
+	if s.Fault == "none" || s.Duration <= 0 {
+		return 0
+	}
+	n := 0
+	for t := s.Warmup; t+s.Duration <= d; t += s.Duration + s.Interval {
+		n++
+	}
+	return n
+}
+
 // RunNemesis injects faults on schedule until ctx ends, then heals.
 func RunNemesis(ctx context.Context, e *env, s Schedule, start time.Time) []NemesisEvent {
 	var events []NemesisEvent

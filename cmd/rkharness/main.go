@@ -80,18 +80,26 @@ func main() {
 		if r.Error != "" {
 			detail = " error: " + r.Error
 		}
-		fmt.Printf("trial %d/%d: %s ops=%d ok=%d info=%d fail=%d faults=%d%s (%.0fs)\n",
-			t, *trials, r.Check.Result, r.Check.Ops, r.Check.OK, r.Check.Info, r.Check.Fail, r.Faults, detail, r.Wall)
+		fmt.Printf("trial %d/%d: %s ops=%d ok=%d info=%d fail=%d faults=%d/%d/%d stale=%d%s (%.0fs)\n",
+			t, *trials, r.Check.Result, r.Check.Ops, r.Check.OK, r.Check.Info, r.Check.Fail,
+			r.FaultsPlanned, r.Faults, r.FaultsCompleted, staleReads(r), detail, r.Wall)
 	}
 	s := harness.Summarize(o, results)
 	b := filepath.Join(*out, "summary.json")
 	if err := writeSummary(b, s); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 	}
-	fmt.Printf("\n%s / %s: %d valid, %d illegal, %d unknown, %d errors; detection %.2f [%.2f, %.2f]",
-		o.DB, o.Fault, s.Valid, s.Illegal, s.Unknown, s.Errors, s.Detection, s.DetectionLow, s.DetectionHigh)
+	fmt.Printf("\n%s / %s: %d valid, %d valid (reduced), %d illegal, %d unknown, %d errors; detection %.2f [%.2f, %.2f]; stale-read scan %d/%d trials",
+		o.DB, o.Fault, s.Valid, s.ValidReduced, s.Illegal, s.Unknown, s.Errors, s.Detection, s.DetectionLow, s.DetectionHigh, s.StaleReadTrials, s.Trials)
 	if s.Illegal > 0 {
 		fmt.Printf("; median time to detection %.1fs", s.MedianDetectS)
 	}
 	fmt.Println()
+}
+
+func staleReads(r harness.TrialResult) int {
+	if r.StaleReads == nil {
+		return 0
+	}
+	return r.StaleReads.Reads
 }

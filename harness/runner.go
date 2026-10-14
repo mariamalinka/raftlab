@@ -29,12 +29,18 @@ type TestOptions struct {
 }
 
 type TrialResult struct {
-	Trial  int            `json:"trial"`
-	Check  CheckResult    `json:"check"`
-	Faults int            `json:"faults"`
-	Events []NemesisEvent `json:"events"`
-	Error  string         `json:"error,omitempty"`
-	Wall   float64        `json:"wall_s"`
+	Trial int         `json:"trial"`
+	Check CheckResult `json:"check"`
+	// StaleReads is the conservative stale-read scan, kept apart from Check.
+	StaleReads *StaleReads `json:"stale_reads,omitempty"`
+	// Faults is the number started (executed); FaultsCompleted the number
+	// healed; FaultsPlanned the number the schedule fits in the run.
+	Faults          int            `json:"faults"`
+	FaultsPlanned   int            `json:"faults_planned"`
+	FaultsCompleted int            `json:"faults_completed"`
+	Events          []NemesisEvent `json:"events"`
+	Error           string         `json:"error,omitempty"`
+	Wall            float64        `json:"wall_s"`
 }
 
 func writeJSON(path string, v any) error {
@@ -119,13 +125,17 @@ func RunTrial(o TestOptions, trial int) TrialResult {
 
 	sched := o.Schedule
 	sched.Fault = o.Fault
+	res.FaultsPlanned = PlannedFaults(sched, o.Duration)
 	evCh := make(chan []NemesisEvent, 1)
 	go func() { evCh <- RunNemesis(faultCtx, e, sched, start) }()
 	history, err := RunRegister(workCtx, db, start, o.Workload)
 	res.Events = <-evCh
 	for _, ev := range res.Events {
-		if ev.Kind == "start" {
+		switch ev.Kind {
+		case "start":
 			res.Faults++
+		case "heal":
+			res.FaultsCompleted++
 		}
 	}
 	if err != nil {
@@ -134,7 +144,9 @@ func RunTrial(o TestOptions, trial int) TrialResult {
 	writeJSONL(filepath.Join(dir, "history.jsonl"), history)
 	writeJSONL(filepath.Join(dir, "nemesis.jsonl"), res.Events)
 	res.Check = Check(history, o.CheckTimeout, filepath.Join(dir, "linearizability.html"))
-	if res.Check.Result != "Illegal" {
+	stale := ScanStaleReads(history)
+	res.StaleReads = &stale
+	if res.Check.Result != ResultIllegal {
 		os.Remove(filepath.Join(dir, "linearizability.html"))
 	}
 	res.Wall = time.Since(t0).Seconds()
@@ -146,9 +158,10 @@ func RunTrial(o TestOptions, trial int) TrialResult {
 type Summary struct {
 	Config        TestOptions `json:"config"`
 	Trials        int         `json:"trials"`
-	Valid         int         `json:"valid"`   // linearizable
-	Illegal       int         `json:"illegal"` // anomaly found
-	Unknown       int         `json:"unknown"` // checker timed out
+	Valid         int         `json:"valid"`         // linearizable (full check)
+	ValidReduced  int         `json:"valid_reduced"` // linearizable, shown by the reduced check after an Unknown
+	Illegal       int         `json:"illegal"`       // anomaly found
+	Unknown       int         `json:"unknown"`       // checker timed out, also after reduction
 	Errors        int         `json:"errors"`
 	Detection     float64     `json:"detection_rate"`
 	DetectionLow  float64     `json:"detection_ci95_low"`
@@ -158,18 +171,49 @@ type Summary struct {
 	OKOps         int         `json:"ok_ops"`
 	InfoOps       int         `json:"info_ops"`
 	FailOps       int         `json:"fail_ops"`
+	// Conservative stale-read scan, a separate metric from the checker.
+	StaleReadTrials int `json:"stale_read_trials"`
+	StaleReads      int `json:"stale_reads"`
+	// Fault counts: planned per trial by the schedule, and the total, min
+	// and max per trial of those started and of those healed.
+	FaultsPlanned      int `json:"faults_planned_per_trial"`
+	FaultsExecuted     int `json:"faults_executed"`
+	FaultsExecutedMin  int `json:"faults_executed_min"`
+	FaultsExecutedMax  int `json:"faults_executed_max"`
+	FaultsCompleted    int `json:"faults_completed"`
+	FaultsCompletedMin int `json:"faults_completed_min"`
+	FaultsCompletedMax int `json:"faults_completed_max"`
 }
 
 func Summarize(o TestOptions, rs []TrialResult) Summary {
 	s := Summary{Config: o, Trials: len(rs)}
+	sched := o.Schedule
+	sched.Fault = o.Fault
+	s.FaultsPlanned = PlannedFaults(sched, o.Duration)
 	var times []float64
-	for _, r := range rs {
+	for i, r := range rs {
+		s.FaultsExecuted += r.Faults
+		s.FaultsCompleted += r.FaultsCompleted
+		if i == 0 || r.Faults < s.FaultsExecutedMin {
+			s.FaultsExecutedMin = r.Faults
+		}
+		s.FaultsExecutedMax = max(s.FaultsExecutedMax, r.Faults)
+		if i == 0 || r.FaultsCompleted < s.FaultsCompletedMin {
+			s.FaultsCompletedMin = r.FaultsCompleted
+		}
+		s.FaultsCompletedMax = max(s.FaultsCompletedMax, r.FaultsCompleted)
+		if r.StaleReads != nil && r.StaleReads.Reads > 0 {
+			s.StaleReadTrials++
+			s.StaleReads += r.StaleReads.Reads
+		}
 		switch {
 		case r.Error != "":
 			s.Errors++
-		case r.Check.Result == "Ok":
+		case r.Check.Result == ResultOk:
 			s.Valid++
-		case r.Check.Result == "Illegal":
+		case r.Check.Result == ResultOkReduced:
+			s.ValidReduced++
+		case r.Check.Result == ResultIllegal:
 			s.Illegal++
 			times = append(times, r.Check.DetectedAt)
 		default:
@@ -180,7 +224,7 @@ func Summarize(o TestOptions, rs []TrialResult) Summary {
 		s.InfoOps += r.Check.Info
 		s.FailOps += r.Check.Fail
 	}
-	n := s.Valid + s.Illegal
+	n := s.Valid + s.ValidReduced + s.Illegal
 	s.Detection = ratio(s.Illegal, n)
 	s.DetectionLow, s.DetectionHigh = Wilson(s.Illegal, n, 1.96)
 	if len(times) > 0 {

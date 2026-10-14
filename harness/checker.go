@@ -133,8 +133,17 @@ func toOperations(history []Op, cutoff int64) []porcupine.Operation {
 	return ops
 }
 
+// Check outcomes. "Ok (reduced)" is a proven pass reached only after the
+// full check returned Unknown; see reduce.
+const (
+	ResultOk        = "Ok"
+	ResultOkReduced = "Ok (reduced)"
+	ResultUnknown   = "Unknown"
+	ResultIllegal   = "Illegal"
+)
+
 type CheckResult struct {
-	Result string `json:"result"` // Ok, Illegal, or Unknown (checker timed out)
+	Result string `json:"result"` // Ok, Ok (reduced), Illegal, or Unknown (checker timed out)
 	// DetectedAt is the shortest history prefix (seconds) already shown to
 	// be non-linearizable; set only when Result is illegal.
 	DetectedAt float64 `json:"detected_at_s,omitempty"`
@@ -143,7 +152,16 @@ type CheckResult struct {
 	Fail       int     `json:"fail"`
 	Info       int     `json:"info"`
 	BadKeys    []int   `json:"bad_keys,omitempty"`
+	// Set only when the full check was Unknown and the per-key reduced
+	// check ran: keys proven by it, keys it could not decide, and how many
+	// indeterminate operations it dropped.
+	ReducedKeys []int `json:"reduced_keys,omitempty"`
+	UnknownKeys []int `json:"unknown_keys,omitempty"`
+	DroppedOps  int   `json:"dropped_ops,omitempty"`
 }
+
+// fullCheck checks the whole history; tests replace it to force a timeout.
+var fullCheck = porcupine.CheckOperationsTimeout
 
 // Check verifies the full history and, if it is not linearizable, finds how
 // early the anomaly was detectable. vizPath, if set, receives Porcupine's
@@ -164,8 +182,11 @@ func Check(history []Op, timeout time.Duration, vizPath string) CheckResult {
 		end = max(end, h.Return)
 	}
 	all := toOperations(history, math.MaxInt64)
-	res := porcupine.CheckOperationsTimeout(RegisterModel, all, timeout)
+	res := fullCheck(RegisterModel, all, timeout)
 	r.Result = string(res)
+	if res == porcupine.Unknown {
+		r.reduce(history, timeout)
+	}
 	if res != porcupine.Illegal {
 		return r
 	}
@@ -210,4 +231,65 @@ func badKeys(ops []porcupine.Operation, timeout time.Duration) []int {
 		}
 	}
 	return keys
+}
+
+// reduce re-checks each key of a history whose full check was Unknown, after
+// dropping the indeterminate writes and CASes whose value is never observed
+// (reduceKey). If every key then checks Ok, the result is "Ok (reduced)";
+// otherwise it stays Unknown. A reduced check that is not Ok proves nothing
+// and never makes the result Illegal.
+//
+// Sound for Ok: under RegisterModel an indeterminate operation may always be
+// linearized as having had no effect (Step returns the unchanged state among
+// its outcomes). So a linearization of the reduced history extends to the
+// original one by placing each dropped operation anywhere in its interval
+// with no effect. Keys are independent registers, so per-key Ok is overall Ok.
+func (r *CheckResult) reduce(history []Op, timeout time.Duration) {
+	byKey := map[int][]Op{}
+	var keys []int
+	for _, h := range history {
+		if _, ok := byKey[h.Key]; !ok {
+			keys = append(keys, h.Key)
+		}
+		byKey[h.Key] = append(byKey[h.Key], h)
+	}
+	sort.Ints(keys)
+	for _, k := range keys {
+		kept, dropped := reduceKey(byKey[k])
+		if porcupine.CheckOperationsTimeout(RegisterModel, toOperations(kept, math.MaxInt64), timeout) != porcupine.Ok {
+			r.UnknownKeys = append(r.UnknownKeys, k)
+			continue
+		}
+		if dropped > 0 {
+			r.ReducedKeys = append(r.ReducedKeys, k)
+			r.DroppedOps += dropped
+		}
+	}
+	if len(r.UnknownKeys) == 0 {
+		r.Result = ResultOkReduced
+	}
+}
+
+// reduceKey drops, from one key's operations, the indeterminate writes and
+// CASes whose value no completed read returned and no completed CAS expected.
+// Such operations are what make Porcupine's search blow up on long
+// unique-value histories (docs/VERIFICATION-2026-10-11.md, section 1).
+func reduceKey(ops []Op) (kept []Op, dropped int) {
+	seen := map[int]bool{}
+	for _, o := range ops {
+		if o.Type == "ok" && o.F == "read" {
+			seen[o.Value] = true
+		}
+		if o.Type == "ok" && o.F == "cas" {
+			seen[o.Expected] = true
+		}
+	}
+	for _, o := range ops {
+		if o.Type == "info" && o.F != "read" && !seen[o.Value] {
+			dropped++
+			continue
+		}
+		kept = append(kept, o)
+	}
+	return kept, dropped
 }

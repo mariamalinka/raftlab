@@ -1,0 +1,7 @@
+trial 1/5: Ok ops=23085 ok=22885 info=124 fail=76 faults=3 (44s)
+trial 2/5: Ok (reduced) ops=25114 ok=25039 info=54 fail=21 faults=3 (106s)
+trial 3/5: Ok ops=23539 ok=23364 info=118 fail=57 faults=3 (41s)
+trial 4/5: Ok ops=22803 ok=22549 info=178 fail=76 faults=3 (40s)
+trial 5/5: Ok (reduced) ops=24645 ok=24478 info=118 fail=49 faults=3 (105s)
+
+raftkv / bridge-churn: 3 valid, 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.43]

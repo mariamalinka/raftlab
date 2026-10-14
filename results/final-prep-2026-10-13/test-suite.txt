@@ -1,0 +1,29 @@
+# branch final-prep on 44f0cb9 + working tree changes
+# gofmt -l .
+client/client.go
+# go vet ./...
+vet-ok
+# go test -race -count=1 ./...
+ok  	raftkv/harness	2.586s
+ok  	raftkv/internal/kv	1.068s
+ok  	raftkv/internal/raft	156.214s
+# harness tests, verbose
+--- PASS: TestCheckOkUnchanged (0.00s)
+--- PASS: TestCheckIllegalUnchanged (0.00s)
+--- PASS: TestUnknownResolvedByReduction (0.00s)
+--- PASS: TestUnknownStaysUnknown (0.00s)
+    checker_test.go:130: 3000 histories: 2307 reduced-Ok (all Ok in full), 665 illegal, 6731 ops dropped
+--- PASS: TestReductionNeverHidesViolations (0.50s)
+--- PASS: TestSummarizeKeepsOutcomesApart (0.00s)
+--- PASS: TestScanStaleReads (0.00s)
+--- PASS: TestPlannedFaults (0.00s)
+ok  	raftkv/harness	0.514s
+# fix regression tests x20
+ok  	raftkv/internal/raft	30.693s
+# make bugtests
+votenopersist: caught
+notruncate: caught
+figure8: caught
+nodedup: caught
+# python3 analysis/report.py results (exit status)
+report-ok

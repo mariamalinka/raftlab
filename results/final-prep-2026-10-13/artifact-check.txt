@@ -1,0 +1,5 @@
+# results/ checksum comparison (excluding new results/final-prep-2026-10-13)
+before: 2462 files, after: 2462 files
+IDENTICAL: no historical artifact added, changed or removed
+# git status of results/ (excluding results/final-prep-2026-10-13)
+(end)

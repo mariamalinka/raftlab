@@ -37,15 +37,58 @@ def correctness(root):
         by_exp[name.split(os.sep)[0]].append((name, s))
     for exp, items in sorted(by_exp.items()):
         print(f"\n### {exp}: linearizability\n")
-        print("| Run | DB | Fault | Bugs | Read path | Trials | Valid | Anomalies | Unknown | Errors | Detection [95% CI] | Median detect (s) | Ops ok / info / fail |")
-        print("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+        print("Valid = Ok from the full check; Ok (reduced) = proven Ok by the per-key reduced check after the full check was Unknown;")
+        print("Unknown = undecided, never counted as a pass. Faults = planned / executed / completed per trial (min-max), from each")
+        print("trial's events; * = planned computed from the config with the current rule (run predates the field; runs before")
+        print("commit 9667921 also started a last fault that the end of the run cut short); ! = fewer executed than planned.")
+        print("Stale-read scan = trials with provably stale reads (conservative scan, separate from Porcupine; n/a = not recorded).\n")
+        print("| Run | DB | Fault | Bugs | Read path | Trials | Valid | Ok (reduced) | Anomalies | Unknown | Errors | Detection [95% CI] | Median detect (s) | Faults | Stale-read scan | Ops ok / info / fail |")
+        print("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
         for name, s in items:
             c = s["config"]
             bugs = ",".join(c.get("RaftKV", {}).get("Bugs") or []) or "-"
             rm = c.get("RaftKV", {}).get("ReadMode", "-") if c["DB"] == "raftkv" else ("serializable" if c.get("Etcd", {}).get("Serializable") else "linearizable")
             det = f'{s["detection_rate"]:.2f} [{s["detection_ci95_low"]:.2f}, {s["detection_ci95_high"]:.2f}]'
             md = f'{s["median_time_to_detection_s"]:.1f}' if s.get("median_time_to_detection_s") else "-"
-            print(f'| {name} | {c["DB"]} | {c["Fault"]} | {bugs} | {rm} | {s["trials"]} | {s["valid"]} | {s["illegal"]} | {s["unknown"]} | {s["errors"]} | {det} | {md} | {s["ok_ops"]} / {s["info_ops"]} / {s["fail_ops"]} |')
+            stale = f'{s["stale_read_trials"]}/{s["trials"]}' if "stale_read_trials" in s else "n/a"
+            print(f'| {name} | {c["DB"]} | {c["Fault"]} | {bugs} | {rm} | {s["trials"]} | {s["valid"]} | {s.get("valid_reduced", 0)} | {s["illegal"]} | {s["unknown"]} | {s["errors"]} | {det} | {md} | {fault_counts(os.path.join(root, name), s)} | {stale} | {s["ok_ops"]} / {s["info_ops"]} / {s["fail_ops"]} |')
+
+
+def planned_faults(c):
+    """Faults that fit in the run: the same rule as harness.PlannedFaults."""
+    sch = c.get("Schedule", {})
+    warm, dur, gap = sch.get("Warmup", 0), sch.get("Duration", 0), sch.get("Interval", 0)
+    if c.get("Fault") == "none" or dur <= 0:
+        return 0
+    n, t = 0, warm
+    while t + dur <= c.get("Duration", 0):
+        n += 1
+        t += dur + gap
+    return n
+
+
+def fault_counts(run_dir, s):
+    """'planned / executed / completed', executed and completed counted from
+    the start and heal events in each trial's result.json."""
+    executed, completed = [], []
+    for t in sorted(os.listdir(run_dir)):
+        path = os.path.join(run_dir, t, "result.json")
+        if t.startswith("trial-") and os.path.exists(path):
+            with open(path) as f:
+                ev = json.load(f).get("events") or []
+            executed.append(sum(e["kind"] == "start" for e in ev))
+            completed.append(sum(e["kind"] == "heal" for e in ev))
+    if "faults_planned_per_trial" in s:
+        planned, mark = s["faults_planned_per_trial"], ""
+    else:
+        planned, mark = planned_faults(s["config"]), "*"
+    if not executed:
+        return f"{planned}{mark} / ? / ?"
+
+    def rng(xs):
+        return f"{min(xs)}" if min(xs) == max(xs) else f"{min(xs)}-{max(xs)}"
+    flag = " !" if min(executed) < planned else ""
+    return f"{planned}{mark} / {rng(executed)} / {rng(completed)}{flag}"
 
 
 def median_ci(xs):

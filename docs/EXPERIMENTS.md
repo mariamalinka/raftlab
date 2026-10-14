@@ -110,3 +110,20 @@ leasenodrift are not covered yet.
   no provably stale reads). **The bug-free build lost an acknowledged write
   under bridge-churn in 1 of 3 trials**; see that REPORT.md. Likely cause:
   deep-dive finding 16.1 (follower acks entries before they are persisted).
+
+## Checker outcomes and fault counts, 2026-10-13
+
+From this change on, each trial's `result.json` and each `summary.json` record:
+
+- **Outcome**, one of four:
+  - `Ok`: the full Porcupine check passed.
+  - `Ok (reduced)`: the full check was Unknown, and every key then passed a per-key check with its unobserved indeterminate writes and CASes dropped. This is sound for Ok (docs/VERIFICATION-2026-10-11.md §1). It counts as a pass but is reported separately (`valid_reduced`).
+  - `Unknown`: undecided even after the reduction. It is never a pass and is excluded from the detection rate.
+  - `Illegal`: the full check found an anomaly. A reduced check never produces Illegal.
+- **Stale-read scan** (`stale_reads` per trial, `stale_read_trials` per run): the conservative rule of `analysis/stale_reads.py`, run in the harness over the whole history. It is a separate metric and does not change the outcome.
+- **Fault counts**:
+  - `faults_planned`: faults that fit in the run (`harness.PlannedFaults`).
+  - `faults` (executed): faults started.
+  - `faults_completed`: faults healed.
+
+  `analysis/report.py` shows planned / executed / completed for every run, deriving executed and completed from the trial events for older runs.

@@ -6,6 +6,7 @@
 Correctness runs (rkharness) are found by summary.json, benchmark runs
 (loadgen) by points.jsonl, failover runs by failover.jsonl.
 """
+import glob
 import json
 import os
 import statistics
@@ -41,9 +42,11 @@ def correctness(root):
         print("Unknown = undecided, never counted as a pass. Faults = planned / executed / completed per trial (min-max), from each")
         print("trial's events; * = planned computed from the config with the current rule (run predates the field; runs before")
         print("commit 9667921 also started a last fault that the end of the run cut short); ! = fewer executed than planned.")
-        print("Stale-read scan = trials with provably stale reads (conservative scan, separate from Porcupine; n/a = not recorded).\n")
-        print("| Run | DB | Fault | Bugs | Read path | Trials | Valid | Ok (reduced) | Anomalies | Unknown | Errors | Detection [95% CI] | Median detect (s) | Faults | Stale-read scan | Ops ok / info / fail |")
-        print("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+        print("Stale-read scan = trials with provably stale reads (conservative scan, separate from Porcupine; n/a = not recorded).")
+        print("Combined detection = trials with Illegal or a provably stale read, over all trials without a harness error (Unknown included).")
+        print("Detection [95% CI] is Porcupine alone: Illegal over Valid + Ok (reduced) + Illegal.\n")
+        print("| Run | DB | Fault | Bugs | Read path | Trials | Valid | Ok (reduced) | Anomalies | Unknown | Errors | Combined detection [95% CI] | Detection [95% CI] | Median detect (s) | Faults | Stale-read scan | Ops ok / info / fail |")
+        print("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
         for name, s in items:
             c = s["config"]
             bugs = ",".join(c.get("RaftKV", {}).get("Bugs") or []) or "-"
@@ -51,7 +54,38 @@ def correctness(root):
             det = f'{s["detection_rate"]:.2f} [{s["detection_ci95_low"]:.2f}, {s["detection_ci95_high"]:.2f}]'
             md = f'{s["median_time_to_detection_s"]:.1f}' if s.get("median_time_to_detection_s") else "-"
             stale = f'{s["stale_read_trials"]}/{s["trials"]}' if "stale_read_trials" in s else "n/a"
-            print(f'| {name} | {c["DB"]} | {c["Fault"]} | {bugs} | {rm} | {s["trials"]} | {s["valid"]} | {s.get("valid_reduced", 0)} | {s["illegal"]} | {s["unknown"]} | {s["errors"]} | {det} | {md} | {fault_counts(os.path.join(root, name), s)} | {stale} | {s["ok_ops"]} / {s["info_ops"]} / {s["fail_ops"]} |')
+            print(f'| {name} | {c["DB"]} | {c["Fault"]} | {bugs} | {rm} | {s["trials"]} | {s["valid"]} | {s.get("valid_reduced", 0)} | {s["illegal"]} | {s["unknown"]} | {s["errors"]} | {combined_detection(os.path.join(root, name))} | {det} | {md} | {fault_counts(os.path.join(root, name), s)} | {stale} | {s["ok_ops"]} / {s["info_ops"]} / {s["fail_ops"]} |')
+
+
+def wilson(k, n, z=1.96):
+    if n == 0:
+        return 0.0, 1.0
+    p = k / n
+    den = 1 + z * z / n
+    centre = (p + z * z / (2 * n)) / den
+    half = z * ((p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5) / den
+    return max(0.0, centre - half), min(1.0, centre + half)
+
+
+def combined_detection(run_dir):
+    """Trials detected by Porcupine (Illegal) or by the stale-read scan,
+    over all trials without a harness error. Unknown trials count in the
+    denominator: the scan is conservative, so a trial with no provably stale
+    read and no Illegal is not detected."""
+    k = n = 0
+    for rp in glob.glob(os.path.join(run_dir, "trial-*", "result.json")):
+        with open(rp) as f:
+            r = json.load(f)
+        if r.get("error"):
+            continue
+        sr = r.get("stale_reads")
+        if sr is None:
+            return "n/a"
+        n += 1
+        if r["check"].get("result") == "Illegal" or sr.get("reads", 0) > 0:
+            k += 1
+    lo, hi = wilson(k, n)
+    return f"{k}/{n} = {k / n if n else 0:.2f} [{lo:.2f}, {hi:.2f}]"
 
 
 def planned_faults(c):

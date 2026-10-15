@@ -1,0 +1,16 @@
+{"time":"2026-10-15T01:24:27.7368892Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:24:27.737032622Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:24:27.737666823Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:24:29.197625111Z","level":"INFO","msg":"starting election","node":5,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-15T01:24:29.199418894Z","level":"INFO","msg":"became leader","node":5,"term":1,"last_index":1}
+{"time":"2026-10-15T01:24:37.22155106Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:24:37.222186711Z","level":"INFO","msg":"raft started","node":5,"term":1,"vote":5,"snapshot":0,"last_index":2364,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:24:37.222643295Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:24:49.240169341Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:24:49.240636368Z","level":"INFO","msg":"raft started","node":5,"term":3,"vote":4,"snapshot":5375,"last_index":6476,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:24:49.240869912Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:25:01.246097538Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:25:01.246347798Z","level":"INFO","msg":"raft started","node":5,"term":4,"vote":2,"snapshot":10615,"last_index":10772,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:25:01.246596329Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:25:02.537305533Z","level":"INFO","msg":"starting election","node":5,"term":5,"last_index":10772,"last_term":4}
+{"time":"2026-10-15T01:25:02.539019005Z","level":"INFO","msg":"became leader","node":5,"term":5,"last_index":10773}

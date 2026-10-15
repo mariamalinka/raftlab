@@ -1,0 +1,3 @@
+{"time":"2026-10-14T23:20:25.854030271Z","level":"WARN","msg":"bug-injection build","bugs":["figure8"]}
+{"time":"2026-10-14T23:20:25.854158365Z","level":"INFO","msg":"raft started","node":2,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["figure8"]}
+{"time":"2026-10-14T23:20:25.854305475Z","level":"INFO","msg":"serving","node":2,"addr":"10.77.0.12:7000","read_mode":"readindex"}

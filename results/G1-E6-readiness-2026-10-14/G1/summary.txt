@@ -1,0 +1,4 @@
+mode=pipeline flag='-pipeline' runs=500 pass=500 fail=0 wall_seconds=9708 concurrency=8
+mode=default flag='' runs=500 pass=500 fail=0 wall_seconds=9872 concurrency=8
+mode=batch1 flag='-batch=1' runs=500 pass=500 fail=0 wall_seconds=11018 concurrency=8
+finished 2026-10-14T22:33:33Z

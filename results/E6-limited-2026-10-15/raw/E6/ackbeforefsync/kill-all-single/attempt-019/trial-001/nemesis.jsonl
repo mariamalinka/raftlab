@@ -1,0 +1,6 @@
+{"time":3012772923,"kind":"start","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}
+{"time":8017142466,"kind":"heal","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}
+{"time":15029651747,"kind":"start","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}
+{"time":20032993404,"kind":"heal","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}
+{"time":27050377607,"kind":"start","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}
+{"time":32053840504,"kind":"heal","fault":"kill-all","desc":"kill all [1 2 3 4 5]"}

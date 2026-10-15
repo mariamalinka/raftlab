@@ -1,0 +1,71 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Unknown",
+    "ops": 23728,
+    "ok": 23289,
+    "fail": 165,
+    "info": 274,
+    "reduced_keys": [
+      0,
+      2,
+      5
+    ],
+    "unknown_keys": [
+      1,
+      3,
+      4
+    ],
+    "dropped_ops": 145
+  },
+  "stale_reads": {
+    "reads": 4,
+    "keys": [
+      1,
+      3,
+      4
+    ]
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3012002347,
+      "kind": "start",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    },
+    {
+      "time": 8017088200,
+      "kind": "heal",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    },
+    {
+      "time": 15033055685,
+      "kind": "start",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    },
+    {
+      "time": 20037345662,
+      "kind": "heal",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    },
+    {
+      "time": 27047629528,
+      "kind": "start",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    },
+    {
+      "time": 32051546085,
+      "kind": "heal",
+      "fault": "kill-all",
+      "desc": "kill all [1 2 3 4 5]"
+    }
+  ],
+  "wall_s": 104.093851697
+}

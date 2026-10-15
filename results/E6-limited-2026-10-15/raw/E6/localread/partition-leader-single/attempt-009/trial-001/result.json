@@ -1,0 +1,70 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Unknown",
+    "ops": 32721,
+    "ok": 32582,
+    "fail": 16,
+    "info": 123,
+    "reduced_keys": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "unknown_keys": [
+      0,
+      2
+    ],
+    "dropped_ops": 81
+  },
+  "stale_reads": {
+    "reads": 2,
+    "keys": [
+      0,
+      2
+    ]
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3060730453,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [1] | [2 3 4 5]"
+    },
+    {
+      "time": 8150010822,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [1] | [2 3 4 5]"
+    },
+    {
+      "time": 15202032538,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [5] | [1 2 3 4]"
+    },
+    {
+      "time": 20297519741,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [5] | [1 2 3 4]"
+    },
+    {
+      "time": 27347279739,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [1] | [2 3 4 5]"
+    },
+    {
+      "time": 32454471390,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [1] | [2 3 4 5]"
+    }
+  ],
+  "wall_s": 105.729528322
+}

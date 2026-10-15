@@ -1,0 +1,65 @@
+== ackbeforefsync/kill-all start 2026-10-15T00:19:20Z
+trial 1/20: Unknown ops=23884 ok=23459 info=275 fail=150 faults=3/3/3 stale=3 (101s)
+trial 2/20: Unknown ops=23926 ok=23476 info=299 fail=151 faults=3/3/3 stale=8 (101s)
+trial 3/20: Unknown ops=23754 ok=23316 info=298 fail=140 faults=3/3/3 stale=9 (109s)
+/tmp/rk/e6l/run.sh: line 9:  1086 Killed                  $E6H "$@" -out "$OUT/E6/$name"
+== ackbeforefsync/kill-all end 2026-10-15T00:25:37Z
+== correct-lazyfs/kill-all start 2026-10-15T00:25:38Z
+trial 1/20: Ok ops=22087 ok=21658 info=281 fail=148 faults=3/3/3 stale=0 (41s)
+trial 2/20: Ok ops=23483 ok=23046 info=308 fail=129 faults=3/3/3 stale=0 (41s)
+trial 3/20: Ok (reduced) ops=21923 ok=21473 info=293 fail=157 faults=3/3/3 stale=0 (101s)
+trial 4/20: Ok ops=22588 ok=22138 info=298 fail=152 faults=3/3/3 stale=0 (41s)
+trial 5/20: Ok ops=23476 ok=23066 info=278 fail=132 faults=3/3/3 stale=0 (41s)
+trial 6/20: Ok ops=23178 ok=22731 info=307 fail=140 faults=3/3/3 stale=0 (41s)
+trial 7/20: Ok ops=22990 ok=22540 info=311 fail=139 faults=3/3/3 stale=0 (41s)
+trial 8/20: Ok ops=22858 ok=22408 info=292 fail=158 faults=3/3/3 stale=0 (41s)
+trial 9/20: Ok ops=23566 ok=23132 info=297 fail=137 faults=3/3/3 stale=0 (41s)
+trial 10/20: Ok ops=23357 ok=22946 info=296 fail=115 faults=3/3/3 stale=0 (41s)
+trial 11/20: Ok ops=23417 ok=22991 info=277 fail=149 faults=3/3/3 stale=0 (41s)
+trial 12/20: Ok ops=22747 ok=22297 info=299 fail=151 faults=3/3/3 stale=0 (41s)
+trial 13/20: Ok (reduced) ops=23019 ok=22594 info=274 fail=151 faults=3/3/3 stale=0 (102s)
+trial 14/20: Ok ops=22571 ok=22123 info=309 fail=139 faults=3/3/3 stale=0 (41s)
+trial 15/20: Ok ops=23246 ok=22841 info=281 fail=124 faults=3/3/3 stale=0 (41s)
+trial 16/20: Ok ops=22076 ok=21626 info=306 fail=144 faults=3/3/3 stale=0 (41s)
+trial 17/20: Ok ops=23275 ok=22859 info=272 fail=144 faults=3/3/3 stale=0 (41s)
+trial 18/20: Ok ops=22684 ok=22259 info=287 fail=138 faults=3/3/3 stale=0 (41s)
+trial 19/20: Ok ops=23785 ok=23405 info=249 fail=131 faults=3/3/3 stale=0 (40s)
+trial 20/20: Ok ops=23254 ok=22843 info=277 fail=134 faults=3/3/3 stale=0 (41s)
+
+raftkv / kill-all: 18 valid, 2 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.16]; stale-read scan 0/20 trials
+== correct-lazyfs/kill-all end 2026-10-15T00:41:19Z
+== localread/partition-leader start 2026-10-15T00:41:23Z
+trial 1/20: Unknown ops=32990 ok=32840 info=130 fail=20 faults=3/3/3 stale=3 (105s)
+trial 2/20: Unknown ops=32339 ok=32164 info=158 fail=17 faults=3/3/3 stale=2 (104s)
+trial 3/20: Illegal ops=31987 ok=31832 info=135 fail=20 faults=3/3/3 stale=4 detected at 4.2s, keys [0] (129s)
+trial 4/20: Unknown ops=33232 ok=33062 info=158 fail=12 faults=3/3/3 stale=3 (102s)
+trial 5/20: Unknown ops=31472 ok=31297 info=150 fail=25 faults=3/3/3 stale=7 (103s)
+trial 6/20: Ok (reduced) ops=31339 ok=31144 info=165 fail=30 faults=3/3/3 stale=0 (102s)
+trial 7/20: Unknown ops=33076 ok=32921 info=137 fail=18 faults=3/3/3 stale=3 (105s)
+/tmp/rk/e6l/run.sh: line 9:  8430 Killed                  $E6H "$@" -out "$OUT/E6/$name"
+== localread/partition-leader end 2026-10-15T00:55:47Z
+== correct/partition-leader start 2026-10-15T00:55:51Z
+trial 1/20: Ok ops=31642 ok=31482 info=113 fail=47 faults=3/3/3 stale=0 (42s)
+trial 2/20: Ok ops=32379 ok=32203 info=123 fail=53 faults=3/3/3 stale=0 (41s)
+trial 3/20: Ok ops=31476 ok=31326 info=99 fail=51 faults=3/3/3 stale=0 (41s)
+trial 4/20: Ok ops=31481 ok=31315 info=119 fail=47 faults=3/3/3 stale=0 (41s)
+trial 5/20: Ok ops=31053 ok=30903 info=91 fail=59 faults=3/3/3 stale=0 (76s)
+trial 6/20: Ok ops=31905 ok=31755 info=104 fail=46 faults=3/3/3 stale=0 (43s)
+trial 7/20: Ok ops=34023 ok=33884 info=90 fail=49 faults=3/3/3 stale=0 (41s)
+trial 8/20: Ok (reduced) ops=32298 ok=32145 info=106 fail=47 faults=3/3/3 stale=0 (101s)
+trial 9/20: Ok (reduced) ops=31341 ok=31187 info=107 fail=47 faults=3/3/3 stale=0 (101s)
+trial 10/20: Ok (reduced) ops=32066 ok=31916 info=110 fail=40 faults=3/3/3 stale=0 (101s)
+trial 11/20: Ok ops=33558 ok=33433 info=93 fail=32 faults=3/3/3 stale=0 (41s)
+trial 12/20: Ok ops=31194 ok=31041 info=103 fail=50 faults=3/3/3 stale=0 (41s)
+trial 13/20: Ok (reduced) ops=32198 ok=32031 info=120 fail=47 faults=3/3/3 stale=0 (101s)
+trial 14/20: Ok ops=31637 ok=31455 info=136 fail=46 faults=3/3/3 stale=0 (41s)
+trial 15/20: Ok ops=32454 ok=32304 info=108 fail=42 faults=3/3/3 stale=0 (41s)
+trial 16/20: Ok ops=30837 ok=30665 info=115 fail=57 faults=3/3/3 stale=0 (41s)
+trial 17/20: Ok ops=31758 ok=31608 info=94 fail=56 faults=3/3/3 stale=0 (45s)
+trial 18/20: Ok ops=32311 ok=32161 info=108 fail=42 faults=3/3/3 stale=0 (41s)
+trial 19/20: Ok ops=31412 ok=31247 info=116 fail=49 faults=3/3/3 stale=0 (41s)
+trial 20/20: Ok ops=31090 ok=30940 info=97 fail=53 faults=3/3/3 stale=0 (41s)
+
+raftkv / partition-leader: 16 valid, 4 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.16]; stale-read scan 0/20 trials
+== correct/partition-leader end 2026-10-15T01:14:18Z
+done 2026-10-15T01:14:23Z

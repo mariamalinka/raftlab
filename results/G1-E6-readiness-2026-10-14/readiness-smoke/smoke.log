@@ -1,0 +1,56 @@
+== ackbeforefsync/kill-all 22:44:26
+trial 2/3: Unknown ops=23955 ok=23507 info=292 fail=156 faults=3/3/3 stale=9 (103s)
+trial 3/3: Unknown ops=23917 ok=23492 info=283 fail=142 faults=3/3/3 stale=7 (102s)
+
+raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 3 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 3/3 trials
+== ackbeforefsync/kill-majority 22:49:33
+trial 2/3: Ok ops=24083 ok=23660 info=282 fail=141 faults=3/3/3 stale=0 (41s)
+trial 3/3: Ok ops=22593 ok=22143 info=293 fail=157 faults=3/3/3 stale=0 (41s)
+
+raftkv / kill-majority: 3 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.56]; stale-read scan 0/3 trials
+== correct/kill-all-lazyfs 22:51:35
+trial 2/3: Ok ops=23231 ok=22784 info=307 fail=140 faults=3/3/3 stale=0 (41s)
+trial 3/3: Ok ops=22625 ok=22175 info=307 fail=143 faults=3/3/3 stale=0 (41s)
+
+raftkv / kill-all: 2 valid, 1 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.56]; stale-read scan 0/3 trials
+== localread/partition-leader 22:54:38
+trial 2/3: Illegal ops=34404 ok=34241 info=135 fail=28 faults=3/3/3 stale=8 detected at 4.1s, keys [1 2] (162s)
+trial 3/3: Unknown ops=33852 ok=33677 info=158 fail=17 faults=3/3/3 stale=1 (106s)
+
+raftkv / partition-leader: 1 valid, 0 valid (reduced), 1 illegal, 1 unknown, 0 errors; detection 0.50 [0.09, 0.91]; stale-read scan 2/3 trials; median time to detection 4.1s
+== correct/partition-leader 22:59:50
+trial 2/3: Ok (reduced) ops=32186 ok=32036 info=99 fail=51 faults=3/3/3 stale=0 (102s)
+trial 3/3: Ok (reduced) ops=32086 ok=31920 info=116 fail=50 faults=3/3/3 stale=0 (103s)
+
+raftkv / partition-leader: 1 valid, 2 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.56]; stale-read scan 0/3 trials
+== leasenodrift/clock-partition-mild 23:04:03
+trial 2/3: Illegal ops=33324 ok=33155 info=142 fail=27 faults=3/3/3 stale=1 detected at 28.5s, keys [5] (105s)
+trial 3/3: Ok ops=31411 ok=31232 info=162 fail=17 faults=3/3/3 stale=0 (56s)
+
+raftkv / clock-partition-mild: 1 valid, 1 valid (reduced), 1 illegal, 0 unknown, 0 errors; detection 0.33 [0.06, 0.79]; stale-read scan 1/3 trials; median time to detection 28.5s
+== correct-lease/clock-partition-mild 23:08:26
+trial 2/3: Ok (reduced) ops=33270 ok=33120 info=134 fail=16 faults=3/3/3 stale=0 (101s)
+trial 3/3: Ok ops=31840 ok=31685 info=127 fail=28 faults=3/3/3 stale=0 (80s)
+
+raftkv / clock-partition-mild: 1 valid, 2 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.56]; stale-read scan 0/3 trials
+== nodedup/pause-leader 23:13:10
+trial 2/3: Ok ops=34232 ok=34117 info=76 fail=39 faults=3/3/3 stale=0 (41s)
+trial 3/3: Ok ops=34302 ok=34197 info=66 fail=39 faults=3/3/3 stale=0 (44s)
+
+raftkv / pause-leader: 2 valid, 1 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.56]; stale-read scan 0/3 trials
+== votenopersist/kill-majority 23:16:17
+trial 2/3: Ok ops=21413 ok=20963 info=302 fail=148 faults=3/3/3 stale=0 (41s)
+trial 3/3: Ok ops=20353 ok=19853 info=323 fail=177 faults=3/3/3 stale=0 (41s)
+
+raftkv / kill-majority: 3 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.56]; stale-read scan 0/3 trials
+== notruncate/partition-halves 23:18:20
+trial 2/3: Ok ops=34018 ok=33918 info=77 fail=23 faults=3/3/3 stale=0 (41s)
+trial 3/3: Ok ops=35410 ok=35319 info=62 fail=29 faults=3/3/3 stale=0 (41s)
+
+raftkv / partition-halves: 3 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.56]; stale-read scan 0/3 trials
+== figure8/mixed 23:20:25
+trial 2/3: Ok ops=35819 ok=35732 info=64 fail=23 faults=3/3/3 stale=0 (41s)
+trial 3/3: Ok ops=36589 ok=36519 info=46 fail=24 faults=3/3/3 stale=0 (46s)
+
+raftkv / mixed: 3 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.56]; stale-read scan 0/3 trials
+done 23:22:34

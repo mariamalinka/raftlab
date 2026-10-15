@@ -1,0 +1,16 @@
+{"time":"2026-10-15T01:53:37.108298654Z","level":"WARN","msg":"bug-injection build","bugs":["localread"]}
+{"time":"2026-10-15T01:53:37.109472892Z","level":"INFO","msg":"raft started","node":2,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["localread"]}
+{"time":"2026-10-15T01:53:37.11007418Z","level":"INFO","msg":"serving","node":2,"addr":"10.77.0.12:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:53:54.520938916Z","level":"INFO","msg":"starting election","node":2,"term":6,"last_index":8742,"last_term":5}
+{"time":"2026-10-15T01:53:54.523361674Z","level":"INFO","msg":"became leader","node":2,"term":6,"last_index":8743}
+{"time":"2026-10-15T01:53:59.019387035Z","level":"INFO","msg":"became follower","node":2,"term":8,"leader":0}
+{"time":"2026-10-15T01:53:59.020459032Z","level":"INFO","msg":"starting election","node":2,"term":9,"last_index":11754,"last_term":6}
+{"time":"2026-10-15T01:54:00.300426401Z","level":"INFO","msg":"starting election","node":2,"term":10,"last_index":11754,"last_term":6}
+{"time":"2026-10-15T01:54:00.302502016Z","level":"INFO","msg":"became leader","node":2,"term":10,"last_index":11755}
+{"time":"2026-10-15T01:54:07.320854279Z","level":"INFO","msg":"lost quorum, stepping down","node":2,"term":10,"active":1}
+{"time":"2026-10-15T01:54:07.320911789Z","level":"INFO","msg":"became follower","node":2,"term":10,"leader":0}
+{"time":"2026-10-15T01:54:07.325813924Z","level":"INFO","msg":"starting election","node":2,"term":11,"last_index":15794,"last_term":10}
+{"time":"2026-10-15T01:54:09.005428664Z","level":"INFO","msg":"starting election","node":2,"term":12,"last_index":15794,"last_term":10}
+{"time":"2026-10-15T01:54:10.476013316Z","level":"INFO","msg":"starting election","node":2,"term":13,"last_index":15794,"last_term":10}
+{"time":"2026-10-15T01:54:11.614520356Z","level":"INFO","msg":"became follower","node":2,"term":14,"leader":0}
+{"time":"2026-10-15T01:54:12.792089594Z","level":"INFO","msg":"installing snapshot from leader","node":2,"term":15,"index":15779}

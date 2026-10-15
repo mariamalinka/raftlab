@@ -1,0 +1,31 @@
+ackbeforefsync/kill-all attempt=5 exit=0 peak_rss_kb=7958568 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=6 exit=0 peak_rss_kb=9015396 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=7 exit=0 peak_rss_kb=8989420 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=8 exit=0 peak_rss_kb=9217368 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=9 exit=0 peak_rss_kb=8615396 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=10 exit=0 peak_rss_kb=8776292 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=11 exit=0 peak_rss_kb=6041508 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=12 exit=0 peak_rss_kb=11257764 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=13 exit=0 peak_rss_kb=9133844 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=14 exit=0 peak_rss_kb=7421940 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=15 exit=0 peak_rss_kb=9582088 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=16 exit=0 peak_rss_kb=9975428 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=17 exit=0 peak_rss_kb=9150536 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=18 exit=0 peak_rss_kb=1978516 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=19 exit=0 peak_rss_kb=10476436 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+ackbeforefsync/kill-all attempt=20 exit=0 peak_rss_kb=10591008 raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+localread/partition-leader attempt=9 exit=0 peak_rss_kb=10397256 raftkv / partition-leader: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+/tmp/rk/e6l/resume.sh: line 9: 25175 Killed                  $E6H "$@" -out "$d" > $d/console.log 2>&1
+localread/partition-leader attempt=10 exit=137 peak_rss_kb=13840852 
+localread/partition-leader attempt=11 exit=0 peak_rss_kb=11849412 raftkv / partition-leader: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+/tmp/rk/e6l/resume.sh: line 9: 26384 Killed                  $E6H "$@" -out "$d" > $d/console.log 2>&1
+localread/partition-leader attempt=12 exit=137 peak_rss_kb=13797800 
+localread/partition-leader attempt=13 exit=0 peak_rss_kb=7422040 raftkv / partition-leader: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+localread/partition-leader attempt=14 exit=0 peak_rss_kb=11372216 raftkv / partition-leader: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+localread/partition-leader attempt=15 exit=0 peak_rss_kb=8899096 raftkv / partition-leader: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+localread/partition-leader attempt=16 exit=0 peak_rss_kb=116608 raftkv / partition-leader: 1 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials
+localread/partition-leader attempt=17 exit=0 peak_rss_kb=10490112 raftkv / partition-leader: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+localread/partition-leader attempt=18 exit=0 peak_rss_kb=10771316 raftkv / partition-leader: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+localread/partition-leader attempt=19 exit=0 peak_rss_kb=13021804 raftkv / partition-leader: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials
+/tmp/rk/e6l/resume.sh: line 9: 30717 Killed                  $E6H "$@" -out "$d" > $d/console.log 2>&1
+localread/partition-leader attempt=20 exit=137 peak_rss_kb=13754036 

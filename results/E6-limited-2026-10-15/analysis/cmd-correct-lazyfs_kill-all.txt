@@ -1,0 +1,1 @@
+/tmp/raftkv-bin-e6l/rkharness -bin /tmp/raftkv-bin-e6l -trials 20 -clients 25 -time 34s -warmup 3s -interval 7s -fault-duration 5s -recover 5s -key-rotate 12s -unique-values -db raftkv -lazyfs -fault kill-all -out /tmp/rk/e6l/out/E6/correct-lazyfs/kill-all

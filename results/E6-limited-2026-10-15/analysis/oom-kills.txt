@@ -1,0 +1,5 @@
+[ 2338.521916] Memory cgroup out of memory: Killed process 8430 (rkharness) total-vm:16106608kB, anon-rss:13884612kB  (localread first process, trial 8; copied from dmesg output seen at 01:14 UTC)
+ackbeforefsync first process (pid 1086, trial 4): killed by SIGKILL at ~00:25 UTC, no kernel log line kept; cause presumed OOM, not confirmed
+[ 5528.670363] Memory cgroup out of memory: Killed process 25175 (rkharness) total-vm:16237628kB, anon-rss:13841028kB, file-rss:1568kB, shmem-rss:0kB, UID:0 pgtables:27432kB oom_score_adj:0
+[ 5794.956932] Memory cgroup out of memory: Killed process 26384 (rkharness) total-vm:16096048kB, anon-rss:13797360kB, file-rss:1740kB, shmem-rss:0kB, UID:0 pgtables:27340kB oom_score_adj:0
+[ 6669.873315] Memory cgroup out of memory: Killed process 30717 (rkharness) total-vm:16098988kB, anon-rss:13754920kB, file-rss:1712kB, shmem-rss:0kB, UID:0 pgtables:27212kB oom_score_adj:0

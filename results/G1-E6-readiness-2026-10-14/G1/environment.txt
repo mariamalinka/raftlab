@@ -1,0 +1,10 @@
+commit=3055bd5ae643ae426ecdef097e05a0b8203ceeb7
+branch=main
+status_clean=yes
+go version go1.26.0 linux/amd64
+build: go test -c -race -o /tmp/rk/raft.test ./internal/raft/
+run: /tmp/rk/raft.test -test.count=1 -test.v [ '' | -pipeline | -batch=1 ]
+runs_per_mode=500 concurrency_per_mode=8 (24 processes total; one run uses ~8% of a core, mostly timer waits)
+nproc=4 kernel=6.18.44-fc-v114
+started=2026-10-14T19:29:48Z
+8b51bbdbc647039f33b1c09201ebdb920ba0298263767934244ca4cf544b6e9d  /tmp/rk/raft.test

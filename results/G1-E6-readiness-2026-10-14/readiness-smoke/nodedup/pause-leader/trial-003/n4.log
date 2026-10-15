@@ -1,0 +1,9 @@
+{"time":"2026-10-14T23:15:33.31975022Z","level":"WARN","msg":"bug-injection build","bugs":["nodedup"]}
+{"time":"2026-10-14T23:15:33.319914602Z","level":"INFO","msg":"raft started","node":4,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["nodedup"]}
+{"time":"2026-10-14T23:15:33.320118974Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-14T23:15:43.786174757Z","level":"INFO","msg":"starting election","node":4,"term":3,"last_index":4227,"last_term":2}
+{"time":"2026-10-14T23:15:43.788485828Z","level":"INFO","msg":"became follower","node":4,"term":4,"leader":0}
+{"time":"2026-10-14T23:15:50.73072118Z","level":"INFO","msg":"starting election","node":4,"term":7,"last_index":8025,"last_term":6}
+{"time":"2026-10-14T23:15:50.73214688Z","level":"INFO","msg":"became leader","node":4,"term":7,"last_index":8026}
+{"time":"2026-10-14T23:16:06.63940686Z","level":"INFO","msg":"became follower","node":4,"term":8,"leader":0}
+{"time":"2026-10-14T23:16:06.639900712Z","level":"INFO","msg":"installing snapshot from leader","node":4,"term":8,"index":15872}

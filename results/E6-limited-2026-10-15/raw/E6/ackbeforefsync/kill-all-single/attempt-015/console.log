@@ -1,0 +1,3 @@
+trial 1/1: Unknown ops=23988 ok=23539 info=306 fail=143 faults=3/3/3 stale=7 (101s)
+
+raftkv / kill-all: 0 valid, 0 valid (reduced), 0 illegal, 1 unknown, 0 errors; detection 0.00 [0.00, 1.00]; stale-read scan 1/1 trials

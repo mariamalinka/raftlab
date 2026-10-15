@@ -1,0 +1,16 @@
+{"time":"2026-10-15T01:26:15.489970161Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:26:15.490109871Z","level":"INFO","msg":"raft started","node":4,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:26:15.490496762Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:26:24.614640699Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:26:24.615394986Z","level":"INFO","msg":"raft started","node":4,"term":1,"vote":0,"snapshot":0,"last_index":2286,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:26:24.615576483Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:26:36.623206967Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:26:36.624046993Z","level":"INFO","msg":"raft started","node":4,"term":2,"vote":1,"snapshot":5397,"last_index":6501,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:26:36.624313721Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:26:37.759548528Z","level":"INFO","msg":"starting election","node":4,"term":3,"last_index":6501,"last_term":2}
+{"time":"2026-10-15T01:26:37.761370448Z","level":"INFO","msg":"became leader","node":4,"term":3,"last_index":6502}
+{"time":"2026-10-15T01:26:48.637280357Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:26:48.637426364Z","level":"INFO","msg":"raft started","node":4,"term":3,"vote":4,"snapshot":10663,"last_index":10747,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-15T01:26:48.637887294Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T01:26:49.992993278Z","level":"INFO","msg":"starting election","node":4,"term":4,"last_index":10747,"last_term":3}
+{"time":"2026-10-15T01:26:50.123527054Z","level":"INFO","msg":"became follower","node":4,"term":5,"leader":0}

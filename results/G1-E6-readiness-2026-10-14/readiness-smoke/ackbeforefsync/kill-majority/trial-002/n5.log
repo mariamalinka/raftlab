@@ -1,0 +1,17 @@
+{"time":"2026-10-14T22:50:14.076617426Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-14T22:50:14.076783062Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-14T22:50:14.077594843Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-14T22:50:19.367288951Z","level":"INFO","msg":"starting election","node":5,"term":2,"last_index":2232,"last_term":1}
+{"time":"2026-10-14T22:50:19.490562977Z","level":"INFO","msg":"became follower","node":5,"term":3,"leader":0}
+{"time":"2026-10-14T22:50:21.142405836Z","level":"INFO","msg":"starting election","node":5,"term":4,"last_index":2232,"last_term":1}
+{"time":"2026-10-14T22:50:21.209675012Z","level":"INFO","msg":"became follower","node":5,"term":5,"leader":0}
+{"time":"2026-10-14T22:50:22.547630848Z","level":"INFO","msg":"starting election","node":5,"term":6,"last_index":2232,"last_term":1}
+{"time":"2026-10-14T22:50:22.85495431Z","level":"INFO","msg":"became follower","node":5,"term":7,"leader":0}
+{"time":"2026-10-14T22:50:24.316936614Z","level":"INFO","msg":"starting election","node":5,"term":8,"last_index":2232,"last_term":1}
+{"time":"2026-10-14T22:50:24.318107087Z","level":"INFO","msg":"became leader","node":5,"term":8,"last_index":2233}
+{"time":"2026-10-14T22:50:35.203529667Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-14T22:50:35.203916159Z","level":"INFO","msg":"raft started","node":5,"term":8,"vote":5,"snapshot":5397,"last_index":6561,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-14T22:50:35.204454385Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-14T22:50:47.214775145Z","level":"WARN","msg":"bug-injection build","bugs":["ackbeforefsync"]}
+{"time":"2026-10-14T22:50:47.215056053Z","level":"INFO","msg":"raft started","node":5,"term":13,"vote":4,"snapshot":10680,"last_index":10944,"bugs":["ackbeforefsync"]}
+{"time":"2026-10-14T22:50:47.2155612Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}

@@ -1,0 +1,14 @@
+{"time":"2026-10-15T00:30:45.382764778Z","level":"INFO","msg":"raft started","node":4,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-15T00:30:45.383003792Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T00:30:46.553535301Z","level":"INFO","msg":"starting election","node":4,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-15T00:30:46.55702062Z","level":"INFO","msg":"became leader","node":4,"term":1,"last_index":1}
+{"time":"2026-10-15T00:30:54.630632769Z","level":"INFO","msg":"raft started","node":4,"term":1,"vote":4,"snapshot":0,"last_index":2248,"bugs":null}
+{"time":"2026-10-15T00:30:54.630915829Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T00:30:56.111200198Z","level":"INFO","msg":"starting election","node":4,"term":2,"last_index":2248,"last_term":1}
+{"time":"2026-10-15T00:30:56.114341863Z","level":"INFO","msg":"became leader","node":4,"term":2,"last_index":2249}
+{"time":"2026-10-15T00:31:06.642815662Z","level":"INFO","msg":"raft started","node":4,"term":2,"vote":4,"snapshot":5400,"last_index":6366,"bugs":null}
+{"time":"2026-10-15T00:31:06.643046643Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T00:31:07.803735577Z","level":"INFO","msg":"starting election","node":4,"term":3,"last_index":6366,"last_term":2}
+{"time":"2026-10-15T00:31:07.80642264Z","level":"INFO","msg":"became leader","node":4,"term":3,"last_index":6367}
+{"time":"2026-10-15T00:31:18.653844875Z","level":"INFO","msg":"raft started","node":4,"term":3,"vote":4,"snapshot":10669,"last_index":10838,"bugs":null}
+{"time":"2026-10-15T00:31:18.654048545Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}

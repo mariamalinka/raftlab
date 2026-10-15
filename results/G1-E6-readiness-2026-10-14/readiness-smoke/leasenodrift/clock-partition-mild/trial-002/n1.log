@@ -1,0 +1,8 @@
+{"time":"2026-10-14T23:05:45.201996502Z","level":"WARN","msg":"bug-injection build","bugs":["leasenodrift"]}
+{"time":"2026-10-14T23:05:45.202134783Z","level":"INFO","msg":"raft started","node":1,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["leasenodrift"]}
+{"time":"2026-10-14T23:05:45.202270057Z","level":"INFO","msg":"serving","node":1,"addr":"10.77.0.11:7000","read_mode":"lease"}
+{"time":"2026-10-14T23:05:54.447236799Z","level":"INFO","msg":"clock skewed","node":1,"offset":0,"rate":1}
+{"time":"2026-10-14T23:06:06.611207393Z","level":"INFO","msg":"clock skewed","node":1,"offset":0,"rate":1}
+{"time":"2026-10-14T23:06:08.323019175Z","level":"INFO","msg":"starting election","node":1,"term":10,"last_index":11581,"last_term":9}
+{"time":"2026-10-14T23:06:08.325232828Z","level":"INFO","msg":"became follower","node":1,"term":11,"leader":0}
+{"time":"2026-10-14T23:06:18.764310962Z","level":"INFO","msg":"clock skewed","node":1,"offset":0,"rate":1}

@@ -1,0 +1,5 @@
+{"time":"2026-10-15T00:41:23.195049105Z","level":"WARN","msg":"bug-injection build","bugs":["localread"]}
+{"time":"2026-10-15T00:41:23.195216845Z","level":"INFO","msg":"raft started","node":2,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":["localread"]}
+{"time":"2026-10-15T00:41:23.195485588Z","level":"INFO","msg":"serving","node":2,"addr":"10.77.0.12:7000","read_mode":"readindex"}
+{"time":"2026-10-15T00:41:52.860686718Z","level":"INFO","msg":"starting election","node":2,"term":13,"last_index":15414,"last_term":12}
+{"time":"2026-10-15T00:41:53.027411302Z","level":"INFO","msg":"became follower","node":2,"term":14,"leader":0}

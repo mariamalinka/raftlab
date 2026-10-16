@@ -2,7 +2,7 @@
 
 RaftLab is a research project that builds a replicated key-value store on the Raft consensus algorithm from scratch, then measures how correct and how fast it is, using etcd as the reference system. The store is called **RaftKV**. The repository contains the store, a fault-injection test harness, a load generator, and the raw data and reports of every experiment.
 
-The full research report is [FINAL-REPORT.md](FINAL-REPORT.md). The original research plan is the PDF *Raft KV Store vs etcd — Research Plan* (October 9, 2026), which is kept outside this repository.
+The full research report is [FINAL-REPORT.md](FINAL-REPORT.md).
 
 ## 1. Project overview
 

@@ -1,0 +1,16 @@
+{"time":"2026-10-15T10:48:39.797224839Z","level":"INFO","msg":"raft started","node":4,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-15T10:48:39.797586639Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T10:48:45.243204834Z","level":"INFO","msg":"starting election","node":4,"term":2,"last_index":2016,"last_term":1}
+{"time":"2026-10-15T10:48:47.026077981Z","level":"INFO","msg":"became follower","node":4,"term":3,"leader":0}
+{"time":"2026-10-15T10:48:48.033185489Z","level":"INFO","msg":"starting election","node":4,"term":4,"last_index":2016,"last_term":1}
+{"time":"2026-10-15T10:48:49.778404527Z","level":"INFO","msg":"starting election","node":4,"term":5,"last_index":2016,"last_term":1}
+{"time":"2026-10-15T10:48:51.046614054Z","level":"INFO","msg":"became follower","node":4,"term":6,"leader":0}
+{"time":"2026-10-15T10:49:00.901188755Z","level":"INFO","msg":"raft started","node":4,"term":6,"vote":3,"snapshot":0,"last_index":5240,"bugs":null}
+{"time":"2026-10-15T10:49:00.901701508Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"readindex"}
+{"time":"2026-10-15T10:49:02.247021401Z","level":"INFO","msg":"starting election","node":4,"term":8,"last_index":5240,"last_term":6}
+{"time":"2026-10-15T10:49:02.251920487Z","level":"INFO","msg":"became follower","node":4,"term":10,"leader":0}
+{"time":"2026-10-15T10:49:11.052231765Z","level":"INFO","msg":"starting election","node":4,"term":12,"last_index":8932,"last_term":11}
+{"time":"2026-10-15T10:49:11.207082721Z","level":"INFO","msg":"became follower","node":4,"term":13,"leader":0}
+{"time":"2026-10-15T10:49:13.706539081Z","level":"INFO","msg":"starting election","node":4,"term":15,"last_index":8932,"last_term":11}
+{"time":"2026-10-15T10:49:14.941954319Z","level":"INFO","msg":"starting election","node":4,"term":16,"last_index":8932,"last_term":11}
+{"time":"2026-10-15T10:49:14.945366585Z","level":"INFO","msg":"became leader","node":4,"term":16,"last_index":8933}

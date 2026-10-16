@@ -1,0 +1,6 @@
+{"time":3075253213,"kind":"start","fault":"partition-leader","desc":"isolate leader [1] | [2 3 4 5]"}
+{"time":8166356813,"kind":"heal","fault":"partition-leader","desc":"isolate leader [1] | [2 3 4 5]"}
+{"time":15238845562,"kind":"start","fault":"partition-leader","desc":"isolate leader [5] | [1 2 3 4]"}
+{"time":20335219324,"kind":"heal","fault":"partition-leader","desc":"isolate leader [5] | [1 2 3 4]"}
+{"time":27432662801,"kind":"start","fault":"partition-leader","desc":"isolate leader [4] | [1 2 3 5]"}
+{"time":32522637978,"kind":"heal","fault":"partition-leader","desc":"isolate leader [4] | [1 2 3 5]"}

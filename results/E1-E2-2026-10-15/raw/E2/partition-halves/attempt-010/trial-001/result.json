@@ -1,0 +1,64 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok (reduced)",
+    "ops": 28554,
+    "ok": 28321,
+    "fail": 66,
+    "info": 167,
+    "reduced_keys": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dropped_ops": 161
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3108974933,
+      "kind": "start",
+      "fault": "partition-halves",
+      "desc": "halves [4 5] | [1 2 3]"
+    },
+    {
+      "time": 8204363995,
+      "kind": "heal",
+      "fault": "partition-halves",
+      "desc": "halves [4 5] | [1 2 3]"
+    },
+    {
+      "time": 15301254787,
+      "kind": "start",
+      "fault": "partition-halves",
+      "desc": "halves [2 5] | [1 3 4]"
+    },
+    {
+      "time": 20396180999,
+      "kind": "heal",
+      "fault": "partition-halves",
+      "desc": "halves [2 5] | [1 3 4]"
+    },
+    {
+      "time": 27483788791,
+      "kind": "start",
+      "fault": "partition-halves",
+      "desc": "halves [1 3] | [2 4 5]"
+    },
+    {
+      "time": 32580666259,
+      "kind": "heal",
+      "fault": "partition-halves",
+      "desc": "halves [1 3] | [2 4 5]"
+    }
+  ],
+  "wall_s": 101.32857534
+}

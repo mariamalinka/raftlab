@@ -1,0 +1,55 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 29402,
+    "ok": 29218,
+    "fail": 49,
+    "info": 135
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3073477251,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [5] | [1 2 3 4]"
+    },
+    {
+      "time": 8161961870,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [5] | [1 2 3 4]"
+    },
+    {
+      "time": 15241600829,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [3] | [1 2 4 5]"
+    },
+    {
+      "time": 20337237343,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [3] | [1 2 4 5]"
+    },
+    {
+      "time": 27412299736,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [2] | [1 3 4 5]"
+    },
+    {
+      "time": 32534617496,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [2] | [1 3 4 5]"
+    }
+  ],
+  "wall_s": 40.845965159
+}

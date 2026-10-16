@@ -1,0 +1,8 @@
+{"level":"warn","ts":"2026-10-15T18:04:57.033081Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-15T18:04:57.033190Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-15T18:05:01.052473Z","caller":"auth/store.go:1137","msg":"simple token is not cryptographically signed"}
+{"level":"warn","ts":"2026-10-15T18:05:06.054975Z","caller":"rafthttp/probing_status.go:68","msg":"prober detected unhealthy status","round-tripper-name":"ROUND_TRIPPER_SNAPSHOT","remote-peer-id":"1896ccaa84a86dfc","rtt":"0s"}
+{"level":"warn","ts":"2026-10-15T18:05:06.056076Z","caller":"rafthttp/probing_status.go:68","msg":"prober detected unhealthy status","round-tripper-name":"ROUND_TRIPPER_RAFT_MESSAGE","remote-peer-id":"588fa67f3c1910ce","rtt":"0s"}
+{"level":"warn","ts":"2026-10-15T18:05:06.056190Z","caller":"rafthttp/probing_status.go:68","msg":"prober detected unhealthy status","round-tripper-name":"ROUND_TRIPPER_SNAPSHOT","remote-peer-id":"588fa67f3c1910ce","rtt":"0s"}
+{"level":"warn","ts":"2026-10-15T18:05:06.056238Z","caller":"rafthttp/probing_status.go:68","msg":"prober detected unhealthy status","round-tripper-name":"ROUND_TRIPPER_RAFT_MESSAGE","remote-peer-id":"1896ccaa84a86dfc","rtt":"0s"}
+{"level":"warn","ts":"2026-10-15T18:05:11.693463Z","caller":"txn/util.go:93","msg":"apply request took too long","took":"104.204581ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"r0\"","response":"range_response_count:1 size:27"}

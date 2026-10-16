@@ -1,0 +1,17 @@
+{"time":"2026-10-15T12:08:41.894443841Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-15T12:08:41.894764559Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-15T12:08:43.060213588Z","level":"INFO","msg":"starting election","node":5,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-15T12:08:43.064472595Z","level":"INFO","msg":"became leader","node":5,"term":1,"last_index":1}
+{"time":"2026-10-15T12:08:51.924721193Z","level":"INFO","msg":"became follower","node":5,"term":7,"leader":0}
+{"time":"2026-10-15T12:08:51.924796465Z","level":"INFO","msg":"starting election","node":5,"term":8,"last_index":5294,"last_term":1}
+{"time":"2026-10-15T12:08:53.207400552Z","level":"INFO","msg":"became follower","node":5,"term":9,"leader":0}
+{"time":"2026-10-15T12:08:59.445051357Z","level":"INFO","msg":"starting election","node":5,"term":11,"last_index":8446,"last_term":10}
+{"time":"2026-10-15T12:08:59.449098801Z","level":"INFO","msg":"became leader","node":5,"term":11,"last_index":8447}
+{"time":"2026-10-15T12:09:03.944235399Z","level":"INFO","msg":"became follower","node":5,"term":13,"leader":0}
+{"time":"2026-10-15T12:09:03.945445977Z","level":"INFO","msg":"starting election","node":5,"term":14,"last_index":10702,"last_term":11}
+{"time":"2026-10-15T12:09:05.074961629Z","level":"INFO","msg":"became follower","node":5,"term":15,"leader":0}
+{"time":"2026-10-15T12:09:05.140499785Z","level":"INFO","msg":"starting election","node":5,"term":16,"last_index":10702,"last_term":11}
+{"time":"2026-10-15T12:09:05.143636985Z","level":"INFO","msg":"became leader","node":5,"term":16,"last_index":10703}
+{"time":"2026-10-15T12:09:16.29708728Z","level":"INFO","msg":"became follower","node":5,"term":20,"leader":0}
+{"time":"2026-10-15T12:09:16.299650148Z","level":"INFO","msg":"starting election","node":5,"term":21,"last_index":17821,"last_term":16}
+{"time":"2026-10-15T12:09:17.530508889Z","level":"INFO","msg":"became follower","node":5,"term":22,"leader":0}

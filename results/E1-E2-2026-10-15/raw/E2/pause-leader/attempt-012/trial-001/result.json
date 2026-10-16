@@ -1,0 +1,64 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok (reduced)",
+    "ops": 31434,
+    "ok": 31256,
+    "fail": 34,
+    "info": 144,
+    "reduced_keys": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dropped_ops": 137
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3011629831,
+      "kind": "start",
+      "fault": "pause-leader",
+      "desc": "pause leader [5]"
+    },
+    {
+      "time": 8011825973,
+      "kind": "heal",
+      "fault": "pause-leader",
+      "desc": "pause leader [5]"
+    },
+    {
+      "time": 15017421024,
+      "kind": "start",
+      "fault": "pause-leader",
+      "desc": "pause leader [2]"
+    },
+    {
+      "time": 20017577701,
+      "kind": "heal",
+      "fault": "pause-leader",
+      "desc": "pause leader [2]"
+    },
+    {
+      "time": 27026096068,
+      "kind": "start",
+      "fault": "pause-leader",
+      "desc": "pause leader [3]"
+    },
+    {
+      "time": 32026520133,
+      "kind": "heal",
+      "fault": "pause-leader",
+      "desc": "pause leader [3]"
+    }
+  ],
+  "wall_s": 100.906940952
+}

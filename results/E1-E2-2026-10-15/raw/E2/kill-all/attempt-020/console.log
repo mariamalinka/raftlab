@@ -1,0 +1,3 @@
+trial 1/1: Ok ops=19743 ok=19243 info=354 fail=146 faults=3/3/3 stale=0 (44s)
+
+etcd / kill-all: 1 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

@@ -1,0 +1,6 @@
+{"time":3003620209,"kind":"start","fault":"clock-skew","desc":"clock n2 813ms x2.00, n3 765ms x2.00, n1 438ms x2.00, n4 -773ms x4.00"}
+{"time":8007269963,"kind":"heal","fault":"clock-skew","desc":"clock n2 813ms x2.00, n3 765ms x2.00, n1 438ms x2.00, n4 -773ms x4.00"}
+{"time":15009406360,"kind":"start","fault":"clock-skew","desc":"clock n1 861ms x2.00, n4 1.744s x2.00, n2 -854ms x2.00"}
+{"time":20018877539,"kind":"heal","fault":"clock-skew","desc":"clock n1 861ms x2.00, n4 1.744s x2.00, n2 -854ms x2.00"}
+{"time":27021131026,"kind":"start","fault":"clock-skew","desc":"clock n5 -763ms x1.00, n4 -512ms x0.25, n3 -799ms x0.50"}
+{"time":32022870564,"kind":"heal","fault":"clock-skew","desc":"clock n5 -763ms x1.00, n4 -512ms x0.25, n3 -799ms x0.50"}

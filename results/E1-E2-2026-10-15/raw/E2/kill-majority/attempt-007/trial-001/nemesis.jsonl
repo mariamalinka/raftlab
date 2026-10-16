@@ -1,0 +1,6 @@
+{"time":3015302659,"kind":"start","fault":"kill-majority","desc":"kill majority [2 3 4]"}
+{"time":8016907197,"kind":"heal","fault":"kill-majority","desc":"kill majority [2 3 4]"}
+{"time":15040636198,"kind":"start","fault":"kill-majority","desc":"kill majority [2 3 5]"}
+{"time":20042555486,"kind":"heal","fault":"kill-majority","desc":"kill majority [2 3 5]"}
+{"time":27083842172,"kind":"start","fault":"kill-majority","desc":"kill majority [1 2 4]"}
+{"time":32085693936,"kind":"heal","fault":"kill-majority","desc":"kill majority [1 2 4]"}

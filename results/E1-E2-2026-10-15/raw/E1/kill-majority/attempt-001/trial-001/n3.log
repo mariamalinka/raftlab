@@ -1,0 +1,16 @@
+{"time":"2026-10-15T10:39:15.238981786Z","level":"INFO","msg":"raft started","node":3,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-15T10:39:15.239232481Z","level":"INFO","msg":"serving","node":3,"addr":"10.77.0.13:7000","read_mode":"readindex"}
+{"time":"2026-10-15T10:39:24.333228271Z","level":"INFO","msg":"raft started","node":3,"term":1,"vote":1,"snapshot":0,"last_index":2078,"bugs":null}
+{"time":"2026-10-15T10:39:24.333575159Z","level":"INFO","msg":"serving","node":3,"addr":"10.77.0.13:7000","read_mode":"readindex"}
+{"time":"2026-10-15T10:39:34.014288003Z","level":"INFO","msg":"starting election","node":3,"term":6,"last_index":6385,"last_term":5}
+{"time":"2026-10-15T10:39:34.334144239Z","level":"INFO","msg":"became follower","node":3,"term":7,"leader":0}
+{"time":"2026-10-15T10:39:35.623561286Z","level":"INFO","msg":"starting election","node":3,"term":8,"last_index":6385,"last_term":5}
+{"time":"2026-10-15T10:39:36.939444086Z","level":"INFO","msg":"became follower","node":3,"term":9,"leader":0}
+{"time":"2026-10-15T10:39:38.023832723Z","level":"INFO","msg":"starting election","node":3,"term":10,"last_index":6385,"last_term":5}
+{"time":"2026-10-15T10:39:38.026206446Z","level":"INFO","msg":"became leader","node":3,"term":10,"last_index":6386}
+{"time":"2026-10-15T10:39:45.048376202Z","level":"INFO","msg":"lost quorum, stepping down","node":3,"term":10,"active":2}
+{"time":"2026-10-15T10:39:45.048426877Z","level":"INFO","msg":"became follower","node":3,"term":10,"leader":0}
+{"time":"2026-10-15T10:39:45.053590115Z","level":"INFO","msg":"starting election","node":3,"term":11,"last_index":10223,"last_term":10}
+{"time":"2026-10-15T10:39:47.018805544Z","level":"INFO","msg":"starting election","node":3,"term":12,"last_index":10223,"last_term":10}
+{"time":"2026-10-15T10:39:48.189351782Z","level":"INFO","msg":"starting election","node":3,"term":13,"last_index":10223,"last_term":10}
+{"time":"2026-10-15T10:39:49.378881326Z","level":"INFO","msg":"became follower","node":3,"term":14,"leader":0}

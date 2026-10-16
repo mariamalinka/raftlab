@@ -1,0 +1,13 @@
+{"time":"2026-10-15T12:52:35.268521367Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-15T12:52:35.272064619Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-15T12:52:39.488972045Z","level":"INFO","msg":"clock skewed","node":5,"offset":-251650621,"rate":0.5}
+{"time":"2026-10-15T12:52:44.494846Z","level":"INFO","msg":"clock skewed","node":5,"offset":0,"rate":1}
+{"time":"2026-10-15T12:52:44.49546692Z","level":"INFO","msg":"starting election","node":5,"term":2,"last_index":4998,"last_term":1}
+{"time":"2026-10-15T12:52:44.504046067Z","level":"INFO","msg":"became follower","node":5,"term":3,"leader":0}
+{"time":"2026-10-15T12:52:46.194634613Z","level":"INFO","msg":"starting election","node":5,"term":4,"last_index":4998,"last_term":1}
+{"time":"2026-10-15T12:52:46.350888176Z","level":"INFO","msg":"became follower","node":5,"term":5,"leader":0}
+{"time":"2026-10-15T12:52:51.497615925Z","level":"INFO","msg":"clock skewed","node":5,"offset":-1812296318,"rate":0.5}
+{"time":"2026-10-15T12:52:56.501007844Z","level":"INFO","msg":"clock skewed","node":5,"offset":0,"rate":1}
+{"time":"2026-10-15T12:53:03.50340749Z","level":"INFO","msg":"clock skewed","node":5,"offset":-1067121374,"rate":2}
+{"time":"2026-10-15T12:53:08.509879128Z","level":"INFO","msg":"clock skewed","node":5,"offset":0,"rate":1}
+{"time":"2026-10-15T12:53:09.629601752Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":7,"index":20967}

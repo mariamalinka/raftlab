@@ -1,0 +1,64 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok (reduced)",
+    "ops": 32159,
+    "ok": 32084,
+    "fail": 22,
+    "info": 53,
+    "reduced_keys": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dropped_ops": 51
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3082833192,
+      "kind": "start",
+      "fault": "partition-bridge",
+      "desc": "bridge [1 2] \u003c-4-\u003e [3 5]"
+    },
+    {
+      "time": 8191498801,
+      "kind": "heal",
+      "fault": "partition-bridge",
+      "desc": "bridge [1 2] \u003c-4-\u003e [3 5]"
+    },
+    {
+      "time": 15279403489,
+      "kind": "start",
+      "fault": "partition-bridge",
+      "desc": "bridge [4 5] \u003c-3-\u003e [1 2]"
+    },
+    {
+      "time": 20375258851,
+      "kind": "heal",
+      "fault": "partition-bridge",
+      "desc": "bridge [4 5] \u003c-3-\u003e [1 2]"
+    },
+    {
+      "time": 27574907838,
+      "kind": "start",
+      "fault": "partition-bridge",
+      "desc": "bridge [1 3] \u003c-2-\u003e [4 5]"
+    },
+    {
+      "time": 32663494874,
+      "kind": "heal",
+      "fault": "partition-bridge",
+      "desc": "bridge [1 3] \u003c-2-\u003e [4 5]"
+    }
+  ],
+  "wall_s": 102.317267626
+}

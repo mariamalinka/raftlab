@@ -1,0 +1,6 @@
+{"time":3003789676,"kind":"start","fault":"pause-leader","desc":"pause leader [1]"}
+{"time":8004046700,"kind":"heal","fault":"pause-leader","desc":"pause leader [1]"}
+{"time":15014214257,"kind":"start","fault":"pause-leader","desc":"pause leader [4]"}
+{"time":20014273443,"kind":"heal","fault":"pause-leader","desc":"pause leader [4]"}
+{"time":27025837686,"kind":"start","fault":"pause-leader","desc":"pause leader [5]"}
+{"time":32026630954,"kind":"heal","fault":"pause-leader","desc":"pause leader [5]"}

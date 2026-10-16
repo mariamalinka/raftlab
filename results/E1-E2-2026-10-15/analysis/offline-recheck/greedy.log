@@ -1,0 +1,5 @@
+# TestGreedy (zz_greedy_test.go), 60 s per Porcupine call, 2026-10-15 ~20:30 UTC
+E2/partition-leader/attempt-008 key 4: 4141 ops, 22 dropped by reduceKey, 1 added back, final check Ok
+E2/mixed/attempt-011 key 3: 3869 ops, 47 dropped by reduceKey, 1 added back, final check Ok
+# TestRecheck, E2/partition-leader/attempt-019, 60 s:
+key 2 ops 4224 reduced(dropped 21)=Illegal; full per-key check = Ok (<1 s)

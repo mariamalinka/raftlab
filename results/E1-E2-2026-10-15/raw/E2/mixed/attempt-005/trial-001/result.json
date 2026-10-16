@@ -1,0 +1,49 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 33456,
+    "ok": 33330,
+    "fail": 33,
+    "info": 93
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 2,
+  "faults_planned": 3,
+  "faults_completed": 2,
+  "events": [
+    {
+      "time": 3029647621,
+      "kind": "error",
+      "fault": "clock-partition",
+      "desc": "fault not supported by this database"
+    },
+    {
+      "time": 10061873580,
+      "kind": "start",
+      "fault": "kill-leader",
+      "desc": "kill leader [5]"
+    },
+    {
+      "time": 15065263157,
+      "kind": "heal",
+      "fault": "kill-leader",
+      "desc": "kill leader [5]"
+    },
+    {
+      "time": 22075197851,
+      "kind": "start",
+      "fault": "pause-leader",
+      "desc": "pause leader [2]"
+    },
+    {
+      "time": 27075353815,
+      "kind": "heal",
+      "fault": "pause-leader",
+      "desc": "pause leader [2]"
+    }
+  ],
+  "wall_s": 40.056974781
+}

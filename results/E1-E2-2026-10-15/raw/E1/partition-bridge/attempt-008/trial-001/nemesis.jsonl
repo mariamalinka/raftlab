@@ -1,0 +1,6 @@
+{"time":3164573105,"kind":"start","fault":"partition-bridge","desc":"bridge [4 5] \u003c-3-\u003e [1 2]"}
+{"time":8267207425,"kind":"heal","fault":"partition-bridge","desc":"bridge [4 5] \u003c-3-\u003e [1 2]"}
+{"time":15418217263,"kind":"start","fault":"partition-bridge","desc":"bridge [1 2] \u003c-5-\u003e [3 4]"}
+{"time":20521532391,"kind":"heal","fault":"partition-bridge","desc":"bridge [1 2] \u003c-5-\u003e [3 4]"}
+{"time":27699794821,"kind":"start","fault":"partition-bridge","desc":"bridge [3 4] \u003c-2-\u003e [1 5]"}
+{"time":32827288079,"kind":"heal","fault":"partition-bridge","desc":"bridge [3 4] \u003c-2-\u003e [1 5]"}

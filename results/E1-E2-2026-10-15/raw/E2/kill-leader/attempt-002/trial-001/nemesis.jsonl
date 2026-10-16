@@ -1,0 +1,6 @@
+{"time":3014938618,"kind":"start","fault":"kill-leader","desc":"kill leader [5]"}
+{"time":8016540985,"kind":"heal","fault":"kill-leader","desc":"kill leader [5]"}
+{"time":15037960597,"kind":"start","fault":"kill-leader","desc":"kill leader [4]"}
+{"time":20039598640,"kind":"heal","fault":"kill-leader","desc":"kill leader [4]"}
+{"time":27046836441,"kind":"start","fault":"kill-leader","desc":"kill leader [1]"}
+{"time":32049997099,"kind":"heal","fault":"kill-leader","desc":"kill leader [1]"}

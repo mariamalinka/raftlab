@@ -1,0 +1,3 @@
+trial 1/1: Ok (reduced) ops=34504 ok=34429 info=61 fail=14 faults=3/3/3 stale=0 (103s)
+
+raftkv / kill-leader: 0 valid, 1 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

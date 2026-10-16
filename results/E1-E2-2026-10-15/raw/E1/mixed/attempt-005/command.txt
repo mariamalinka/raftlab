@@ -1,0 +1,1 @@
+TMPDIR=/tmp/rk/e1e2/tmp /tmp/raftkv-bin-e1/rkharness -bin /tmp/raftkv-bin-e1 -trials 1 -clients 25 -time 34s -warmup 3s -interval 7s -fault-duration 5s -recover 5s -key-rotate 12s -unique-values -db raftkv -fault mixed -out /tmp/rk/e1e2/out/E1/mixed/attempt-005

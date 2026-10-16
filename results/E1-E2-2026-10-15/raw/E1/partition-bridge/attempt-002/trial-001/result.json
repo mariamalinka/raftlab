@@ -1,0 +1,55 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 33702,
+    "ok": 33652,
+    "fail": 18,
+    "info": 32
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3074493707,
+      "kind": "start",
+      "fault": "partition-bridge",
+      "desc": "bridge [2 5] \u003c-1-\u003e [3 4]"
+    },
+    {
+      "time": 8155935348,
+      "kind": "heal",
+      "fault": "partition-bridge",
+      "desc": "bridge [2 5] \u003c-1-\u003e [3 4]"
+    },
+    {
+      "time": 15224212236,
+      "kind": "start",
+      "fault": "partition-bridge",
+      "desc": "bridge [2 5] \u003c-3-\u003e [1 4]"
+    },
+    {
+      "time": 20327949372,
+      "kind": "heal",
+      "fault": "partition-bridge",
+      "desc": "bridge [2 5] \u003c-3-\u003e [1 4]"
+    },
+    {
+      "time": 27425667543,
+      "kind": "start",
+      "fault": "partition-bridge",
+      "desc": "bridge [3 4] \u003c-1-\u003e [2 5]"
+    },
+    {
+      "time": 32505647454,
+      "kind": "heal",
+      "fault": "partition-bridge",
+      "desc": "bridge [3 4] \u003c-1-\u003e [2 5]"
+    }
+  ],
+  "wall_s": 54.625946483
+}

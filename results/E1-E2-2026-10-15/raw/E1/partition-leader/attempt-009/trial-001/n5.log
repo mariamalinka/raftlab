@@ -1,0 +1,21 @@
+{"time":"2026-10-15T11:30:07.235422269Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-15T11:30:07.235849602Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-15T11:30:12.637952098Z","level":"INFO","msg":"starting election","node":5,"term":3,"last_index":2075,"last_term":1}
+{"time":"2026-10-15T11:30:12.643356246Z","level":"INFO","msg":"became leader","node":5,"term":3,"last_index":2076}
+{"time":"2026-10-15T11:30:17.142510562Z","level":"INFO","msg":"became follower","node":5,"term":4,"leader":0}
+{"time":"2026-10-15T11:30:17.146634105Z","level":"INFO","msg":"starting election","node":5,"term":5,"last_index":4390,"last_term":3}
+{"time":"2026-10-15T11:30:18.487978279Z","level":"INFO","msg":"became follower","node":5,"term":6,"leader":0}
+{"time":"2026-10-15T11:30:18.594065689Z","level":"INFO","msg":"truncated conflicting suffix","node":5,"term":7,"index":4390}
+{"time":"2026-10-15T11:30:24.611076767Z","level":"INFO","msg":"starting election","node":5,"term":8,"last_index":7781,"last_term":7}
+{"time":"2026-10-15T11:30:24.614047675Z","level":"INFO","msg":"became leader","node":5,"term":8,"last_index":7782}
+{"time":"2026-10-15T11:30:29.101214078Z","level":"INFO","msg":"became follower","node":5,"term":10,"leader":0}
+{"time":"2026-10-15T11:30:29.105775487Z","level":"INFO","msg":"starting election","node":5,"term":11,"last_index":10353,"last_term":8}
+{"time":"2026-10-15T11:30:30.501339487Z","level":"INFO","msg":"starting election","node":5,"term":12,"last_index":10353,"last_term":8}
+{"time":"2026-10-15T11:30:30.505834168Z","level":"INFO","msg":"became leader","node":5,"term":12,"last_index":10354}
+{"time":"2026-10-15T11:30:37.536209452Z","level":"INFO","msg":"lost quorum, stepping down","node":5,"term":12,"active":1}
+{"time":"2026-10-15T11:30:37.536258317Z","level":"INFO","msg":"became follower","node":5,"term":12,"leader":0}
+{"time":"2026-10-15T11:30:37.541848694Z","level":"INFO","msg":"starting election","node":5,"term":13,"last_index":13928,"last_term":12}
+{"time":"2026-10-15T11:30:39.48189341Z","level":"INFO","msg":"starting election","node":5,"term":14,"last_index":13928,"last_term":12}
+{"time":"2026-10-15T11:30:40.741051703Z","level":"INFO","msg":"starting election","node":5,"term":15,"last_index":13928,"last_term":12}
+{"time":"2026-10-15T11:30:41.489446906Z","level":"INFO","msg":"became follower","node":5,"term":16,"leader":0}
+{"time":"2026-10-15T11:30:43.34211439Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":17,"index":15808}

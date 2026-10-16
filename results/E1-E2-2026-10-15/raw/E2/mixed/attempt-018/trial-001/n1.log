@@ -1,0 +1,6 @@
+{"level":"warn","ts":"2026-10-15T18:55:45.442005Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-15T18:55:45.442127Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-15T18:55:48.455305Z","caller":"auth/store.go:1137","msg":"simple token is not cryptographically signed"}
+{"level":"warn","ts":"2026-10-15T18:55:57.645510Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-15T18:55:57.645700Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-15T18:55:57.661237Z","caller":"auth/store.go:1137","msg":"simple token is not cryptographically signed"}

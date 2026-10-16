@@ -1,0 +1,3 @@
+trial 1/1: Ok ops=31283 ok=31143 info=88 fail=52 faults=3/3/3 stale=0 (42s)
+
+raftkv / pause-leader: 1 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

@@ -1,0 +1,3 @@
+trial 1/1: Ok (reduced) ops=26115 ok=25842 info=194 fail=79 faults=3/3/3 stale=0 (104s)
+
+etcd / partition-halves: 0 valid, 1 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

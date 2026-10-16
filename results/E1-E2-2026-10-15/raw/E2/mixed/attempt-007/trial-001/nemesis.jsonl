@@ -1,0 +1,6 @@
+{"time":3018020816,"kind":"start","fault":"kill-leader","desc":"kill leader [3]"}
+{"time":8021391982,"kind":"heal","fault":"kill-leader","desc":"kill leader [3]"}
+{"time":15110908008,"kind":"start","fault":"partition-leader","desc":"isolate leader [5] | [1 2 3 4]"}
+{"time":20209168566,"kind":"heal","fault":"partition-leader","desc":"isolate leader [5] | [1 2 3 4]"}
+{"time":27223526576,"kind":"start","fault":"kill-random","desc":"kill [3]"}
+{"time":32225028956,"kind":"heal","fault":"kill-random","desc":"kill [3]"}

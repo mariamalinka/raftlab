@@ -1,0 +1,55 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 32081,
+    "ok": 31916,
+    "fail": 53,
+    "info": 112
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3001281024,
+      "kind": "start",
+      "fault": "pause-random",
+      "desc": "pause [4]"
+    },
+    {
+      "time": 8002254809,
+      "kind": "heal",
+      "fault": "pause-random",
+      "desc": "pause [4]"
+    },
+    {
+      "time": 15015595984,
+      "kind": "start",
+      "fault": "kill-leader",
+      "desc": "kill leader [1]"
+    },
+    {
+      "time": 20016336945,
+      "kind": "heal",
+      "fault": "kill-leader",
+      "desc": "kill leader [1]"
+    },
+    {
+      "time": 27097486873,
+      "kind": "start",
+      "fault": "partition-bridge",
+      "desc": "bridge [2 3] \u003c-4-\u003e [1 5]"
+    },
+    {
+      "time": 32185956660,
+      "kind": "heal",
+      "fault": "partition-bridge",
+      "desc": "bridge [2 3] \u003c-4-\u003e [1 5]"
+    }
+  ],
+  "wall_s": 40.177572824
+}

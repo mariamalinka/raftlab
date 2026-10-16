@@ -1,0 +1,55 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 38547,
+    "ok": 38522,
+    "fail": 8,
+    "info": 17
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3001335147,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n4 1.25s x0.25"
+    },
+    {
+      "time": 8004446414,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n4 1.25s x0.25"
+    },
+    {
+      "time": 15008496143,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n2 -1.239s x2.00, n3 -169ms x0.25, n1 630ms x4.00, n5 1.332s x1.00, n4 -311ms x0.50"
+    },
+    {
+      "time": 20010443679,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n2 -1.239s x2.00, n3 -169ms x0.25, n1 630ms x4.00, n5 1.332s x1.00, n4 -311ms x0.50"
+    },
+    {
+      "time": 27015760879,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n3 -644ms x4.00"
+    },
+    {
+      "time": 32019737644,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n3 -644ms x4.00"
+    }
+  ],
+  "wall_s": 47.118944249
+}

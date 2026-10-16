@@ -1,0 +1,3 @@
+trial 1/1: Ok (reduced) ops=28855 ok=28632 info=153 fail=70 faults=3/3/3 stale=0 (105s)
+
+etcd / partition-bridge: 0 valid, 1 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

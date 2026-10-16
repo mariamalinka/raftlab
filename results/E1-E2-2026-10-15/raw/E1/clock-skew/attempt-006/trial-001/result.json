@@ -1,0 +1,55 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 39430,
+    "ok": 39430,
+    "fail": 0,
+    "info": 0
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3001948675,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n5 -477ms x1.00, n3 1.986s x1.00"
+    },
+    {
+      "time": 8005418686,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n5 -477ms x1.00, n3 1.986s x1.00"
+    },
+    {
+      "time": 15006630133,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n1 -502ms x0.50"
+    },
+    {
+      "time": 20015030158,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n1 -502ms x0.50"
+    },
+    {
+      "time": 27017341271,
+      "kind": "start",
+      "fault": "clock-skew",
+      "desc": "clock n1 675ms x0.25, n5 1.056s x1.00, n3 1.831s x0.25"
+    },
+    {
+      "time": 32022987821,
+      "kind": "heal",
+      "fault": "clock-skew",
+      "desc": "clock n1 675ms x0.25, n5 1.056s x1.00, n3 1.831s x0.25"
+    }
+  ],
+  "wall_s": 42.884077995
+}

@@ -1,0 +1,16 @@
+{"time":"2026-10-15T13:31:37.261613925Z","level":"INFO","msg":"raft started","node":3,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-15T13:31:37.26241549Z","level":"INFO","msg":"serving","node":3,"addr":"10.77.0.13:7000","read_mode":"readindex"}
+{"time":"2026-10-15T13:31:47.682539204Z","level":"INFO","msg":"starting election","node":3,"term":5,"last_index":4649,"last_term":1}
+{"time":"2026-10-15T13:31:47.686608265Z","level":"INFO","msg":"became leader","node":3,"term":5,"last_index":4650}
+{"time":"2026-10-15T13:31:59.14082167Z","level":"INFO","msg":"became follower","node":3,"term":10,"leader":0}
+{"time":"2026-10-15T13:31:59.142545705Z","level":"INFO","msg":"starting election","node":3,"term":11,"last_index":11675,"last_term":5}
+{"time":"2026-10-15T13:32:00.562280852Z","level":"INFO","msg":"starting election","node":3,"term":12,"last_index":11675,"last_term":5}
+{"time":"2026-10-15T13:32:00.564129301Z","level":"INFO","msg":"became leader","node":3,"term":12,"last_index":11676}
+{"time":"2026-10-15T13:32:07.577717987Z","level":"INFO","msg":"lost quorum, stepping down","node":3,"term":12,"active":1}
+{"time":"2026-10-15T13:32:07.577771666Z","level":"INFO","msg":"became follower","node":3,"term":12,"leader":0}
+{"time":"2026-10-15T13:32:07.582698127Z","level":"INFO","msg":"starting election","node":3,"term":13,"last_index":15314,"last_term":12}
+{"time":"2026-10-15T13:32:08.672447733Z","level":"INFO","msg":"starting election","node":3,"term":14,"last_index":15314,"last_term":12}
+{"time":"2026-10-15T13:32:10.042200586Z","level":"INFO","msg":"starting election","node":3,"term":15,"last_index":15314,"last_term":12}
+{"time":"2026-10-15T13:32:11.107379208Z","level":"INFO","msg":"starting election","node":3,"term":16,"last_index":15314,"last_term":12}
+{"time":"2026-10-15T13:32:11.305273065Z","level":"INFO","msg":"became follower","node":3,"term":17,"leader":0}
+{"time":"2026-10-15T13:32:12.723603351Z","level":"INFO","msg":"installing snapshot from leader","node":3,"term":18,"index":15810}

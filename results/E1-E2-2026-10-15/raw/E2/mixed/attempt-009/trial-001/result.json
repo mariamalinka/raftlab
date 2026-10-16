@@ -1,0 +1,65 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok (reduced)",
+    "ops": 32060,
+    "ok": 31883,
+    "fail": 58,
+    "info": 119,
+    "reduced_keys": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "dropped_ops": 111
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3074737319,
+      "kind": "start",
+      "fault": "partition-bridge",
+      "desc": "bridge [3 4] \u003c-5-\u003e [1 2]"
+    },
+    {
+      "time": 8152469684,
+      "kind": "heal",
+      "fault": "partition-bridge",
+      "desc": "bridge [3 4] \u003c-5-\u003e [1 2]"
+    },
+    {
+      "time": 15152573762,
+      "kind": "start",
+      "fault": "pause-random",
+      "desc": "pause [3]"
+    },
+    {
+      "time": 20162626974,
+      "kind": "heal",
+      "fault": "pause-random",
+      "desc": "pause [3]"
+    },
+    {
+      "time": 27239966790,
+      "kind": "start",
+      "fault": "partition-leader",
+      "desc": "isolate leader [4] | [1 2 3 5]"
+    },
+    {
+      "time": 32331327219,
+      "kind": "heal",
+      "fault": "partition-leader",
+      "desc": "isolate leader [4] | [1 2 3 5]"
+    }
+  ],
+  "wall_s": 105.118208617
+}

@@ -1,0 +1,6 @@
+{"time":3119357495,"kind":"start","fault":"partition-halves","desc":"halves [1 2] | [3 4 5]"}
+{"time":8210348152,"kind":"heal","fault":"partition-halves","desc":"halves [1 2] | [3 4 5]"}
+{"time":15346262567,"kind":"start","fault":"partition-halves","desc":"halves [3 5] | [1 2 4]"}
+{"time":20458719581,"kind":"heal","fault":"partition-halves","desc":"halves [3 5] | [1 2 4]"}
+{"time":27539732002,"kind":"start","fault":"partition-halves","desc":"halves [1 2] | [3 4 5]"}
+{"time":32653588255,"kind":"heal","fault":"partition-halves","desc":"halves [1 2] | [3 4 5]"}

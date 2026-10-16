@@ -1,0 +1,3 @@
+trial 1/1: Ok ops=29307 ok=29079 info=170 fail=58 faults=3/3/3 stale=0 (41s)
+
+etcd / partition-leader: 1 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

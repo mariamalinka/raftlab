@@ -1,0 +1,3 @@
+trial 1/1: Ok (reduced) ops=28023 ok=27870 info=106 fail=47 faults=3/3/3 stale=0 (103s)
+
+raftkv / partition-leader: 0 valid, 1 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

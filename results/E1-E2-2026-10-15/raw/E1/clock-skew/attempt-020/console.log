@@ -1,0 +1,3 @@
+trial 1/1: Ok (reduced) ops=38495 ok=38470 info=19 fail=6 faults=3/3/3 stale=0 (102s)
+
+raftkv / clock-skew: 0 valid, 1 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

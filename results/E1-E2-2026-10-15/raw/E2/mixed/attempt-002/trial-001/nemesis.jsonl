@@ -1,0 +1,5 @@
+{"time":3095900190,"kind":"start","fault":"partition-leader","desc":"isolate leader [3] | [1 2 4 5]"}
+{"time":8194305388,"kind":"heal","fault":"partition-leader","desc":"isolate leader [3] | [1 2 4 5]"}
+{"time":15213614447,"kind":"error","fault":"clock-partition","desc":"fault not supported by this database"}
+{"time":22271633373,"kind":"start","fault":"partition-bridge","desc":"bridge [2 4] \u003c-3-\u003e [1 5]"}
+{"time":27354733533,"kind":"heal","fault":"partition-bridge","desc":"bridge [2 4] \u003c-3-\u003e [1 5]"}

@@ -1,0 +1,3 @@
+trial 1/1: Ok (reduced) ops=31492 ok=31336 info=123 fail=33 faults=3/3/3 stale=0 (105s)
+
+etcd / pause-leader: 0 valid, 1 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

@@ -1,0 +1,52 @@
+== E2/partition-leader/attempt-008 keys=4 2026-10-15T20:01:47Z
+exit=137 peak_rss_kb=13924388
+== E2/partition-leader/attempt-019 keys=2 2026-10-15T20:07:34Z
+key 2 ops 4224 full=Ok (0s)
+PASS
+exit=0 peak_rss_kb=1252
+== E2/mixed/attempt-011 keys=3 2026-10-15T20:07:36Z
+exit=137 peak_rss_kb=13940040
+== E2/partition-leader/attempt-005 keys=all 2026-10-15T20:13:47Z
+exit=137 peak_rss_kb=13967284
+DONE
+== pass2 reduced-only E2/partition-leader/attempt-008 key=4 2026-10-15T20:18:57Z
+key 4 ops 4141 full=Unknown (0s) reduced(dropped 22)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=4912
+== pass2 reduced-only E2/mixed/attempt-011 key=3 2026-10-15T20:18:59Z
+key 3 ops 3869 full=Unknown (0s) reduced(dropped 47)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=3400
+== pass2 reduced-only E2/partition-leader/attempt-005 key=0 2026-10-15T20:19:01Z
+key 0 ops 4449 full=Unknown (0s) reduced(dropped 24)=Ok (1s)
+PASS
+exit=0 peak_rss_kb=3400
+== pass2 reduced-only E2/partition-leader/attempt-005 key=1 2026-10-15T20:19:03Z
+key 1 ops 4377 full=Unknown (0s) reduced(dropped 27)=Ok (0s)
+PASS
+exit=0 peak_rss_kb=4800
+== pass2 reduced-only E2/partition-leader/attempt-005 key=2 2026-10-15T20:19:05Z
+key 2 ops 4305 full=Unknown (0s) reduced(dropped 25)=Ok (0s)
+PASS
+exit=0 peak_rss_kb=1720
+== pass2 reduced-only E2/partition-leader/attempt-005 key=3 2026-10-15T20:19:07Z
+key 3 ops 4196 full=Unknown (0s) reduced(dropped 29)=Ok (0s)
+PASS
+exit=0 peak_rss_kb=5780
+== pass2 reduced-only E2/partition-leader/attempt-005 key=4 2026-10-15T20:19:09Z
+key 4 ops 4398 full=Unknown (0s) reduced(dropped 28)=Ok (0s)
+PASS
+exit=0 peak_rss_kb=5792
+== pass2 reduced-only E2/partition-leader/attempt-005 key=5 2026-10-15T20:19:11Z
+key 5 ops 4384 full=Unknown (0s) reduced(dropped 17)=Ok (0s)
+PASS
+exit=0 peak_rss_kb=4848
+== pass2 reduced-only E2/partition-leader/attempt-005 key=6 2026-10-15T20:19:13Z
+key 6 ops 1288 full=Unknown (0s) reduced(dropped 1)=Ok (0s)
+PASS
+exit=0 peak_rss_kb=5500
+== pass2 reduced-only E2/partition-leader/attempt-005 key=7 2026-10-15T20:19:15Z
+key 7 ops 1245 full=Unknown (0s) reduced(dropped 2)=Ok (0s)
+PASS
+exit=0 peak_rss_kb=4500
+DONE2

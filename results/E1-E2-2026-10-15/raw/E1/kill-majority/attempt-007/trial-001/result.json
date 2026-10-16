@@ -1,0 +1,55 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok",
+    "ops": 20613,
+    "ok": 20138,
+    "fail": 157,
+    "info": 318
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3007681866,
+      "kind": "start",
+      "fault": "kill-majority",
+      "desc": "kill majority [1 3 4]"
+    },
+    {
+      "time": 8011175855,
+      "kind": "heal",
+      "fault": "kill-majority",
+      "desc": "kill majority [1 3 4]"
+    },
+    {
+      "time": 15016659014,
+      "kind": "start",
+      "fault": "kill-majority",
+      "desc": "kill majority [2 3 4]"
+    },
+    {
+      "time": 20018341549,
+      "kind": "heal",
+      "fault": "kill-majority",
+      "desc": "kill majority [2 3 4]"
+    },
+    {
+      "time": 27033600044,
+      "kind": "start",
+      "fault": "kill-majority",
+      "desc": "kill majority [1 2 5]"
+    },
+    {
+      "time": 32035293040,
+      "kind": "heal",
+      "fault": "kill-majority",
+      "desc": "kill majority [1 2 5]"
+    }
+  ],
+  "wall_s": 40.613197454
+}

@@ -1,0 +1,58 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok (reduced)",
+    "ops": 35884,
+    "ok": 35775,
+    "fail": 33,
+    "info": 76,
+    "reduced_keys": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dropped_ops": 74
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 2,
+  "faults_planned": 3,
+  "faults_completed": 2,
+  "events": [
+    {
+      "time": 3003331925,
+      "kind": "start",
+      "fault": "pause-leader",
+      "desc": "pause leader [1]"
+    },
+    {
+      "time": 8003787856,
+      "kind": "heal",
+      "fault": "pause-leader",
+      "desc": "pause leader [1]"
+    },
+    {
+      "time": 15012496379,
+      "kind": "error",
+      "fault": "clock-partition",
+      "desc": "fault not supported by this database"
+    },
+    {
+      "time": 22026603749,
+      "kind": "start",
+      "fault": "kill-leader",
+      "desc": "kill leader [3]"
+    },
+    {
+      "time": 27027672437,
+      "kind": "heal",
+      "fault": "kill-leader",
+      "desc": "kill leader [3]"
+    }
+  ],
+  "wall_s": 104.101467483
+}

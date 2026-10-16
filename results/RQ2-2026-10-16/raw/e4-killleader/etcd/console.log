@@ -1,0 +1,10 @@
+1792175705.789031337 etcd kill n2: unavailable 1298ms, restarted node caught up in 309ms
+1792175705.790947570 etcd kill n3: unavailable 1004ms, restarted node caught up in 312ms
+1792175705.792594268 etcd kill n4: unavailable 1072ms, restarted node caught up in 533ms
+1792175705.794217342 etcd kill n3: unavailable 1176ms, restarted node caught up in 529ms
+1792175705.796378286 etcd kill n2: unavailable 1094ms, restarted node caught up in 311ms
+1792175705.798147709 etcd kill n4: unavailable 1203ms, restarted node caught up in 530ms
+1792175705.799974069 etcd kill n2: unavailable 1440ms, restarted node caught up in 315ms
+1792175705.801658859 etcd kill n5: unavailable 1119ms, restarted node caught up in 533ms
+1792175705.803318306 etcd kill n3: unavailable 1023ms, restarted node caught up in 312ms
+1792175705.804958764 etcd kill n5: unavailable 1352ms, restarted node caught up in 529ms

@@ -1,0 +1,21 @@
+{"time":"2026-10-16T11:49:55.211181597Z","level":"INFO","msg":"raft started","node":3,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T11:49:55.211695438Z","level":"INFO","msg":"serving","node":3,"addr":"10.77.0.13:7000","read_mode":"lease"}
+{"time":"2026-10-16T11:49:56.572373057Z","level":"INFO","msg":"starting election","node":3,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-16T11:49:56.575630617Z","level":"INFO","msg":"became leader","node":3,"term":1,"last_index":1}
+{"time":"2026-10-16T11:49:59.630111647Z","level":"INFO","msg":"clock skewed","node":3,"offset":-28,"rate":0.92}
+{"time":"2026-10-16T11:50:01.762164612Z","level":"INFO","msg":"lost quorum, stepping down","node":3,"term":1,"active":1}
+{"time":"2026-10-16T11:50:01.76219196Z","level":"INFO","msg":"became follower","node":3,"term":1,"leader":0}
+{"time":"2026-10-16T11:50:01.766892781Z","level":"INFO","msg":"starting election","node":3,"term":2,"last_index":2320,"last_term":1}
+{"time":"2026-10-16T11:50:03.861641642Z","level":"INFO","msg":"starting election","node":3,"term":3,"last_index":2320,"last_term":1}
+{"time":"2026-10-16T11:50:04.805791241Z","level":"INFO","msg":"clock skewed","node":3,"offset":0,"rate":1}
+{"time":"2026-10-16T11:50:04.806594357Z","level":"INFO","msg":"starting election","node":3,"term":4,"last_index":2320,"last_term":1}
+{"time":"2026-10-16T11:50:05.262582129Z","level":"INFO","msg":"became follower","node":3,"term":5,"leader":0}
+{"time":"2026-10-16T11:50:06.72000699Z","level":"INFO","msg":"truncated conflicting suffix","node":3,"term":6,"index":2246}
+{"time":"2026-10-16T11:50:16.992639096Z","level":"INFO","msg":"clock skewed","node":3,"offset":0,"rate":1}
+{"time":"2026-10-16T11:50:25.342230682Z","level":"INFO","msg":"starting election","node":3,"term":13,"last_index":15228,"last_term":11}
+{"time":"2026-10-16T11:50:25.344640193Z","level":"INFO","msg":"became leader","node":3,"term":13,"last_index":15229}
+{"time":"2026-10-16T11:50:29.14920845Z","level":"INFO","msg":"clock skewed","node":3,"offset":0,"rate":1}
+{"time":"2026-10-16T11:50:29.592918976Z","level":"INFO","msg":"became follower","node":3,"term":14,"leader":0}
+{"time":"2026-10-16T11:50:29.596868434Z","level":"INFO","msg":"starting election","node":3,"term":15,"last_index":17896,"last_term":13}
+{"time":"2026-10-16T11:50:31.287048962Z","level":"INFO","msg":"starting election","node":3,"term":16,"last_index":17896,"last_term":13}
+{"time":"2026-10-16T11:50:31.288653714Z","level":"INFO","msg":"became leader","node":3,"term":16,"last_index":17897}

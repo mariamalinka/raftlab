@@ -1,0 +1,1474 @@
+{
+ "main": {
+  "1.0": {
+   "log": [
+    {
+     "rate": 1000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 2.311,
+       "p99_ms": 10.167,
+       "p999_ms": 29.407,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 1.948,
+       "p99_ms": 12.615,
+       "p999_ms": 24.591,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 2.04,
+       "p99_ms": 10.255,
+       "p999_ms": 38.303,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 2.281,
+       "p99_ms": 11.671,
+       "p999_ms": 31.519,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 2.055,
+       "p99_ms": 6.927,
+       "p999_ms": 14.903,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 2.055,
+     "p99": 10.255,
+     "p999": 29.407
+    },
+    {
+     "rate": 2000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 3.291,
+       "p99_ms": 25.343,
+       "p999_ms": 51.007,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 3.275,
+       "p99_ms": 16.223,
+       "p999_ms": 34.079,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 3.213,
+       "p99_ms": 28.303,
+       "p999_ms": 45.279,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 3.421,
+       "p99_ms": 17.567,
+       "p999_ms": 41.759,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 2.885,
+       "p99_ms": 10.407,
+       "p999_ms": 21.919,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 3.275,
+     "p99": 17.567,
+     "p999": 41.759
+    },
+    {
+     "rate": 4000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 4.919,
+       "p99_ms": 38.111,
+       "p999_ms": 58.943,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 4.271,
+       "p99_ms": 28.175,
+       "p999_ms": 56.767,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 4.391,
+       "p99_ms": 30.495,
+       "p999_ms": 44.991,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 4.611,
+       "p99_ms": 28.271,
+       "p999_ms": 65.375,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 4.627,
+       "p99_ms": 17.119,
+       "p999_ms": 30.639,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 4.611,
+     "p99": 28.271,
+     "p999": 56.767
+    },
+    {
+     "rate": 8000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 6.691,
+       "p99_ms": 51.615,
+       "p999_ms": 67.327,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 6.319,
+       "p99_ms": 52.767,
+       "p999_ms": 85.311,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 8.303,
+       "p99_ms": 58.335,
+       "p999_ms": 88.447,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 8.567,
+       "p99_ms": 55.743,
+       "p999_ms": 76.223,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 7.307,
+       "p99_ms": 46.367,
+       "p999_ms": 70.399,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 7.307,
+     "p99": 52.767,
+     "p999": 76.223
+    }
+   ],
+   "readindex": [
+    {
+     "rate": 1000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 1.084,
+       "p99_ms": 3.259,
+       "p999_ms": 6.171,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 1.052,
+       "p99_ms": 3.349,
+       "p999_ms": 7.015,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 1.056,
+       "p99_ms": 3.055,
+       "p999_ms": 5.483,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 1.077,
+       "p99_ms": 3.273,
+       "p999_ms": 6.879,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 1.08,
+       "p99_ms": 3.525,
+       "p999_ms": 7.271,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 1.077,
+     "p99": 3.273,
+     "p999": 6.879
+    },
+    {
+     "rate": 2000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.933,
+       "p99_ms": 4.411,
+       "p999_ms": 12.631,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.933,
+       "p99_ms": 5.175,
+       "p999_ms": 54.687,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.928,
+       "p99_ms": 4.043,
+       "p999_ms": 7.271,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.972,
+       "p99_ms": 5.651,
+       "p999_ms": 80.191,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.971,
+       "p99_ms": 4.735,
+       "p999_ms": 8.727,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.933,
+     "p99": 4.735,
+     "p999": 12.631
+    },
+    {
+     "rate": 4000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 1.626,
+       "p99_ms": 7.543,
+       "p999_ms": 10.919,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 1.572,
+       "p99_ms": 7.391,
+       "p999_ms": 27.647,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 1.502,
+       "p99_ms": 7.403,
+       "p999_ms": 11.239,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 1.655,
+       "p99_ms": 7.539,
+       "p999_ms": 10.895,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 1.656,
+       "p99_ms": 12.351,
+       "p999_ms": 102.335,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 1.626,
+     "p99": 7.539,
+     "p999": 11.239
+    },
+    {
+     "rate": 8000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 3.169,
+       "p99_ms": 12.255,
+       "p999_ms": 16.719,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 2.969,
+       "p99_ms": 12.807,
+       "p999_ms": 22.335,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 3.433,
+       "p99_ms": 35.679,
+       "p999_ms": 101.951,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 3.279,
+       "p99_ms": 12.423,
+       "p999_ms": 17.343,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 3.065,
+       "p99_ms": 15.047,
+       "p999_ms": 118.015,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 3.169,
+     "p99": 12.807,
+     "p999": 22.335
+    }
+   ],
+   "lease": [
+    {
+     "rate": 1000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.844,
+       "p99_ms": 1.797,
+       "p999_ms": 3.817,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.859,
+       "p99_ms": 2.411,
+       "p999_ms": 42.367,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.837,
+       "p99_ms": 1.937,
+       "p999_ms": 4.707,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.901,
+       "p99_ms": 41.983,
+       "p999_ms": 153.087,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.848,
+       "p99_ms": 1.828,
+       "p999_ms": 3.201,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.848,
+     "p99": 1.937,
+     "p999": 4.707
+    },
+    {
+     "rate": 2000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.557,
+       "p99_ms": 2.397,
+       "p999_ms": 6.947,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.576,
+       "p99_ms": 2.331,
+       "p999_ms": 41.087,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.583,
+       "p99_ms": 2.475,
+       "p999_ms": 14.975,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.565,
+       "p99_ms": 2.197,
+       "p999_ms": 9.303,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.59,
+       "p99_ms": 2.345,
+       "p999_ms": 12.695,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.576,
+     "p99": 2.345,
+     "p999": 12.695
+    },
+    {
+     "rate": 4000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.358,
+       "p99_ms": 1.671,
+       "p999_ms": 3.381,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.355,
+       "p99_ms": 1.712,
+       "p999_ms": 4.195,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.348,
+       "p99_ms": 2.199,
+       "p999_ms": 80.063,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.371,
+       "p99_ms": 1.704,
+       "p999_ms": 4.831,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.361,
+       "p99_ms": 2.391,
+       "p999_ms": 18.431,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.358,
+     "p99": 1.712,
+     "p999": 4.831
+    },
+    {
+     "rate": 8000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.357,
+       "p99_ms": 1.924,
+       "p999_ms": 4.091,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.34,
+       "p99_ms": 2.297,
+       "p999_ms": 23.455,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.345,
+       "p99_ms": 2.623,
+       "p999_ms": 12.783,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.349,
+       "p99_ms": 2.055,
+       "p999_ms": 5.291,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.365,
+       "p99_ms": 2.565,
+       "p999_ms": 11.623,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.349,
+     "p99": 2.297,
+     "p999": 11.623
+    }
+   ]
+  },
+  "0.95": {
+   "log": [
+    {
+     "rate": 1000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 2.301,
+       "p99_ms": 8.431,
+       "p999_ms": 15.847,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 2.021,
+       "p99_ms": 23.199,
+       "p999_ms": 116.287,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 2.339,
+       "p99_ms": 10.863,
+       "p999_ms": 28.223,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 2.059,
+       "p99_ms": 11.119,
+       "p999_ms": 39.903,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 2.077,
+       "p99_ms": 10.535,
+       "p999_ms": 26.207,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 2.077,
+     "p99": 10.863,
+     "p999": 28.223
+    },
+    {
+     "rate": 2000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 3.243,
+       "p99_ms": 21.599,
+       "p999_ms": 73.407,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 3.109,
+       "p99_ms": 25.455,
+       "p999_ms": 47.871,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 3.345,
+       "p99_ms": 14.311,
+       "p999_ms": 33.279,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 3.051,
+       "p99_ms": 11.783,
+       "p999_ms": 26.031,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 3.167,
+       "p99_ms": 13.847,
+       "p999_ms": 31.391,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 3.167,
+     "p99": 14.311,
+     "p999": 33.279
+    },
+    {
+     "rate": 4000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 5.067,
+       "p99_ms": 36.127,
+       "p999_ms": 92.031,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 4.467,
+       "p99_ms": 38.687,
+       "p999_ms": 54.591,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 4.983,
+       "p99_ms": 30.383,
+       "p999_ms": 45.375,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 4.299,
+       "p99_ms": 31.439,
+       "p999_ms": 44.255,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 4.803,
+       "p99_ms": 19.375,
+       "p999_ms": 33.663,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 4.803,
+     "p99": 31.439,
+     "p999": 45.375
+    },
+    {
+     "rate": 8000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 9.311,
+       "p99_ms": 69.055,
+       "p999_ms": 103.807,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 8.431,
+       "p99_ms": 71.295,
+       "p999_ms": 99.519,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 9.615,
+       "p99_ms": 94.655,
+       "p999_ms": 190.207,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 7.987,
+       "p99_ms": 72.255,
+       "p999_ms": 129.087,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 7.935,
+       "p99_ms": 56.639,
+       "p999_ms": 97.279,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 8.431,
+     "p99": 71.295,
+     "p999": 103.807
+    }
+   ],
+   "readindex": [
+    {
+     "rate": 1000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 1.11,
+       "p99_ms": 3.807,
+       "p999_ms": 48.767,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 1.129,
+       "p99_ms": 3.553,
+       "p999_ms": 6.595,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 1.245,
+       "p99_ms": 5.359,
+       "p999_ms": 26.975,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 1.156,
+       "p99_ms": 3.779,
+       "p999_ms": 7.883,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 1.125,
+       "p99_ms": 3.815,
+       "p999_ms": 10.575,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 1.129,
+     "p99": 3.807,
+     "p999": 10.575
+    },
+    {
+     "rate": 2000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 1.208,
+       "p99_ms": 60.479,
+       "p999_ms": 235.135,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 1.253,
+       "p99_ms": 7.355,
+       "p999_ms": 17.679,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 1.096,
+       "p99_ms": 6.267,
+       "p999_ms": 36.127,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 1.068,
+       "p99_ms": 6.111,
+       "p999_ms": 16.183,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 1.398,
+       "p99_ms": 11.047,
+       "p999_ms": 26.383,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 1.208,
+     "p99": 7.355,
+     "p999": 26.383
+    },
+    {
+     "rate": 4000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 2.613,
+       "p99_ms": 12.567,
+       "p999_ms": 23.759,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 2.191,
+       "p99_ms": 9.879,
+       "p999_ms": 18.223,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 2.647,
+       "p99_ms": 13.831,
+       "p999_ms": 38.431,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 2.203,
+       "p99_ms": 10.327,
+       "p999_ms": 21.535,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 2.473,
+       "p99_ms": 11.071,
+       "p999_ms": 31.391,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 2.473,
+     "p99": 11.071,
+     "p999": 23.759
+    },
+    {
+     "rate": 8000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 5.039,
+       "p99_ms": 20.911,
+       "p999_ms": 30.831,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 5.043,
+       "p99_ms": 22.623,
+       "p999_ms": 51.103,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 5.235,
+       "p99_ms": 32.543,
+       "p999_ms": 52.511,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 4.735,
+       "p99_ms": 19.503,
+       "p999_ms": 39.615,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 4.619,
+       "p99_ms": 23.071,
+       "p999_ms": 40.575,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 5.039,
+     "p99": 22.623,
+     "p999": 40.575
+    }
+   ],
+   "lease": [
+    {
+     "rate": 1000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.898,
+       "p99_ms": 3.053,
+       "p999_ms": 11.855,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.883,
+       "p99_ms": 3.093,
+       "p999_ms": 7.099,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.906,
+       "p99_ms": 3.145,
+       "p999_ms": 18.943,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.877,
+       "p99_ms": 2.727,
+       "p999_ms": 5.015,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.891,
+       "p99_ms": 2.861,
+       "p999_ms": 7.431,
+       "achieved_ops_s": 1000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.891,
+     "p99": 3.053,
+     "p999": 7.431
+    },
+    {
+     "rate": 2000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.63,
+       "p99_ms": 2.991,
+       "p999_ms": 9.903,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.634,
+       "p99_ms": 4.475,
+       "p999_ms": 28.607,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.642,
+       "p99_ms": 4.699,
+       "p999_ms": 64.351,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.652,
+       "p99_ms": 3.139,
+       "p999_ms": 7.063,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.641,
+       "p99_ms": 3.353,
+       "p999_ms": 10.767,
+       "achieved_ops_s": 2000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.641,
+     "p99": 3.353,
+     "p999": 10.767
+    },
+    {
+     "rate": 4000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.427,
+       "p99_ms": 4.523,
+       "p999_ms": 33.119,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.406,
+       "p99_ms": 3.917,
+       "p999_ms": 34.687,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.516,
+       "p99_ms": 6.463,
+       "p999_ms": 51.423,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.422,
+       "p99_ms": 3.639,
+       "p999_ms": 11.647,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.42,
+       "p99_ms": 3.965,
+       "p999_ms": 27.599,
+       "achieved_ops_s": 4000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.422,
+     "p99": 3.965,
+     "p999": 33.119
+    },
+    {
+     "rate": 8000,
+     "reps": [
+      {
+       "rep": 1,
+       "p50_ms": 0.734,
+       "p99_ms": 14.479,
+       "p999_ms": 38.079,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 2,
+       "p50_ms": 0.774,
+       "p99_ms": 18.623,
+       "p999_ms": 41.407,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 3,
+       "p50_ms": 0.726,
+       "p99_ms": 8.695,
+       "p999_ms": 17.711,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 4,
+       "p50_ms": 0.797,
+       "p99_ms": 8.623,
+       "p999_ms": 21.535,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      },
+      {
+       "rep": 5,
+       "p50_ms": 0.741,
+       "p99_ms": 7.999,
+       "p999_ms": 20.271,
+       "achieved_ops_s": 8000,
+       "errors": 0,
+       "dropped": 0
+      }
+     ],
+     "p50": 0.741,
+     "p99": 8.695,
+     "p999": 21.535
+    }
+   ]
+  }
+ },
+ "diag": [
+  {
+   "config": "lease-rf1.0-8000",
+   "rep": 1,
+   "offered_ops_s": 8000,
+   "p50_ms": 0.363,
+   "p99_ms": 3.447,
+   "p999_ms": 43.103,
+   "max_ms": 78.207,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 0,
+   "gc_events_in_window": 820,
+   "gc_max_stw_ms": 39.042,
+   "psi_cpu_avg10_max": 39.62,
+   "cpu_busiest_node_pct": 104.5,
+   "cpu_loadgen_pct": 114.2,
+   "run_dir": "diag-gctrace/lease-rf1.0-8000/rep-1"
+  },
+  {
+   "config": "lease-rf1.0-8000",
+   "rep": 2,
+   "offered_ops_s": 8000,
+   "p50_ms": 0.366,
+   "p99_ms": 3.965,
+   "p999_ms": 37.631,
+   "max_ms": 53.983,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 0,
+   "gc_events_in_window": 806,
+   "gc_max_stw_ms": 2.05,
+   "psi_cpu_avg10_max": 39.56,
+   "cpu_busiest_node_pct": 106.3,
+   "cpu_loadgen_pct": 113.5,
+   "run_dir": "diag-gctrace/lease-rf1.0-8000/rep-2"
+  },
+  {
+   "config": "lease-rf1.0-8000",
+   "rep": 3,
+   "offered_ops_s": 8000,
+   "p50_ms": 0.369,
+   "p99_ms": 2.937,
+   "p999_ms": 16.927,
+   "max_ms": 32.431,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 0,
+   "gc_events_in_window": 788,
+   "gc_max_stw_ms": 5.02,
+   "psi_cpu_avg10_max": 40.19,
+   "cpu_busiest_node_pct": 105.7,
+   "cpu_loadgen_pct": 114.8,
+   "run_dir": "diag-gctrace/lease-rf1.0-8000/rep-3"
+  },
+  {
+   "config": "lease-rf1.0-8000",
+   "rep": 4,
+   "offered_ops_s": 8000,
+   "p50_ms": 0.383,
+   "p99_ms": 2.653,
+   "p999_ms": 6.463,
+   "max_ms": 10.431,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 0,
+   "gc_events_in_window": 789,
+   "gc_max_stw_ms": 3.025,
+   "psi_cpu_avg10_max": 39.79,
+   "cpu_busiest_node_pct": 106.9,
+   "cpu_loadgen_pct": 114.4,
+   "run_dir": "diag-gctrace/lease-rf1.0-8000/rep-4"
+  },
+  {
+   "config": "lease-rf1.0-8000",
+   "rep": 5,
+   "offered_ops_s": 8000,
+   "p50_ms": 0.4,
+   "p99_ms": 3.393,
+   "p999_ms": 34.079,
+   "max_ms": 55.391,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 0,
+   "gc_events_in_window": 803,
+   "gc_max_stw_ms": 29.01,
+   "psi_cpu_avg10_max": 40.45,
+   "cpu_busiest_node_pct": 109.1,
+   "cpu_loadgen_pct": 116.6,
+   "run_dir": "diag-gctrace/lease-rf1.0-8000/rep-5"
+  },
+  {
+   "config": "log-rf1.0-1000",
+   "rep": 1,
+   "offered_ops_s": 1000,
+   "p50_ms": 2.279,
+   "p99_ms": 22.287,
+   "p999_ms": 138.623,
+   "max_ms": 151.679,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 15,
+   "gc_events_in_window": 343,
+   "gc_max_stw_ms": 5.504,
+   "psi_cpu_avg10_max": 55.94,
+   "cpu_busiest_node_pct": 96.6,
+   "cpu_loadgen_pct": 34.3,
+   "run_dir": "diag-gctrace/log-rf1.0-1000/rep-1"
+  },
+  {
+   "config": "log-rf1.0-1000",
+   "rep": 2,
+   "offered_ops_s": 1000,
+   "p50_ms": 2.333,
+   "p99_ms": 8.799,
+   "p999_ms": 20.927,
+   "max_ms": 29.599,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 15,
+   "gc_events_in_window": 340,
+   "gc_max_stw_ms": 4.404,
+   "psi_cpu_avg10_max": 57.41,
+   "cpu_busiest_node_pct": 97.9,
+   "cpu_loadgen_pct": 34.9,
+   "run_dir": "diag-gctrace/log-rf1.0-1000/rep-2"
+  },
+  {
+   "config": "log-rf1.0-1000",
+   "rep": 3,
+   "offered_ops_s": 1000,
+   "p50_ms": 2.401,
+   "p99_ms": 11.335,
+   "p999_ms": 56.063,
+   "max_ms": 71.807,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 15,
+   "gc_events_in_window": 340,
+   "gc_max_stw_ms": 2.805,
+   "psi_cpu_avg10_max": 57.67,
+   "cpu_busiest_node_pct": 99.1,
+   "cpu_loadgen_pct": 35.0,
+   "run_dir": "diag-gctrace/log-rf1.0-1000/rep-3"
+  },
+  {
+   "config": "log-rf1.0-1000",
+   "rep": 4,
+   "offered_ops_s": 1000,
+   "p50_ms": 2.111,
+   "p99_ms": 7.559,
+   "p999_ms": 21.887,
+   "max_ms": 28.703,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 15,
+   "gc_events_in_window": 346,
+   "gc_max_stw_ms": 7.105,
+   "psi_cpu_avg10_max": 57.41,
+   "cpu_busiest_node_pct": 98.7,
+   "cpu_loadgen_pct": 34.8,
+   "run_dir": "diag-gctrace/log-rf1.0-1000/rep-4"
+  },
+  {
+   "config": "log-rf1.0-1000",
+   "rep": 5,
+   "offered_ops_s": 1000,
+   "p50_ms": 1.984,
+   "p99_ms": 9.647,
+   "p999_ms": 38.303,
+   "max_ms": 48.671,
+   "errors": 0,
+   "dropped": 0,
+   "snapshots_in_window": 15,
+   "gc_events_in_window": 346,
+   "gc_max_stw_ms": 6.57,
+   "psi_cpu_avg10_max": 56.04,
+   "cpu_busiest_node_pct": 99.0,
+   "cpu_loadgen_pct": 34.9,
+   "run_dir": "diag-gctrace/log-rf1.0-1000/rep-5"
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+  "trial": 1,
+  "check": {
+    "result": "Ok (reduced)",
+    "ops": 32093,
+    "ok": 31914,
+    "fail": 19,
+    "info": 160,
+    "reduced_keys": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "dropped_ops": 155
+  },
+  "stale_reads": {
+    "reads": 0
+  },
+  "faults": 3,
+  "faults_planned": 3,
+  "faults_completed": 3,
+  "events": [
+    {
+      "time": 3062939586,
+      "kind": "start",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n2 + [2] | [1 3 4 5]"
+    },
+    {
+      "time": 8153332847,
+      "kind": "heal",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n2 + [2] | [1 3 4 5]"
+    },
+    {
+      "time": 15225336244,
+      "kind": "start",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n4 + [4] | [1 2 3 5]"
+    },
+    {
+      "time": 20331249540,
+      "kind": "heal",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n4 + [4] | [1 2 3 5]"
+    },
+    {
+      "time": 27383742742,
+      "kind": "start",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n5 + [5] | [1 2 3 4]"
+    },
+    {
+      "time": 32464698932,
+      "kind": "heal",
+      "fault": "clock-partition-mild",
+      "desc": "clock x0.92 on n5 + [5] | [1 2 3 4]"
+    }
+  ],
+  "wall_s": 103.688727377
+}

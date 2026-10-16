@@ -1,0 +1,184 @@
+<title>RaftKV E5 Lease Figures</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column of numbered figures (the paper's figure order), each with caption, chart, and data note. */
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --fg:#17202b; --muted:#5b6675; --grid:#e3e7ec; --axis:#9aa4b1;
+  --log:#2a78d6; --ri:#eb6834; --lease:#1baf7a; --viol:#c2334a; --ref:#7b8494;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161c; --panel:#1a2029; --fg:#e6eaf0; --muted:#9aa5b4; --grid:#2a323d; --axis:#5e6876;
+  --log:#3987e5; --ri:#d95926; --lease:#199e70; --viol:#e0566b; --ref:#8d96a6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161c; --panel:#1a2029; --fg:#e6eaf0; --muted:#9aa5b4; --grid:#2a323d; --axis:#5e6876;
+  --log:#3987e5; --ri:#d95926; --lease:#199e70; --viol:#e0566b; --ref:#8d96a6; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55}
+main{max-width:980px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+header h1{font-size:1.65rem;font-weight:600;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em}
+header p{margin:0;color:var(--muted);max-width:68ch}
+.meta{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-top:10px}
+section.fig{background:var(--panel);border:1px solid var(--grid);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.fig h2{font-size:1.05rem;font-weight:600;margin:0;text-wrap:balance}
+.fig h2 .n{font-family:var(--mono);font-weight:500;color:var(--muted);margin-right:8px;letter-spacing:.04em}
+.cap{margin:0;color:var(--muted);max-width:72ch;font-size:.92rem}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.controls span{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-right:4px}
+.controls button{font:inherit;font-size:.85rem;padding:4px 12px;border-radius:4px;border:1px solid var(--grid);background:transparent;color:var(--fg);cursor:pointer}
+.controls button[aria-pressed="true"]{border-color:var(--fg);font-weight:500}
+.controls button:focus-visible{outline:2px solid var(--log);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.85rem}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.chart{min-width:0;overflow-x:auto}
+svg{display:block;width:100%;height:auto;font-family:var(--sans)}
+svg text{fill:var(--muted);font-size:11px}
+svg .ttl{fill:var(--fg);font-size:12px;font-weight:600}
+svg .gl{stroke:var(--grid);stroke-width:1}
+svg .ax{stroke:var(--axis);stroke-width:1}
+.c-log{stroke:var(--log);fill:var(--log)} .c-readindex{stroke:var(--ri);fill:var(--ri)} .c-lease{stroke:var(--lease);fill:var(--lease)}
+.line{fill:none;stroke-width:2}
+.dot{stroke:none;opacity:.45}
+.med{stroke-width:0}
+.hit:hover{opacity:1}
+.note{font-size:.85rem;color:var(--muted);margin:0;max-width:72ch}
+.note b{color:var(--fg);font-weight:500}
+table{border-collapse:collapse;font-size:.85rem;font-variant-numeric:tabular-nums}
+th,td{padding:4px 10px;text-align:right;border-bottom:1px solid var(--grid)}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:500;color:var(--muted)}
+.tw{overflow-x:auto}
+#tip{position:fixed;pointer-events:none;background:var(--fg);color:var(--bg);font-family:var(--mono);font-size:.75rem;padding:5px 8px;border-radius:4px;white-space:pre;z-index:5}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<main>
+<header>
+  <h1>RaftKV E5 lease figures</h1>
+  <p>Read-path latency (log, ReadIndex, lease) on a 5-node cluster with no faults, and lease safety near the clock-drift boundary. Every mark is a measured value from the E5 extension run on 2026-10-16.</p>
+  <div class="meta">commit 14bf0f6 · 4 vCPU / 16 GB container · Go 1.26.0 · open loop · 10,000 keys · 128 B values · 5 s warmup · 20 s window · 5 repetitions per point</div>
+</header>
+
+<section class="fig" id="figA">
+  <h2><span class="n">FIG A</span>Read latency vs offered load</h2>
+  <p class="cap">Median of 5 repetitions (line) with each repetition (dots). Log scale on both axes. Latency is measured from the intended start time of each request. In the 95/5 mix, the histogram covers all operations, reads and writes together, because loadgen does not record write latency separately.</p>
+  <div class="controls" role="group" aria-label="Workload mix for Figure A"><span>Mix</span>
+    <button id="mixA095" data-mix="0.95" aria-pressed="true">95% reads / 5% writes</button>
+    <button id="mixA100" data-mix="1.0" aria-pressed="false">100% reads</button></div>
+  <div class="legend"><span><i style="background:var(--log)"></i>log</span><span><i style="background:var(--ri)"></i>ReadIndex</span><span><i style="background:var(--lease)"></i>lease</span></div>
+  <div class="charts"><div class="chart" id="a50"></div><div class="chart" id="a99"></div></div>
+  <p class="note" id="noteA"></p>
+</section>
+
+<section class="fig" id="figB">
+  <h2><span class="n">FIG B</span>p99.9 tail latency and its spread across repetitions</h2>
+  <p class="cap">Each dot is one repetition; the bar is the median of 5. The spread is large compared with p50 and p99, so p99.9 differences between paths are less reliable than the median comparisons in Figure A.</p>
+  <div class="controls" role="group" aria-label="Workload mix for Figure B"><span>Mix</span>
+    <button id="mixB095" data-mix="0.95" aria-pressed="true">95% reads / 5% writes</button>
+    <button id="mixB100" data-mix="1.0" aria-pressed="false">100% reads</button></div>
+  <div class="legend"><span><i style="background:var(--log)"></i>log</span><span><i style="background:var(--ri)"></i>ReadIndex</span><span><i style="background:var(--lease)"></i>lease</span></div>
+  <div class="chart" id="b999"></div>
+</section>
+
+<section class="fig" id="figC">
+  <h2><span class="n">FIG C</span>Lease safety near the drift boundary</h2>
+  <p class="cap">Share of trials with a linearizability violation (Porcupine Illegal or a provably stale read), with Wilson 95% intervals. The 0.92× point is the new 60-trial run. The normal and 0.25× points come from the 3-trial pilot and are shown only as reference points; they are not pooled with the 60 trials.</p>
+  <div class="chart" id="c"></div>
+  <div class="tw"><table>
+    <thead><tr><th>Condition (lease read path)</th><th>Source</th><th>Trials</th><th>Violations</th><th>Rate</th><th>Wilson 95%</th></tr></thead>
+    <tbody id="ctab"></tbody></table></div>
+  <p class="note">At 0.92× the lease lasts about 0.978 s of real time against a 1 s minimum election timeout, a margin of about 2%. Zero violations in 60 trials bounds the per-trial violation rate below 6.0% at 95% confidence. It does not prove the configuration safe. The lease path is safe only while clock drift stays within the configured bound; the 0.25× pilot shows what happens when it does not.</p>
+</section>
+</main>
+<div id="tip" hidden></div>
+
+<script>
+const D = {"1.0": {"log": [{"rate": 1000, "p50": 2.055, "p99": 10.255, "p999": 29.407, "r50": [2.311, 1.948, 2.04, 2.281, 2.055], "r99": [10.167, 12.615, 10.255, 11.671, 6.927], "r999": [29.407, 24.591, 38.303, 31.519, 14.903]}, {"rate": 2000, "p50": 3.275, "p99": 17.567, "p999": 41.759, "r50": [3.291, 3.275, 3.213, 3.421, 2.885], "r99": [25.343, 16.223, 28.303, 17.567, 10.407], "r999": [51.007, 34.079, 45.279, 41.759, 21.919]}, {"rate": 4000, "p50": 4.611, "p99": 28.271, "p999": 56.767, "r50": [4.919, 4.271, 4.391, 4.611, 4.627], "r99": [38.111, 28.175, 30.495, 28.271, 17.119], "r999": [58.943, 56.767, 44.991, 65.375, 30.639]}, {"rate": 8000, "p50": 7.307, "p99": 52.767, "p999": 76.223, "r50": [6.691, 6.319, 8.303, 8.567, 7.307], "r99": [51.615, 52.767, 58.335, 55.743, 46.367], "r999": [67.327, 85.311, 88.447, 76.223, 70.399]}], "readindex": [{"rate": 1000, "p50": 1.077, "p99": 3.273, "p999": 6.879, "r50": [1.084, 1.052, 1.056, 1.077, 1.08], "r99": [3.259, 3.349, 3.055, 3.273, 3.525], "r999": [6.171, 7.015, 5.483, 6.879, 7.271]}, {"rate": 2000, "p50": 0.933, "p99": 4.735, "p999": 12.631, "r50": [0.933, 0.933, 0.928, 0.972, 0.971], "r99": [4.411, 5.175, 4.043, 5.651, 4.735], "r999": [12.631, 54.687, 7.271, 80.191, 8.727]}, {"rate": 4000, "p50": 1.626, "p99": 7.539, "p999": 11.239, "r50": [1.626, 1.572, 1.502, 1.655, 1.656], "r99": [7.543, 7.391, 7.403, 7.539, 12.351], "r999": [10.919, 27.647, 11.239, 10.895, 102.335]}, {"rate": 8000, "p50": 3.169, "p99": 12.807, "p999": 22.335, "r50": [3.169, 2.969, 3.433, 3.279, 3.065], "r99": [12.255, 12.807, 35.679, 12.423, 15.047], "r999": [16.719, 22.335, 101.951, 17.343, 118.015]}], "lease": [{"rate": 1000, "p50": 0.848, "p99": 1.937, "p999": 4.707, "r50": [0.844, 0.859, 0.837, 0.901, 0.848], "r99": [1.797, 2.411, 1.937, 41.983, 1.828], "r999": [3.817, 42.367, 4.707, 153.087, 3.201]}, {"rate": 2000, "p50": 0.576, "p99": 2.345, "p999": 12.695, "r50": [0.557, 0.576, 0.583, 0.565, 0.59], "r99": [2.397, 2.331, 2.475, 2.197, 2.345], "r999": [6.947, 41.087, 14.975, 9.303, 12.695]}, {"rate": 4000, "p50": 0.358, "p99": 1.712, "p999": 4.831, "r50": [0.358, 0.355, 0.348, 0.371, 0.361], "r99": [1.671, 1.712, 2.199, 1.704, 2.391], "r999": [3.381, 4.195, 80.063, 4.831, 18.431]}, {"rate": 8000, "p50": 0.349, "p99": 2.297, "p999": 11.623, "r50": [0.357, 0.34, 0.345, 0.349, 0.365], "r99": [1.924, 2.297, 2.623, 2.055, 2.565], "r999": [4.091, 23.455, 12.783, 5.291, 11.623]}]}, "0.95": {"log": [{"rate": 1000, "p50": 2.077, "p99": 10.863, "p999": 28.223, "r50": [2.301, 2.021, 2.339, 2.059, 2.077], "r99": [8.431, 23.199, 10.863, 11.119, 10.535], "r999": [15.847, 116.287, 28.223, 39.903, 26.207]}, {"rate": 2000, "p50": 3.167, "p99": 14.311, "p999": 33.279, "r50": [3.243, 3.109, 3.345, 3.051, 3.167], "r99": [21.599, 25.455, 14.311, 11.783, 13.847], "r999": [73.407, 47.871, 33.279, 26.031, 31.391]}, {"rate": 4000, "p50": 4.803, "p99": 31.439, "p999": 45.375, "r50": [5.067, 4.467, 4.983, 4.299, 4.803], "r99": [36.127, 38.687, 30.383, 31.439, 19.375], "r999": [92.031, 54.591, 45.375, 44.255, 33.663]}, {"rate": 8000, "p50": 8.431, "p99": 71.295, "p999": 103.807, "r50": [9.311, 8.431, 9.615, 7.987, 7.935], "r99": [69.055, 71.295, 94.655, 72.255, 56.639], "r999": [103.807, 99.519, 190.207, 129.087, 97.279]}], "readindex": [{"rate": 1000, "p50": 1.129, "p99": 3.807, "p999": 10.575, "r50": [1.11, 1.129, 1.245, 1.156, 1.125], "r99": [3.807, 3.553, 5.359, 3.779, 3.815], "r999": [48.767, 6.595, 26.975, 7.883, 10.575]}, {"rate": 2000, "p50": 1.208, "p99": 7.355, "p999": 26.383, "r50": [1.208, 1.253, 1.096, 1.068, 1.398], "r99": [60.479, 7.355, 6.267, 6.111, 11.047], "r999": [235.135, 17.679, 36.127, 16.183, 26.383]}, {"rate": 4000, "p50": 2.473, "p99": 11.071, "p999": 23.759, "r50": [2.613, 2.191, 2.647, 2.203, 2.473], "r99": [12.567, 9.879, 13.831, 10.327, 11.071], "r999": [23.759, 18.223, 38.431, 21.535, 31.391]}, {"rate": 8000, "p50": 5.039, "p99": 22.623, "p999": 40.575, "r50": [5.039, 5.043, 5.235, 4.735, 4.619], "r99": [20.911, 22.623, 32.543, 19.503, 23.071], "r999": [30.831, 51.103, 52.511, 39.615, 40.575]}], "lease": [{"rate": 1000, "p50": 0.891, "p99": 3.053, "p999": 7.431, "r50": [0.898, 0.883, 0.906, 0.877, 0.891], "r99": [3.053, 3.093, 3.145, 2.727, 2.861], "r999": [11.855, 7.099, 18.943, 5.015, 7.431]}, {"rate": 2000, "p50": 0.641, "p99": 3.353, "p999": 10.767, "r50": [0.63, 0.634, 0.642, 0.652, 0.641], "r99": [2.991, 4.475, 4.699, 3.139, 3.353], "r999": [9.903, 28.607, 64.351, 7.063, 10.767]}, {"rate": 4000, "p50": 0.422, "p99": 3.965, "p999": 33.119, "r50": [0.427, 0.406, 0.516, 0.422, 0.42], "r99": [4.523, 3.917, 6.463, 3.639, 3.965], "r999": [33.119, 34.687, 51.423, 11.647, 27.599]}, {"rate": 8000, "p50": 0.741, "p99": 8.695, "p999": 21.535, "r50": [0.734, 0.774, 0.726, 0.797, 0.741], "r99": [14.479, 18.623, 8.695, 8.623, 7.999], "r999": [38.079, 41.407, 17.711, 21.535, 20.271]}]}};
+const PATHS=[["log","log"],["readindex","ReadIndex"],["lease","lease"]];
+const RATES=[1000,2000,4000,8000];
+const NS="http://www.w3.org/2000/svg";
+const tip=document.getElementById("tip");
+function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,a){const e=el("text",Object.assign({x,y},a||{}),p);e.textContent=s;return e}
+function hover(e,s){e.addEventListener("mousemove",ev=>{tip.textContent=s;tip.hidden=false;tip.style.left=(ev.clientX+12)+"px";tip.style.top=(ev.clientY+12)+"px"});e.addEventListener("mouseleave",()=>tip.hidden=true);e.setAttribute("tabindex","0");e.addEventListener("focus",()=>{const r=e.getBoundingClientRect();tip.textContent=s;tip.hidden=false;tip.style.left=(r.right+6)+"px";tip.style.top=(r.top)+"px"});e.addEventListener("blur",()=>tip.hidden=true);const t=el("title",{},e);t.textContent=s}
+function logTicks(lo,hi){const out=[];for(let e=Math.floor(Math.log10(lo));e<=Math.ceil(Math.log10(hi));e++)for(const m of [1,2,5]){const v=m*10**e;if(v>=lo*0.999&&v<=hi*1.001)out.push(v)}return out}
+function fmt(v){return v>=10?v.toFixed(0):v>=1?v.toFixed(1):v.toFixed(2)}
+
+function lineChart(host,mix,key,rkey,title,ylo,yhi){
+  host.innerHTML="";
+  const W=460,H=300,m={l:48,r:14,t:26,b:40};
+  const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":title},host);
+  const lx=v=>m.l+(Math.log2(v/1000)/3)*(W-m.l-m.r);
+  const ly=v=>H-m.b-(Math.log10(v/ylo)/Math.log10(yhi/ylo))*(H-m.t-m.b);
+  for(const v of logTicks(ylo,yhi)){el("line",{x1:m.l,x2:W-m.r,y1:ly(v),y2:ly(v),class:"gl"},s);txt(s,m.l-6,ly(v)+4,fmt(v),{"text-anchor":"end"})}
+  for(const r of RATES){el("line",{x1:lx(r),x2:lx(r),y1:H-m.b,y2:H-m.b+4,class:"ax"},s);txt(s,lx(r),H-m.b+16,r.toLocaleString("en-US"),{"text-anchor":"middle"})}
+  el("line",{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,class:"ax"},s);
+  txt(s,(m.l+W-m.r)/2,H-6,"offered load (ops/s)",{"text-anchor":"middle"});
+  txt(s,m.l-40,14,title,{class:"ttl"});
+  PATHS.forEach(([p,label],pi)=>{
+    const pts=D[mix][p];
+    el("polyline",{points:pts.map(x=>`${lx(x.rate)},${ly(x[key])}`).join(" "),class:`line c-${p}`},s);
+    pts.forEach(x=>{
+      x[rkey].forEach((v,i)=>{const c=el("circle",{cx:lx(x.rate)+(pi-1)*7+(i-2)*1.2,cy:ly(Math.max(v,ylo)),r:2.4,class:`dot hit c-${p}`},s);hover(c,`${label} · ${x.rate} ops/s · rep ${i+1}\n${title}: ${v.toFixed(2)} ms`)});
+      const c=el("circle",{cx:lx(x.rate),cy:ly(x[key]),r:4,class:`med hit c-${p}`},s);
+      hover(c,`${label} · ${x.rate} ops/s\nmedian ${title}: ${x[key].toFixed(2)} ms\nreps: ${x[rkey].map(v=>v.toFixed(2)).join(", ")}`);
+    });
+  });
+}
+function figA(mix){
+  lineChart(document.getElementById("a50"),mix,"p50","r50","p50 latency (ms)",0.2,20);
+  lineChart(document.getElementById("a99"),mix,"p99","r99","p99 latency (ms)",1,200);
+  const L=D[mix].lease,R=D[mix].readindex,G=D[mix].log;
+  const r=i=>`${(R[i].p50/L[i].p50).toFixed(1)}× / ${(G[i].p50/L[i].p50).toFixed(1)}×`;
+  document.getElementById("noteA").innerHTML=`<b>p50 speed-up of lease over ReadIndex / log</b> (${mix==="0.95"?"95/5 mix":"100% reads"}): 1,000 ops/s ${r(0)}; 2,000 ops/s ${r(1)}; 4,000 ops/s ${r(2)}; 8,000 ops/s ${r(3)}. All 40 runs reached the offered load with 0 errors, 0 timeouts and 0 dropped requests.`;
+}
+function figB(mix){
+  const host=document.getElementById("b999");host.innerHTML="";
+  const W=940,H=320,m={l:52,r:14,t:26,b:42},ylo=2,yhi=300;
+  const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"p99.9 latency per repetition"},host);
+  const ly=v=>H-m.b-(Math.log10(v/ylo)/Math.log10(yhi/ylo))*(H-m.t-m.b);
+  const gw=(W-m.l-m.r)/4;
+  for(const v of logTicks(ylo,yhi)){el("line",{x1:m.l,x2:W-m.r,y1:ly(v),y2:ly(v),class:"gl"},s);txt(s,m.l-6,ly(v)+4,fmt(v),{"text-anchor":"end"})}
+  el("line",{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,class:"ax"},s);
+  txt(s,m.l-44,14,"p99.9 latency (ms)",{class:"ttl"});
+  RATES.forEach((r,ri)=>{
+    const gx=m.l+ri*gw;
+    txt(s,gx+gw/2,H-m.b+18,r.toLocaleString("en-US")+" ops/s",{"text-anchor":"middle"});
+    PATHS.forEach(([p,label],pi)=>{
+      const x0=gx+gw*(0.22+pi*0.28),x=D[mix][p][ri];
+      el("line",{x1:x0-12,x2:x0+12,y1:ly(x.p999),y2:ly(x.p999),class:`c-${p}`,"stroke-width":2.5},s);
+      x.r999.forEach((v,i)=>{const c=el("circle",{cx:x0-8+i*4,cy:ly(v),r:3,class:`dot hit c-${p}`},s);hover(c,`${label} · ${r} ops/s · rep ${i+1}\np99.9: ${v.toFixed(2)} ms`)});
+      const hb=el("rect",{x:x0-14,y:ly(x.p999)-5,width:28,height:10,fill:"transparent",class:"hit"},s);
+      hover(hb,`${label} · ${r} ops/s\nmedian p99.9: ${x.p999.toFixed(2)} ms\nrange ${Math.min(...x.r999).toFixed(2)}–${Math.max(...x.r999).toFixed(2)} ms`);
+    });
+  });
+  txt(s,(m.l+W-m.r)/2,H-6,"offered load",{"text-anchor":"middle"});
+}
+function wilson(k,n){const z=1.959964,z2=z*z,p=k/n,c=(p+z2/(2*n))/(1+z2/n),h=z*Math.sqrt(p*(1-p)/n+z2/(4*n*n))/(1+z2/n);return [Math.max(0,c-h),Math.min(1,c+h)]}
+function figC(){
+  const rows=[["normal clock (1.0×) + leader partition","pilot, reference",0,3,false],["mild drift (0.92×) + partition","E5 extension",0,60,true],["severe drift (0.25×) + partition","pilot, reference",3,3,false]];
+  const host=document.getElementById("c");
+  const W=940,H=230,m={l:220,r:30,t:16,b:40};
+  const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"Violation rate with Wilson 95% intervals"},host);
+  const lx=v=>m.l+v*(W-m.l-m.r);
+  for(const v of [0,.2,.4,.6,.8,1]){el("line",{x1:lx(v),x2:lx(v),y1:m.t,y2:H-m.b,class:"gl"},s);txt(s,lx(v),H-m.b+16,(v*100).toFixed(0)+"%",{"text-anchor":"middle"})}
+  txt(s,(m.l+W-m.r)/2,H-6,"trials with a violation (Wilson 95% interval)",{"text-anchor":"middle"});
+  const bh=(H-m.t-m.b)/3,tb=document.getElementById("ctab");
+  rows.forEach(([lab,src,k,n,main],i)=>{
+    const y=m.t+bh*i+bh/2,[lo,hi]=wilson(k,n),col=k>0?"var(--viol)":main?"var(--lease)":"var(--ref)";
+    txt(s,m.l-12,y-2,lab,{"text-anchor":"end",class:main?"ttl":""});
+    txt(s,m.l-12,y+13,`${src} · ${k}/${n}`,{"text-anchor":"end"});
+    el("line",{x1:lx(lo),x2:lx(hi),y1:y,y2:y,stroke:col,"stroke-width":main?3:2,"stroke-dasharray":main?"":"5 3"},s);
+    for(const v of [lo,hi])el("line",{x1:lx(v),x2:lx(v),y1:y-7,y2:y+7,stroke:col,"stroke-width":2},s);
+    const c=el("circle",{cx:lx(k/n),cy:y,r:main?6:5,fill:main?col:"var(--panel)",stroke:col,"stroke-width":2,class:"hit"},s);
+    hover(c,`${lab}\n${src}: ${k}/${n} trials\nrate ${(k/n*100).toFixed(1)}%, Wilson 95% [${(lo*100).toFixed(1)}%, ${(hi*100).toFixed(1)}%]`);
+    if(main)txt(s,lx(hi)+8,y-8,`upper bound ${(hi*100).toFixed(1)}%`,{class:"ttl"});
+    const tr=document.createElement("tr");tr.innerHTML=`<td>${lab}</td><td>${src}</td><td>${n}</td><td>${k}</td><td>${(k/n*100).toFixed(1)}%</td><td>${(lo*100).toFixed(1)}–${(hi*100).toFixed(1)}%</td>`;tb.appendChild(tr);
+  });
+}
+function wire(prefix,fn){const b=[...document.querySelectorAll(`[id^=${prefix}]`)];b.forEach(x=>x.addEventListener("click",()=>{b.forEach(y=>y.setAttribute("aria-pressed",String(y===x)));fn(x.dataset.mix)}))}
+wire("mixA",figA);wire("mixB",figB);figA("0.95");figB("0.95");figC();
+</script>

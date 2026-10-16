@@ -1,0 +1,241 @@
+exp,db,fault,trial,event,start_s,recovery_ms,resume_ms,prefault_writes_per_250ms,ok,fail,info,check,stale,election_ms,anchor
+E1,raftkv,kill-leader,E1/kill-leader/attempt-001/trial-001,1,3.005,1408.6,3750,90.0,2986,7,13,Ok,0,1388.9,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-001/trial-001,2,15.016,1367.8,1500,90.0,3315,3,10,Ok,0,1333.1,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-001/trial-001,3,27.023,1154.3,1250,89.0,3791,9,11,Ok,0,1133.5,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-002/trial-001,1,3.008,1145.9,4250,87.0,3186,3,16,Ok,0,1116.3,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-002/trial-001,2,15.017,1054.7,1250,88.5,3706,5,14,Ok,0,1031.2,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-002/trial-001,3,27.024,1177.6,1750,89.5,3674,8,12,Ok,0,1145.6,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-003/trial-001,1,3.005,1112.3,4750,88.5,3316,5,16,Ok,0,1089.2,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-003/trial-001,2,15.02,1032.0,1000,88.5,3839,9,7,Ok,0,1003.2,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-003/trial-001,3,27.028,1014.6,1000,87.5,3748,4,8,Ok,0,999.5,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-004/trial-001,1,3.01,1415.7,4250,82.0,3082,8,9,Ok,0,1378.6,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-004/trial-001,2,15.021,1249.0,3750,86.0,3312,6,10,Ok,0,1230.7,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-004/trial-001,3,27.033,1125.8,2250,82.0,3227,8,15,Ok,0,1101.8,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-005/trial-001,1,3.014,1185.6,5250,87.5,2808,5,7,Ok,0,1143.1,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-005/trial-001,2,15.02,1185.1,1500,84.5,3570,11,13,Ok,0,1162.3,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-005/trial-001,3,27.031,1182.1,1250,94.5,3564,5,14,Ok,0,1157.0,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-006/trial-001,1,3.006,1184.0,2250,89.5,3046,3,14,Ok (reduced),0,1172.6,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-006/trial-001,2,15.012,1582.1,1750,84.5,3216,5,15,Ok (reduced),0,1571.6,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-006/trial-001,3,27.028,1520.4,1500,87.0,3319,4,13,Ok (reduced),0,1496.6,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-007/trial-001,1,3.036,1214.0,5250,90.0,2900,0,0,Ok,0,1199.0,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-007/trial-001,2,15.057,1249.1,2250,86.0,3390,0,13,Ok,0,1231.8,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-007/trial-001,3,27.064,1565.9,1750,89.0,3341,6,13,Ok,0,1550.3,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-008/trial-001,1,3.005,1458.4,5250,91.5,2954,9,9,Ok,0,1435.6,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-008/trial-001,2,15.012,1382.8,1500,84.5,3348,7,13,Ok,0,1355.8,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-008/trial-001,3,27.023,1388.7,2250,89.5,3401,6,12,Ok,0,1367.1,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-009/trial-001,1,3.006,1118.0,2500,83.5,3355,8,10,Ok,0,1093.5,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-009/trial-001,2,15.015,1761.7,1750,91.5,2910,6,9,Ok,0,1739.1,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-009/trial-001,3,27.023,1535.6,1500,89.5,3349,9,12,Ok,0,1523.2,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-010/trial-001,1,3.008,1149.3,2500,89.5,3320,4,16,Ok (reduced),0,1134.7,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-010/trial-001,2,15.014,1272.5,1250,91.0,3553,5,19,Ok (reduced),0,1254.1,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-010/trial-001,3,27.02,1123.6,1250,93.0,3720,6,14,Ok (reduced),0,1107.9,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-011/trial-001,1,3.008,1210.4,2750,86.5,3305,5,10,Ok,0,1195.3,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-011/trial-001,2,15.015,1116.4,1250,96.5,3630,7,12,Ok,0,1099.3,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-011/trial-001,3,27.024,1340.7,1500,89.5,3524,5,14,Ok,0,1324.4,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-012/trial-001,1,3.004,1085.3,3000,92.0,3319,7,16,Ok,0,1055.4,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-012/trial-001,2,15.012,1414.5,1500,81.5,3446,5,17,Ok,0,1391.1,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-012/trial-001,3,27.024,1549.4,1500,87.0,3211,7,7,Ok,0,1519.3,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-013/trial-001,1,3.012,1479.0,5000,91.0,2940,3,8,Ok,0,1449.0,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-013/trial-001,2,15.018,1131.9,1250,98.5,3799,5,14,Ok,0,1108.8,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-013/trial-001,3,27.023,1075.7,1250,96.5,3689,9,12,Ok,0,1045.5,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-014/trial-001,1,3.017,1166.5,3500,89.0,3312,7,9,Ok,0,1154.5,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-014/trial-001,2,15.023,1741.6,1750,93.0,3035,6,11,Ok,0,1722.9,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-014/trial-001,3,27.032,1401.1,1500,85.0,3470,6,10,Ok,0,1380.5,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-015/trial-001,1,3.005,1145.8,3750,85.0,3261,8,12,Ok,0,1120.4,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-015/trial-001,2,15.012,1011.7,1750,92.5,3832,11,7,Ok,0,997.9,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-015/trial-001,3,27.018,1018.5,1250,90.0,3868,7,11,Ok,0,1007.4,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-016/trial-001,1,3.011,1108.6,5000,99.0,3329,3,10,Ok,0,1085.3,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-016/trial-001,2,15.017,1266.2,1250,94.0,3689,11,8,Ok,0,1241.2,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-016/trial-001,3,27.025,1136.8,1250,90.5,3695,7,15,Ok,0,1108.2,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-017/trial-001,1,3.011,1534.4,2750,78.0,2789,6,14,Ok,0,1520.8,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-017/trial-001,2,15.021,1243.3,3000,95.5,3613,6,12,Ok,0,1231.2,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-017/trial-001,3,27.029,1109.0,2000,93.0,3666,6,13,Ok,0,1092.7,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-018/trial-001,1,3.004,1388.2,4000,89.0,3031,7,16,Ok (reduced),0,1366.4,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-018/trial-001,2,15.017,1334.9,1500,91.5,3363,8,12,Ok (reduced),0,1303.0,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-018/trial-001,3,27.027,1095.7,1250,89.0,3677,3,16,Ok (reduced),0,1085.6,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-019/trial-001,1,3.01,1187.5,1250,83.5,3210,8,11,Ok (reduced),0,1148.0,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-019/trial-001,2,15.018,1186.0,5500,89.0,3443,4,14,Ok (reduced),0,1164.3,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-019/trial-001,3,27.025,1316.9,1500,89.0,3426,8,13,Ok (reduced),0,1297.2,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-020/trial-001,1,3.011,1030.7,5250,88.0,3099,3,11,Ok,0,1003.0,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-020/trial-001,2,15.018,1104.8,1250,85.0,3604,5,13,Ok,0,1087.0,restart
+E1,raftkv,kill-leader,E1/kill-leader/attempt-020/trial-001,3,27.028,1684.7,2000,92.5,3180,6,15,Ok,0,1655.3,restart
+E1,raftkv,partition-leader,E1/partition-leader/attempt-001/trial-001,1,3.068,1924.8,2000,89.0,2829,5,21,Ok,0,1885.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-001/trial-001,2,15.245,1516.7,2000,87.0,3148,3,14,Ok,0,1480.4,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-001/trial-001,3,27.434,1497.0,1500,92.0,3451,1,1,Ok,0,1221.8,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-002/trial-001,1,3.077,1512.3,1500,86.5,3156,4,6,Ok (reduced),0,1480.6,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-002/trial-001,2,15.247,1499.5,1500,84.0,3556,1,5,Ok (reduced),0,1080.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-002/trial-001,3,27.405,1504.3,1500,90.5,3855,0,1,Ok (reduced),0,1110.4,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-003/trial-001,1,3.083,2059.2,2000,81.0,2522,1,18,Ok,0,1477.1,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-003/trial-001,2,15.266,985.7,1000,80.0,3757,1,0,Ok,0,939.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-003/trial-001,3,27.449,1499.2,1500,88.5,3553,0,5,Ok,0,971.3,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-004/trial-001,1,3.092,1528.0,3000,78.5,2534,6,21,Ok,0,1127.5,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-004/trial-001,2,15.267,1511.2,1500,87.0,3569,2,6,Ok,0,1003.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-004/trial-001,3,27.454,1520.4,1500,86.5,3324,0,6,Ok,0,1283.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-005/trial-001,1,3.087,1499.9,7500,83.0,2675,1,5,Ok,0,1154.6,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-005/trial-001,2,15.278,1504.7,1500,85.0,3494,0,2,Ok,0,1032.2,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-005/trial-001,3,27.467,1535.6,1500,93.0,3433,2,10,Ok,0,1382.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-006/trial-001,1,3.111,1500.4,7000,86.5,3136,1,0,Ok (reduced),0,993.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-006/trial-001,2,15.294,1497.8,1500,90.0,3292,0,9,Ok (reduced),0,1264.4,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-006/trial-001,3,27.525,1497.8,1500,87.5,3484,1,3,Ok (reduced),0,1090.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-007/trial-001,1,3.117,1484.4,1250,73.0,3331,0,0,Ok,0,982.3,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-007/trial-001,2,15.269,1543.5,2000,83.0,3010,3,27,Ok,0,1267.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-007/trial-001,3,27.505,1494.4,1500,85.5,3263,1,1,Ok,0,1052.3,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-008/trial-001,1,3.073,1927.6,2750,86.5,2781,2,24,Ok,0,1580.7,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-008/trial-001,2,15.242,1831.0,2000,87.5,3113,1,20,Ok,0,1809.6,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-008/trial-001,3,27.412,1498.1,1500,86.5,3352,3,5,Ok,0,1120.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-009/trial-001,1,3.104,1491.8,7250,86.0,2878,1,0,Ok,0,1234.4,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-009/trial-001,2,15.292,1501.4,1500,85.0,3495,2,1,Ok,0,1017.7,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-009/trial-001,3,27.494,1478.9,1500,77.0,3530,0,0,Ok,0,1224.2,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-010/trial-001,1,3.088,1947.8,7750,86.5,2625,3,22,Ok,0,1569.3,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-010/trial-001,2,15.285,1574.5,2000,86.5,3200,0,15,Ok,0,1536.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-010/trial-001,3,27.454,1511.2,1500,92.0,3837,3,4,Ok,0,991.5,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-011/trial-001,1,3.098,1498.6,1500,80.5,3037,0,3,Ok,0,1315.3,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-011/trial-001,2,15.284,1481.9,1500,80.0,3373,1,0,Ok,0,1144.2,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-011/trial-001,3,27.456,1495.0,1750,97.0,3368,0,1,Ok,0,1336.8,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-012/trial-001,1,3.098,1505.2,1500,85.0,3201,0,3,Ok (reduced),0,1350.2,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-012/trial-001,2,15.259,1497.3,1750,89.5,3834,2,1,Ok (reduced),0,991.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-012/trial-001,3,27.437,1503.6,1500,88.5,3554,2,6,Ok (reduced),0,1245.4,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-013/trial-001,1,3.123,1496.1,1500,78.0,3080,0,4,Ok (reduced),0,1001.3,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-013/trial-001,2,15.3,1506.1,1500,78.0,3198,4,6,Ok (reduced),0,1487.7,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-013/trial-001,3,27.509,1527.7,1750,86.5,3333,3,8,Ok (reduced),0,1071.7,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-014/trial-001,1,3.081,1494.5,7000,88.5,2913,3,7,Ok,0,1170.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-014/trial-001,2,15.251,1863.5,2000,82.5,3018,0,19,Ok,0,1820.4,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-014/trial-001,3,27.472,1525.0,2000,85.0,2902,0,19,Ok,0,1167.2,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-015/trial-001,1,3.09,1912.1,3000,85.0,2779,0,23,Ok,0,1641.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-015/trial-001,2,15.26,1051.3,2000,88.0,3117,4,19,Ok,0,1040.2,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-015/trial-001,3,27.462,1522.2,1500,88.0,3488,0,3,Ok,0,1075.8,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-016/trial-001,1,3.075,1498.9,7750,94.0,2967,0,4,Ok (reduced),0,1333.1,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-016/trial-001,2,15.235,1498.9,1500,87.0,3472,2,3,Ok (reduced),0,1483.3,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-016/trial-001,3,27.417,1532.4,1500,86.0,3646,4,8,Ok (reduced),0,1354.5,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-017/trial-001,1,3.1,1502.6,7250,87.0,2951,1,5,Ok,0,1279.1,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-017/trial-001,2,15.286,1491.1,1500,84.5,3629,0,3,Ok,0,1241.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-017/trial-001,3,27.466,1507.9,1500,85.0,3618,0,0,Ok,0,1151.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-018/trial-001,1,3.067,1924.0,2000,87.0,2840,4,25,Ok,0,1842.0,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-018/trial-001,2,15.241,1494.6,1500,91.0,3623,1,5,Ok,0,1040.1,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-018/trial-001,3,27.416,1770.4,2000,82.0,2934,1,11,Ok,0,1772.5,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-019/trial-001,1,3.075,1936.6,7250,91.5,2839,4,19,Ok (reduced),0,1582.2,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-019/trial-001,2,15.283,1922.0,2000,92.0,3134,0,17,Ok (reduced),0,1666.4,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-019/trial-001,3,27.472,1496.6,1750,89.0,3452,0,6,Ok (reduced),0,1486.2,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-020/trial-001,1,3.08,1502.8,1500,83.0,3076,0,3,Ok,0,1397.1,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-020/trial-001,2,15.254,1718.4,1750,83.5,3308,1,9,Ok,0,1673.9,first-leader+median-offset
+E1,raftkv,partition-leader,E1/partition-leader/attempt-020/trial-001,3,27.418,1506.2,7000,93.0,3287,3,7,Ok,0,1333.0,first-leader+median-offset
+E2,etcd,kill-leader,E2/kill-leader/attempt-001/trial-001,1,3.012,1259.8,3000,78.5,2578,8,40,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-001/trial-001,2,15.032,1107.6,6000,85.0,2783,12,37,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-001/trial-001,3,27.061,1221.1,2000,89.0,2694,11,40,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-002/trial-001,1,3.015,1090.1,2500,87.5,2796,15,39,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-002/trial-001,2,15.038,1357.9,2250,86.5,2676,11,36,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-002/trial-001,3,27.047,1012.8,1500,87.0,3295,10,29,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-003/trial-001,1,3.012,1023.5,2250,81.0,3332,7,31,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-003/trial-001,2,15.027,998.7,11000,86.0,3394,12,19,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-003/trial-001,3,27.048,1040.2,2000,72.5,2849,17,26,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-004/trial-001,1,3.028,1167.5,6500,87.5,2418,10,32,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-004/trial-001,2,15.044,1257.6,4000,85.0,2670,10,35,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-004/trial-001,3,27.066,1303.3,6000,83.5,2684,13,40,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-005/trial-001,1,3.012,1098.5,6500,81.5,2471,12,35,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-005/trial-001,2,15.038,1259.5,5500,94.0,2763,11,35,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-005/trial-001,3,27.058,1024.6,2750,91.0,3226,10,33,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-006/trial-001,1,3.013,1106.0,6750,96.0,2639,11,44,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-006/trial-001,2,15.022,1213.4,5500,90.0,2526,9,46,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-006/trial-001,3,27.076,1111.9,5250,82.0,2481,13,32,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-007/trial-001,1,3.011,1238.0,2250,79.0,2634,13,40,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-007/trial-001,2,15.024,1099.9,5500,86.0,2721,11,40,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-007/trial-001,3,27.043,1013.8,1250,78.0,3055,7,22,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-008/trial-001,1,3.025,1270.3,2250,77.5,2810,9,37,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-008/trial-001,2,15.039,1167.9,2000,76.0,2701,11,38,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-008/trial-001,3,27.055,997.7,1500,84.5,3193,3,27,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-009/trial-001,1,3.008,1001.8,1000,83.0,3386,5,23,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-009/trial-001,2,15.029,1064.1,5500,88.0,2664,7,37,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-009/trial-001,3,27.064,1324.9,2000,73.5,2854,12,31,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-010/trial-001,1,3.011,1162.9,2000,78.5,2635,13,38,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-010/trial-001,2,15.034,1156.9,2500,81.0,2705,13,36,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-010/trial-001,3,27.064,1291.2,6250,86.0,2598,13,36,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-011/trial-001,1,3.02,1078.3,2000,82.5,2678,13,32,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-011/trial-001,2,15.036,1039.6,2250,84.5,2783,7,38,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-011/trial-001,3,27.047,1562.5,6250,83.5,2496,9,40,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-012/trial-001,1,3.018,1280.1,2000,77.5,2606,7,43,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-012/trial-001,2,15.035,956.2,7250,83.5,3244,7,23,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-012/trial-001,3,27.062,1424.7,5500,82.0,2657,13,37,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-013/trial-001,1,3.011,1027.2,3250,85.0,3108,12,25,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-013/trial-001,2,15.027,1520.8,5250,84.0,2600,13,38,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-013/trial-001,3,27.049,1487.6,6750,89.0,2510,9,48,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-014/trial-001,1,3.021,1274.2,5250,87.0,2634,8,37,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-014/trial-001,2,15.043,1142.3,6250,87.0,2403,12,35,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-014/trial-001,3,27.056,1235.6,2000,85.5,2801,9,35,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-015/trial-001,1,3.016,1075.2,5250,82.5,2849,8,40,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-015/trial-001,2,15.031,1088.7,6750,87.5,2688,14,32,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-015/trial-001,3,27.06,1623.2,4750,84.0,2331,11,38,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-016/trial-001,1,3.02,1072.2,6500,84.5,2710,13,35,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-016/trial-001,2,15.033,1181.9,6250,85.0,2834,12,31,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-016/trial-001,3,27.046,1014.3,3500,84.0,3140,9,30,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-017/trial-001,1,3.03,1147.9,2250,81.0,2736,15,36,Ok (reduced),0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-017/trial-001,2,15.047,1327.4,6750,89.0,2673,12,34,Ok (reduced),0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-017/trial-001,3,27.063,1419.4,3500,84.0,2865,9,39,Ok (reduced),0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-018/trial-001,1,3.025,984.1,1750,82.0,3296,5,24,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-018/trial-001,2,15.05,1136.9,3500,79.5,2918,15,27,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-018/trial-001,3,27.067,1010.5,2500,83.5,3102,10,24,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-019/trial-001,1,3.017,1066.0,2000,77.5,2842,16,25,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-019/trial-001,2,15.035,1162.3,4000,80.5,2759,11,35,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-019/trial-001,3,27.053,942.2,6750,86.0,3235,10,19,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-020/trial-001,1,3.014,1280.8,5000,81.0,2585,12,32,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-020/trial-001,2,15.04,1048.5,3250,86.0,2893,13,31,Ok,0,,
+E2,etcd,kill-leader,E2/kill-leader/attempt-020/trial-001,3,27.057,1007.3,1750,82.0,3148,8,23,Ok,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-001/trial-001,1,3.059,1756.4,14750,86.0,2678,10,28,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-001/trial-001,2,15.26,1043.8,2000,67.0,3093,8,22,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-001/trial-001,3,27.476,1185.7,2000,74.0,2816,5,32,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-002/trial-001,1,3.076,2487.2,2500,84.0,2238,19,27,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-002/trial-001,2,15.257,1313.1,2250,72.0,2761,6,35,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-002/trial-001,3,27.433,1445.6,2000,75.5,2844,7,33,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-003/trial-001,1,3.083,930.2,1000,86.0,3559,7,16,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-003/trial-001,2,15.264,1144.8,2000,62.5,2617,8,34,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-003/trial-001,3,27.482,1128.7,2000,69.5,2837,9,32,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-004/trial-001,1,3.064,1086.9,2250,87.5,3066,12,33,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-004/trial-001,2,15.237,1648.5,3000,85.0,2613,9,33,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-004/trial-001,3,27.382,1164.3,2000,88.0,3058,10,33,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-005/trial-001,1,3.075,1214.5,2750,85.5,2883,10,36,no result.json (checker crash),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-005/trial-001,2,15.239,1369.0,7250,82.0,2723,12,35,no result.json (checker crash),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-005/trial-001,3,27.433,1362.4,2000,73.0,2969,6,31,no result.json (checker crash),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-006/trial-001,1,3.112,1370.0,2750,82.5,2782,10,28,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-006/trial-001,2,15.323,1463.9,2000,65.5,2845,8,22,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-006/trial-001,3,27.503,1384.1,2500,77.0,2864,7,26,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-007/trial-001,1,3.08,1434.3,2000,84.5,2704,12,26,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-007/trial-001,2,15.26,1254.1,2250,78.0,2814,9,30,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-007/trial-001,3,27.459,1264.4,2000,79.5,2799,8,37,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-008/trial-001,1,3.07,1095.2,4250,91.0,3026,6,27,Unknown,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-008/trial-001,2,15.228,1077.0,2000,65.0,2863,13,34,Unknown,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-008/trial-001,3,27.398,1468.5,3250,79.0,2894,8,26,Unknown,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-009/trial-001,1,3.072,1818.7,,89.0,2597,11,36,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-009/trial-001,2,15.306,1709.0,2000,57.0,2613,13,30,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-009/trial-001,3,27.462,1033.4,1000,71.0,3294,8,24,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-010/trial-001,1,3.086,1110.7,,99.0,2831,12,28,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-010/trial-001,2,15.271,1127.1,1750,56.5,2797,9,28,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-010/trial-001,3,27.49,1117.0,3500,80.0,2654,5,33,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-011/trial-001,1,3.078,1327.1,10500,87.0,2649,12,32,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-011/trial-001,2,15.246,1463.8,5000,88.5,2730,8,32,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-011/trial-001,3,27.431,1066.8,2750,85.0,2896,10,31,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-012/trial-001,1,3.076,1019.1,3750,87.0,3105,12,26,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-012/trial-001,2,15.29,935.4,1000,62.0,3350,10,18,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-012/trial-001,3,27.482,1144.4,2000,72.0,2854,15,25,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-013/trial-001,1,3.073,1338.6,5500,88.5,2808,8,29,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-013/trial-001,2,15.27,1630.0,2000,70.0,2674,8,30,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-013/trial-001,3,27.417,1201.0,,92.5,3085,13,22,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-014/trial-001,1,3.075,1277.6,2000,82.0,2910,9,31,Ok,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-014/trial-001,2,15.277,1141.2,2000,86.5,2939,9,34,Ok,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-014/trial-001,3,27.448,1802.0,2500,84.5,2812,7,26,Ok,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-015/trial-001,1,3.076,1108.7,10000,85.5,2967,8,28,Ok,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-015/trial-001,2,15.243,1044.2,13750,89.0,2981,10,30,Ok,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-015/trial-001,3,27.441,953.4,1000,72.0,3421,9,14,Ok,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-016/trial-001,1,3.063,990.2,1000,86.5,3388,4,24,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-016/trial-001,2,15.296,2835.5,2750,60.0,1915,19,27,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-016/trial-001,3,27.493,1040.3,2000,80.5,3007,11,23,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-017/trial-001,1,3.085,1010.5,,87.5,3307,9,18,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-017/trial-001,2,15.248,1423.6,2000,70.0,2801,7,35,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-017/trial-001,3,27.458,1227.1,2000,67.0,2787,15,29,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-018/trial-001,1,3.084,1279.3,4500,87.0,2738,8,33,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-018/trial-001,2,15.278,1785.6,2000,80.5,2717,10,26,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-018/trial-001,3,27.467,988.1,1000,56.5,3352,7,18,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-019/trial-001,1,3.083,999.3,2000,87.0,3482,10,17,Unknown,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-019/trial-001,2,15.291,1396.8,2000,77.0,2820,9,25,Unknown,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-019/trial-001,3,27.497,1481.5,2000,76.0,2690,11,31,Unknown,0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-020/trial-001,1,3.091,1102.5,10750,93.0,2799,7,34,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-020/trial-001,2,15.287,900.0,1000,84.5,3506,7,17,Ok (reduced),0,,
+E2,etcd,partition-leader,E2/partition-leader/attempt-020/trial-001,3,27.471,1223.8,2000,71.0,2858,10,35,Ok (reduced),0,,

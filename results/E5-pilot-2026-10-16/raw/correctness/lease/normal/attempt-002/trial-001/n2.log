@@ -1,0 +1,17 @@
+{"time":"2026-10-16T00:40:17.824524108Z","level":"INFO","msg":"raft started","node":2,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T00:40:17.824705187Z","level":"INFO","msg":"serving","node":2,"addr":"10.77.0.12:7000","read_mode":"lease"}
+{"time":"2026-10-16T00:40:23.115364521Z","level":"INFO","msg":"starting election","node":2,"term":2,"last_index":2200,"last_term":1}
+{"time":"2026-10-16T00:40:23.118409298Z","level":"INFO","msg":"became leader","node":2,"term":2,"last_index":2201}
+{"time":"2026-10-16T00:40:27.578475699Z","level":"INFO","msg":"became follower","node":2,"term":5,"leader":0}
+{"time":"2026-10-16T00:40:27.581022057Z","level":"INFO","msg":"starting election","node":2,"term":6,"last_index":4992,"last_term":2}
+{"time":"2026-10-16T00:40:29.254848907Z","level":"INFO","msg":"starting election","node":2,"term":7,"last_index":4992,"last_term":2}
+{"time":"2026-10-16T00:40:29.256589314Z","level":"INFO","msg":"became leader","node":2,"term":7,"last_index":4993}
+{"time":"2026-10-16T00:40:35.275584807Z","level":"INFO","msg":"lost quorum, stepping down","node":2,"term":7,"active":1}
+{"time":"2026-10-16T00:40:35.275624961Z","level":"INFO","msg":"became follower","node":2,"term":7,"leader":0}
+{"time":"2026-10-16T00:40:35.279826458Z","level":"INFO","msg":"starting election","node":2,"term":8,"last_index":8768,"last_term":7}
+{"time":"2026-10-16T00:40:37.220067625Z","level":"INFO","msg":"starting election","node":2,"term":9,"last_index":8768,"last_term":7}
+{"time":"2026-10-16T00:40:39.159800389Z","level":"INFO","msg":"starting election","node":2,"term":10,"last_index":8768,"last_term":7}
+{"time":"2026-10-16T00:40:40.332574606Z","level":"INFO","msg":"became follower","node":2,"term":10,"leader":5}
+{"time":"2026-10-16T00:40:40.332894494Z","level":"INFO","msg":"installing snapshot from leader","node":2,"term":10,"index":10669}
+{"time":"2026-10-16T00:40:53.820538448Z","level":"INFO","msg":"starting election","node":2,"term":12,"last_index":19267,"last_term":11}
+{"time":"2026-10-16T00:40:53.821753454Z","level":"INFO","msg":"became follower","node":2,"term":15,"leader":0}

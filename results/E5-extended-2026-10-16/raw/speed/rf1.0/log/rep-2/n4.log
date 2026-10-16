@@ -1,0 +1,3 @@
+{"time":"2026-10-16T12:30:28.786400585Z","level":"INFO","msg":"raft started","node":4,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T12:30:28.786743121Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"log"}
+{"time":"2026-10-16T12:31:22.592248812Z","level":"INFO","msg":"installing snapshot from leader","node":4,"term":1,"index":89937}

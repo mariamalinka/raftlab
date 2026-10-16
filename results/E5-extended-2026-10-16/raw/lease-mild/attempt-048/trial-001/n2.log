@@ -1,0 +1,17 @@
+{"time":"2026-10-16T11:52:43.339282217Z","level":"INFO","msg":"raft started","node":2,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T11:52:43.339660096Z","level":"INFO","msg":"serving","node":2,"addr":"10.77.0.12:7000","read_mode":"lease"}
+{"time":"2026-10-16T11:52:48.87501511Z","level":"INFO","msg":"starting election","node":2,"term":2,"last_index":2339,"last_term":1}
+{"time":"2026-10-16T11:52:49.219823287Z","level":"INFO","msg":"became follower","node":2,"term":3,"leader":0}
+{"time":"2026-10-16T11:52:52.913798128Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T11:53:05.101724966Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T11:53:06.69587378Z","level":"INFO","msg":"starting election","node":2,"term":12,"last_index":11164,"last_term":7}
+{"time":"2026-10-16T11:53:06.69771379Z","level":"INFO","msg":"became leader","node":2,"term":12,"last_index":11165}
+{"time":"2026-10-16T11:53:12.11113797Z","level":"INFO","msg":"clock skewed","node":2,"offset":-16,"rate":0.92}
+{"time":"2026-10-16T11:53:13.855005728Z","level":"INFO","msg":"lost quorum, stepping down","node":2,"term":12,"active":1}
+{"time":"2026-10-16T11:53:13.855064855Z","level":"INFO","msg":"became follower","node":2,"term":12,"leader":0}
+{"time":"2026-10-16T11:53:13.860731011Z","level":"INFO","msg":"starting election","node":2,"term":13,"last_index":15272,"last_term":12}
+{"time":"2026-10-16T11:53:15.931816259Z","level":"INFO","msg":"starting election","node":2,"term":14,"last_index":15272,"last_term":12}
+{"time":"2026-10-16T11:53:17.276506922Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T11:53:17.280812675Z","level":"INFO","msg":"starting election","node":2,"term":15,"last_index":15272,"last_term":12}
+{"time":"2026-10-16T11:53:17.813459151Z","level":"INFO","msg":"became follower","node":2,"term":16,"leader":0}
+{"time":"2026-10-16T11:53:18.905571557Z","level":"INFO","msg":"installing snapshot from leader","node":2,"term":17,"index":15794}

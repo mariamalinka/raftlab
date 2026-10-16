@@ -1,0 +1,6 @@
+{"level":"warn","ts":"2026-10-16T17:53:31.177466Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-16T17:53:31.177634Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-16T17:53:33.187688Z","caller":"auth/store.go:1137","msg":"simple token is not cryptographically signed"}
+{"level":"warn","ts":"2026-10-16T17:55:15.367214Z","caller":"rafthttp/stream.go:425","msg":"lost TCP streaming connection with remote peer","stream-reader-type":"stream Message","local-member-id":"1896ccaa84a86dfc","remote-peer-id":"3af18f89498c03bd","error":"unexpected EOF"}
+{"level":"warn","ts":"2026-10-16T17:55:15.367293Z","caller":"rafthttp/peer_status.go:66","msg":"peer became inactive (message send to peer failed)","peer-id":"3af18f89498c03bd","error":"failed to read 3af18f89498c03bd on stream Message (unexpected EOF)"}
+{"level":"warn","ts":"2026-10-16T17:55:15.367788Z","caller":"rafthttp/stream.go:425","msg":"lost TCP streaming connection with remote peer","stream-reader-type":"stream MsgApp v2","local-member-id":"1896ccaa84a86dfc","remote-peer-id":"3af18f89498c03bd","error":"unexpected EOF"}

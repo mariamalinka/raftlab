@@ -1,0 +1,1 @@
+TMPDIR=/tmp/rk/e5x/tmp /tmp/raftkv-bin-e5/rkharness -bin /tmp/raftkv-bin-e5 -trials 1 -clients 25 -time 34s -warmup 3s -interval 7s -fault-duration 5s -recover 5s -key-rotate 12s -unique-values -db raftkv -read-mode lease -fault clock-partition-mild -out /tmp/rk/e5x/out/lease-mild/attempt-007

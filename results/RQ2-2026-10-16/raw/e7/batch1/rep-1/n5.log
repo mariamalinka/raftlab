@@ -1,0 +1,24 @@
+{"time":"2026-10-16T18:21:11.89319178Z","level":"INFO","msg":"raft started","node":5,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T18:21:11.893456735Z","level":"INFO","msg":"serving","node":5,"addr":"10.77.0.15:7000","read_mode":"readindex"}
+{"time":"2026-10-16T18:21:14.490275994Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":1457}
+{"time":"2026-10-16T18:21:18.392764072Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":5788}
+{"time":"2026-10-16T18:21:19.686173256Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":7228}
+{"time":"2026-10-16T18:21:57.539500099Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":40521}
+{"time":"2026-10-16T18:21:57.656915391Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":40621}
+{"time":"2026-10-16T18:21:57.801474258Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":40721}
+{"time":"2026-10-16T18:21:58.660853152Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":41121}
+{"time":"2026-10-16T18:21:59.033459861Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":41421}
+{"time":"2026-10-16T18:21:59.114356947Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":41521}
+{"time":"2026-10-16T18:21:59.214957201Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":41621}
+{"time":"2026-10-16T18:21:59.335458833Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":41721}
+{"time":"2026-10-16T18:22:00.162275639Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":42121}
+{"time":"2026-10-16T18:22:00.290605004Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":42221}
+{"time":"2026-10-16T18:22:00.46429711Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":42321}
+{"time":"2026-10-16T18:22:00.768383978Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":42421}
+{"time":"2026-10-16T18:22:00.983083072Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":42521}
+{"time":"2026-10-16T18:22:01.41331267Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":42721}
+{"time":"2026-10-16T18:22:03.877526167Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":43821}
+{"time":"2026-10-16T18:22:04.045908053Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":43921}
+{"time":"2026-10-16T18:22:04.207635927Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":44021}
+{"time":"2026-10-16T18:22:04.795060616Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":44421}
+{"time":"2026-10-16T18:22:04.974124137Z","level":"INFO","msg":"installing snapshot from leader","node":5,"term":1,"index":44521}

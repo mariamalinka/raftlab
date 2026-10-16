@@ -1,0 +1,106 @@
+start 2026-10-16T10:40:45Z commit 14bf0f66850fafb1418c6daf77c9c8b237c915b5
+2026-10-16T10:42:32Z lease-mild attempt=1 exit=0 wall_s=106 peak_rss_kb=7101512  | trial 1/1: Unknown ops=31334 ok=31174 info=139 fail=21 faults=3/3/3 stale=0 (105s)
+2026-10-16T10:44:20Z lease-mild attempt=2 exit=0 wall_s=106 peak_rss_kb=6044676  | trial 1/1: Ok (reduced) ops=30211 ok=30056 info=134 fail=21 faults=3/3/3 stale=0 (105s)
+2026-10-16T10:45:08Z lease-mild attempt=3 exit=0 wall_s=47 peak_rss_kb=535368  | trial 1/1: Ok ops=32188 ok=32025 info=142 fail=21 faults=3/3/3 stale=0 (47s)
+2026-10-16T10:46:18Z lease-mild attempt=4 exit=0 wall_s=69 peak_rss_kb=1232888  | trial 1/1: Ok ops=31303 ok=31153 info=123 fail=27 faults=3/3/3 stale=0 (67s)
+2026-10-16T10:47:01Z lease-mild attempt=5 exit=0 wall_s=42 peak_rss_kb=138120  | trial 1/1: Ok ops=31105 ok=30954 info=123 fail=28 faults=3/3/3 stale=0 (41s)
+2026-10-16T10:48:47Z lease-mild attempt=6 exit=0 wall_s=105 peak_rss_kb=3624568  | trial 1/1: Ok (reduced) ops=32027 ok=31837 info=163 fail=27 faults=3/3/3 stale=0 (103s)
+2026-10-16T10:49:30Z lease-mild attempt=7 exit=0 wall_s=42 peak_rss_kb=176536  | trial 1/1: Ok ops=31631 ok=31471 info=139 fail=21 faults=3/3/3 stale=0 (41s)
+2026-10-16T10:51:15Z lease-mild attempt=8 exit=0 wall_s=104 peak_rss_kb=8494560  | trial 1/1: Ok (reduced) ops=31998 ok=31804 info=152 fail=42 faults=3/3/3 stale=0 (102s)
+2026-10-16T10:52:58Z lease-mild attempt=9 exit=0 wall_s=102 peak_rss_kb=4289272  | trial 1/1: Ok (reduced) ops=30674 ok=30508 info=136 fail=30 faults=3/3/3 stale=0 (101s)
+2026-10-16T10:54:42Z lease-mild attempt=10 exit=0 wall_s=103 peak_rss_kb=6451668  | trial 1/1: Ok (reduced) ops=32147 ok=31979 info=145 fail=23 faults=3/3/3 stale=0 (101s)
+2026-10-16T10:56:28Z lease-mild attempt=11 exit=0 wall_s=104 peak_rss_kb=3831704  | trial 1/1: Ok (reduced) ops=30621 ok=30426 info=161 fail=34 faults=3/3/3 stale=0 (102s)
+2026-10-16T10:58:12Z lease-mild attempt=12 exit=0 wall_s=102 peak_rss_kb=3586900  | trial 1/1: Unknown ops=33101 ok=32956 info=117 fail=28 faults=3/3/3 stale=0 (102s)
+2026-10-16T10:59:57Z lease-mild attempt=13 exit=0 wall_s=103 peak_rss_kb=5768716  | trial 1/1: Ok (reduced) ops=32791 ok=32638 info=131 fail=22 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:01:41Z lease-mild attempt=14 exit=0 wall_s=102 peak_rss_kb=2633856  | trial 1/1: Ok (reduced) ops=32116 ok=31946 info=137 fail=33 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:03:26Z lease-mild attempt=15 exit=0 wall_s=103 peak_rss_kb=5235144  | trial 1/1: Ok (reduced) ops=31195 ok=30998 info=157 fail=40 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:05:10Z lease-mild attempt=16 exit=0 wall_s=102 peak_rss_kb=2402156  | trial 1/1: Ok (reduced) ops=32131 ok=31969 info=143 fail=19 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:06:57Z lease-mild attempt=17 exit=0 wall_s=105 peak_rss_kb=8319604  | trial 1/1: Ok (reduced) ops=31794 ok=31619 info=147 fail=28 faults=3/3/3 stale=0 (103s)
+2026-10-16T11:08:43Z lease-mild attempt=18 exit=0 wall_s=103 peak_rss_kb=6265028  | trial 1/1: Ok (reduced) ops=32547 ok=32384 info=141 fail=22 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:10:29Z lease-mild attempt=19 exit=0 wall_s=103 peak_rss_kb=2439564  | trial 1/1: Ok (reduced) ops=32625 ok=32470 info=136 fail=19 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:12:13Z lease-mild attempt=20 exit=0 wall_s=102 peak_rss_kb=2382172  | trial 1/1: Ok (reduced) ops=31743 ok=31584 info=130 fail=29 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:14:00Z lease-mild attempt=21 exit=0 wall_s=104 peak_rss_kb=5121576  | trial 1/1: Ok (reduced) ops=32003 ok=31838 info=148 fail=17 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:15:28Z lease-mild attempt=22 exit=0 wall_s=86 peak_rss_kb=2952792  | trial 1/1: Ok ops=31862 ok=31712 info=125 fail=25 faults=3/3/3 stale=0 (84s)
+2026-10-16T11:17:14Z lease-mild attempt=23 exit=0 wall_s=103 peak_rss_kb=5855072  | trial 1/1: Ok (reduced) ops=31100 ok=30900 info=156 fail=44 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:17:58Z lease-mild attempt=24 exit=0 wall_s=41 peak_rss_kb=30172  | trial 1/1: Ok ops=32348 ok=32198 info=120 fail=30 faults=3/3/3 stale=0 (41s)
+2026-10-16T11:19:43Z lease-mild attempt=25 exit=0 wall_s=102 peak_rss_kb=3253784  | trial 1/1: Ok (reduced) ops=32994 ok=32842 info=130 fail=22 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:21:28Z lease-mild attempt=26 exit=0 wall_s=102 peak_rss_kb=4328724  | trial 1/1: Ok (reduced) ops=32802 ok=32652 info=127 fail=23 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:23:16Z lease-mild attempt=27 exit=0 wall_s=105 peak_rss_kb=8836944  | trial 1/1: Ok (reduced) ops=32093 ok=31914 info=160 fail=19 faults=3/3/3 stale=0 (104s)
+2026-10-16T11:24:04Z lease-mild attempt=28 exit=0 wall_s=44 peak_rss_kb=243688  | trial 1/1: Ok ops=31273 ok=31082 info=159 fail=32 faults=3/3/3 stale=0 (43s)
+2026-10-16T11:26:00Z lease-mild attempt=29 exit=0 wall_s=113 peak_rss_kb=2819788  | trial 1/1: Ok (reduced) ops=32394 ok=32249 info=119 fail=26 faults=3/3/3 stale=0 (112s)
+2026-10-16T11:27:46Z lease-mild attempt=30 exit=0 wall_s=102 peak_rss_kb=2970712  | trial 1/1: Ok (reduced) ops=31713 ok=31563 info=126 fail=24 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:29:34Z lease-mild attempt=31 exit=0 wall_s=104 peak_rss_kb=7863728  | trial 1/1: Ok (reduced) ops=31741 ok=31562 info=149 fail=30 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:30:22Z lease-mild attempt=32 exit=0 wall_s=43 peak_rss_kb=421364  | trial 1/1: Ok ops=31737 ok=31582 info=134 fail=21 faults=3/3/3 stale=0 (42s)
+2026-10-16T11:32:00Z lease-mild attempt=33 exit=0 wall_s=93 peak_rss_kb=3277016  | trial 1/1: Ok ops=32249 ok=32080 info=130 fail=39 faults=3/3/3 stale=0 (93s)
+2026-10-16T11:32:47Z lease-mild attempt=34 exit=0 wall_s=42 peak_rss_kb=288104  | trial 1/1: Ok ops=31693 ok=31518 info=140 fail=35 faults=3/3/3 stale=0 (41s)
+2026-10-16T11:34:34Z lease-mild attempt=35 exit=0 wall_s=102 peak_rss_kb=2842036  | trial 1/1: Ok (reduced) ops=32673 ok=32510 info=148 fail=15 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:36:25Z lease-mild attempt=36 exit=0 wall_s=106 peak_rss_kb=6884520  | trial 1/1: Ok (reduced) ops=31448 ok=31284 info=139 fail=25 faults=3/3/3 stale=0 (104s)
+2026-10-16T11:37:13Z lease-mild attempt=37 exit=0 wall_s=43 peak_rss_kb=231240  | trial 1/1: Ok ops=32156 ok=31983 info=139 fail=34 faults=3/3/3 stale=0 (42s)
+2026-10-16T11:39:00Z lease-mild attempt=38 exit=0 wall_s=102 peak_rss_kb=2646404  | trial 1/1: Ok (reduced) ops=32672 ok=32519 info=136 fail=17 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:40:49Z lease-mild attempt=39 exit=0 wall_s=104 peak_rss_kb=5918464  | trial 1/1: Ok (reduced) ops=32694 ok=32544 info=123 fail=27 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:42:36Z lease-mild attempt=40 exit=0 wall_s=102 peak_rss_kb=2602184  | trial 1/1: Ok (reduced) ops=32073 ok=31910 info=143 fail=20 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:43:23Z lease-mild attempt=41 exit=0 wall_s=42 peak_rss_kb=314720  | trial 1/1: Ok ops=32704 ok=32554 info=127 fail=23 faults=3/3/3 stale=0 (42s)
+2026-10-16T11:45:12Z lease-mild attempt=42 exit=0 wall_s=103 peak_rss_kb=4336036  | trial 1/1: Ok (reduced) ops=32678 ok=32528 info=122 fail=28 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:46:59Z lease-mild attempt=43 exit=0 wall_s=102 peak_rss_kb=3678300  | trial 1/1: Ok (reduced) ops=31007 ok=30813 info=157 fail=37 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:47:59Z lease-mild attempt=44 exit=0 wall_s=54 peak_rss_kb=1691608  | trial 1/1: Ok ops=30856 ok=30686 info=140 fail=30 faults=3/3/3 stale=0 (54s)
+2026-10-16T11:49:49Z lease-mild attempt=45 exit=0 wall_s=104 peak_rss_kb=6406428  | trial 1/1: Ok (reduced) ops=32658 ok=32492 info=143 fail=23 faults=3/3/3 stale=0 (102s)
+2026-10-16T11:51:20Z lease-mild attempt=46 exit=0 wall_s=85 peak_rss_kb=1898828  | trial 1/1: Ok ops=31854 ok=31687 info=135 fail=32 faults=3/3/3 stale=0 (84s)
+2026-10-16T11:52:36Z lease-mild attempt=47 exit=0 wall_s=70 peak_rss_kb=1591324  | trial 1/1: Ok ops=34136 ok=34011 info=111 fail=14 faults=3/3/3 stale=0 (69s)
+2026-10-16T11:54:25Z lease-mild attempt=48 exit=0 wall_s=102 peak_rss_kb=3955140  | trial 1/1: Ok (reduced) ops=32395 ok=32228 info=140 fail=27 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:56:14Z lease-mild attempt=49 exit=0 wall_s=102 peak_rss_kb=1604700  | trial 1/1: Ok (reduced) ops=31253 ok=31103 info=125 fail=25 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:58:03Z lease-mild attempt=50 exit=0 wall_s=103 peak_rss_kb=4366932  | trial 1/1: Ok (reduced) ops=32471 ok=32301 info=149 fail=21 faults=3/3/3 stale=0 (101s)
+2026-10-16T11:59:56Z lease-mild attempt=51 exit=0 wall_s=101 peak_rss_kb=4300028  | trial 1/1: Ok (reduced) ops=31933 ok=31745 info=160 fail=28 faults=3/3/3 stale=0 (101s)
+2026-10-16T12:00:46Z lease-mild attempt=52 exit=0 wall_s=43 peak_rss_kb=315940  | trial 1/1: Ok ops=33866 ok=33692 info=139 fail=35 faults=3/3/3 stale=0 (42s)
+2026-10-16T12:02:39Z lease-mild attempt=53 exit=0 wall_s=101 peak_rss_kb=2870168  | trial 1/1: Ok (reduced) ops=32199 ok=32044 info=134 fail=21 faults=3/3/3 stale=0 (101s)
+2026-10-16T12:04:10Z lease-mild attempt=54 exit=0 wall_s=84 peak_rss_kb=1868728  | trial 1/1: Ok ops=33743 ok=33576 info=134 fail=33 faults=3/3/3 stale=0 (84s)
+2026-10-16T12:06:03Z lease-mild attempt=55 exit=0 wall_s=101 peak_rss_kb=2426616  | trial 1/1: Ok (reduced) ops=32739 ok=32584 info=125 fail=30 faults=3/3/3 stale=0 (101s)
+2026-10-16T12:07:27Z lease-mild attempt=56 exit=0 wall_s=72 peak_rss_kb=3127120  | trial 1/1: Ok ops=33063 ok=32912 info=121 fail=30 faults=3/3/3 stale=0 (71s)
+2026-10-16T12:09:20Z lease-mild attempt=57 exit=0 wall_s=101 peak_rss_kb=2675556  | trial 1/1: Ok (reduced) ops=32695 ok=32545 info=123 fail=27 faults=3/3/3 stale=0 (101s)
+2026-10-16T12:10:14Z lease-mild attempt=58 exit=0 wall_s=42 peak_rss_kb=179512  | trial 1/1: Ok ops=34302 ok=34156 info=126 fail=20 faults=3/3/3 stale=0 (41s)
+2026-10-16T12:12:10Z lease-mild attempt=59 exit=0 wall_s=102 peak_rss_kb=10011556  | trial 1/1: Ok (reduced) ops=33019 ok=32844 info=139 fail=36 faults=3/3/3 stale=0 (101s)
+2026-10-16T12:14:31Z lease-mild attempt=60 INTERRUPTED by container restart during checking (history+nemesis saved; moved to lease-mild-interrupted/attempt-060); rerunning attempt 60
+start 2026-10-16T12:14:57Z commit 14bf0f66850fafb1418c6daf77c9c8b237c915b5
+2026-10-16T12:15:41Z lease-mild attempt=60 exit=0 wall_s=44 peak_rss_kb=117008  | trial 1/1: Ok ops=33215 ok=33045 info=147 fail=23 faults=3/3/3 stale=0 (42s)
+part1 done 2026-10-16T12:15:55Z
+part2 start 2026-10-16T12:16:17Z commit 14bf0f66850fafb1418c6daf77c9c8b237c915b5
+2026-10-16T12:18:02Z bench /tmp/rk/e5x/out/speed/rf1.0/log/rep-1
+2026-10-16T12:19:46Z bench /tmp/rk/e5x/out/speed/rf1.0/readindex/rep-1
+2026-10-16T12:21:30Z bench /tmp/rk/e5x/out/speed/rf1.0/lease/rep-1
+2026-10-16T12:23:15Z bench /tmp/rk/e5x/out/speed/rf0.95/log/rep-1
+2026-10-16T12:24:59Z bench /tmp/rk/e5x/out/speed/rf0.95/readindex/rep-1
+2026-10-16T12:26:43Z bench /tmp/rk/e5x/out/speed/rf0.95/lease/rep-1
+2026-10-16T12:28:44Z bench /tmp/rk/e5x/out/speed/rf1.0/readindex/rep-2
+2026-10-16T12:30:28Z bench /tmp/rk/e5x/out/speed/rf1.0/lease/rep-2
+2026-10-16T12:32:12Z bench /tmp/rk/e5x/out/speed/rf1.0/log/rep-2
+2026-10-16T12:33:56Z bench /tmp/rk/e5x/out/speed/rf0.95/readindex/rep-2
+2026-10-16T12:35:41Z bench /tmp/rk/e5x/out/speed/rf0.95/lease/rep-2
+2026-10-16T12:37:25Z bench /tmp/rk/e5x/out/speed/rf0.95/log/rep-2
+2026-10-16T12:39:26Z bench /tmp/rk/e5x/out/speed/rf1.0/lease/rep-3
+2026-10-16T12:41:10Z bench /tmp/rk/e5x/out/speed/rf1.0/log/rep-3
+2026-10-16T12:42:54Z bench /tmp/rk/e5x/out/speed/rf1.0/readindex/rep-3
+2026-10-16T12:44:38Z bench /tmp/rk/e5x/out/speed/rf0.95/lease/rep-3
+2026-10-16T12:46:23Z bench /tmp/rk/e5x/out/speed/rf0.95/log/rep-3
+2026-10-16T12:48:07Z bench /tmp/rk/e5x/out/speed/rf0.95/readindex/rep-3
+2026-10-16T12:50:09Z bench /tmp/rk/e5x/out/speed/rf1.0/log/rep-4
+2026-10-16T12:51:53Z bench /tmp/rk/e5x/out/speed/rf1.0/readindex/rep-4
+2026-10-16T12:53:38Z bench /tmp/rk/e5x/out/speed/rf1.0/lease/rep-4
+2026-10-16T12:55:22Z bench /tmp/rk/e5x/out/speed/rf0.95/log/rep-4
+2026-10-16T12:57:06Z bench /tmp/rk/e5x/out/speed/rf0.95/readindex/rep-4
+2026-10-16T12:58:50Z bench /tmp/rk/e5x/out/speed/rf0.95/lease/rep-4
+2026-10-16T13:00:53Z bench /tmp/rk/e5x/out/speed/rf1.0/readindex/rep-5
+2026-10-16T13:02:37Z bench /tmp/rk/e5x/out/speed/rf1.0/lease/rep-5
+2026-10-16T13:04:21Z bench /tmp/rk/e5x/out/speed/rf1.0/log/rep-5
+2026-10-16T13:06:05Z bench /tmp/rk/e5x/out/speed/rf0.95/readindex/rep-5
+2026-10-16T13:07:50Z bench /tmp/rk/e5x/out/speed/rf0.95/lease/rep-5
+2026-10-16T13:09:34Z bench /tmp/rk/e5x/out/speed/rf0.95/log/rep-5
+2026-10-16T13:10:22Z bench /tmp/rk/e5x/out/diag-gctrace/log-rf1.0-1000/rep-1
+2026-10-16T13:10:51Z bench /tmp/rk/e5x/out/diag-gctrace/lease-rf1.0-8000/rep-1
+2026-10-16T13:11:20Z bench /tmp/rk/e5x/out/diag-gctrace/log-rf1.0-1000/rep-2
+2026-10-16T13:11:49Z bench /tmp/rk/e5x/out/diag-gctrace/lease-rf1.0-8000/rep-2
+2026-10-16T13:12:18Z bench /tmp/rk/e5x/out/diag-gctrace/log-rf1.0-1000/rep-3
+2026-10-16T13:12:47Z bench /tmp/rk/e5x/out/diag-gctrace/lease-rf1.0-8000/rep-3
+2026-10-16T13:13:16Z bench /tmp/rk/e5x/out/diag-gctrace/log-rf1.0-1000/rep-4
+2026-10-16T13:13:46Z bench /tmp/rk/e5x/out/diag-gctrace/lease-rf1.0-8000/rep-4
+2026-10-16T13:14:15Z bench /tmp/rk/e5x/out/diag-gctrace/log-rf1.0-1000/rep-5
+2026-10-16T13:14:44Z bench /tmp/rk/e5x/out/diag-gctrace/lease-rf1.0-8000/rep-5
+part2 done 2026-10-16T13:14:44Z

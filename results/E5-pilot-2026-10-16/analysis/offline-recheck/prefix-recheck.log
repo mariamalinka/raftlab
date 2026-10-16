@@ -1,0 +1,33 @@
+== attempt-001 key=0 prefix up to first stale read return 4640886490ns
+key 0 ops 5010 full=Unknown (60s) reduced(dropped 22)=Illegal (2s)
+== attempt-001 key=1 prefix up to first stale read return 5213707973ns
+key 1 ops 4847 full=Unknown (60s) reduced(dropped 23)=Illegal (0s)
+== attempt-001 key=2 prefix up to first stale read return 16749438216ns
+key 2 ops 4679 full=Unknown (60s) reduced(dropped 25)=Illegal (0s)
+== attempt-001 key=3 prefix up to first stale read return 17278104818ns
+key 3 ops 4758 full=Unknown (60s) reduced(dropped 18)=Illegal (0s)
+== attempt-001 key=4 prefix up to first stale read return 28954765810ns
+key 4 ops 5111 full=Unknown (60s) reduced(dropped 19)=Illegal (0s)
+== attempt-001 key=5 prefix up to first stale read return 29503541074ns
+key 5 ops 5169 full=Unknown (60s) reduced(dropped 26)=Illegal (0s)
+== attempt-002 key=1 prefix up to first stale read return 5632936213ns
+key 1 ops 4438 full=Unknown (60s) reduced(dropped 21)=Illegal (6s)
+== attempt-002 key=2 prefix up to first stale read return 17255440675ns
+== attempt-002 key=3 prefix up to first stale read return 17286543160ns
+key 3 ops 4907 full=Unknown (60s) reduced(dropped 22)=Illegal (0s)
+== attempt-002 key=4 prefix up to first stale read return 28916206323ns
+key 4 ops 5295 full=Unknown (60s) reduced(dropped 25)=Illegal (0s)
+== attempt-002 key=5 prefix up to first stale read return 28909999613ns
+key 5 ops 5240 full=Unknown (60s) reduced(dropped 18)=Illegal (0s)
+== attempt-003 key=0 prefix up to first stale read return 5073670926ns
+key 0 ops 4736 full=Unknown (60s) reduced(dropped 30)=Illegal (0s)
+== attempt-003 key=1 prefix up to first stale read return 5133307886ns
+key 1 ops 4881 full=Unknown (60s) reduced(dropped 14)=Illegal (1s)
+== attempt-003 key=2 prefix up to first stale read return 16848124803ns
+key 2 ops 4688 full=Unknown (60s) reduced(dropped 15)=Illegal (5s)
+== attempt-003 key=3 prefix up to first stale read return 16764574025ns
+key 3 ops 4764 full=Unknown (60s) reduced(dropped 22)=Illegal (1s)
+== attempt-003 key=4 prefix up to first stale read return 28964052969ns
+key 4 ops 5472 full=Unknown (60s) reduced(dropped 18)=Illegal (0s)
+== attempt-003 key=5 prefix up to first stale read return 30036018301ns
+key 5 ops 5447 full=Unknown (60s) reduced(dropped 11)=Illegal (1s)

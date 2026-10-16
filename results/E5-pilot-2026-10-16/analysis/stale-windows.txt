@@ -1,0 +1,18 @@
+attempt-001/trial-001: 27 stale reads
+  fault 3.1-8.2s [clock x0.25 on n3 + [3] | [1 2 4 5]]: 6 stale, served by node(s) [3], slowed leader n3, 1.58-3.35s after fault start
+  fault 15.2-20.3s [clock x0.25 on n4 + [4] | [1 2 3 5]]: 11 stale, served by node(s) [4], slowed leader n4, 1.53-3.22s after fault start
+  fault 27.4-32.5s [clock x0.25 on n3 + [3] | [1 2 4 5]]: 10 stale, served by node(s) [3], slowed leader n3, 1.56-3.22s after fault start
+  stale reads outside any fault window (+1 s): 0
+
+attempt-002/trial-001: 21 stale reads
+  fault 3.1-8.2s [clock x0.25 on n5 + [5] | [1 2 3 4]]: 4 stale, served by node(s) [5], slowed leader n5, 2.57-3.16s after fault start
+  fault 15.2-20.3s [clock x0.25 on n4 + [4] | [1 2 3 5]]: 12 stale, served by node(s) [4], slowed leader n4, 2.03-3.18s after fault start
+  fault 27.4-32.5s [clock x0.25 on n3 + [3] | [1 2 4 5]]: 5 stale, served by node(s) [3], slowed leader n3, 1.54-3.18s after fault start
+  stale reads outside any fault window (+1 s): 0
+
+attempt-003/trial-001: 27 stale reads
+  fault 3.1-8.2s [clock x0.25 on n2 + [2] | [1 3 4 5]]: 2 stale, served by node(s) [2], slowed leader n2, 2.00-2.06s after fault start
+  fault 15.2-20.3s [clock x0.25 on n4 + [4] | [1 2 3 5]]: 17 stale, served by node(s) [4], slowed leader n4, 1.52-3.35s after fault start
+  fault 27.4-32.5s [clock x0.25 on n3 + [3] | [1 2 4 5]]: 8 stale, served by node(s) [3], slowed leader n3, 1.56-3.19s after fault start
+  stale reads outside any fault window (+1 s): 0
+

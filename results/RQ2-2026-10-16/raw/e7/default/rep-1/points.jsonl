@@ -1,0 +1,2 @@
+{"rep":1,"result":{"backend":"raftkv","offered_ops_s":2000,"achieved_ops_s":2000,"read_frac":0.5,"value_size":128,"zipf":false,"ops":40000,"errors":0,"dropped":0,"p50_ms":2.451,"p99_ms":14.903,"p999_ms":25.407,"max_ms":38.335,"mean_ms":3.2212592499999886}}
+{"rep":1,"result":{"backend":"raftkv","offered_ops_s":8000,"achieved_ops_s":8000,"read_frac":0.5,"value_size":128,"zipf":false,"ops":160000,"errors":0,"dropped":0,"p50_ms":10.239,"p99_ms":48.927,"p999_ms":86.015,"max_ms":113.087,"mean_ms":13.205644681250009}}

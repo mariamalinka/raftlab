@@ -1,0 +1,19 @@
+{
+  "db": "raftkv",
+  "duration": "20s",
+  "election_timeout": "1s",
+  "etcd_no_fsync": false,
+  "etcd_serializable": false,
+  "etcd_version": "3.7.2",
+  "heartbeat": "100ms",
+  "keys": 10000,
+  "mode": "sweep",
+  "nodes": 5,
+  "raftkv_args": "-pipeline=false",
+  "read_frac": 0.5,
+  "read_mode": "readindex",
+  "started": "2026-10-16T18:22:20Z",
+  "value_size": 128,
+  "warmup": "5s",
+  "zipf": false
+}

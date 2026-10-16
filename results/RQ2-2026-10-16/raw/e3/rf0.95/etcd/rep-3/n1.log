@@ -1,0 +1,3 @@
+{"level":"warn","ts":"2026-10-16T17:39:28.177894Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-16T17:39:28.178043Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-16T17:39:28.185363Z","caller":"auth/store.go:1137","msg":"simple token is not cryptographically signed"}

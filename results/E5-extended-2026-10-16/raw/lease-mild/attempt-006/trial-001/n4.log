@@ -1,0 +1,17 @@
+{"time":"2026-10-16T10:47:02.677190609Z","level":"INFO","msg":"raft started","node":4,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T10:47:02.677723151Z","level":"INFO","msg":"serving","node":4,"addr":"10.77.0.14:7000","read_mode":"lease"}
+{"time":"2026-10-16T10:47:12.006097492Z","level":"INFO","msg":"clock skewed","node":4,"offset":0,"rate":1}
+{"time":"2026-10-16T10:47:20.207830465Z","level":"INFO","msg":"starting election","node":4,"term":9,"last_index":8572,"last_term":8}
+{"time":"2026-10-16T10:47:20.210384598Z","level":"INFO","msg":"became leader","node":4,"term":9,"last_index":8573}
+{"time":"2026-10-16T10:47:24.183727673Z","level":"INFO","msg":"clock skewed","node":4,"offset":0,"rate":1}
+{"time":"2026-10-16T10:47:24.6864246Z","level":"INFO","msg":"became follower","node":4,"term":10,"leader":0}
+{"time":"2026-10-16T10:47:24.687827367Z","level":"INFO","msg":"starting election","node":4,"term":11,"last_index":11243,"last_term":9}
+{"time":"2026-10-16T10:47:25.706127163Z","level":"INFO","msg":"became follower","node":4,"term":12,"leader":0}
+{"time":"2026-10-16T10:47:32.832876748Z","level":"INFO","msg":"starting election","node":4,"term":15,"last_index":15337,"last_term":13}
+{"time":"2026-10-16T10:47:32.834583194Z","level":"INFO","msg":"became leader","node":4,"term":15,"last_index":15338}
+{"time":"2026-10-16T10:47:36.334510052Z","level":"INFO","msg":"clock skewed","node":4,"offset":0,"rate":1}
+{"time":"2026-10-16T10:47:37.326027586Z","level":"INFO","msg":"became follower","node":4,"term":16,"leader":0}
+{"time":"2026-10-16T10:47:37.327665536Z","level":"INFO","msg":"starting election","node":4,"term":17,"last_index":18175,"last_term":15}
+{"time":"2026-10-16T10:47:38.736475373Z","level":"INFO","msg":"became follower","node":4,"term":18,"leader":0}
+{"time":"2026-10-16T10:47:38.763003829Z","level":"INFO","msg":"starting election","node":4,"term":19,"last_index":18175,"last_term":15}
+{"time":"2026-10-16T10:47:38.764648721Z","level":"INFO","msg":"became leader","node":4,"term":19,"last_index":18176}

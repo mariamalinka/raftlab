@@ -1,0 +1,16 @@
+{"time":"2026-10-16T11:37:18.451128905Z","level":"INFO","msg":"raft started","node":2,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T11:37:18.45133332Z","level":"INFO","msg":"serving","node":2,"addr":"10.77.0.12:7000","read_mode":"lease"}
+{"time":"2026-10-16T11:37:27.980968536Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T11:37:40.149336708Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T11:37:41.886703111Z","level":"INFO","msg":"starting election","node":2,"term":13,"last_index":11287,"last_term":8}
+{"time":"2026-10-16T11:37:41.889949828Z","level":"INFO","msg":"became leader","node":2,"term":13,"last_index":11288}
+{"time":"2026-10-16T11:37:47.154182226Z","level":"INFO","msg":"clock skewed","node":2,"offset":-22,"rate":0.92}
+{"time":"2026-10-16T11:37:49.05247256Z","level":"INFO","msg":"lost quorum, stepping down","node":2,"term":13,"active":1}
+{"time":"2026-10-16T11:37:49.052515485Z","level":"INFO","msg":"became follower","node":2,"term":13,"leader":0}
+{"time":"2026-10-16T11:37:49.057381953Z","level":"INFO","msg":"starting election","node":2,"term":14,"last_index":15267,"last_term":13}
+{"time":"2026-10-16T11:37:50.156855589Z","level":"INFO","msg":"starting election","node":2,"term":15,"last_index":15267,"last_term":13}
+{"time":"2026-10-16T11:37:51.311569668Z","level":"INFO","msg":"starting election","node":2,"term":16,"last_index":15267,"last_term":13}
+{"time":"2026-10-16T11:37:52.318486155Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T11:37:52.321957962Z","level":"INFO","msg":"starting election","node":2,"term":17,"last_index":15267,"last_term":13}
+{"time":"2026-10-16T11:37:53.090564614Z","level":"INFO","msg":"became follower","node":2,"term":18,"leader":0}
+{"time":"2026-10-16T11:37:54.187214963Z","level":"INFO","msg":"installing snapshot from leader","node":2,"term":19,"index":15799}

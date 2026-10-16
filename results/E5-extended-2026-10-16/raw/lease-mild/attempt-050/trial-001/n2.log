@@ -1,0 +1,19 @@
+{"time":"2026-10-16T11:56:21.12759837Z","level":"INFO","msg":"raft started","node":2,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T11:56:21.129934277Z","level":"INFO","msg":"serving","node":2,"addr":"10.77.0.12:7000","read_mode":"lease"}
+{"time":"2026-10-16T11:56:22.373780577Z","level":"INFO","msg":"starting election","node":2,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-16T11:56:22.37688434Z","level":"INFO","msg":"became leader","node":2,"term":1,"last_index":1}
+{"time":"2026-10-16T11:56:25.407813083Z","level":"INFO","msg":"clock skewed","node":2,"offset":-20,"rate":0.92}
+{"time":"2026-10-16T11:56:27.563121136Z","level":"INFO","msg":"lost quorum, stepping down","node":2,"term":1,"active":1}
+{"time":"2026-10-16T11:56:27.563269852Z","level":"INFO","msg":"became follower","node":2,"term":1,"leader":0}
+{"time":"2026-10-16T11:56:27.568719596Z","level":"INFO","msg":"starting election","node":2,"term":2,"last_index":2359,"last_term":1}
+{"time":"2026-10-16T11:56:29.45871505Z","level":"INFO","msg":"starting election","node":2,"term":3,"last_index":2359,"last_term":1}
+{"time":"2026-10-16T11:56:30.545069977Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T11:56:30.723605679Z","level":"INFO","msg":"starting election","node":2,"term":4,"last_index":2359,"last_term":1}
+{"time":"2026-10-16T11:56:30.943474227Z","level":"INFO","msg":"became follower","node":2,"term":5,"leader":0}
+{"time":"2026-10-16T11:56:32.673027939Z","level":"INFO","msg":"starting election","node":2,"term":6,"last_index":2359,"last_term":1}
+{"time":"2026-10-16T11:56:32.697737714Z","level":"INFO","msg":"became follower","node":2,"term":7,"leader":0}
+{"time":"2026-10-16T11:56:32.701312062Z","level":"INFO","msg":"truncated conflicting suffix","node":2,"term":7,"index":2301}
+{"time":"2026-10-16T11:56:42.700899447Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T11:56:51.063368168Z","level":"INFO","msg":"starting election","node":2,"term":13,"last_index":15413,"last_term":12}
+{"time":"2026-10-16T11:56:51.250946504Z","level":"INFO","msg":"became follower","node":2,"term":14,"leader":0}
+{"time":"2026-10-16T11:56:54.868636747Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}

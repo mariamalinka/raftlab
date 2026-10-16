@@ -1,0 +1,64 @@
+{
+  "config": {
+    "DB": "raftkv",
+    "Nodes": 5,
+    "Fault": "partition-leader",
+    "Duration": 34000000000,
+    "Recover": 5000000000,
+    "Schedule": {
+      "Fault": "",
+      "Warmup": 3000000000,
+      "Interval": 7000000000,
+      "Duration": 5000000000
+    },
+    "Workload": {
+      "Clients": 25,
+      "KeyRotate": 12000000000,
+      "ActiveKeys": 2,
+      "OpTimeout": 1000000000,
+      "Stagger": 0,
+      "Values": 5,
+      "UniqueValues": true
+    },
+    "CheckTimeout": 60000000000,
+    "RaftKV": {
+      "Bin": "/tmp/raftkv-bin-e5/raftkv",
+      "ReadMode": "log",
+      "Bugs": null,
+      "LazyFS": false,
+      "ElectionTimeout": 1000000000,
+      "Heartbeat": 100000000,
+      "ExtraArgs": []
+    },
+    "Etcd": {
+      "Bin": "/tmp/raftkv-bin-e5/etcd",
+      "Serializable": false,
+      "ElectionTimeout": 1000000000,
+      "Heartbeat": 100000000,
+      "NoFsync": false
+    },
+    "Out": "/tmp/rk/e5/out/correctness/log/normal/attempt-001"
+  },
+  "trials": 1,
+  "valid": 1,
+  "valid_reduced": 0,
+  "illegal": 0,
+  "unknown": 0,
+  "errors": 0,
+  "detection_rate": 0,
+  "detection_ci95_low": 0,
+  "detection_ci95_high": 0.7934567085261071,
+  "ops": 30198,
+  "ok_ops": 30018,
+  "info_ops": 115,
+  "fail_ops": 65,
+  "stale_read_trials": 0,
+  "stale_reads": 0,
+  "faults_planned_per_trial": 3,
+  "faults_executed": 3,
+  "faults_executed_min": 3,
+  "faults_executed_max": 3,
+  "faults_completed": 3,
+  "faults_completed_min": 3,
+  "faults_completed_max": 3
+}

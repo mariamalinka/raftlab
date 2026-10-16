@@ -1,0 +1,6 @@
+{"time":3075265256,"kind":"start","fault":"clock-partition-mild","desc":"clock x0.92 on n1 + [1] | [2 3 4 5]"}
+{"time":8182300679,"kind":"heal","fault":"clock-partition-mild","desc":"clock x0.92 on n1 + [1] | [2 3 4 5]"}
+{"time":15236157011,"kind":"start","fault":"clock-partition-mild","desc":"clock x0.92 on n4 + [4] | [1 2 3 5]"}
+{"time":20325901202,"kind":"heal","fault":"clock-partition-mild","desc":"clock x0.92 on n4 + [4] | [1 2 3 5]"}
+{"time":27400691336,"kind":"start","fault":"clock-partition-mild","desc":"clock x0.92 on n3 + [3] | [1 2 4 5]"}
+{"time":32489110268,"kind":"heal","fault":"clock-partition-mild","desc":"clock x0.92 on n3 + [3] | [1 2 4 5]"}

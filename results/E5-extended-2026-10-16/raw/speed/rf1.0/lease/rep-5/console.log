@@ -1,0 +1,4 @@
+1792155681.272347948 raftkv rate=1000 rep=1 tput=1000 p50=0.85ms p99=1.83ms p99.9=3.20ms errors=0 dropped=0
+1792155706.273100715 raftkv rate=2000 rep=1 tput=2000 p50=0.59ms p99=2.35ms p99.9=12.70ms errors=0 dropped=0
+1792155731.274348624 raftkv rate=4000 rep=1 tput=4000 p50=0.36ms p99=2.39ms p99.9=18.43ms errors=0 dropped=0
+1792155756.274486732 raftkv rate=8000 rep=1 tput=8000 p50=0.36ms p99=2.56ms p99.9=11.62ms errors=0 dropped=0

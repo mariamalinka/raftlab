@@ -1,0 +1,9 @@
+2026-10-16T18:20:01.595646936Z
+leader=n3 follower=n4
+6818 /tmp/raftkv-bin-e5/raftkv -id 1 -peers 1=10.77.0.11:7000,2=10.77.0.12:7000,3=10.77.0.13:7000,4=10.77.0.14:7000,5=10.77.0.15:7000 -data /tmp/rk/rq2/tmp/raftlab-bench/data1 -read-mode readindex -election-timeout 1s -heartbeat 100ms -snapshot-bytes 262144
+6819 /tmp/raftkv-bin-e5/raftkv -id 2 -peers 1=10.77.0.11:7000,2=10.77.0.12:7000,3=10.77.0.13:7000,4=10.77.0.14:7000,5=10.77.0.15:7000 -data /tmp/rk/rq2/tmp/raftlab-bench/data2 -read-mode readindex -election-timeout 1s -heartbeat 100ms -snapshot-bytes 262144
+6820 /tmp/raftkv-bin-e5/raftkv -id 3 -peers 1=10.77.0.11:7000,2=10.77.0.12:7000,3=10.77.0.13:7000,4=10.77.0.14:7000,5=10.77.0.15:7000 -data /tmp/rk/rq2/tmp/raftlab-bench/data3 -read-mode readindex -election-timeout 1s -heartbeat 100ms -snapshot-bytes 262144
+6822 /tmp/raftkv-bin-e5/raftkv -id 4 -peers 1=10.77.0.11:7000,2=10.77.0.12:7000,3=10.77.0.13:7000,4=10.77.0.14:7000,5=10.77.0.15:7000 -data /tmp/rk/rq2/tmp/raftlab-bench/data4 -read-mode readindex -election-timeout 1s -heartbeat 100ms -snapshot-bytes 262144
+6825 /tmp/raftkv-bin-e5/raftkv -id 5 -peers 1=10.77.0.11:7000,2=10.77.0.12:7000,3=10.77.0.13:7000,4=10.77.0.14:7000,5=10.77.0.15:7000 -data /tmp/rk/rq2/tmp/raftlab-bench/data5 -read-mode readindex -election-timeout 1s -heartbeat 100ms -snapshot-bytes 262144
+n3 pid=6820
+n4 pid=6822

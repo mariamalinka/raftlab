@@ -1,0 +1,206 @@
+<title>RaftKV vs etcd RQ2 Figures</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column of numbered research figures, each with caption, controls, chart and data note. */
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --fg:#17202b; --muted:#5b6675; --grid:#e3e7ec; --axis:#9aa4b1;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#7b5cd6; --unsafe:#8b939f; --bad:#c2334a;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161c; --panel:#1a2029; --fg:#e6eaf0; --muted:#9aa5b4; --grid:#2a323d; --axis:#5e6876;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#8f75e0; --unsafe:#7d8695; --bad:#e0566b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161c; --panel:#1a2029; --fg:#e6eaf0; --muted:#9aa5b4; --grid:#2a323d; --axis:#5e6876;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#8f75e0; --unsafe:#7d8695; --bad:#e0566b; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.55}
+main{max-width:1000px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:28px}
+header h1{font-size:1.65rem;font-weight:600;margin:0 0 6px;text-wrap:balance;letter-spacing:-.01em}
+header p{margin:0;color:var(--muted);max-width:70ch}
+.meta{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-top:10px}
+section.fig{background:var(--panel);border:1px solid var(--grid);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.fig h2{font-size:1.05rem;font-weight:600;margin:0;text-wrap:balance}
+.fig h2 .n{font-family:var(--mono);font-weight:500;color:var(--muted);margin-right:8px;letter-spacing:.04em}
+.cap,.note{margin:0;color:var(--muted);max-width:74ch;font-size:.9rem}
+.note b{color:var(--fg);font-weight:500}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.controls span{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-right:4px}
+.controls button{font:inherit;font-size:.85rem;padding:4px 12px;border-radius:4px;border:1px solid var(--grid);background:transparent;color:var(--fg);cursor:pointer}
+.controls button[aria-pressed="true"]{border-color:var(--fg);font-weight:500}
+.controls button:focus-visible{outline:2px solid var(--s1);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.85rem}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.legend i.hollow{height:8px;width:8px;border-radius:50%;background:transparent!important;border:2px solid var(--unsafe)}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.chart{min-width:0;overflow-x:auto}
+svg{display:block;width:100%;height:auto;font-family:var(--sans)}
+svg text{fill:var(--muted);font-size:11px}
+svg .ttl{fill:var(--fg);font-size:12px;font-weight:600}
+svg .gl{stroke:var(--grid);stroke-width:1}
+svg .ax{stroke:var(--axis);stroke-width:1}
+svg .ref{stroke:var(--axis);stroke-width:1;stroke-dasharray:4 3;fill:none}
+.c1{stroke:var(--s1);fill:var(--s1)} .c2{stroke:var(--s2);fill:var(--s2)} .c3{stroke:var(--s3);fill:var(--s3)} .c4{stroke:var(--s4);fill:var(--s4)}
+.cu{stroke:var(--unsafe);fill:none;stroke-width:1.6}
+.line{fill:none;stroke-width:2}
+.dot{stroke:none;opacity:.45}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;font-size:.84rem;font-variant-numeric:tabular-nums}
+th,td{padding:4px 10px;text-align:right;border-bottom:1px solid var(--grid);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:500;color:var(--muted)}
+#tip{position:fixed;pointer-events:none;background:var(--fg);color:var(--bg);font-family:var(--mono);font-size:.75rem;padding:5px 8px;border-radius:4px;white-space:pre;z-index:5}
+</style>
+
+<main>
+<header>
+  <h1>RaftKV vs etcd: RQ2 figures</h1>
+  <p>Throughput, latency, overload, ablation and leader recovery for RaftKV (ReadIndex reads) and etcd 3.7.2 (linearizable reads). Every mark is a measured value from the runs of 2026-10-15 and 2026-10-16.</p>
+  <div class="meta">commit 14bf0f6 · one 4 vCPU / 16 GB container for all 5 nodes and the client · open loop · 10,000 keys · 128 B values · 5 s warmup · 20 s window</div>
+</header>
+
+<section class="fig">
+  <h2><span class="n">FIG 1</span>Offered load vs achieved throughput</h2>
+  <p class="cap">Median achieved throughput (successful operations per second in the 20 s window), with each repetition as a dot. The dashed diagonal is achieved = offered. The 50/50 panel also shows the overload runs at 8,000–14,000 ops/s.</p>
+  <div class="controls" id="m1" role="group" aria-label="Workload mix for Figure 1"><span>Mix</span></div>
+  <div class="legend"><span><i style="background:var(--s1)"></i>RaftKV</span><span><i style="background:var(--s2)"></i>etcd</span></div>
+  <div class="chart" id="f1"></div>
+</section>
+
+<section class="fig">
+  <h2><span class="n">FIG 2</span>Latency under matching workloads</h2>
+  <p class="cap">p50 and p99 latency (log scale), median line with each repetition as a dot. Latency is measured from each request's intended start time and covers reads and writes together.</p>
+  <div class="controls" id="m2" role="group" aria-label="Workload mix for Figure 2"><span>Mix</span></div>
+  <div class="legend"><span><i style="background:var(--s1)"></i>RaftKV</span><span><i style="background:var(--s2)"></i>etcd</span></div>
+  <div class="charts"><div class="chart" id="f2a"></div><div class="chart" id="f2b"></div></div>
+  <div class="tw"><table id="t2"></table></div>
+</section>
+
+<section class="fig">
+  <h2><span class="n">FIG 3</span>RaftKV overload behaviour</h2>
+  <p class="cap">50/50 mix, 8,000–14,000 ops/s. RaftKV has 2 repetitions, etcd 1 (control on the same host and client). Failed requests are errors (5 s client timeout) plus requests the client dropped at its 20,000 in-flight cap.</p>
+  <div class="legend"><span><i style="background:var(--s1)"></i>RaftKV</span><span><i style="background:var(--s2)"></i>etcd</span></div>
+  <div class="charts"><div class="chart" id="f3a"></div><div class="chart" id="f3b"></div><div class="chart" id="f3c"></div><div class="chart" id="f3d"></div></div>
+</section>
+
+<section class="fig">
+  <h2><span class="n">FIG 4</span>Ablation of RaftKV optimizations</h2>
+  <p class="cap">50/50 mix at 2,000 and 8,000 ops/s, one dot per repetition, bar at the median. "fsync off" weakens durability: acknowledged writes can be lost in a crash, so it is shown hollow and is not comparable with the safe configurations.</p>
+  <div class="legend"><span><i style="background:var(--s1)"></i>default (safe)</span><span><i style="background:var(--s3)"></i>batching off, -batch=1 (safe)</span><span><i style="background:var(--s4)"></i>pipelining off (safe)</span><span><i class="hollow"></i>fsync off (UNSAFE)</span></div>
+  <div class="charts"><div class="chart" id="f4a"></div><div class="chart" id="f4b"></div></div>
+  <div class="tw"><table id="t4"></table></div>
+</section>
+
+<section class="fig">
+  <h2><span class="n">FIG 5</span>Leader recovery</h2>
+  <p class="cap">Client-visible recovery: time from fault injection to the return of the first write that was issued after the fault and acknowledged by the system. Election time (RaftKV only; etcd's logs do not record it at the configured level) is shown separately. Each dot is one fault event.</p>
+  <div class="legend"><span><i style="background:var(--s1)"></i>RaftKV</span><span><i style="background:var(--s2)"></i>etcd</span><span><i class="hollow" style="border-color:var(--s1)"></i>RaftKV election time</span></div>
+  <div class="chart" id="f5"></div>
+  <div class="tw"><table id="t5"></table></div>
+</section>
+</main>
+<div id="tip" hidden></div>
+
+<script>
+const D=__DATA__;
+const NS="http://www.w3.org/2000/svg",tip=document.getElementById("tip");
+const SYS=[["raftkv","RaftKV","c1"],["etcd","etcd","c2"]];
+const MIX=[["0.95","95% reads / 5% writes"],["0.5","50% reads / 50% writes"],["0.0","100% writes"]];
+function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function txt(p,x,y,s,a){const e=el("text",Object.assign({x,y},a||{}),p);e.textContent=s;return e}
+function hover(e,s){e.addEventListener("mousemove",ev=>{tip.textContent=s;tip.hidden=false;tip.style.left=(ev.clientX+12)+"px";tip.style.top=(ev.clientY+12)+"px"});e.addEventListener("mouseleave",()=>tip.hidden=true);el("title",{},e).textContent=s}
+function ticksLog(lo,hi){const o=[];for(let e=Math.floor(Math.log10(lo));e<=Math.ceil(Math.log10(hi));e++)for(const m of (Math.log10(hi/lo)>3?[1]:[1,2,5])){const v=m*10**e;if(v>=lo*0.999&&v<=hi*1.001)o.push(v)}return o}
+function ticksLin(lo,hi,n){const st=Math.pow(10,Math.floor(Math.log10((hi-lo)/n)));const s=[1,2,2.5,5,10].map(m=>m*st).find(s=>(hi-lo)/s<=n);const o=[];for(let v=Math.ceil(lo/s)*s;v<=hi+1e-9;v+=s)o.push(+v.toFixed(6));return o}
+function fmt(v){return v>=10000?(v/1000).toFixed(0)+"k":v>=1000?(v/1000).toFixed(v%1000?1:0)+"k":v>=10?v.toFixed(0):v>=1?v.toFixed(1):v.toFixed(2)}
+/* xy chart: x log2 (loads), y log or linear */
+function xy(host,o){
+  host.innerHTML="";const W=o.w||470,H=o.h||290,m={l:52,r:14,t:26,b:40};
+  const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":o.title},host);
+  const xs=o.xs,xlo=Math.log2(xs[0]),xhi=Math.log2(xs[xs.length-1]);
+  const X=v=>m.l+(Math.log2(v)-xlo)/(xhi-xlo)*(W-m.l-m.r);
+  const Y=o.ylog?v=>H-m.b-(Math.log10(Math.max(v,o.ylo))-Math.log10(o.ylo))/(Math.log10(o.yhi)-Math.log10(o.ylo))*(H-m.t-m.b):v=>H-m.b-(v-o.ylo)/(o.yhi-o.ylo)*(H-m.t-m.b);
+  for(const v of (o.ylog?ticksLog(o.ylo,o.yhi):ticksLin(o.ylo,o.yhi,5))){el("line",{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),class:"gl"},s);txt(s,m.l-6,Y(v)+4,fmt(v),{"text-anchor":"end"})}
+  for(const r of xs){el("line",{x1:X(r),x2:X(r),y1:H-m.b,y2:H-m.b+4,class:"ax"},s);txt(s,X(r),H-m.b+16,fmt(r),{"text-anchor":"middle"})}
+  el("line",{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,class:"ax"},s);
+  txt(s,(m.l+W-m.r)/2,H-6,o.xlabel||"offered load (ops/s)",{"text-anchor":"middle"});txt(s,m.l-44,14,o.title,{class:"ttl"});
+  if(o.diag)el("polyline",{points:xs.map(x=>`${X(x)},${Y(x)}`).join(" "),class:"ref"},s);
+  o.series.forEach((se,si)=>{
+    const P=se.pts.filter(p=>p.y!=null);
+    el("polyline",{points:P.map(p=>`${X(p.x)},${Y(p.y)}`).join(" "),class:`line ${se.cls}`,"stroke-dasharray":se.dash||""},s);
+    P.forEach(p=>{(p.reps||[]).forEach((v,i)=>{if(v==null)return;const c=el("circle",{cx:X(p.x)+(si-0.5)*6+(i-(p.reps.length-1)/2)*1.4,cy:Y(v),r:2.4,class:`dot ${se.cls}`},s);hover(c,`${se.name} · ${p.x} ops/s · rep ${i+1}\n${o.title}: ${(+v).toFixed(2)}`)});
+      const c=el("circle",{cx:X(p.x),cy:Y(p.y),r:4,class:se.cls},s);hover(c,`${se.name} · ${p.x} ops/s\nmedian ${o.title}: ${(+p.y).toFixed(2)}${p.reps?"\nreps: "+p.reps.map(v=>(+v).toFixed(2)).join(", "):""}`)});
+  });
+}
+function mixButtons(id,fn){const h=document.getElementById(id);MIX.forEach(([m,l],i)=>{const b=document.createElement("button");b.id=id+"-"+m.replace(".","");b.textContent=l;b.setAttribute("aria-pressed",String(i===0));b.onclick=()=>{[...h.querySelectorAll("button")].forEach(x=>x.setAttribute("aria-pressed",String(x===b)));fn(m)};h.appendChild(b)});fn(MIX[0][0])}
+const R4=[1000,2000,4000,8000];
+function fig1(m){
+  const xs=m==="0.5"?[1000,2000,4000,8000,10000,12000,14000]:R4;
+  const series=SYS.map(([k,n,c])=>({name:n,cls:c,pts:D.e3[m][k].map(p=>({x:p.rate,y:p.achieved,reps:p.reps.map(r=>r.achieved)}))}));
+  if(m==="0.5")SYS.forEach(([k,n,c])=>series.push({name:n+" (overload runs)",cls:c,dash:"4 3",pts:D.ov[k].map(p=>({x:p.rate,y:p.achieved,reps:p.reps.map(r=>r.achieved)}))}));
+  xy(document.getElementById("f1"),{title:"achieved throughput (ops/s)",xs,ylo:0,yhi:Math.max(...xs)*1.05,series,diag:true,w:940,h:320});
+}
+function xyHack(){}
+function fig2(m){
+  const mk=key=>SYS.map(([k,n,c])=>({name:n,cls:c,pts:D.e3[m][k].map(p=>({x:p.rate,y:p[key],reps:p.reps.map(r=>r[key])}))}));
+  xy(document.getElementById("f2a"),{title:"p50 latency (ms)",xs:R4,ylog:true,ylo:0.5,yhi:50,series:mk("p50")});
+  xy(document.getElementById("f2b"),{title:"p99 latency (ms)",xs:R4,ylog:true,ylo:2,yhi:500,series:mk("p99")});
+  const t=document.getElementById("t2");let h="<tr><th>Offered (ops/s)</th>"+SYS.map(([,n])=>`<th>${n} n</th><th>${n} p50</th><th>${n} p99</th><th>${n} p99.9</th>`).join("")+"<th>p50 etcd / RaftKV</th></tr>";
+  R4.forEach((r,i)=>{const a=D.e3[m].raftkv[i],b=D.e3[m].etcd[i];h+=`<tr><td>${r.toLocaleString("en-US")}</td>`+[a,b].map(p=>p?`<td>${p.n}</td><td>${p.p50.toFixed(2)}</td><td>${p.p99.toFixed(1)}</td><td>${p.p999.toFixed(1)}</td>`:"<td colspan=4>–</td>").join("")+`<td>${a&&b?(b.p50/a.p50).toFixed(2)+"×":"–"}</td></tr>`});
+  t.innerHTML=h;
+}
+function fig3(){
+  const xs=[8000,10000,12000,14000];
+  const mk=(key,rk)=>SYS.map(([k,n,c])=>({name:n,cls:c,pts:D.ov[k].map(p=>({x:p.rate,y:p[key],reps:rk?p.reps.map(r=>r[rk]):null}))}));
+  xy(document.getElementById("f3a"),{title:"achieved throughput (ops/s)",xs,ylo:0,yhi:15000,series:mk("achieved","achieved"),diag:true});
+  xy(document.getElementById("f3b"),{title:"p99 latency (ms)",xs,ylog:true,ylo:5,yhi:10000,series:mk("p99","p99")});
+  const fails=SYS.map(([k,n,c])=>({name:n,cls:c,pts:D.ov[k].map(p=>{const v=p.reps.map(r=>r.err);return{x:p.rate,y:Math.max(1,v.slice().sort((a,b)=>a-b)[Math.floor((v.length-1)/2)]),reps:v.map(x=>Math.max(1,x))}})}));
+  xy(document.getElementById("f3c"),{title:"failed requests (errors + dropped, log; 1 = none)",xs,ylog:true,ylo:1,yhi:1e6,series:fails});
+  xy(document.getElementById("f3d"),{title:"busiest node CPU (%)",xs,ylo:0,yhi:200,series:mk("cpu")});
+}
+const CF=[["default","default","c1"],["batch1","batching off","c3"],["nopipeline","pipelining off","c4"],["nofsync-UNSAFE","fsync off (UNSAFE)","cu"]];
+function dots(host,title,key,ylog,ylo,yhi,rates){
+  host.innerHTML="";const W=470,H=290,m={l:52,r:14,t:26,b:40};
+  const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":title},host);
+  const Y=ylog?v=>H-m.b-(Math.log10(Math.max(v,ylo))-Math.log10(ylo))/(Math.log10(yhi)-Math.log10(ylo))*(H-m.t-m.b):v=>H-m.b-(v-ylo)/(yhi-ylo)*(H-m.t-m.b);
+  for(const v of (ylog?ticksLog(ylo,yhi):ticksLin(ylo,yhi,5))){el("line",{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),class:"gl"},s);txt(s,m.l-6,Y(v)+4,fmt(v),{"text-anchor":"end"})}
+  el("line",{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,class:"ax"},s);txt(s,m.l-44,14,title,{class:"ttl"});
+  const gw=(W-m.l-m.r)/rates.length;
+  rates.forEach((r,ri)=>{txt(s,m.l+gw*ri+gw/2,H-m.b+16,r.toLocaleString("en-US")+" ops/s",{"text-anchor":"middle"});
+    CF.forEach(([k,n,c],ci)=>{const p=(D.e7[k]||[]).find(x=>x.rate===r);if(!p)return;const x0=m.l+gw*ri+gw*(0.17+ci*0.22);
+      el("line",{x1:x0-10,x2:x0+10,y1:Y(p[key]),y2:Y(p[key]),class:c==="cu"?"cu":c,"stroke-width":2.5},s);
+      p.reps.forEach((rp,i)=>{const cc=el("circle",{cx:x0-6+i*6,cy:Y(rp[key]),r:3,class:c==="cu"?"cu":`dot ${c}`},s);hover(cc,`${n} · ${r} ops/s · ${rp.rep}\n${title}: ${(+rp[key]).toFixed(2)}`)});
+      const hb=el("rect",{x:x0-12,y:Y(p[key])-5,width:24,height:10,fill:"transparent"},s);hover(hb,`${n} · ${r} ops/s\nmedian ${title}: ${(+p[key]).toFixed(2)}`)})});
+}
+function fig4(){
+  const rates=[2000,8000];
+  dots(document.getElementById("f4a"),"p50 latency (ms)","p50",true,0.5,500,rates);
+  dots(document.getElementById("f4b"),"p99 latency (ms)","p99",true,2,5000,rates);
+  const t=document.getElementById("t4");let h="<tr><th>Configuration</th><th>Offered</th><th>n</th><th>Achieved</th><th>p50</th><th>p99</th><th>Errors+dropped (sum)</th><th>Node CPU sum %</th><th>Disk write MB/s</th><th>Write syscalls/s</th></tr>";
+  CF.forEach(([k,n])=>(D.e7[k]||[]).forEach(p=>{h+=`<tr><td>${n}</td><td>${p.rate}</td><td>${p.n}</td><td>${p.achieved}</td><td>${p.p50.toFixed(2)}</td><td>${p.p99.toFixed(1)}</td><td>${p.reps.reduce((a,r)=>a+r.err,0)}</td><td>${p.cputot??"–"}</td><td>${p.disk??"–"}</td><td>${p.sysw??"–"}</td></tr>`}));
+  t.innerHTML=h;
+}
+function fig5(){
+  const host=document.getElementById("f5");const W=940,H=300,m={l:200,r:20,t:16,b:40},xhi=3000;
+  const rows=[["kill-leader","raftkv","RaftKV · kill-leader","c1"],["kill-leader","etcd","etcd · kill-leader","c2"],["partition-leader","raftkv","RaftKV · partition-leader","c1"],["partition-leader","etcd","etcd · partition-leader","c2"]];
+  const s=el("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":"recovery time per fault event"},host);
+  const X=v=>m.l+Math.min(v,xhi)/xhi*(W-m.l-m.r);
+  for(const v of ticksLin(0,xhi,6)){el("line",{x1:X(v),x2:X(v),y1:m.t,y2:H-m.b,class:"gl"},s);txt(s,X(v),H-m.b+16,v+" ms",{"text-anchor":"middle"})}
+  txt(s,(m.l+W-m.r)/2,H-6,"time from fault injection (ms); values above 3,000 ms are drawn at the edge",{"text-anchor":"middle"});
+  const bh=(H-m.t-m.b)/rows.length;const med=a=>{const b=a.slice().sort((x,y)=>x-y);return b.length?(b[(b.length-1)>>1]+b[b.length>>1])/2:null};
+  const tb=document.getElementById("t5");let h="<tr><th>System · fault</th><th>Source</th><th>Events</th><th>Recovery median [min–max] ms</th><th>Election median [min–max] ms</th><th>Back to ≥80% write rate, median ms</th></tr>";
+  rows.forEach(([f,db,lab,c],i)=>{const y=m.t+bh*i+bh/2;const ev=D.e4re.filter(r=>r.fault===f&&r.db===db);
+    txt(s,m.l-12,y-2,lab,{"text-anchor":"end",class:"ttl"});txt(s,m.l-12,y+13,`E1/E2 histories · ${ev.length} events`,{"text-anchor":"end"});
+    ev.forEach((r,j)=>{if(r.rec!=null){const cc=el("circle",{cx:X(r.rec),cy:y-6+((j*7)%13)-6,r:2.6,class:`dot ${c}`},s);hover(cc,`${lab} · ${r.trial} event ${r.ev}\nrecovery ${r.rec} ms${r.el!=null?"\nelection "+r.el+" ms":""}`)}
+      if(r.el!=null){const e2=el("circle",{cx:X(r.el),cy:y+9,r:2.6,fill:"none",stroke:"var(--s1)","stroke-width":1.2},s);hover(e2,`${lab} · ${r.trial} event ${r.ev}\nelection ${r.el} ms`)}});
+    const rec=ev.map(r=>r.rec).filter(v=>v!=null),el_=ev.map(r=>r.el).filter(v=>v!=null),rs=ev.map(r=>r.res).filter(v=>v!=null);
+    if(rec.length)el("line",{x1:X(med(rec)),x2:X(med(rec)),y1:y-16,y2:y+4,class:c,"stroke-width":3},s);
+    h+=`<tr><td>${lab}</td><td>E1/E2 histories (2026-10-15)</td><td>${ev.length}</td><td>${rec.length?med(rec).toFixed(0)+" ["+Math.min(...rec).toFixed(0)+"–"+Math.max(...rec).toFixed(0)+"]":"–"}</td><td>${el_.length?med(el_).toFixed(0)+" ["+Math.min(...el_).toFixed(0)+"–"+Math.max(...el_).toFixed(0)+"]":"not observable"}</td><td>${rs.length?med(rs).toFixed(0)+" (n="+rs.length+")":"–"}</td></tr>`;
+  });
+  SYS.forEach(([db,n])=>{const v=D.e4fo.filter(r=>r.db===db&&r.gap>=0).map(r=>r.gap),c=D.e4fo.filter(r=>r.db===db&&r.catchup>=0).map(r=>r.catchup);if(!v.length)return;
+    h+=`<tr><td>${n} · kill-leader</td><td>loadgen failover, 500 writes/s (2026-10-16)</td><td>${D.e4fo.filter(r=>r.db===db).length}</td><td>${med(v).toFixed(0)} [${Math.min(...v).toFixed(0)}–${Math.max(...v).toFixed(0)}]</td><td>–</td><td>restarted node catch-up ${c.length?med(c).toFixed(0)+" ms":"–"}</td></tr>`});
+  tb.innerHTML=h;
+}
+mixButtons("m1",fig1);mixButtons("m2",fig2);fig3();fig4();fig5();
+</script>

@@ -1,0 +1,36 @@
+start 2026-10-16T00:21:45Z commit 14bf0f66850fafb1418c6daf77c9c8b237c915b5
+2026-10-16T00:22:27Z log/normal attempt=1 exit=0 wall_s=42 peak_rss_kb=121304  | trial 1/1: Ok ops=30198 ok=30018 info=115 fail=65 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:23:10Z log/normal attempt=2 exit=0 wall_s=42 peak_rss_kb=41536  | trial 1/1: Ok ops=32173 ok=32003 info=111 fail=59 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:23:54Z log/normal attempt=3 exit=0 wall_s=43 peak_rss_kb=142156  | trial 1/1: Ok ops=31733 ok=31578 info=107 fail=48 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:25:37Z log/mild attempt=1 exit=0 wall_s=103 peak_rss_kb=2883508  | trial 1/1: Ok (reduced) ops=31587 ok=31412 info=112 fail=63 faults=3/3/3 stale=0 (102s)
+2026-10-16T00:26:22Z log/mild attempt=2 exit=0 wall_s=44 peak_rss_kb=262072  | trial 1/1: Ok ops=30504 ok=30336 info=113 fail=55 faults=3/3/3 stale=0 (43s)
+2026-10-16T00:27:05Z log/mild attempt=3 exit=0 wall_s=41 peak_rss_kb=30720  | trial 1/1: Ok ops=31394 ok=31219 info=115 fail=60 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:27:47Z log/severe attempt=1 exit=0 wall_s=41 peak_rss_kb=30656  | trial 1/1: Ok ops=34175 ok=34094 info=60 fail=21 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:28:31Z log/severe attempt=2 exit=0 wall_s=42 peak_rss_kb=78868  | trial 1/1: Ok ops=32137 ok=31988 info=108 fail=41 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:30:16Z log/severe attempt=3 exit=0 wall_s=103 peak_rss_kb=2412188  | trial 1/1: Ok (reduced) ops=31998 ok=31853 info=86 fail=59 faults=3/3/3 stale=0 (102s)
+2026-10-16T00:30:59Z readindex/normal attempt=1 exit=0 wall_s=41 peak_rss_kb=29680  | trial 1/1: Ok ops=31573 ok=31406 info=118 fail=49 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:32:19Z readindex/normal attempt=2 exit=0 wall_s=78 peak_rss_kb=2631708  | trial 1/1: Ok ops=32640 ok=32497 info=108 fail=35 faults=3/3/3 stale=0 (77s)
+2026-10-16T00:33:03Z readindex/normal attempt=3 exit=0 wall_s=42 peak_rss_kb=212904  | trial 1/1: Ok ops=34189 ok=34087 info=76 fail=26 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:33:46Z readindex/mild attempt=1 exit=0 wall_s=41 peak_rss_kb=31036  | trial 1/1: Ok ops=32473 ok=32323 info=93 fail=57 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:35:31Z readindex/mild attempt=2 exit=0 wall_s=103 peak_rss_kb=2844804  | trial 1/1: Ok (reduced) ops=31099 ok=30949 info=101 fail=49 faults=3/3/3 stale=0 (102s)
+2026-10-16T00:36:16Z readindex/mild attempt=3 exit=0 wall_s=42 peak_rss_kb=115008  | trial 1/1: Ok ops=31205 ok=31015 info=131 fail=59 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:37:00Z readindex/severe attempt=1 exit=0 wall_s=42 peak_rss_kb=33088  | trial 1/1: Ok ops=34220 ok=34123 info=70 fail=27 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:37:43Z readindex/severe attempt=2 exit=0 wall_s=41 peak_rss_kb=33620  | trial 1/1: Ok ops=34321 ok=34223 info=65 fail=33 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:38:27Z readindex/severe attempt=3 exit=0 wall_s=41 peak_rss_kb=32728  | trial 1/1: Ok ops=32961 ok=32842 info=81 fail=38 faults=3/3/3 stale=0 (41s)
+2026-10-16T00:40:14Z lease/normal attempt=1 exit=0 wall_s=104 peak_rss_kb=5355120  | trial 1/1: Ok (reduced) ops=32115 ok=31965 info=131 fail=19 faults=3/3/3 stale=0 (102s)
+2026-10-16T00:41:13Z lease/normal attempt=2 exit=0 wall_s=56 peak_rss_kb=1790388  | trial 1/1: Ok ops=33671 ok=33546 info=102 fail=23 faults=3/3/3 stale=0 (55s)
+2026-10-16T00:43:01Z lease/normal attempt=3 exit=0 wall_s=104 peak_rss_kb=5067448  | trial 1/1: Ok (reduced) ops=32012 ok=31849 info=141 fail=22 faults=3/3/3 stale=0 (103s)
+2026-10-16T00:44:46Z lease/mild attempt=1 exit=0 wall_s=101 peak_rss_kb=3725804  | trial 1/1: Ok (reduced) ops=32517 ok=32347 info=137 fail=33 faults=3/3/3 stale=0 (101s)
+2026-10-16T00:46:25Z lease/mild attempt=2 exit=0 wall_s=95 peak_rss_kb=1885384  | trial 1/1: Ok ops=32113 ok=31958 info=131 fail=24 faults=3/3/3 stale=0 (94s)
+2026-10-16T00:48:15Z lease/mild attempt=3 exit=0 wall_s=107 peak_rss_kb=4432320  | trial 1/1: Ok (reduced) ops=31410 ok=31231 info=151 fail=28 faults=3/3/3 stale=0 (106s)
+2026-10-16T00:50:03Z lease/severe attempt=1 exit=0 wall_s=105 peak_rss_kb=12155476  | trial 1/1: Unknown ops=32997 ok=32857 info=133 fail=7 faults=3/3/3 stale=27 (104s)
+2026-10-16T00:52:57Z lease/severe attempt=2 exit=0 wall_s=169 peak_rss_kb=12198600  | trial 1/1: Unknown ops=32518 ok=32376 info=142 fail=0 faults=3/3/3 stale=21 (168s)
+2026-10-16T00:54:54Z lease/severe attempt=3 exit=0 wall_s=112 peak_rss_kb=11639196  | trial 1/1: Unknown ops=33379 ok=33253 info=113 fail=13 faults=3/3/3 stale=27 (111s)
+correctness done 2026-10-16T00:54:58Z
+2026-10-16T00:57:31Z speed rf=1.0 log exit=0
+2026-10-16T01:00:09Z speed rf=1.0 readindex exit=0
+2026-10-16T01:02:46Z speed rf=1.0 lease exit=0
+2026-10-16T01:05:23Z speed rf=0.95 log exit=0
+2026-10-16T01:08:01Z speed rf=0.95 readindex exit=0
+2026-10-16T01:10:38Z speed rf=0.95 lease exit=0
+done 2026-10-16T01:10:43Z

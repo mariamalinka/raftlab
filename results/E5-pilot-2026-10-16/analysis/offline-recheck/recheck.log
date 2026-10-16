@@ -1,0 +1,97 @@
+== attempt-001 key=0
+key 0 ops 5010 full=Unknown (60s) reduced(dropped 22)=Illegal (2s)
+PASS
+exit=0 peak_rss_kb=2074456
+== attempt-001 key=1
+key 1 ops 4847 full=Unknown (60s) reduced(dropped 23)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=3878884
+== attempt-001 key=2
+key 2 ops 4679 full=Unknown (60s) reduced(dropped 25)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=4238304
+== attempt-001 key=3
+key 3 ops 4758 full=Unknown (60s) reduced(dropped 18)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=4825156
+== attempt-001 key=4
+key 4 ops 5111 full=Unknown (60s) reduced(dropped 19)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=1948144
+== attempt-001 key=5
+key 5 ops 5169 full=Unknown (60s) reduced(dropped 26)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=4907580
+== attempt-001 key=6
+key 6 ops 1704 full=Ok (0s)
+PASS
+exit=0 peak_rss_kb=3276
+== attempt-001 key=7
+key 7 ops 1719 full=Ok (0s)
+PASS
+exit=0 peak_rss_kb=3356
+== attempt-002 key=0
+key 0 ops 4353 full=Unknown (60s) reduced(dropped 27)=Ok (0s)
+PASS
+exit=0 peak_rss_kb=797560
+== attempt-002 key=1
+key 1 ops 4438 full=Unknown (60s) reduced(dropped 21)=Illegal (5s)
+PASS
+exit=0 peak_rss_kb=4601484
+== attempt-002 key=2
+key 2 ops 4904 full=Unknown (60s) reduced(dropped 28)=Illegal (59s)
+PASS
+exit=0 peak_rss_kb=3927548
+== attempt-002 key=3
+key 3 ops 4907 full=Unknown (60s) reduced(dropped 22)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=2705300
+== attempt-002 key=4
+key 4 ops 5295 full=Unknown (60s) reduced(dropped 25)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=1582708
+== attempt-002 key=5
+key 5 ops 5240 full=Unknown (60s) reduced(dropped 18)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=3352216
+== attempt-002 key=6
+key 6 ops 1729 full=Ok (0s)
+PASS
+exit=0 peak_rss_kb=3060
+== attempt-002 key=7
+key 7 ops 1652 full=Ok (0s)
+PASS
+exit=0 peak_rss_kb=4856
+== attempt-003 key=0
+key 0 ops 4736 full=Unknown (60s) reduced(dropped 30)=Illegal (1s)
+PASS
+exit=0 peak_rss_kb=3956412
+== attempt-003 key=1
+key 1 ops 4881 full=Unknown (60s) reduced(dropped 14)=Illegal (1s)
+PASS
+exit=0 peak_rss_kb=4593460
+== attempt-003 key=2
+key 2 ops 4688 full=Unknown (60s) reduced(dropped 15)=Illegal (5s)
+PASS
+exit=0 peak_rss_kb=5064396
+== attempt-003 key=3
+key 3 ops 4764 full=Unknown (60s) reduced(dropped 22)=Illegal (3s)
+PASS
+exit=0 peak_rss_kb=4038636
+== attempt-003 key=4
+key 4 ops 5472 full=Unknown (60s) reduced(dropped 18)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=1959152
+== attempt-003 key=5
+key 5 ops 5447 full=Unknown (60s) reduced(dropped 11)=Illegal (0s)
+PASS
+exit=0 peak_rss_kb=963172
+== attempt-003 key=6
+key 6 ops 1670 full=Ok (0s)
+PASS
+exit=0 peak_rss_kb=3164
+== attempt-003 key=7
+key 7 ops 1721 full=Ok (0s)
+PASS
+exit=0 peak_rss_kb=4440
+DONE

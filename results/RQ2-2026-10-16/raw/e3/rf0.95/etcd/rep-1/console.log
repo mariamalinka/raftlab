@@ -1,0 +1,4 @@
+1792171978.596116055 etcd rate=1000 rep=1 tput=1000 p50=1.19ms p99=3.64ms p99.9=5.78ms errors=0 dropped=0
+1792172003.597646711 etcd rate=2000 rep=1 tput=2000 p50=1.19ms p99=5.64ms p99.9=17.86ms errors=0 dropped=0
+1792172028.601877739 etcd rate=4000 rep=1 tput=4000 p50=2.39ms p99=13.57ms p99.9=23.49ms errors=0 dropped=0
+1792172053.603370615 etcd rate=8000 rep=1 tput=8000 p50=6.74ms p99=29.28ms p99.9=54.49ms errors=0 dropped=0

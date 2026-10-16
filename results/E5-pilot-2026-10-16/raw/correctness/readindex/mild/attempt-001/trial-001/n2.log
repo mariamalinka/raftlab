@@ -1,0 +1,17 @@
+{"time":"2026-10-16T00:33:05.733781649Z","level":"INFO","msg":"raft started","node":2,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T00:33:05.73414081Z","level":"INFO","msg":"serving","node":2,"addr":"10.77.0.12:7000","read_mode":"readindex"}
+{"time":"2026-10-16T00:33:06.885224619Z","level":"INFO","msg":"starting election","node":2,"term":1,"last_index":0,"last_term":0}
+{"time":"2026-10-16T00:33:06.888511716Z","level":"INFO","msg":"became leader","node":2,"term":1,"last_index":1}
+{"time":"2026-10-16T00:33:09.89259301Z","level":"INFO","msg":"clock skewed","node":2,"offset":-26,"rate":0.92}
+{"time":"2026-10-16T00:33:12.074866392Z","level":"INFO","msg":"lost quorum, stepping down","node":2,"term":1,"active":1}
+{"time":"2026-10-16T00:33:12.074902105Z","level":"INFO","msg":"became follower","node":2,"term":1,"leader":0}
+{"time":"2026-10-16T00:33:12.079445033Z","level":"INFO","msg":"starting election","node":2,"term":2,"last_index":2376,"last_term":1}
+{"time":"2026-10-16T00:33:13.17988447Z","level":"INFO","msg":"starting election","node":2,"term":3,"last_index":2376,"last_term":1}
+{"time":"2026-10-16T00:33:15.043934955Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T00:33:15.044272258Z","level":"INFO","msg":"starting election","node":2,"term":4,"last_index":2376,"last_term":1}
+{"time":"2026-10-16T00:33:16.222022502Z","level":"INFO","msg":"became follower","node":2,"term":4,"leader":5}
+{"time":"2026-10-16T00:33:16.22494334Z","level":"INFO","msg":"truncated conflicting suffix","node":2,"term":4,"index":2317}
+{"time":"2026-10-16T00:33:23.469590406Z","level":"INFO","msg":"starting election","node":2,"term":5,"last_index":9109,"last_term":4}
+{"time":"2026-10-16T00:33:23.554800528Z","level":"INFO","msg":"became follower","node":2,"term":6,"leader":0}
+{"time":"2026-10-16T00:33:27.207487249Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}
+{"time":"2026-10-16T00:33:39.359371916Z","level":"INFO","msg":"clock skewed","node":2,"offset":0,"rate":1}

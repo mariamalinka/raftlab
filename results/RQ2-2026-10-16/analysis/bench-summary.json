@@ -1,0 +1,5318 @@
+[
+ {
+  "exp": "e3",
+  "cell": "rf0.0/etcd",
+  "offered": 1000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 1000.0,
+   "min": 1000.0,
+   "max": 1000.0
+  },
+  "p50": {
+   "med": 2.411,
+   "min": 2.323,
+   "max": 2.569
+  },
+  "p99": {
+   "med": 8.313,
+   "min": 7.871,
+   "max": 11.223
+  },
+  "p999": {
+   "med": 23.663,
+   "min": 15.591,
+   "max": 112.383
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 237.0,
+   "min": 236.0,
+   "max": 239.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 71.5,
+   "min": 71.0,
+   "max": 72.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 37.0,
+   "min": 37.0,
+   "max": 37.0
+  },
+  "rss_max_node_mb": {
+   "med": 63.15,
+   "min": 62.9,
+   "max": 64.2
+  },
+  "threads_max_node": {
+   "med": 12.0,
+   "min": 12.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 57.9,
+   "min": 56.57,
+   "max": 58.66
+  },
+  "psi_io_max": {
+   "med": 21.295,
+   "min": 20.65,
+   "max": 23.62
+  },
+  "disk_write_mb_s": {
+   "med": 23.205,
+   "min": 22.82,
+   "max": 23.31
+  },
+  "write_syscalls_s": {
+   "med": 23317.5,
+   "min": 22696.0,
+   "max": 23587.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 2.569,
+    "p99": 11.223,
+    "p999": 112.383,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 2.411,
+    "p99": 8.455,
+    "p999": 15.591,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 2.323,
+    "p99": 8.171,
+    "p999": 16.431,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 2.411,
+    "p99": 7.871,
+    "p999": 30.895,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.0/etcd",
+  "offered": 2000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 4.401,
+   "min": 4.135,
+   "max": 4.691
+  },
+  "p99": {
+   "med": 25.247,
+   "min": 20.159,
+   "max": 41.567
+  },
+  "p999": {
+   "med": 79.455,
+   "min": 67.775,
+   "max": 88.191
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 247.0,
+   "min": 246.5,
+   "max": 250.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 74.45,
+   "min": 73.0,
+   "max": 75.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 45.5,
+   "min": 44.5,
+   "max": 46.0
+  },
+  "rss_max_node_mb": {
+   "med": 75.9,
+   "min": 75.7,
+   "max": 76.3
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 12.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 66.33,
+   "min": 66.08,
+   "max": 66.47
+  },
+  "psi_io_max": {
+   "med": 21.615,
+   "min": 20.64,
+   "max": 22.37
+  },
+  "disk_write_mb_s": {
+   "med": 25.875,
+   "min": 25.15,
+   "max": 27.33
+  },
+  "write_syscalls_s": {
+   "med": 24728.0,
+   "min": 23957.0,
+   "max": 25985.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 4.135,
+    "p99": 20.159,
+    "p999": 74.623,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 4.475,
+    "p99": 41.567,
+    "p999": 88.191,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 4.691,
+    "p99": 29.503,
+    "p999": 84.287,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 4.327,
+    "p99": 20.991,
+    "p999": 67.775,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.0/etcd",
+  "offered": 4000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 4000.0,
+   "min": 4000.0,
+   "max": 4000.0
+  },
+  "p50": {
+   "med": 8.579,
+   "min": 8.103,
+   "max": 8.735
+  },
+  "p99": {
+   "med": 74.463,
+   "min": 71.167,
+   "max": 78.079
+  },
+  "p999": {
+   "med": 105.343,
+   "min": 102.271,
+   "max": 110.719
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 246.6,
+   "min": 245.0,
+   "max": 247.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 71.0,
+   "min": 70.9,
+   "max": 71.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 57.0,
+   "min": 57.0,
+   "max": 58.0
+  },
+  "rss_max_node_mb": {
+   "med": 95.55,
+   "min": 95.1,
+   "max": 96.5
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 70.315,
+   "min": 70.26,
+   "max": 70.53
+  },
+  "psi_io_max": {
+   "med": 18.66,
+   "min": 17.51,
+   "max": 18.8
+  },
+  "disk_write_mb_s": {
+   "med": 22.08,
+   "min": 21.88,
+   "max": 22.77
+  },
+  "write_syscalls_s": {
+   "med": 25098.0,
+   "min": 25041.0,
+   "max": 25694.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 8.735,
+    "p99": 71.167,
+    "p999": 107.007,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 8.591,
+    "p99": 72.511,
+    "p999": 102.271,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 8.103,
+    "p99": 78.079,
+    "p999": 110.719,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 8.567,
+    "p99": 76.415,
+    "p999": 103.679,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.0/etcd",
+  "offered": 8000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 24.567,
+   "min": 21.247,
+   "max": 25.375
+  },
+  "p99": {
+   "med": 118.495,
+   "min": 101.119,
+   "max": 133.631
+  },
+  "p999": {
+   "med": 171.455,
+   "min": 133.375,
+   "max": 196.095
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 255.9,
+   "min": 253.0,
+   "max": 256.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 68.45,
+   "min": 68.0,
+   "max": 69.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 68.25,
+   "min": 67.0,
+   "max": 69.5
+  },
+  "rss_max_node_mb": {
+   "med": 124.9,
+   "min": 124.5,
+   "max": 126.1
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 75.455,
+   "min": 74.9,
+   "max": 75.64
+  },
+  "psi_io_max": {
+   "med": 12.605,
+   "min": 12.39,
+   "max": 12.82
+  },
+  "disk_write_mb_s": {
+   "med": 23.25,
+   "min": 23.03,
+   "max": 23.85
+  },
+  "write_syscalls_s": {
+   "med": 25149.0,
+   "min": 24693.0,
+   "max": 26495.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 25.375,
+    "p99": 114.175,
+    "p999": 147.839,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 25.263,
+    "p99": 122.815,
+    "p999": 196.095,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 21.247,
+    "p99": 101.119,
+    "p999": 133.375,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 23.871,
+    "p99": 133.631,
+    "p999": 195.071,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.0/raftkv",
+  "offered": 1000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 1000.0,
+   "min": 1000.0,
+   "max": 1000.0
+  },
+  "p50": {
+   "med": 1.802,
+   "min": 1.714,
+   "max": 1.879
+  },
+  "p99": {
+   "med": 11.847,
+   "min": 8.887,
+   "max": 30.479
+  },
+  "p999": {
+   "med": 25.207,
+   "min": 17.391,
+   "max": 86.655
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 240.95,
+   "min": 239.0,
+   "max": 244.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 97.75,
+   "min": 95.5,
+   "max": 99.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 33.75,
+   "min": 33.0,
+   "max": 34.0
+  },
+  "rss_max_node_mb": {
+   "med": 35.7,
+   "min": 34.3,
+   "max": 36.8
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 58.035,
+   "min": 57.49,
+   "max": 58.92
+  },
+  "psi_io_max": {
+   "med": 24.225,
+   "min": 23.14,
+   "max": 24.73
+  },
+  "disk_write_mb_s": {
+   "med": 23.945,
+   "min": 23.57,
+   "max": 24.21
+  },
+  "write_syscalls_s": {
+   "med": 28187.0,
+   "min": 27736.0,
+   "max": 29007.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 1.714,
+    "p99": 30.479,
+    "p999": 86.655,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 1.879,
+    "p99": 14.447,
+    "p999": 30.127,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 1.864,
+    "p99": 9.247,
+    "p999": 20.287,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 1.74,
+    "p99": 8.887,
+    "p999": 17.391,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.0/raftkv",
+  "offered": 2000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 2.834,
+   "min": 2.791,
+   "max": 2.895
+  },
+  "p99": {
+   "med": 31.159,
+   "min": 26.943,
+   "max": 39.199
+  },
+  "p999": {
+   "med": 44.063,
+   "min": 37.663,
+   "max": 54.175
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 257.2,
+   "min": 256.0,
+   "max": 257.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 104.75,
+   "min": 103.5,
+   "max": 105.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 35.0,
+   "min": 35.0,
+   "max": 35.0
+  },
+  "rss_max_node_mb": {
+   "med": 35.5,
+   "min": 34.9,
+   "max": 36.3
+  },
+  "threads_max_node": {
+   "med": 13.5,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 63.83,
+   "min": 63.55,
+   "max": 63.97
+  },
+  "psi_io_max": {
+   "med": 26.075,
+   "min": 24.88,
+   "max": 27.03
+  },
+  "disk_write_mb_s": {
+   "med": 31.735,
+   "min": 31.18,
+   "max": 32.17
+  },
+  "write_syscalls_s": {
+   "med": 29618.5,
+   "min": 29200.0,
+   "max": 29749.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 2.857,
+    "p99": 39.199,
+    "p999": 54.175,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 2.895,
+    "p99": 26.943,
+    "p999": 37.663,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 2.811,
+    "p99": 34.751,
+    "p999": 45.663,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 2.791,
+    "p99": 27.567,
+    "p999": 42.463,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.0/raftkv",
+  "offered": 4000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 4000.0,
+   "min": 4000.0,
+   "max": 4000.0
+  },
+  "p50": {
+   "med": 4.265,
+   "min": 4.171,
+   "max": 4.607
+  },
+  "p99": {
+   "med": 40.559,
+   "min": 36.607,
+   "max": 43.039
+  },
+  "p999": {
+   "med": 49.551,
+   "min": 47.519,
+   "max": 89.087
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 257.5,
+   "min": 256.5,
+   "max": 257.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 104.25,
+   "min": 104.0,
+   "max": 106.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 41.0,
+   "min": 41.0,
+   "max": 41.0
+  },
+  "rss_max_node_mb": {
+   "med": 38.0,
+   "min": 36.3,
+   "max": 40.4
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 64.865,
+   "min": 64.63,
+   "max": 65.0
+  },
+  "psi_io_max": {
+   "med": 24.81,
+   "min": 24.0,
+   "max": 25.97
+  },
+  "disk_write_mb_s": {
+   "med": 40.01,
+   "min": 38.83,
+   "max": 41.17
+  },
+  "write_syscalls_s": {
+   "med": 26962.5,
+   "min": 26186.0,
+   "max": 27643.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 4.235,
+    "p99": 40.223,
+    "p999": 48.383,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 4.607,
+    "p99": 40.895,
+    "p999": 50.719,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 4.171,
+    "p99": 36.607,
+    "p999": 47.519,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 4.295,
+    "p99": 43.039,
+    "p999": 89.087,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.0/raftkv",
+  "offered": 8000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 3949.45,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 10.919,
+   "min": 9.855,
+   "max": 12.583
+  },
+  "p99": {
+   "med": 66.095,
+   "min": 64.447,
+   "max": 1091.583
+  },
+  "p999": {
+   "med": 79.519,
+   "min": 77.503,
+   "max": 5070.847
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 40387.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 40624.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 251.0,
+   "min": 248.6,
+   "max": 254.2
+  },
+  "cpu_busiest_node_pct": {
+   "med": 102.0,
+   "min": 91.5,
+   "max": 103.4
+  },
+  "cpu_loadgen_pct": {
+   "med": 52.95,
+   "min": 52.0,
+   "max": 90.2
+  },
+  "rss_max_node_mb": {
+   "med": 42.6,
+   "min": 40.5,
+   "max": 366.8
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 64.94,
+   "min": 64.62,
+   "max": 72.54
+  },
+  "psi_io_max": {
+   "med": 21.5,
+   "min": 20.41,
+   "max": 22.07
+  },
+  "disk_write_mb_s": {
+   "med": 62.39,
+   "min": 59.96,
+   "max": 102.53
+  },
+  "write_syscalls_s": {
+   "med": 21550.5,
+   "min": 7980.0,
+   "max": 22323.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 9.975,
+    "p99": 64.927,
+    "p999": 81.279,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 11.863,
+    "p99": 67.263,
+    "p999": 77.759,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 12.583,
+    "p99": 1091.583,
+    "p999": 5070.847,
+    "achieved": 3949.45,
+    "errors": 40387,
+    "dropped": 40624
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 9.855,
+    "p99": 64.447,
+    "p999": 77.503,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.5/etcd",
+  "offered": 1000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 1000.0,
+   "min": 1000.0,
+   "max": 1000.0
+  },
+  "p50": {
+   "med": 1.817,
+   "min": 1.802,
+   "max": 1.83
+  },
+  "p99": {
+   "med": 6.479,
+   "min": 5.927,
+   "max": 6.995
+  },
+  "p999": {
+   "med": 11.143,
+   "min": 9.983,
+   "max": 20.063
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 207.5,
+   "min": 206.5,
+   "max": 209.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 65.25,
+   "min": 65.0,
+   "max": 66.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 40.5,
+   "min": 40.0,
+   "max": 41.0
+  },
+  "rss_max_node_mb": {
+   "med": 61.75,
+   "min": 61.6,
+   "max": 61.8
+  },
+  "threads_max_node": {
+   "med": 12.0,
+   "min": 12.0,
+   "max": 12.0
+  },
+  "psi_cpu_max": {
+   "med": 49.24,
+   "min": 48.66,
+   "max": 51.09
+  },
+  "psi_io_max": {
+   "med": 14.145,
+   "min": 13.93,
+   "max": 14.69
+  },
+  "disk_write_mb_s": {
+   "med": 12.75,
+   "min": 12.7,
+   "max": 12.86
+  },
+  "write_syscalls_s": {
+   "med": 20091.5,
+   "min": 20053.0,
+   "max": 20153.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 1.828,
+    "p99": 6.427,
+    "p999": 11.287,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 1.802,
+    "p99": 6.995,
+    "p999": 20.063,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 1.83,
+    "p99": 5.927,
+    "p999": 9.983,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 1.807,
+    "p99": 6.531,
+    "p999": 10.999,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.5/etcd",
+  "offered": 2000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 3.304,
+   "min": 3.121,
+   "max": 3.495
+  },
+  "p99": {
+   "med": 12.751,
+   "min": 11.647,
+   "max": 18.607
+  },
+  "p999": {
+   "med": 24.991,
+   "min": 18.623,
+   "max": 67.199
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 251.45,
+   "min": 249.5,
+   "max": 253.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 75.75,
+   "min": 75.0,
+   "max": 77.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 45.75,
+   "min": 45.0,
+   "max": 47.0
+  },
+  "rss_max_node_mb": {
+   "med": 69.1,
+   "min": 68.8,
+   "max": 69.6
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 66.655,
+   "min": 65.95,
+   "max": 67.02
+  },
+  "psi_io_max": {
+   "med": 16.965,
+   "min": 16.7,
+   "max": 17.29
+  },
+  "disk_write_mb_s": {
+   "med": 19.555,
+   "min": 19.27,
+   "max": 20.14
+  },
+  "write_syscalls_s": {
+   "med": 28487.0,
+   "min": 28094.0,
+   "max": 29254.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 3.299,
+    "p99": 12.503,
+    "p999": 18.623,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 3.309,
+    "p99": 18.607,
+    "p999": 67.199,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 3.121,
+    "p99": 11.647,
+    "p999": 30.735,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 3.495,
+    "p99": 12.999,
+    "p999": 19.247,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.5/etcd",
+  "offered": 4000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 4000.0,
+   "min": 4000.0,
+   "max": 4000.0
+  },
+  "p50": {
+   "med": 7.483,
+   "min": 7.383,
+   "max": 7.911
+  },
+  "p99": {
+   "med": 25.655,
+   "min": 21.551,
+   "max": 58.303
+  },
+  "p999": {
+   "med": 44.607,
+   "min": 29.135,
+   "max": 189.951
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 253.45,
+   "min": 252.5,
+   "max": 255.2
+  },
+  "cpu_busiest_node_pct": {
+   "med": 74.0,
+   "min": 74.0,
+   "max": 74.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 57.25,
+   "min": 57.0,
+   "max": 58.0
+  },
+  "rss_max_node_mb": {
+   "med": 83.7,
+   "min": 83.5,
+   "max": 83.9
+  },
+  "threads_max_node": {
+   "med": 13.5,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 71.885,
+   "min": 71.67,
+   "max": 72.21
+  },
+  "psi_io_max": {
+   "med": 15.62,
+   "min": 15.54,
+   "max": 15.72
+  },
+  "disk_write_mb_s": {
+   "med": 17.82,
+   "min": 17.46,
+   "max": 18.18
+  },
+  "write_syscalls_s": {
+   "med": 29485.5,
+   "min": 28881.0,
+   "max": 29916.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 7.467,
+    "p99": 26.031,
+    "p999": 51.039,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 7.383,
+    "p99": 21.551,
+    "p999": 29.135,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 7.911,
+    "p99": 25.279,
+    "p999": 38.175,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 7.499,
+    "p99": 58.303,
+    "p999": 189.951,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.5/etcd",
+  "offered": 8000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 16.855,
+   "min": 16.543,
+   "max": 17.199
+  },
+  "p99": {
+   "med": 47.615,
+   "min": 46.207,
+   "max": 53.023
+  },
+  "p999": {
+   "med": 65.215,
+   "min": 60.191,
+   "max": 77.247
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 251.9,
+   "min": 251.5,
+   "max": 253.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 70.0,
+   "min": 69.9,
+   "max": 71.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 70.4,
+   "min": 70.0,
+   "max": 71.0
+  },
+  "rss_max_node_mb": {
+   "med": 111.75,
+   "min": 111.6,
+   "max": 112.2
+  },
+  "threads_max_node": {
+   "med": 13.5,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 75.41,
+   "min": 75.21,
+   "max": 75.64
+  },
+  "psi_io_max": {
+   "med": 12.385,
+   "min": 11.58,
+   "max": 12.62
+  },
+  "disk_write_mb_s": {
+   "med": 16.565,
+   "min": 16.34,
+   "max": 16.7
+  },
+  "write_syscalls_s": {
+   "med": 29745.0,
+   "min": 29123.0,
+   "max": 29922.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 17.199,
+    "p99": 53.023,
+    "p999": 77.247,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 16.543,
+    "p99": 46.207,
+    "p999": 60.191,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 16.959,
+    "p99": 47.327,
+    "p999": 63.103,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 16.751,
+    "p99": 47.903,
+    "p999": 67.327,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.5/raftkv",
+  "offered": 1000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 1000.0,
+   "min": 1000.0,
+   "max": 1000.0
+  },
+  "p50": {
+   "med": 1.482,
+   "min": 1.459,
+   "max": 1.577
+  },
+  "p99": {
+   "med": 7.169,
+   "min": 5.595,
+   "max": 12.111
+  },
+  "p999": {
+   "med": 19.135,
+   "min": 16.879,
+   "max": 33.663
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 209.25,
+   "min": 208.0,
+   "max": 214.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 89.75,
+   "min": 89.0,
+   "max": 92.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 36.75,
+   "min": 36.0,
+   "max": 37.0
+  },
+  "rss_max_node_mb": {
+   "med": 33.1,
+   "min": 31.7,
+   "max": 36.0
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 12.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 54.585,
+   "min": 52.13,
+   "max": 55.19
+  },
+  "psi_io_max": {
+   "med": 14.775,
+   "min": 14.18,
+   "max": 15.51
+  },
+  "disk_write_mb_s": {
+   "med": 12.3,
+   "min": 12.24,
+   "max": 12.41
+  },
+  "write_syscalls_s": {
+   "med": 24404.5,
+   "min": 23936.0,
+   "max": 24483.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 1.459,
+    "p99": 12.111,
+    "p999": 33.663,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 1.577,
+    "p99": 8.255,
+    "p999": 19.087,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 1.491,
+    "p99": 6.083,
+    "p999": 19.183,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 1.473,
+    "p99": 5.595,
+    "p999": 16.879,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.5/raftkv",
+  "offered": 2000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 2.104,
+   "min": 2.04,
+   "max": 2.273
+  },
+  "p99": {
+   "med": 17.599,
+   "min": 14.119,
+   "max": 24.415
+  },
+  "p999": {
+   "med": 33.015,
+   "min": 25.247,
+   "max": 41.951
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 256.75,
+   "min": 255.0,
+   "max": 258.4
+  },
+  "cpu_busiest_node_pct": {
+   "med": 110.5,
+   "min": 110.0,
+   "max": 112.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 36.5,
+   "min": 36.0,
+   "max": 37.0
+  },
+  "rss_max_node_mb": {
+   "med": 34.4,
+   "min": 34.0,
+   "max": 34.9
+  },
+  "threads_max_node": {
+   "med": 13.5,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 63.145,
+   "min": 62.89,
+   "max": 63.58
+  },
+  "psi_io_max": {
+   "med": 19.26,
+   "min": 19.05,
+   "max": 19.89
+  },
+  "disk_write_mb_s": {
+   "med": 20.945,
+   "min": 20.45,
+   "max": 21.27
+  },
+  "write_syscalls_s": {
+   "med": 29852.0,
+   "min": 28714.0,
+   "max": 30156.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 2.04,
+    "p99": 24.415,
+    "p999": 41.951,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 2.273,
+    "p99": 14.119,
+    "p999": 25.247,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 2.125,
+    "p99": 17.423,
+    "p999": 32.591,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 2.083,
+    "p99": 17.775,
+    "p999": 33.439,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.5/raftkv",
+  "offered": 4000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 4000.0,
+   "min": 4000.0,
+   "max": 4000.0
+  },
+  "p50": {
+   "med": 4.002,
+   "min": 3.829,
+   "max": 4.147
+  },
+  "p99": {
+   "med": 38.927,
+   "min": 33.503,
+   "max": 41.855
+  },
+  "p999": {
+   "med": 54.079,
+   "min": 50.975,
+   "max": 66.751
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 260.7,
+   "min": 258.0,
+   "max": 263.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 113.75,
+   "min": 113.3,
+   "max": 114.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 41.0,
+   "min": 40.5,
+   "max": 41.0
+  },
+  "rss_max_node_mb": {
+   "med": 35.85,
+   "min": 34.7,
+   "max": 36.0
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 66.16,
+   "min": 65.56,
+   "max": 66.6
+  },
+  "psi_io_max": {
+   "med": 19.435,
+   "min": 19.1,
+   "max": 19.77
+  },
+  "disk_write_mb_s": {
+   "med": 25.785,
+   "min": 25.21,
+   "max": 26.13
+  },
+  "write_syscalls_s": {
+   "med": 26177.5,
+   "min": 25416.0,
+   "max": 26790.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 3.829,
+    "p99": 37.279,
+    "p999": 50.975,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 4.135,
+    "p99": 40.575,
+    "p999": 56.863,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 3.869,
+    "p99": 33.503,
+    "p999": 51.295,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 4.147,
+    "p99": 41.855,
+    "p999": 66.751,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.5/raftkv",
+  "offered": 8000,
+  "n": 4,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 8.619,
+   "min": 7.947,
+   "max": 9.319
+  },
+  "p99": {
+   "med": 48.511,
+   "min": 40.127,
+   "max": 59.359
+  },
+  "p999": {
+   "med": 63.791,
+   "min": 55.007,
+   "max": 76.863
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 253.95,
+   "min": 251.0,
+   "max": 256.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 113.4,
+   "min": 112.5,
+   "max": 115.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 54.0,
+   "min": 53.5,
+   "max": 55.0
+  },
+  "rss_max_node_mb": {
+   "med": 40.85,
+   "min": 38.7,
+   "max": 42.6
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 66.59,
+   "min": 66.21,
+   "max": 67.25
+  },
+  "psi_io_max": {
+   "med": 17.995,
+   "min": 17.62,
+   "max": 18.07
+  },
+  "disk_write_mb_s": {
+   "med": 34.26,
+   "min": 33.31,
+   "max": 34.98
+  },
+  "write_syscalls_s": {
+   "med": 21130.5,
+   "min": 20405.0,
+   "max": 22432.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 8.071,
+    "p99": 54.303,
+    "p999": 71.615,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 9.167,
+    "p99": 59.359,
+    "p999": 76.863,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 7.947,
+    "p99": 40.127,
+    "p999": 55.967,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 9.319,
+    "p99": 42.719,
+    "p999": 55.007,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.95/etcd",
+  "offered": 1000,
+  "n": 5,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4",
+   "rep-5"
+  ],
+  "achieved": {
+   "med": 1000.0,
+   "min": 1000.0,
+   "max": 1000.0
+  },
+  "p50": {
+   "med": 1.189,
+   "min": 1.17,
+   "max": 1.216
+  },
+  "p99": {
+   "med": 4.071,
+   "min": 3.637,
+   "max": 27.151
+  },
+  "p999": {
+   "med": 15.151,
+   "min": 5.783,
+   "max": 186.239
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 161.0,
+   "min": 146.5,
+   "max": 161.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 53.0,
+   "min": 48.0,
+   "max": 54.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 47.0,
+   "min": 43.5,
+   "max": 48.0
+  },
+  "rss_max_node_mb": {
+   "med": 60.0,
+   "min": 59.2,
+   "max": 60.4
+  },
+  "threads_max_node": {
+   "med": 12.0,
+   "min": 12.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 44.88,
+   "min": 30.46,
+   "max": 47.83
+  },
+  "psi_io_max": {
+   "med": 5.47,
+   "min": 4.59,
+   "max": 22.74
+  },
+  "disk_write_mb_s": {
+   "med": 2.75,
+   "min": 2.69,
+   "max": 2.82
+  },
+  "write_syscalls_s": {
+   "med": 15325.0,
+   "min": 15201.0,
+   "max": 15506.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 1.189,
+    "p99": 3.637,
+    "p999": 5.783,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 1.216,
+    "p99": 5.875,
+    "p999": 16.799,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 1.182,
+    "p99": 4.071,
+    "p999": 9.031,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 1.17,
+    "p99": 3.669,
+    "p999": 15.151,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-5",
+    "src": "new",
+    "p50": 1.19,
+    "p99": 27.151,
+    "p999": 186.239,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.95/etcd",
+  "offered": 2000,
+  "n": 5,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4",
+   "rep-5"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 1.252,
+   "min": 1.188,
+   "max": 1.319
+  },
+  "p99": {
+   "med": 6.463,
+   "min": 5.639,
+   "max": 8.951
+  },
+  "p999": {
+   "med": 17.855,
+   "min": 11.783,
+   "max": 32.015
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 227.0,
+   "min": 212.9,
+   "max": 228.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 73.0,
+   "min": 67.5,
+   "max": 74.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 57.0,
+   "min": 53.5,
+   "max": 58.0
+  },
+  "rss_max_node_mb": {
+   "med": 60.9,
+   "min": 60.6,
+   "max": 61.4
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 12.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 57.21,
+   "min": 54.85,
+   "max": 57.95
+  },
+  "psi_io_max": {
+   "med": 3.91,
+   "min": 3.55,
+   "max": 17.77
+  },
+  "disk_write_mb_s": {
+   "med": 3.9,
+   "min": 3.86,
+   "max": 3.96
+  },
+  "write_syscalls_s": {
+   "med": 27530.0,
+   "min": 26871.0,
+   "max": 28312.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 1.188,
+    "p99": 5.639,
+    "p999": 17.855,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 1.319,
+    "p99": 8.951,
+    "p999": 19.967,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 1.247,
+    "p99": 6.155,
+    "p999": 11.783,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 1.281,
+    "p99": 6.511,
+    "p999": 16.719,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-5",
+    "src": "new",
+    "p50": 1.252,
+    "p99": 6.463,
+    "p999": 32.015,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.95/etcd",
+  "offered": 4000,
+  "n": 5,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4",
+   "rep-5"
+  ],
+  "achieved": {
+   "med": 4000.0,
+   "min": 4000.0,
+   "max": 4000.0
+  },
+  "p50": {
+   "med": 2.719,
+   "min": 2.391,
+   "max": 4.211
+  },
+  "p99": {
+   "med": 15.839,
+   "min": 12.231,
+   "max": 24.111
+  },
+  "p999": {
+   "med": 26.079,
+   "min": 19.919,
+   "max": 58.847
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 243.0,
+   "min": 193.0,
+   "max": 246.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 72.0,
+   "min": 55.5,
+   "max": 72.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 64.0,
+   "min": 56.5,
+   "max": 65.0
+  },
+  "rss_max_node_mb": {
+   "med": 62.6,
+   "min": 62.2,
+   "max": 63.1
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 12.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 73.19,
+   "min": 63.41,
+   "max": 74.48
+  },
+  "psi_io_max": {
+   "med": 6.19,
+   "min": 5.43,
+   "max": 7.14
+  },
+  "disk_write_mb_s": {
+   "med": 5.99,
+   "min": 5.84,
+   "max": 6.12
+  },
+  "write_syscalls_s": {
+   "med": 34295.0,
+   "min": 28898.0,
+   "max": 36235.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 2.391,
+    "p99": 13.575,
+    "p999": 23.487,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 4.211,
+    "p99": 24.111,
+    "p999": 46.047,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 2.607,
+    "p99": 12.231,
+    "p999": 19.919,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 2.719,
+    "p99": 15.839,
+    "p999": 26.079,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-5",
+    "src": "new",
+    "p50": 2.821,
+    "p99": 19.823,
+    "p999": 58.847,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.95/etcd",
+  "offered": 8000,
+  "n": 5,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3",
+   "rep-4",
+   "rep-5"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 7.623,
+   "min": 6.735,
+   "max": 7.971
+  },
+  "p99": {
+   "med": 28.671,
+   "min": 26.911,
+   "max": 37.247
+  },
+  "p999": {
+   "med": 53.759,
+   "min": 37.887,
+   "max": 59.423
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 239.0,
+   "min": 234.0,
+   "max": 241.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 66.0,
+   "min": 63.6,
+   "max": 66.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 77.0,
+   "min": 75.0,
+   "max": 78.5
+  },
+  "rss_max_node_mb": {
+   "med": 66.3,
+   "min": 65.5,
+   "max": 67.7
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 75.2,
+   "min": 72.94,
+   "max": 75.78
+  },
+  "psi_io_max": {
+   "med": 7.9,
+   "min": 7.68,
+   "max": 14.7
+  },
+  "disk_write_mb_s": {
+   "med": 8.76,
+   "min": 8.64,
+   "max": 8.85
+  },
+  "write_syscalls_s": {
+   "med": 34140.0,
+   "min": 33318.0,
+   "max": 36073.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 6.735,
+    "p99": 29.279,
+    "p999": 54.495,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 7.971,
+    "p99": 37.247,
+    "p999": 59.423,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 7.959,
+    "p99": 27.151,
+    "p999": 53.759,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "new",
+    "p50": 7.583,
+    "p99": 28.671,
+    "p999": 48.031,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-5",
+    "src": "new",
+    "p50": 7.623,
+    "p99": 26.911,
+    "p999": 37.887,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.95/raftkv",
+  "offered": 1000,
+  "n": 7,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-1(e5ext)",
+   "rep-2(e5ext)",
+   "rep-3(e5ext)",
+   "rep-4(e5ext)",
+   "rep-5(e5ext)"
+  ],
+  "achieved": {
+   "med": 1000.0,
+   "min": 1000.0,
+   "max": 1000.0
+  },
+  "p50": {
+   "med": 1.125,
+   "min": 1.097,
+   "max": 1.245
+  },
+  "p99": {
+   "med": 3.779,
+   "min": 3.395,
+   "max": 5.359
+  },
+  "p999": {
+   "med": 10.575,
+   "min": 6.595,
+   "max": 48.767
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 175.0,
+   "min": 158.0,
+   "max": 190.2
+  },
+  "cpu_busiest_node_pct": {
+   "med": 84.0,
+   "min": 75.5,
+   "max": 91.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 41.0,
+   "min": 39.0,
+   "max": 44.0
+  },
+  "rss_max_node_mb": {
+   "med": 31.3,
+   "min": 27.9,
+   "max": 32.9
+  },
+  "threads_max_node": {
+   "med": 12.5,
+   "min": 12.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 48.58,
+   "min": 47.97,
+   "max": 51.6
+  },
+  "psi_io_max": {
+   "med": 5.915,
+   "min": 5.25,
+   "max": 6.58
+  },
+  "disk_write_mb_s": {
+   "med": 1.325,
+   "min": 1.21,
+   "max": 1.44
+  },
+  "write_syscalls_s": {
+   "med": 19595.5,
+   "min": 19563.0,
+   "max": 19628.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 1.097,
+    "p99": 3.603,
+    "p999": 12.439,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 1.101,
+    "p99": 3.395,
+    "p999": 9.455,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-1",
+    "src": "e5ext",
+    "p50": 1.11,
+    "p99": 3.807,
+    "p999": 48.767,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "e5ext",
+    "p50": 1.129,
+    "p99": 3.553,
+    "p999": 6.595,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "e5ext",
+    "p50": 1.245,
+    "p99": 5.359,
+    "p999": 26.975,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "e5ext",
+    "p50": 1.156,
+    "p99": 3.779,
+    "p999": 7.883,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-5",
+    "src": "e5ext",
+    "p50": 1.125,
+    "p99": 3.815,
+    "p999": 10.575,
+    "achieved": 1000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.95/raftkv",
+  "offered": 2000,
+  "n": 7,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-1(e5ext)",
+   "rep-2(e5ext)",
+   "rep-3(e5ext)",
+   "rep-4(e5ext)",
+   "rep-5(e5ext)"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 1.096,
+   "min": 0.913,
+   "max": 1.398
+  },
+  "p99": {
+   "med": 7.355,
+   "min": 4.999,
+   "max": 107.327
+  },
+  "p999": {
+   "med": 26.383,
+   "min": 15.223,
+   "max": 277.759
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 244.0,
+   "min": 240.0,
+   "max": 246.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 114.0,
+   "min": 113.5,
+   "max": 116.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 47.0,
+   "min": 45.5,
+   "max": 47.0
+  },
+  "rss_max_node_mb": {
+   "med": 32.0,
+   "min": 31.4,
+   "max": 34.1
+  },
+  "threads_max_node": {
+   "med": 13.5,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 61.03,
+   "min": 58.63,
+   "max": 62.19
+  },
+  "psi_io_max": {
+   "med": 4.46,
+   "min": 4.39,
+   "max": 4.53
+  },
+  "disk_write_mb_s": {
+   "med": 2.7,
+   "min": 2.65,
+   "max": 2.75
+  },
+  "write_syscalls_s": {
+   "med": 34684.0,
+   "min": 34620.0,
+   "max": 34748.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 0.947,
+    "p99": 4.999,
+    "p999": 15.223,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 0.913,
+    "p99": 107.327,
+    "p999": 277.759,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-1",
+    "src": "e5ext",
+    "p50": 1.208,
+    "p99": 60.479,
+    "p999": 235.135,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "e5ext",
+    "p50": 1.253,
+    "p99": 7.355,
+    "p999": 17.679,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "e5ext",
+    "p50": 1.096,
+    "p99": 6.267,
+    "p999": 36.127,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "e5ext",
+    "p50": 1.068,
+    "p99": 6.111,
+    "p999": 16.183,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-5",
+    "src": "e5ext",
+    "p50": 1.398,
+    "p99": 11.047,
+    "p999": 26.383,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.95/raftkv",
+  "offered": 4000,
+  "n": 7,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-1(e5ext)",
+   "rep-2(e5ext)",
+   "rep-3(e5ext)",
+   "rep-4(e5ext)",
+   "rep-5(e5ext)"
+  ],
+  "achieved": {
+   "med": 4000.0,
+   "min": 4000.0,
+   "max": 4000.0
+  },
+  "p50": {
+   "med": 2.203,
+   "min": 1.744,
+   "max": 2.647
+  },
+  "p99": {
+   "med": 11.071,
+   "min": 9.879,
+   "max": 13.831
+  },
+  "p999": {
+   "med": 26.255,
+   "min": 18.223,
+   "max": 38.431
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 254.5,
+   "min": 252.9,
+   "max": 256.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 123.0,
+   "min": 120.0,
+   "max": 125.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 46.0,
+   "min": 44.0,
+   "max": 47.0
+  },
+  "rss_max_node_mb": {
+   "med": 34.0,
+   "min": 30.2,
+   "max": 38.7
+  },
+  "threads_max_node": {
+   "med": 13.5,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 65.94,
+   "min": 65.71,
+   "max": 66.53
+  },
+  "psi_io_max": {
+   "med": 7.765,
+   "min": 5.08,
+   "max": 10.45
+  },
+  "disk_write_mb_s": {
+   "med": 4.915,
+   "min": 4.68,
+   "max": 5.15
+  },
+  "write_syscalls_s": {
+   "med": 30407.0,
+   "min": 30402.0,
+   "max": 30412.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 1.799,
+    "p99": 11.375,
+    "p999": 26.255,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 1.744,
+    "p99": 10.471,
+    "p999": 32.159,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-1",
+    "src": "e5ext",
+    "p50": 2.613,
+    "p99": 12.567,
+    "p999": 23.759,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "e5ext",
+    "p50": 2.191,
+    "p99": 9.879,
+    "p999": 18.223,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "e5ext",
+    "p50": 2.647,
+    "p99": 13.831,
+    "p999": 38.431,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "e5ext",
+    "p50": 2.203,
+    "p99": 10.327,
+    "p999": 21.535,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-5",
+    "src": "e5ext",
+    "p50": 2.473,
+    "p99": 11.071,
+    "p999": 31.391,
+    "achieved": 4000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e3",
+  "cell": "rf0.95/raftkv",
+  "offered": 8000,
+  "n": 7,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-1(e5ext)",
+   "rep-2(e5ext)",
+   "rep-3(e5ext)",
+   "rep-4(e5ext)",
+   "rep-5(e5ext)"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 4.735,
+   "min": 3.793,
+   "max": 5.235
+  },
+  "p99": {
+   "med": 22.623,
+   "min": 17.743,
+   "max": 34.335
+  },
+  "p999": {
+   "med": 40.575,
+   "min": 30.831,
+   "max": 62.655
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 242.4,
+   "min": 233.9,
+   "max": 249.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 122.0,
+   "min": 117.5,
+   "max": 127.9
+  },
+  "cpu_loadgen_pct": {
+   "med": 60.0,
+   "min": 54.5,
+   "max": 63.0
+  },
+  "rss_max_node_mb": {
+   "med": 36.5,
+   "min": 32.3,
+   "max": 38.2
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 66.46,
+   "min": 64.09,
+   "max": 66.97
+  },
+  "psi_io_max": {
+   "med": 15.21,
+   "min": 7.73,
+   "max": 22.69
+  },
+  "disk_write_mb_s": {
+   "med": 8.085,
+   "min": 7.91,
+   "max": 8.26
+  },
+  "write_syscalls_s": {
+   "med": 21797.5,
+   "min": 21133.0,
+   "max": 22462.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 4.203,
+    "p99": 34.335,
+    "p999": 62.655,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 3.793,
+    "p99": 17.743,
+    "p999": 40.287,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-1",
+    "src": "e5ext",
+    "p50": 5.039,
+    "p99": 20.911,
+    "p999": 30.831,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "e5ext",
+    "p50": 5.043,
+    "p99": 22.623,
+    "p999": 51.103,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "e5ext",
+    "p50": 5.235,
+    "p99": 32.543,
+    "p999": 52.511,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-4",
+    "src": "e5ext",
+    "p50": 4.735,
+    "p99": 19.503,
+    "p999": 39.615,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-5",
+    "src": "e5ext",
+    "p50": 4.619,
+    "p99": 23.071,
+    "p999": 40.575,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e7",
+  "cell": "batch1",
+  "offered": 2000,
+  "n": 3,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 5.503,
+   "min": 4.391,
+   "max": 5.883
+  },
+  "p99": {
+   "med": 63.807,
+   "min": 45.311,
+   "max": 101.631
+  },
+  "p999": {
+   "med": 94.207,
+   "min": 53.663,
+   "max": 110.783
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 264.5,
+   "min": 263.5,
+   "max": 266.6
+  },
+  "cpu_busiest_node_pct": {
+   "med": 112.0,
+   "min": 110.0,
+   "max": 113.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 30.0,
+   "min": 30.0,
+   "max": 31.0
+  },
+  "rss_max_node_mb": {
+   "med": 32.9,
+   "min": 32.4,
+   "max": 33.6
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 65.11,
+   "min": 64.95,
+   "max": 65.49
+  },
+  "psi_io_max": {
+   "med": 24.15,
+   "min": 23.43,
+   "max": 24.26
+  },
+  "disk_write_mb_s": {
+   "med": 26.06,
+   "min": 25.88,
+   "max": 26.07
+  },
+  "write_syscalls_s": {
+   "med": 25792.0,
+   "min": 25769.0,
+   "max": 27502.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 5.503,
+    "p99": 63.807,
+    "p999": 94.207,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 5.883,
+    "p99": 101.631,
+    "p999": 110.783,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 4.391,
+    "p99": 45.311,
+    "p999": 53.663,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e7",
+  "cell": "batch1",
+  "offered": 8000,
+  "n": 3,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3"
+  ],
+  "achieved": {
+   "med": 252.9,
+   "min": 89.1,
+   "max": 412.2
+  },
+  "p50": {
+   "med": 3878.911,
+   "min": 3745.791,
+   "max": 4788.223
+  },
+  "p99": {
+   "med": 5021.695,
+   "min": 4935.679,
+   "max": 5341.183
+  },
+  "p999": {
+   "med": 5378.047,
+   "min": 5029.887,
+   "max": 6037.503
+  },
+  "errors": {
+   "med": 72251.0,
+   "min": 71823.0,
+   "max": 78376.0
+  },
+  "dropped": {
+   "med": 79842.0,
+   "min": 79505.0,
+   "max": 83119.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 216.7,
+   "min": 209.6,
+   "max": 222.9
+  },
+  "cpu_busiest_node_pct": {
+   "med": 85.0,
+   "min": 76.7,
+   "max": 90.2
+  },
+  "cpu_loadgen_pct": {
+   "med": 154.2,
+   "min": 151.3,
+   "max": 162.5
+  },
+  "rss_max_node_mb": {
+   "med": 376.1,
+   "min": 348.7,
+   "max": 576.3
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 70.64,
+   "min": 69.67,
+   "max": 71.79
+  },
+  "psi_io_max": {
+   "med": 17.65,
+   "min": 17.35,
+   "max": 17.92
+  },
+  "disk_write_mb_s": {
+   "med": 47.76,
+   "min": 18.22,
+   "max": 48.78
+  },
+  "write_syscalls_s": {
+   "med": 10222.0,
+   "min": 9242.0,
+   "max": 11073.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 3745.791,
+    "p99": 5341.183,
+    "p999": 6037.503,
+    "achieved": 412.2,
+    "errors": 72251,
+    "dropped": 79505
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 4788.223,
+    "p99": 5021.695,
+    "p999": 5029.887,
+    "achieved": 89.1,
+    "errors": 78376,
+    "dropped": 79842
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 3878.911,
+    "p99": 4935.679,
+    "p999": 5378.047,
+    "achieved": 252.9,
+    "errors": 71823,
+    "dropped": 83119
+   }
+  ]
+ },
+ {
+  "exp": "e7",
+  "cell": "default",
+  "offered": 2000,
+  "n": 3,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 2.173,
+   "min": 2.032,
+   "max": 2.451
+  },
+  "p99": {
+   "med": 12.567,
+   "min": 10.399,
+   "max": 14.903
+  },
+  "p999": {
+   "med": 24.879,
+   "min": 20.399,
+   "max": 25.407
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 257.5,
+   "min": 250.5,
+   "max": 258.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 111.0,
+   "min": 105.0,
+   "max": 111.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 37.0,
+   "min": 35.0,
+   "max": 37.0
+  },
+  "rss_max_node_mb": {
+   "med": 34.1,
+   "min": 34.0,
+   "max": 34.1
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 63.44,
+   "min": 61.59,
+   "max": 63.63
+  },
+  "psi_io_max": {
+   "med": 17.89,
+   "min": 17.81,
+   "max": 17.92
+  },
+  "disk_write_mb_s": {
+   "med": 20.61,
+   "min": 19.74,
+   "max": 21.05
+  },
+  "write_syscalls_s": {
+   "med": 29303.0,
+   "min": 27084.0,
+   "max": 30305.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 2.451,
+    "p99": 14.903,
+    "p999": 25.407,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 2.173,
+    "p99": 12.567,
+    "p999": 24.879,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 2.032,
+    "p99": 10.399,
+    "p999": 20.399,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e7",
+  "cell": "default",
+  "offered": 8000,
+  "n": 3,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 9.663,
+   "min": 8.863,
+   "max": 10.239
+  },
+  "p99": {
+   "med": 49.343,
+   "min": 48.927,
+   "max": 53.567
+  },
+  "p999": {
+   "med": 86.015,
+   "min": 69.183,
+   "max": 133.887
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 253.0,
+   "min": 250.0,
+   "max": 255.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 113.0,
+   "min": 112.0,
+   "max": 115.4
+  },
+  "cpu_loadgen_pct": {
+   "med": 55.0,
+   "min": 54.0,
+   "max": 56.0
+  },
+  "rss_max_node_mb": {
+   "med": 39.1,
+   "min": 36.5,
+   "max": 41.0
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 66.17,
+   "min": 65.47,
+   "max": 66.55
+  },
+  "psi_io_max": {
+   "med": 17.0,
+   "min": 16.87,
+   "max": 17.36
+  },
+  "disk_write_mb_s": {
+   "med": 34.95,
+   "min": 34.17,
+   "max": 35.07
+  },
+  "write_syscalls_s": {
+   "med": 20145.0,
+   "min": 19394.0,
+   "max": 21001.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 10.239,
+    "p99": 48.927,
+    "p999": 86.015,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 8.863,
+    "p99": 49.343,
+    "p999": 69.183,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 9.663,
+    "p99": 53.567,
+    "p999": 133.887,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e7",
+  "cell": "nofsync-UNSAFE",
+  "offered": 2000,
+  "n": 3,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 0.989,
+   "min": 0.928,
+   "max": 1.07
+  },
+  "p99": {
+   "med": 12.943,
+   "min": 8.895,
+   "max": 24.735
+  },
+  "p999": {
+   "med": 31.119,
+   "min": 24.943,
+   "max": 44.831
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 259.0,
+   "min": 256.0,
+   "max": 259.2
+  },
+  "cpu_busiest_node_pct": {
+   "med": 118.8,
+   "min": 117.0,
+   "max": 119.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 48.5,
+   "min": 48.0,
+   "max": 49.0
+  },
+  "rss_max_node_mb": {
+   "med": 34.2,
+   "min": 33.7,
+   "max": 34.7
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 12.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 63.72,
+   "min": 62.8,
+   "max": 64.46
+  },
+  "psi_io_max": {
+   "med": 9.14,
+   "min": 8.52,
+   "max": 9.36
+  },
+  "disk_write_mb_s": {
+   "med": 5.58,
+   "min": 5.58,
+   "max": 5.58
+  },
+  "write_syscalls_s": {
+   "med": 38287.0,
+   "min": 36924.0,
+   "max": 39450.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 1.07,
+    "p99": 24.735,
+    "p999": 44.831,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 0.989,
+    "p99": 8.895,
+    "p999": 24.943,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 0.928,
+    "p99": 12.943,
+    "p999": 31.119,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e7",
+  "cell": "nofsync-UNSAFE",
+  "offered": 8000,
+  "n": 3,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 4.475,
+   "min": 4.215,
+   "max": 5.279
+  },
+  "p99": {
+   "med": 31.663,
+   "min": 27.503,
+   "max": 57.311
+  },
+  "p999": {
+   "med": 43.359,
+   "min": 37.535,
+   "max": 77.631
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 265.9,
+   "min": 265.0,
+   "max": 271.4
+  },
+  "cpu_busiest_node_pct": {
+   "med": 125.0,
+   "min": 123.0,
+   "max": 129.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 59.0,
+   "min": 59.0,
+   "max": 60.0
+  },
+  "rss_max_node_mb": {
+   "med": 37.8,
+   "min": 36.6,
+   "max": 44.4
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 69.59,
+   "min": 69.29,
+   "max": 71.76
+  },
+  "psi_io_max": {
+   "med": 1.1,
+   "min": 1.02,
+   "max": 1.31
+  },
+  "disk_write_mb_s": {
+   "med": 24.01,
+   "min": 23.37,
+   "max": 24.97
+  },
+  "write_syscalls_s": {
+   "med": 27706.0,
+   "min": 25759.0,
+   "max": 28593.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 5.279,
+    "p99": 57.311,
+    "p999": 77.631,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 4.475,
+    "p99": 31.663,
+    "p999": 43.359,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 4.215,
+    "p99": 27.503,
+    "p999": 37.535,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e7",
+  "cell": "nopipeline",
+  "offered": 2000,
+  "n": 3,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3"
+  ],
+  "achieved": {
+   "med": 2000.0,
+   "min": 2000.0,
+   "max": 2000.0
+  },
+  "p50": {
+   "med": 2.03,
+   "min": 1.947,
+   "max": 2.233
+  },
+  "p99": {
+   "med": 29.439,
+   "min": 14.071,
+   "max": 32.255
+  },
+  "p999": {
+   "med": 52.479,
+   "min": 49.151,
+   "max": 62.335
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 242.0,
+   "min": 242.0,
+   "max": 243.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 102.0,
+   "min": 102.0,
+   "max": 103.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 42.0,
+   "min": 41.5,
+   "max": 42.0
+  },
+  "rss_max_node_mb": {
+   "med": 35.1,
+   "min": 34.1,
+   "max": 45.7
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 60.92,
+   "min": 60.19,
+   "max": 61.09
+  },
+  "psi_io_max": {
+   "med": 19.58,
+   "min": 19.17,
+   "max": 20.16
+  },
+  "disk_write_mb_s": {
+   "med": 19.75,
+   "min": 19.45,
+   "max": 20.33
+  },
+  "write_syscalls_s": {
+   "med": 27424.0,
+   "min": 25605.0,
+   "max": 28156.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 2.233,
+    "p99": 32.255,
+    "p999": 52.479,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 2.03,
+    "p99": 14.071,
+    "p999": 62.335,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 1.947,
+    "p99": 29.439,
+    "p999": 49.151,
+    "achieved": 2000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "e7",
+  "cell": "nopipeline",
+  "offered": 8000,
+  "n": 3,
+  "reps": [
+   "rep-1",
+   "rep-2",
+   "rep-3"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 5.159,
+   "min": 4.947,
+   "max": 5.383
+  },
+  "p99": {
+   "med": 47.647,
+   "min": 45.823,
+   "max": 52.927
+  },
+  "p999": {
+   "med": 64.351,
+   "min": 59.935,
+   "max": 71.935
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 230.5,
+   "min": 230.0,
+   "max": 232.4
+  },
+  "cpu_busiest_node_pct": {
+   "med": 105.0,
+   "min": 102.9,
+   "max": 105.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 62.0,
+   "min": 62.0,
+   "max": 63.0
+  },
+  "rss_max_node_mb": {
+   "med": 43.4,
+   "min": 43.2,
+   "max": 43.9
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 62.72,
+   "min": 62.58,
+   "max": 62.86
+  },
+  "psi_io_max": {
+   "med": 19.58,
+   "min": 19.39,
+   "max": 20.27
+  },
+  "disk_write_mb_s": {
+   "med": 35.03,
+   "min": 34.17,
+   "max": 35.74
+  },
+  "write_syscalls_s": {
+   "med": 20698.0,
+   "min": 20123.0,
+   "max": 21284.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 5.159,
+    "p99": 52.927,
+    "p999": 71.935,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 5.383,
+    "p99": 47.647,
+    "p999": 64.351,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-3",
+    "src": "new",
+    "p50": 4.947,
+    "p99": 45.823,
+    "p999": 59.935,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "etcd",
+  "offered": 8000,
+  "n": 1,
+  "reps": [
+   "rep-1"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 17.567,
+   "min": 17.567,
+   "max": 17.567
+  },
+  "p99": {
+   "med": 49.695,
+   "min": 49.695,
+   "max": 49.695
+  },
+  "p999": {
+   "med": 70.911,
+   "min": 70.911,
+   "max": 70.911
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 250.7,
+   "min": 250.7,
+   "max": 250.7
+  },
+  "cpu_busiest_node_pct": {
+   "med": 69.9,
+   "min": 69.9,
+   "max": 69.9
+  },
+  "cpu_loadgen_pct": {
+   "med": 69.3,
+   "min": 69.3,
+   "max": 69.3
+  },
+  "rss_max_node_mb": {
+   "med": 88.8,
+   "min": 88.8,
+   "max": 88.8
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 72.02,
+   "min": 72.02,
+   "max": 72.02
+  },
+  "psi_io_max": {
+   "med": 9.11,
+   "min": 9.11,
+   "max": 9.11
+  },
+  "disk_write_mb_s": {
+   "med": 16.31,
+   "min": 16.31,
+   "max": 16.31
+  },
+  "write_syscalls_s": {
+   "med": 28884.0,
+   "min": 28884.0,
+   "max": 28884.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 17.567,
+    "p99": 49.695,
+    "p999": 70.911,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "etcd",
+  "offered": 10000,
+  "n": 1,
+  "reps": [
+   "rep-1"
+  ],
+  "achieved": {
+   "med": 10000.0,
+   "min": 10000.0,
+   "max": 10000.0
+  },
+  "p50": {
+   "med": 24.639,
+   "min": 24.639,
+   "max": 24.639
+  },
+  "p99": {
+   "med": 73.727,
+   "min": 73.727,
+   "max": 73.727
+  },
+  "p999": {
+   "med": 107.007,
+   "min": 107.007,
+   "max": 107.007
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 251.9,
+   "min": 251.9,
+   "max": 251.9
+  },
+  "cpu_busiest_node_pct": {
+   "med": 69.0,
+   "min": 69.0,
+   "max": 69.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 75.0,
+   "min": 75.0,
+   "max": 75.0
+  },
+  "rss_max_node_mb": {
+   "med": 123.0,
+   "min": 123.0,
+   "max": 123.0
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 76.03,
+   "min": 76.03,
+   "max": 76.03
+  },
+  "psi_io_max": {
+   "med": 8.88,
+   "min": 8.88,
+   "max": 8.88
+  },
+  "disk_write_mb_s": {
+   "med": 16.79,
+   "min": 16.79,
+   "max": 16.79
+  },
+  "write_syscalls_s": {
+   "med": 26888.0,
+   "min": 26888.0,
+   "max": 26888.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 24.639,
+    "p99": 73.727,
+    "p999": 107.007,
+    "achieved": 10000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "etcd",
+  "offered": 12000,
+  "n": 1,
+  "reps": [
+   "rep-1"
+  ],
+  "achieved": {
+   "med": 12000.05,
+   "min": 12000.05,
+   "max": 12000.05
+  },
+  "p50": {
+   "med": 39.455,
+   "min": 39.455,
+   "max": 39.455
+  },
+  "p99": {
+   "med": 140.415,
+   "min": 140.415,
+   "max": 140.415
+  },
+  "p999": {
+   "med": 207.743,
+   "min": 207.743,
+   "max": 207.743
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 254.2,
+   "min": 254.2,
+   "max": 254.2
+  },
+  "cpu_busiest_node_pct": {
+   "med": 68.8,
+   "min": 68.8,
+   "max": 68.8
+  },
+  "cpu_loadgen_pct": {
+   "med": 81.8,
+   "min": 81.8,
+   "max": 81.8
+  },
+  "rss_max_node_mb": {
+   "med": 168.3,
+   "min": 168.3,
+   "max": 168.3
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 77.77,
+   "min": 77.77,
+   "max": 77.77
+  },
+  "psi_io_max": {
+   "med": 7.46,
+   "min": 7.46,
+   "max": 7.46
+  },
+  "disk_write_mb_s": {
+   "med": 17.96,
+   "min": 17.96,
+   "max": 17.96
+  },
+  "write_syscalls_s": {
+   "med": 23347.0,
+   "min": 23347.0,
+   "max": 23347.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 39.455,
+    "p99": 140.415,
+    "p999": 207.743,
+    "achieved": 12000.05,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "etcd",
+  "offered": 14000,
+  "n": 1,
+  "reps": [
+   "rep-1"
+  ],
+  "achieved": {
+   "med": 14000.1,
+   "min": 14000.1,
+   "max": 14000.1
+  },
+  "p50": {
+   "med": 54.271,
+   "min": 54.271,
+   "max": 54.271
+  },
+  "p99": {
+   "med": 168.447,
+   "min": 168.447,
+   "max": 168.447
+  },
+  "p999": {
+   "med": 221.183,
+   "min": 221.183,
+   "max": 221.183
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 256.9,
+   "min": 256.9,
+   "max": 256.9
+  },
+  "cpu_busiest_node_pct": {
+   "med": 68.0,
+   "min": 68.0,
+   "max": 68.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 89.0,
+   "min": 89.0,
+   "max": 89.0
+  },
+  "rss_max_node_mb": {
+   "med": 210.6,
+   "min": 210.6,
+   "max": 210.6
+  },
+  "threads_max_node": {
+   "med": 13.0,
+   "min": 13.0,
+   "max": 13.0
+  },
+  "psi_cpu_max": {
+   "med": 78.99,
+   "min": 78.99,
+   "max": 78.99
+  },
+  "psi_io_max": {
+   "med": 6.79,
+   "min": 6.79,
+   "max": 6.79
+  },
+  "disk_write_mb_s": {
+   "med": 19.31,
+   "min": 19.31,
+   "max": 19.31
+  },
+  "write_syscalls_s": {
+   "med": 21505.0,
+   "min": 21505.0,
+   "max": 21505.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 54.271,
+    "p99": 168.447,
+    "p999": 221.183,
+    "achieved": 14000.1,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "raftkv",
+  "offered": 8000,
+  "n": 2,
+  "reps": [
+   "rep-1",
+   "rep-2"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 9.143,
+   "min": 8.567,
+   "max": 9.719
+  },
+  "p99": {
+   "med": 53.503,
+   "min": 45.215,
+   "max": 61.791
+  },
+  "p999": {
+   "med": 100.735,
+   "min": 72.895,
+   "max": 128.575
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 249.2,
+   "min": 248.1,
+   "max": 250.3
+  },
+  "cpu_busiest_node_pct": {
+   "med": 110.8,
+   "min": 110.4,
+   "max": 111.2
+  },
+  "cpu_loadgen_pct": {
+   "med": 54.0,
+   "min": 53.0,
+   "max": 55.0
+  },
+  "rss_max_node_mb": {
+   "med": 42.3,
+   "min": 41.4,
+   "max": 43.2
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 64.33,
+   "min": 63.98,
+   "max": 64.68
+  },
+  "psi_io_max": {
+   "med": 15.14,
+   "min": 14.86,
+   "max": 15.42
+  },
+  "disk_write_mb_s": {
+   "med": 34.305,
+   "min": 33.17,
+   "max": 35.44
+  },
+  "write_syscalls_s": {
+   "med": 20394.5,
+   "min": 19700.0,
+   "max": 21089.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 8.567,
+    "p99": 45.215,
+    "p999": 72.895,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 9.719,
+    "p99": 61.791,
+    "p999": 128.575,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "raftkv",
+  "offered": 10000,
+  "n": 2,
+  "reps": [
+   "rep-1",
+   "rep-2"
+  ],
+  "achieved": {
+   "med": 10000.0,
+   "min": 10000.0,
+   "max": 10000.0
+  },
+  "p50": {
+   "med": 12.459,
+   "min": 11.623,
+   "max": 13.295
+  },
+  "p99": {
+   "med": 62.399,
+   "min": 61.567,
+   "max": 63.231
+  },
+  "p999": {
+   "med": 82.271,
+   "min": 81.535,
+   "max": 83.007
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 250.5,
+   "min": 249.0,
+   "max": 252.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 113.25,
+   "min": 113.0,
+   "max": 113.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 59.0,
+   "min": 58.0,
+   "max": 60.0
+  },
+  "rss_max_node_mb": {
+   "med": 42.55,
+   "min": 41.0,
+   "max": 44.1
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 66.405,
+   "min": 66.26,
+   "max": 66.55
+  },
+  "psi_io_max": {
+   "med": 15.04,
+   "min": 14.89,
+   "max": 15.19
+  },
+  "disk_write_mb_s": {
+   "med": 40.88,
+   "min": 40.79,
+   "max": 40.97
+  },
+  "write_syscalls_s": {
+   "med": 19330.5,
+   "min": 18866.0,
+   "max": 19795.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 11.623,
+    "p99": 61.567,
+    "p999": 81.535,
+    "achieved": 10000,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 13.295,
+    "p99": 63.231,
+    "p999": 83.007,
+    "achieved": 10000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "raftkv",
+  "offered": 12000,
+  "n": 2,
+  "reps": [
+   "rep-1",
+   "rep-2"
+  ],
+  "achieved": {
+   "med": 12000.05,
+   "min": 12000.05,
+   "max": 12000.05
+  },
+  "p50": {
+   "med": 19.439,
+   "min": 18.159,
+   "max": 20.719
+  },
+  "p99": {
+   "med": 97.631,
+   "min": 93.311,
+   "max": 101.951
+  },
+  "p999": {
+   "med": 128.319,
+   "min": 117.375,
+   "max": 139.263
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 252.05,
+   "min": 251.2,
+   "max": 252.9
+  },
+  "cpu_busiest_node_pct": {
+   "med": 114.0,
+   "min": 113.0,
+   "max": 115.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 65.2,
+   "min": 64.5,
+   "max": 65.9
+  },
+  "rss_max_node_mb": {
+   "med": 47.5,
+   "min": 44.7,
+   "max": 50.3
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 67.42,
+   "min": 67.04,
+   "max": 67.8
+  },
+  "psi_io_max": {
+   "med": 13.98,
+   "min": 13.68,
+   "max": 14.28
+  },
+  "disk_write_mb_s": {
+   "med": 50.33,
+   "min": 49.63,
+   "max": 51.03
+  },
+  "write_syscalls_s": {
+   "med": 17675.5,
+   "min": 17345.0,
+   "max": 18006.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 20.719,
+    "p99": 93.311,
+    "p999": 117.375,
+    "achieved": 12000.05,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 18.159,
+    "p99": 101.951,
+    "p999": 139.263,
+    "achieved": 12000.05,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "raftkv",
+  "offered": 14000,
+  "n": 2,
+  "reps": [
+   "rep-1",
+   "rep-2"
+  ],
+  "achieved": {
+   "med": 14000.1,
+   "min": 14000.1,
+   "max": 14000.1
+  },
+  "p50": {
+   "med": 38.815,
+   "min": 35.807,
+   "max": 41.823
+  },
+  "p99": {
+   "med": 243.391,
+   "min": 185.983,
+   "max": 300.799
+  },
+  "p999": {
+   "med": 309.183,
+   "min": 234.879,
+   "max": 383.487
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 252.45,
+   "min": 250.4,
+   "max": 254.5
+  },
+  "cpu_busiest_node_pct": {
+   "med": 116.5,
+   "min": 116.0,
+   "max": 117.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 71.5,
+   "min": 69.5,
+   "max": 73.5
+  },
+  "rss_max_node_mb": {
+   "med": 72.5,
+   "min": 62.9,
+   "max": 82.1
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 68.565,
+   "min": 67.72,
+   "max": 69.41
+  },
+  "psi_io_max": {
+   "med": 12.755,
+   "min": 12.41,
+   "max": 13.1
+  },
+  "disk_write_mb_s": {
+   "med": 62.13,
+   "min": 61.83,
+   "max": 62.43
+  },
+  "write_syscalls_s": {
+   "med": 15811.0,
+   "min": 15398.0,
+   "max": 16224.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 35.807,
+    "p99": 300.799,
+    "p999": 383.487,
+    "achieved": 14000.1,
+    "errors": 0,
+    "dropped": 0
+   },
+   {
+    "rep": "rep-2",
+    "src": "new",
+    "p50": 41.823,
+    "p99": 185.983,
+    "p999": 234.879,
+    "achieved": 14000.1,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "raftkv-writeonly",
+  "offered": 6000,
+  "n": 1,
+  "reps": [
+   "rep-1"
+  ],
+  "achieved": {
+   "med": 6000.0,
+   "min": 6000.0,
+   "max": 6000.0
+  },
+  "p50": {
+   "med": 7.023,
+   "min": 7.023,
+   "max": 7.023
+  },
+  "p99": {
+   "med": 53.759,
+   "min": 53.759,
+   "max": 53.759
+  },
+  "p999": {
+   "med": 68.223,
+   "min": 68.223,
+   "max": 68.223
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 249.0,
+   "min": 249.0,
+   "max": 249.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 99.5,
+   "min": 99.5,
+   "max": 99.5
+  },
+  "cpu_loadgen_pct": {
+   "med": 48.4,
+   "min": 48.4,
+   "max": 48.4
+  },
+  "rss_max_node_mb": {
+   "med": 40.4,
+   "min": 40.4,
+   "max": 40.4
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 62.97,
+   "min": 62.97,
+   "max": 62.97
+  },
+  "psi_io_max": {
+   "med": 19.72,
+   "min": 19.72,
+   "max": 19.72
+  },
+  "disk_write_mb_s": {
+   "med": 49.78,
+   "min": 49.78,
+   "max": 49.78
+  },
+  "write_syscalls_s": {
+   "med": 23198.0,
+   "min": 23198.0,
+   "max": 23198.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 7.023,
+    "p99": 53.759,
+    "p999": 68.223,
+    "achieved": 6000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "raftkv-writeonly",
+  "offered": 8000,
+  "n": 1,
+  "reps": [
+   "rep-1"
+  ],
+  "achieved": {
+   "med": 8000.0,
+   "min": 8000.0,
+   "max": 8000.0
+  },
+  "p50": {
+   "med": 13.439,
+   "min": 13.439,
+   "max": 13.439
+  },
+  "p99": {
+   "med": 101.759,
+   "min": 101.759,
+   "max": 101.759
+  },
+  "p999": {
+   "med": 183.295,
+   "min": 183.295,
+   "max": 183.295
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 247.0,
+   "min": 247.0,
+   "max": 247.0
+  },
+  "cpu_busiest_node_pct": {
+   "med": 100.0,
+   "min": 100.0,
+   "max": 100.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 53.0,
+   "min": 53.0,
+   "max": 53.0
+  },
+  "rss_max_node_mb": {
+   "med": 47.2,
+   "min": 47.2,
+   "max": 47.2
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 63.89,
+   "min": 63.89,
+   "max": 63.89
+  },
+  "psi_io_max": {
+   "med": 18.91,
+   "min": 18.91,
+   "max": 18.91
+  },
+  "disk_write_mb_s": {
+   "med": 61.8,
+   "min": 61.8,
+   "max": 61.8
+  },
+  "write_syscalls_s": {
+   "med": 19910.0,
+   "min": 19910.0,
+   "max": 19910.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 13.439,
+    "p99": 101.759,
+    "p999": 183.295,
+    "achieved": 8000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ },
+ {
+  "exp": "overload",
+  "cell": "raftkv-writeonly",
+  "offered": 10000,
+  "n": 1,
+  "reps": [
+   "rep-1"
+  ],
+  "achieved": {
+   "med": 10000.0,
+   "min": 10000.0,
+   "max": 10000.0
+  },
+  "p50": {
+   "med": 31.759,
+   "min": 31.759,
+   "max": 31.759
+  },
+  "p99": {
+   "med": 102.655,
+   "min": 102.655,
+   "max": 102.655
+  },
+  "p999": {
+   "med": 135.807,
+   "min": 135.807,
+   "max": 135.807
+  },
+  "errors": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dropped": {
+   "med": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "cpu_nodes_total_pct": {
+   "med": 250.9,
+   "min": 250.9,
+   "max": 250.9
+  },
+  "cpu_busiest_node_pct": {
+   "med": 104.0,
+   "min": 104.0,
+   "max": 104.0
+  },
+  "cpu_loadgen_pct": {
+   "med": 60.0,
+   "min": 60.0,
+   "max": 60.0
+  },
+  "rss_max_node_mb": {
+   "med": 49.4,
+   "min": 49.4,
+   "max": 49.4
+  },
+  "threads_max_node": {
+   "med": 14.0,
+   "min": 14.0,
+   "max": 14.0
+  },
+  "psi_cpu_max": {
+   "med": 65.46,
+   "min": 65.46,
+   "max": 65.46
+  },
+  "psi_io_max": {
+   "med": 16.26,
+   "min": 16.26,
+   "max": 16.26
+  },
+  "disk_write_mb_s": {
+   "med": 80.61,
+   "min": 80.61,
+   "max": 80.61
+  },
+  "write_syscalls_s": {
+   "med": 17431.0,
+   "min": 17431.0,
+   "max": 17431.0
+  },
+  "per_rep": [
+   {
+    "rep": "rep-1",
+    "src": "new",
+    "p50": 31.759,
+    "p99": 102.655,
+    "p999": 135.807,
+    "achieved": 10000,
+    "errors": 0,
+    "dropped": 0
+   }
+  ]
+ }
+]

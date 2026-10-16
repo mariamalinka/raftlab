@@ -1,0 +1,3 @@
+trial 1/1: Ok ops=31631 ok=31471 info=139 fail=21 faults=3/3/3 stale=0 (41s)
+
+raftkv / clock-partition-mild: 1 valid, 0 valid (reduced), 0 illegal, 0 unknown, 0 errors; detection 0.00 [0.00, 0.79]; stale-read scan 0/1 trials

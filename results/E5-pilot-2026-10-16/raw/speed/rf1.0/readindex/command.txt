@@ -1,0 +1,1 @@
+TMPDIR=/tmp/rk/e5/tmp /tmp/raftkv-bin-e5/loadgen -bin /tmp/raftkv-bin-e5 -db raftkv -read-mode readindex -read-frac 1.0 -rates 1000,4000,8000 -reps 2 -duration 20s -warmup 5s -out /tmp/rk/e5/out/speed/rf1.0/readindex

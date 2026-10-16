@@ -1,0 +1,6 @@
+{"level":"warn","ts":"2026-10-16T17:46:28.417995Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-16T17:46:28.418180Z","caller":"embed/config.go:956","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"warn","ts":"2026-10-16T17:46:31.437959Z","caller":"auth/store.go:1137","msg":"simple token is not cryptographically signed"}
+{"level":"warn","ts":"2026-10-16T17:47:02.103780Z","caller":"txn/util.go:93","msg":"apply request took too long","took":"120.244798ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"k4681\"","response":"range_response_count:1 size:158"}
+{"level":"warn","ts":"2026-10-16T17:47:02.104071Z","caller":"txn/util.go:93","msg":"apply request took too long","took":"101.86831ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"k552\"","response":"range_response_count:1 size:156"}
+{"level":"warn","ts":"2026-10-16T17:47:02.104145Z","caller":"txn/util.go:93","msg":"apply request took too long","took":"103.078422ms","expected-duration":"100ms","prefix":"read-only range ","request":"key:\"k2611\"","response":"range_response_count:1 size:158"}

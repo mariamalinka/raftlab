@@ -1,0 +1,4 @@
+{"time":"2026-10-16T00:21:45.639684727Z","level":"INFO","msg":"raft started","node":1,"term":0,"vote":0,"snapshot":0,"last_index":0,"bugs":null}
+{"time":"2026-10-16T00:21:45.642224761Z","level":"INFO","msg":"serving","node":1,"addr":"10.77.0.11:7000","read_mode":"log"}
+{"time":"2026-10-16T00:21:56.440564567Z","level":"INFO","msg":"starting election","node":1,"term":3,"last_index":6927,"last_term":2}
+{"time":"2026-10-16T00:21:56.459593176Z","level":"INFO","msg":"became follower","node":1,"term":5,"leader":0}
